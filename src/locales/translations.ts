@@ -181,9 +181,26 @@ export const translations = {
       comparison: {
         title: 'Service Comparison',
         features: 'Features',
+        careerCoaching: 'Career Coaching',
+        resumeReview: 'Resume Review',
+        interviewPrep: 'Interview Prep',
+        monthlyRetainer: 'Monthly Retainer',
+        items: [
+          'One-on-one sessions',
+          'Career assessment',
+          'Resume review',
+          'Interview coaching',
+          'Unlimited messages',
+          'Priority support',
+        ],
       },
       buttons: {
         scheduleNow: 'Schedule Now',
+      },
+      cta: {
+        title: 'Still not sure? Schedule a free consultation.',
+        subtitle: 'Let\'s discuss your goals and find the perfect mentorship package for you.',
+        button: 'Get Free Consultation',
       },
       mostPopular: '⭐ MOST POPULAR',
     },
@@ -195,10 +212,10 @@ export const translations = {
       },
       items: [
         {
-          name: 'Sarah Johnson',
-          title: 'Product Manager',
-          company: 'Tech Corp',
-          content: 'Gabriel\'s mentorship was transformative. He provided clear guidance and practical advice that accelerated my career growth significantly.',
+          name: 'Clara Gabrielle',
+          title: 'Mid level developer',
+          company: 'Mutant',
+          content: 'Gabriel\'s mentorship has been of great value. I\'ve been learning a lot from him. He has deep programming knowledge and it shows on the way he teaches and gives support in his sessions. I believe he is a great professional and it feels easy to explain the programming problems I\'ve been facing recently.',
           rating: 5,
         },
         {
@@ -488,9 +505,26 @@ export const translations = {
       comparison: {
         title: 'Comparação de Serviços',
         features: 'Funcionalidades',
+        careerCoaching: 'Coaching de Carreira',
+        resumeReview: 'Revisão de Currículo',
+        interviewPrep: 'Preparação para Entrevista',
+        monthlyRetainer: 'Contrato Mensal',
+        items: [
+          'Sessões individuais',
+          'Avaliação de carreira',
+          'Revisão de currículo',
+          'Coaching de entrevista',
+          'Mensagens ilimitadas',
+          'Suporte prioritário',
+        ],
       },
       buttons: {
         scheduleNow: 'Agendar Agora',
+      },
+      cta: {
+        title: 'Ainda com dúvidas? Agende uma consulta gratuita.',
+        subtitle: 'Vamos discutir seus objetivos e encontrar o pacote de mentoria perfeito para você.',
+        button: 'Obter Consulta Gratuita',
       },
       mostPopular: '⭐ MAIS POPULAR',
     },
@@ -502,10 +536,10 @@ export const translations = {
       },
       items: [
         {
-          name: 'Sarah Johnson',
-          title: 'Gerente de Produto',
-          company: 'Tech Corp',
-          content: 'A mentoria do Gabriel foi transformadora. Ele forneceu orientação clara e conselhos práticos que acelerou significativamente meu crescimento profissional.',
+          name: 'Clara Gabrielle',
+          title: 'Desenvolvedora Pleno',
+          company: 'Mutant',
+          content: 'A mentoria do Gabriel foi de grande valor. Tenho aprendido muito com ele. Ele possui um conhecimento profundo em programação e isso se reflete na forma como ensina e oferece suporte em suas sessões. Acredito que ele é um ótimo profissional e sinto facilidade em explicar os problemas de programação que venho enfrentando recentemente.',
           rating: 5,
         },
         {
@@ -795,9 +829,26 @@ export const translations = {
       comparison: {
         title: 'Comparación de Servicios',
         features: 'Características',
+        careerCoaching: 'Coaching de Carrera',
+        resumeReview: 'Revisión de Currículum',
+        interviewPrep: 'Preparación para Entrevistas',
+        monthlyRetainer: 'Paquete Mensual',
+        items: [
+          'Sesiones individuales',
+          'Evaluación de carrera',
+          'Revisión de currículum',
+          'Coaching de entrevista',
+          'Mensajes ilimitados',
+          'Soporte prioritario',
+        ],
       },
       buttons: {
         scheduleNow: 'Agendar Ahora',
+      },
+      cta: {
+        title: '¿Aún no estás seguro? Agenda una consulta gratuita.',
+        subtitle: 'Discutamos tus objetivos y encontremos el paquete de mentoría perfecto para ti.',
+        button: 'Obtener Consulta Gratuita',
       },
       mostPopular: '⭐ MÁS POPULAR',
     },
@@ -809,10 +860,10 @@ export const translations = {
       },
       items: [
         {
-          name: 'Sarah Johnson',
-          title: 'Gerente de Producto',
-          company: 'Tech Corp',
-          content: 'La mentoría de Gabriel fue transformadora. Proporcionó orientación clara y consejos prácticos que aceleraron significativamente mi crecimiento profesional.',
+          name: 'Clara Gabrielle',
+          title: 'Desarrolladora Pleno',
+          company: 'Mutant',
+          content: 'La mentoría de Gabriel fue de gran valor. He estado aprendiendo mucho de él. Tiene un conocimiento profundo en programación y eso se refleja en la forma en que enseña y da soporte en sus sesiones. Creo que es un excelente profesional y siento facilidad al explicar los problemas de programación que he venido enfrentando últimamente.',
           rating: 5,
         },
         {

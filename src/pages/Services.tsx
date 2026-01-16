@@ -137,28 +137,21 @@ const Services = () => {
       <section className="py-20 bg-gray-50 dark:bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-12 text-center">
-            Service Comparison
+            {t('services.comparison.title')}
           </h2>
           <div className="overflow-x-auto">
             <table className="w-full text-left">
               <thead>
                 <tr className="border-b-2 border-gray-300 dark:border-gray-700">
-                  <th className="py-4 px-4 font-bold text-gray-900 dark:text-white">Features</th>
-                  <th className="py-4 px-4 text-center text-gray-900 dark:text-white">Career Coaching</th>
-                  <th className="py-4 px-4 text-center text-gray-900 dark:text-white">Resume Review</th>
-                  <th className="py-4 px-4 text-center text-gray-900 dark:text-white">Interview Prep</th>
-                  <th className="py-4 px-4 text-center text-gray-900 dark:text-white">Monthly Retainer</th>
+                  <th className="py-4 px-4 font-bold text-gray-900 dark:text-white">{t('services.comparison.features')}</th>
+                  <th className="py-4 px-4 text-center text-gray-900 dark:text-white">{t('services.comparison.careerCoaching')}</th>
+                  <th className="py-4 px-4 text-center text-gray-900 dark:text-white">{t('services.comparison.resumeReview')}</th>
+                  <th className="py-4 px-4 text-center text-gray-900 dark:text-white">{t('services.comparison.interviewPrep')}</th>
+                  <th className="py-4 px-4 text-center text-gray-900 dark:text-white">{t('services.comparison.monthlyRetainer')}</th>
                 </tr>
               </thead>
               <tbody>
-                {[
-                  'One-on-one sessions',
-                  'Career assessment',
-                  'Resume review',
-                  'Interview coaching',
-                  'Unlimited messages',
-                  'Priority support',
-                ].map((feature, index) => (
+                {t('services.comparison.items').map((feature, index) => (
                   <tr key={index} className="border-b border-gray-200 dark:border-gray-700">
                     <td className="py-4 px-4 font-medium text-gray-900 dark:text-white">
                       {feature}
@@ -179,16 +172,16 @@ const Services = () => {
       <section className="py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-6">
-            Still not sure? Schedule a free consultation.
+            {t('services.cta.title')}
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-400 mb-8">
-            Let's discuss your goals and find the perfect mentorship package for you.
+            {t('services.cta.subtitle')}
           </p>
           <Link
             to="/contact"
             className="inline-block px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300"
           >
-            Get Free Consultation
+            {t('services.cta.button')}
           </Link>
         </div>
       </section>

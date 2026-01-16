@@ -1,10 +1,12 @@
 import { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { useTheme } from '../hooks/useTheme'
+import { useLanguage } from '../hooks/useLanguage'
 import { LanguageSelector } from './LanguageSelector'
 
 const Navbar = () => {
   const { isDark, toggleTheme } = useTheme()
+  const { t } = useLanguage()
   const location = useLocation()
   const [isOpen, setIsOpen] = useState(false)
 
@@ -13,11 +15,11 @@ const Navbar = () => {
   }, [location])
 
   const navLinks = [
-    { path: '/', label: 'Home' },
-    { path: '/about', label: 'About' },
-    { path: '/services', label: 'Services' },
-    { path: '/testimonials', label: 'Testimonials' },
-    { path: '/contact', label: 'Contact' },
+    { path: '/', label: t('navbar.home') },
+    { path: '/about', label: t('navbar.about') },
+    { path: '/services', label: t('navbar.services') },
+    { path: '/testimonials', label: t('navbar.testimonials') },
+    { path: '/contact', label: t('navbar.contact') },
   ]
 
   return (
