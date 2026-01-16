@@ -2,9 +2,8 @@
 
 This file documents how to implement the following features:
 1. Add your photo
-2. Add more testimonials
-3. Integration with Calendly
-4. Integration with payment API
+2. Integration with Calendly
+3. Integration with payment API
 
 ---
 
@@ -55,77 +54,7 @@ This file documents how to implement the following features:
 
 ---
 
-## 2. Add More Testimonials
-
-### Location: Testimonials Page
-**File**: `src/pages/Testimonials.tsx`
-
-### Current Data Structure:
-```typescript
-interface Testimonial {
-  id: number
-  name: string
-  title: string
-  company: string
-  content: string
-  rating: number
-  image: string
-}
-```
-
-### Steps:
-
-1. **Create testimonials data file** (optional - for cleaner code):
-   ```bash
-   # Create file:
-   src/data/testimonials.ts
-   ```
-
-2. **Add new testimonials**:
-   ```typescript
-   // src/data/testimonials.ts
-   export const testimonials = [
-     {
-       id: 1,
-       name: "Student Name",
-       title: "Job Title",
-       company: "Company Name",
-       content: "Their mentorship helped me...",
-       rating: 5,
-       image: "https://ui-avatars.com/api/?name=Student+Name"
-     },
-     // Add more...
-   ]
-   ```
-
-3. **Update Testimonials.tsx** to import and use the data:
-   ```typescript
-   import { testimonials } from '../data/testimonials'
-   
-   // Replace the hardcoded testimonials array with:
-   {testimonials.map((testimonial) => (...))}
-   ```
-
-### Quick Template for New Testimonial:
-```typescript
-{
-  id: 7,  // Increment ID
-  name: "John Smith",
-  title: "Senior Developer",
-  company: "Tech Corp",
-  content: "Gabriel's mentorship was transformative. He provided clear guidance and practical advice that accelerated my career growth significantly.",
-  rating: 5,
-  image: "https://ui-avatars.com/api/?name=John+Smith"
-}
-```
-
-### Using Real Images (Optional):
-- Use `https://ui-avatars.com/api/?name=FirstName+LastName` for auto-generated avatars
-- Or upload actual photos to `src/assets/images/testimonials/` and import them
-
----
-
-## 3. Integration with Calendly
+## 2. Integration with Calendly
 
 ### Location: Services Page & Contact Page
 **Files**: `src/pages/Services.tsx`, `src/pages/Contact.tsx`
@@ -349,8 +278,7 @@ VITE_CONTACT_EMAIL=gabrieln.dev3@gmail.com
 ## Next Steps
 
 1. **Start with Step 1**: Add your photo to About page
-2. **Then Step 2**: Add more testimonials
-3. **Then Step 3**: Add Calendly booking buttons
-4. **Finally Step 4**: Add payment integration when ready
+3. **Then Step 2**: Add Calendly booking buttons
+4. **Finally Step 3**: Add payment integration when ready
 
 Once you're ready to implement any of these, let me know which feature you want to start with and I can help you code it!

@@ -7,7 +7,7 @@ const Testimonials = () => {
       company: 'Mutant',
       image: '👩‍💻',
       content:
-        'The mentorship I received was transformative. I was struggling with career direction, but through personalized guidance, I was able to land a dream job at a top tech company. Highly recommended!',
+        'Gabriel\'s mentorship has been of great value. I\'ve been learning a lot from him. He has deep programming knowledge and it shows on the way he teaches and gives support in his sessions. I believe he is a great professional and it feels easy to explain the programming problems I\'ve been facing recently.',
       rating: 5,
     },
     {

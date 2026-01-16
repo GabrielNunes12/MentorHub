@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom'
+import { useCalendly } from '../hooks/useCalendly'
 
 const Home = () => {
+  const { openCalendly } = useCalendly()
   const stats = [
     { label: 'Students Mentored', value: '20+' },
     { label: 'Success Rate', value: '95%' },
@@ -50,17 +52,17 @@ const Home = () => {
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link
-                  to="/services"
+                <button
+                  onClick={openCalendly}
                   className="inline-block px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300 text-center"
                 >
-                  Explore Services
-                </Link>
+                  Schedule Free Consultation
+                </button>
                 <Link
-                  to="/contact"
+                  to="/services"
                   className="inline-block px-8 py-4 border-2 border-blue-600 text-blue-600 dark:text-blue-400 dark:border-blue-400 font-semibold rounded-lg hover:bg-blue-50 dark:hover:bg-blue-500 dark:hover:bg-opacity-10 transition-all duration-300 text-center"
                 >
-                  Book a Call
+                  Explore Services
                 </Link>
               </div>
 
@@ -151,12 +153,12 @@ const Home = () => {
           <p className="text-xl text-blue-100 mb-8">
             Join hundreds of professionals who have achieved their goals with personalized mentorship.
           </p>
-          <Link
-            to="/contact"
+          <button
+            onClick={openCalendly}
             className="inline-block px-8 py-4 bg-white text-blue-600 font-bold rounded-lg hover:bg-gray-100 transition-colors duration-300"
           >
             Schedule Your Free Consultation
-          </Link>
+          </button>
         </div>
       </section>
     </div>

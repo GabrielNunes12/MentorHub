@@ -1,3 +1,5 @@
+import myPhoto from '../assets/images/my-photo.png'
+
 const About = () => {
   const timeline = [
     { year: '2019', event: 'Started my professional career in tech' },
@@ -35,14 +37,16 @@ const About = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div className="relative h-96 md:h-[500px]">
               <div className="absolute inset-0 bg-gradient-to-br from-blue-400 to-cyan-400 rounded-2xl opacity-20 blur-3xl"></div>
-              <div className="relative w-full h-full bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center text-white text-8xl">
-                👋
-              </div>
+              <img
+                src={myPhoto}
+                alt="Gabriel Nunes"
+                className="relative w-full h-full object-cover rounded-2xl shadow-2xl border-4 border-white dark:border-gray-700"
+              />
             </div>
 
             <div className="space-y-6">
               <h2 className="text-4xl font-bold text-gray-900 dark:text-white">
-                Hi, I'm your mentor!
+                Hi, I'm Gabriel Nunes!
               </h2>
               <p className="text-lg text-gray-600 dark:text-gray-400">
                 With over 5 years of experience in the tech industry, I've built a career that spans from individual contributor to team leadership. My journey has been filled with challenges, victories, and invaluable lessons that I'm passionate about sharing.

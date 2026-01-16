@@ -1,11 +1,16 @@
 import { Link } from 'react-router-dom'
+import { useCalendly } from '../hooks/useCalendly'
+import { useUserRegion } from '../hooks/usePricing'
+import { RegionSelector } from '../components/RegionSelector'
 
 const Services = () => {
+  const { openCalendly } = useCalendly()
+  const { region, currency, convertPrice } = useUserRegion()
   const services = [
     {
       id: 1,
       name: 'Career Coaching',
-      price: '$99',
+      basePrice: 99,
       duration: '1 hour',
       description: 'Personalized career guidance to help you navigate your professional path.',
       features: [
@@ -18,7 +23,7 @@ const Services = () => {
     {
       id: 2,
       name: 'Resume & LinkedIn Review',
-      price: '$49',
+      basePrice: 49,
       duration: '30 minutes',
       description: 'Get professional feedback on your resume and LinkedIn profile.',
       features: [
@@ -31,7 +36,7 @@ const Services = () => {
     {
       id: 3,
       name: 'Interview Preparation',
-      price: '$79',
+      basePrice: 79,
       duration: '45 minutes',
       description: 'Master interview techniques and boost your confidence.',
       features: [
@@ -44,7 +49,7 @@ const Services = () => {
     {
       id: 4,
       name: 'Salary Negotiation',
-      price: '$129',
+      basePrice: 129,
       duration: '1.5 hours',
       description: 'Negotiate your worth with confidence and get better compensation.',
       features: [
@@ -57,7 +62,7 @@ const Services = () => {
     {
       id: 5,
       name: 'Leadership Mentorship',
-      price: '$149',
+      basePrice: 149,
       duration: '1 hour',
       description: 'Develop leadership skills and manage teams effectively.',
       features: [
@@ -70,7 +75,7 @@ const Services = () => {
     {
       id: 6,
       name: 'Monthly Retainer',
-      price: '$299',
+      basePrice: 299,
       duration: '4 hours/month',
       description: 'Ongoing mentorship with flexible scheduling throughout the month.',
       features: [
@@ -102,6 +107,45 @@ const Services = () => {
       {/* Services Grid */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Region Selector and Indicator */}
+          <div className="mb-12 p-6 bg-gradient-to-r from-blue-100 to-cyan-100 dark:from-blue-900 dark:to-cyan-900 rounded-lg">
+            <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+              <div>
+                <p className="font-semibold text-blue-900 dark:text-blue-100 mb-2">
+                  Currency: {currency.symbol} {currency.code}
+                </p>
+                <p className="text-sm text-blue-800 dark:text-blue-200">
+                  {region === 'BR' && '🇧🇷 Prices in Brazilian Real with accessibility pricing'}
+                  {region === 'EU' && '🇪🇺 Prices in Euro (Eurozone)'}
+                  {region === 'UK' && '🇬🇧 Prices in British Pound'}
+                  {region === 'US' && '🇺🇸 Prices in US Dollar'}
+                </p>
+              </div>
+              <div>
+                <p className="text-sm text-blue-800 dark:text-blue-200 mb-2 font-semibold">Change region:</p>
+                <div className="flex gap-2">
+                  {['US', 'BR', 'EU', 'UK'].map((r) => (
+                    <button
+                      key={r}
+                      onClick={() => {
+                        // We need to expose setUserRegion - will add to context or pass as prop
+                        localStorage.setItem('userRegion', r)
+                        window.location.reload()
+                      }}
+                      className={`px-3 py-1 rounded text-sm font-semibold transition-all ${
+                        region === r
+                          ? 'bg-blue-600 text-white'
+                          : 'bg-white dark:bg-gray-800 text-blue-600 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-gray-700'
+                      }`}
+                    >
+                      {r}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service) => (
               <div
@@ -122,9 +166,12 @@ const Services = () => {
                   <h3 className="text-2xl font-bold mb-2">{service.name}</h3>
                   
                   <div className="mb-4">
-                    <div className="text-4xl font-bold mb-2">{service.price}</div>
+                    <div className="text-4xl font-bold mb-2">
+                      {currency.symbol}{convertPrice(service.basePrice)}
+                    </div>
                     <p className={`text-sm ${service.popular ? 'text-blue-100' : 'text-gray-600 dark:text-gray-400'}`}>
                       {service.duration}
+                      {region !== 'US' && <span className="ml-2 text-xs">({region})</span>}
                     </p>
                   </div>
 
@@ -141,16 +188,18 @@ const Services = () => {
                     ))}
                   </ul>
 
-                  <Link
-                    to="/contact"
-                    className={`block w-full py-3 rounded-lg font-semibold text-center transition-colors ${
-                      service.popular
-                        ? 'bg-white text-blue-600 hover:bg-gray-100'
-                        : 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white hover:shadow-lg'
-                    }`}
-                  >
-                    Book Now
-                  </Link>
+                  <div className="flex gap-2">
+                    <button
+                      onClick={openCalendly}
+                      className={`flex-1 py-3 rounded-lg font-semibold text-center transition-colors ${
+                        service.popular
+                          ? 'bg-white text-blue-600 hover:bg-gray-100'
+                          : 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white hover:shadow-lg'
+                      }`}
+                    >
+                      Schedule Now
+                    </button>
+                  </div>
                 </div>
               </div>
             ))}
