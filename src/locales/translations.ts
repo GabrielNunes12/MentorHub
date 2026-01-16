@@ -1,0 +1,923 @@
+export const translations = {
+  en: {
+    common: {
+      language: 'Language',
+      english: 'English',
+      portuguese: 'Português',
+      spanish: 'Español',
+      contactEmail: 'gabrieln.dev3@gmail.com',
+      phone: '+351 928 460 134',
+    },
+    navbar: {
+      home: 'Home',
+      about: 'About',
+      services: 'Services',
+      testimonials: 'Testimonials',
+      contact: 'Contact',
+    },
+    home: {
+      hero: {
+        title: 'Transform Your',
+        titleHighlight: 'Career',
+        subtitle: 'Today',
+        description: 'Get personalized mentorship from an experienced industry professional. Accelerate your growth, achieve your goals, and unlock your full potential.',
+        cta1: 'Schedule Free Consultation',
+        cta2: 'Explore Services',
+        trustIndicator: 'students transformed',
+      },
+      stats: [
+        { label: 'Students Mentored', value: '20+' },
+        { label: 'Success Rate', value: '95%' },
+        { label: 'Years Experience', value: '5+' },
+        { label: 'Companies Helped', value: '1+' },
+      ],
+      features: {
+        title: 'Why Choose MentorHub?',
+        subtitle: 'Get the guidance you need to succeed in your career and personal growth.',
+        items: [
+          {
+            title: 'Personalized Guidance',
+            description: 'Customized mentoring tailored to your specific goals and learning style.',
+            icon: '🎯',
+          },
+          {
+            title: 'Industry Expertise',
+            description: 'Learn from someone with years of real-world experience in the field.',
+            icon: '💼',
+          },
+          {
+            title: 'Career Growth',
+            description: 'Accelerate your career with strategic advice and insider knowledge.',
+            icon: '📈',
+          },
+          {
+            title: 'Network Building',
+            description: 'Get connected with professionals and expand your professional network.',
+            icon: '🤝',
+          },
+        ],
+      },
+      cta: {
+        title: 'Ready to Transform Your Career?',
+        subtitle: 'Join hundreds of professionals who have achieved their goals with personalized mentorship.',
+        button: 'Schedule Your Free Consultation',
+      },
+    },
+    about: {
+      hero: {
+        title: 'About',
+        titleHighlight: 'Me',
+        description: 'A passionate mentor dedicated to helping professionals achieve their goals and unlock their potential.',
+      },
+      profile: {
+        name: 'Hi, Gabriel Nunes!',
+        bio1: 'With over 5 years of experience in the tech industry, I\'ve built a career that spans from individual contributor to team leadership. My journey has been filled with challenges, victories, and invaluable lessons that I\'m passionate about sharing.',
+        bio2: 'I believe that everyone has the potential to excel in their career. Through personalized guidance, honest feedback, and strategic planning, I help professionals navigate their career path and achieve their ambitions.',
+        bio3: 'My mentorship philosophy is centered on understanding your unique needs, building on your strengths, and addressing your challenges with practical, actionable advice.',
+      },
+      timeline: {
+        title: 'My Journey',
+        events: [
+          { year: '2019', event: 'Started my professional career in tech' },
+          { year: '2024', event: 'Became a team lead at a Mutant' },
+          { year: '2024-2025', event: 'Went to a biggest bank in Brazil (Intermedium bank)' },
+          { year: '2025-present', event: 'Senior developer in Europe' },
+        ],
+      },
+      expertise: {
+        title: 'Areas of Expertise',
+        items: ['Career Development', 'Personal Branding', 'Management Skills', 'Work-Life Balance'],
+      },
+      certifications: {
+        title: 'Certifications & Achievements',
+        items: [
+          { title: 'AWS Certified Developer', issuer: 'Amazon Web Services' },
+          { title: 'Agile Coach Certification', issuer: 'Scrum Alliance' },
+          { title: '20+ Mentees Successfully Placed', issuer: 'Career Development' },
+          { title: 'Tech Speaker & Educator', issuer: 'Various Conferences' },
+        ],
+      },
+    },
+    services: {
+      hero: {
+        title: 'My Services',
+        titleHighlight: 'Services',
+        description: 'Choose the perfect mentorship package tailored to your needs and goals.',
+      },
+      regionIndicator: {
+        currency: 'Currency',
+        localPricing: 'Locally adjusted pricing for',
+        changeRegion: 'Change region:',
+      },
+      cards: [
+        {
+          name: 'Career Coaching',
+          duration: '1 hour',
+          description: 'Personalized career guidance to help you navigate your professional path.',
+          features: [
+            'Career path assessment',
+            'Goal setting & planning',
+            'Industry insights',
+            'Actionable advice',
+          ],
+        },
+        {
+          name: 'Resume & LinkedIn Review',
+          duration: '30 minutes',
+          description: 'Get professional feedback on your resume and LinkedIn profile.',
+          features: [
+            'Resume optimization',
+            'LinkedIn profile enhancement',
+            'ATS keyword optimization',
+            'Professional formatting',
+          ],
+        },
+        {
+          name: 'Interview Preparation',
+          duration: '45 minutes',
+          description: 'Master interview techniques and boost your confidence.',
+          features: [
+            'Mock interviews',
+            'Answer strategies',
+            'Body language coaching',
+            'Q&A preparation',
+          ],
+        },
+        {
+          name: 'Salary Negotiation',
+          duration: '1.5 hours',
+          description: 'Negotiate your worth with confidence and get better compensation.',
+          features: [
+            'Market research',
+            'Negotiation strategies',
+            'Offer evaluation',
+            'Counter-offer techniques',
+          ],
+        },
+        {
+          name: 'Leadership Mentorship',
+          duration: '1 hour',
+          description: 'Develop leadership skills and manage teams effectively.',
+          features: [
+            'Leadership development',
+            'Team management',
+            'Conflict resolution',
+            'Executive coaching',
+          ],
+        },
+        {
+          name: 'Monthly Retainer',
+          duration: '4 hours/month',
+          description: 'Ongoing mentorship with flexible scheduling throughout the month.',
+          features: [
+            'Weekly check-ins',
+            'Career planning',
+            'Unlimited questions',
+            'Priority support',
+          ],
+          popular: true,
+        },
+      ],
+      comparison: {
+        title: 'Service Comparison',
+        features: 'Features',
+      },
+      buttons: {
+        scheduleNow: 'Schedule Now',
+      },
+      mostPopular: '⭐ MOST POPULAR',
+    },
+    testimonials: {
+      hero: {
+        title: 'Success Stories',
+        titleHighlight: 'Stories',
+        description: 'Real transformations from people I\'ve had the privilege to mentor.',
+      },
+      items: [
+        {
+          name: 'Sarah Johnson',
+          title: 'Product Manager',
+          company: 'Tech Corp',
+          content: 'Gabriel\'s mentorship was transformative. He provided clear guidance and practical advice that accelerated my career growth significantly.',
+          rating: 5,
+        },
+        {
+          name: 'Michael Chen',
+          title: 'Senior Developer',
+          company: 'StartUp Inc',
+          content: 'The best investment I made for my career. Gabriel\'s insights helped me navigate a major career transition smoothly.',
+          rating: 5,
+        },
+        {
+          name: 'Emma Rodriguez',
+          title: 'HR Manager',
+          company: 'Global Solutions',
+          content: 'Working with Gabriel was incredible. He helped me build confidence and leadership skills that changed my professional life.',
+          rating: 5,
+        },
+        {
+          name: 'James Wilson',
+          title: 'Consultant',
+          company: 'Business Advisors',
+          content: 'Gabriel\'s practical approach and deep expertise made all the difference. Highly recommended!',
+          rating: 5,
+        },
+        {
+          name: 'Lisa Martinez',
+          title: 'Entrepreneur',
+          company: 'Own Business',
+          content: 'The guidance I received was exactly what I needed to take my career to the next level.',
+          rating: 5,
+        },
+        {
+          name: 'David Brown',
+          title: 'Finance Manager',
+          company: 'Global Bank',
+          content: 'Gabriel helped me negotiate a 40% salary increase and advance to a director position. Exceptional mentor!',
+          rating: 5,
+        },
+      ],
+    },
+    contact: {
+      hero: {
+        title: 'Get in',
+        titleHighlight: 'Touch',
+        description: 'Ready to start your mentorship journey? Let\'s connect and discuss how I can help you achieve your goals.',
+      },
+      info: {
+        title: 'Contact Information',
+        subtitle: 'Feel free to reach out to me through any of these channels.',
+        email: 'Email',
+        phone: 'Phone',
+        location: 'Location',
+        locationValue: 'Available for virtual mentoring worldwide',
+        responseTime: 'Response Time',
+        responseTimeValue: 'Usually within 24 hours',
+        social: 'Connect on Social',
+      },
+      form: {
+        title: 'Send me a message',
+        labels: {
+          fullName: 'Full Name',
+          email: 'Email Address',
+          phone: 'Phone (Optional)',
+          subject: 'Subject',
+          message: 'Message',
+        },
+        placeholders: {
+          fullName: 'John Doe',
+          email: 'john@example.com',
+          phone: '+1 (234) 567-890',
+          subject: 'I\'m interested in career coaching',
+          message: 'Tell me about your goals and what you\'re looking for...',
+        },
+        button: 'Send Message',
+        sending: 'Sending...',
+        errors: {
+          nameRequired: 'Name is required',
+          emailRequired: 'Email is required',
+          emailInvalid: 'Please enter a valid email',
+          subjectRequired: 'Subject is required',
+          messageRequired: 'Message is required',
+        },
+        success: 'Message sent successfully! I\'ll get back to you soon.',
+        error: 'Error sending message',
+      },
+      faq: {
+        title: 'Frequently Asked Questions',
+        items: [
+          {
+            question: 'How long does a typical mentoring session last?',
+            answer: 'Sessions vary from 30 minutes to 1.5 hours depending on the service package you choose.',
+          },
+          {
+            question: 'What is your response time?',
+            answer: 'I typically respond to inquiries within 24 hours during business days.',
+          },
+          {
+            question: 'Do you offer flexible scheduling?',
+            answer: 'Yes! I work with mentees across different time zones and offer flexible scheduling options.',
+          },
+          {
+            question: 'What if I\'m not satisfied with the mentorship?',
+            answer: 'Your satisfaction is my priority. We can discuss concerns and adjust the mentoring approach as needed.',
+          },
+        ],
+      },
+    },
+  },
+  pt: {
+    common: {
+      language: 'Idioma',
+      english: 'English',
+      portuguese: 'Português',
+      spanish: 'Español',
+      contactEmail: 'gabrieln.dev3@gmail.com',
+      phone: '+351 928 460 134',
+    },
+    navbar: {
+      home: 'Início',
+      about: 'Sobre',
+      services: 'Serviços',
+      testimonials: 'Depoimentos',
+      contact: 'Contato',
+    },
+    home: {
+      hero: {
+        title: 'Transforme sua',
+        titleHighlight: 'Carreira',
+        subtitle: 'Hoje',
+        description: 'Obtenha mentoria personalizada de um profissional experiente da indústria. Acelere seu crescimento, alcance seus objetivos e desbloqueie seu potencial total.',
+        cta1: 'Agendar Consulta Gratuita',
+        cta2: 'Explorar Serviços',
+        trustIndicator: 'alunos transformados',
+      },
+      stats: [
+        { label: 'Alunos Mentorados', value: '20+' },
+        { label: 'Taxa de Sucesso', value: '95%' },
+        { label: 'Anos de Experiência', value: '5+' },
+        { label: 'Empresas Ajudadas', value: '1+' },
+      ],
+      features: {
+        title: 'Por que escolher MentorHub?',
+        subtitle: 'Obtenha a orientação que você precisa para ter sucesso em sua carreira e crescimento pessoal.',
+        items: [
+          {
+            title: 'Orientação Personalizada',
+            description: 'Mentoria customizada adaptada aos seus objetivos e estilo de aprendizado específicos.',
+            icon: '🎯',
+          },
+          {
+            title: 'Expertise da Indústria',
+            description: 'Aprenda com alguém que possui anos de experiência real no campo.',
+            icon: '💼',
+          },
+          {
+            title: 'Crescimento de Carreira',
+            description: 'Acelere sua carreira com conselhos estratégicos e conhecimento de insider.',
+            icon: '📈',
+          },
+          {
+            title: 'Construção de Rede',
+            description: 'Conecte-se com profissionais e expanda sua rede profissional.',
+            icon: '🤝',
+          },
+        ],
+      },
+      cta: {
+        title: 'Pronto para Transformar sua Carreira?',
+        subtitle: 'Junte-se a centenas de profissionais que alcançaram seus objetivos com mentoria personalizada.',
+        button: 'Agendar sua Consulta Gratuita',
+      },
+    },
+    about: {
+      hero: {
+        title: 'Sobre',
+        titleHighlight: 'Mim',
+        description: 'Um mentor apaixonado dedicado a ajudar profissionais a alcançar seus objetivos e desbloquear seu potencial.',
+      },
+      profile: {
+        name: 'Olá, Gabriel Nunes!',
+        bio1: 'Com mais de 5 anos de experiência na indústria de tecnologia, construí uma carreira que vai desde colaborador individual até liderança de equipe. Minha jornada foi repleta de desafios, vitórias e lições inestimáveis que sou apaixonado em compartilhar.',
+        bio2: 'Acredito que todos têm potencial para se destacar em suas carreiras. Através de orientação personalizada, feedback honesto e planejamento estratégico, ajudo profissionais a navegar em seus caminhos profissionais e alcançar suas ambições.',
+        bio3: 'Minha filosofia de mentoria é centrada em entender suas necessidades únicas, construir sobre seus pontos fortes e abordar desafios com conselhos práticos e viáveis.',
+      },
+      timeline: {
+        title: 'Minha Jornada',
+        events: [
+          { year: '2019', event: 'Comecei minha carreira profissional em tecnologia' },
+          { year: '2024', event: 'Virei líder de equipe em Mutant' },
+          { year: '2024-2025', event: 'Fui para o maior banco do Brasil (Intermedium bank)' },
+          { year: '2025-presente', event: 'Desenvolvedor sênior na Europa' },
+        ],
+      },
+      expertise: {
+        title: 'Áreas de Expertise',
+        items: ['Desenvolvimento de Carreira', 'Marca Pessoal', 'Habilidades de Gestão', 'Equilíbrio Trabalho-Vida'],
+      },
+      certifications: {
+        title: 'Certificações e Realizações',
+        items: [
+          { title: 'AWS Certified Developer', issuer: 'Amazon Web Services' },
+          { title: 'Agile Coach Certification', issuer: 'Scrum Alliance' },
+          { title: '20+ Mentorados Colocados com Sucesso', issuer: 'Desenvolvimento de Carreira' },
+          { title: 'Palestrante e Educador em Tech', issuer: 'Várias Conferências' },
+        ],
+      },
+    },
+    services: {
+      hero: {
+        title: 'Meus Serviços',
+        titleHighlight: 'Serviços',
+        description: 'Escolha o pacote de mentoria perfeito adaptado às suas necessidades e objetivos.',
+      },
+      regionIndicator: {
+        currency: 'Moeda',
+        localPricing: 'Preços ajustados localmente para',
+        changeRegion: 'Mudar região:',
+      },
+      cards: [
+        {
+          name: 'Coaching de Carreira',
+          duration: '1 hora',
+          description: 'Orientação personalizada de carreira para ajudá-lo a navegar seu caminho profissional.',
+          features: [
+            'Avaliação de caminho profissional',
+            'Definição e planejamento de metas',
+            'Insights da indústria',
+            'Conselhos acionáveis',
+          ],
+        },
+        {
+          name: 'Revisão de Currículo e LinkedIn',
+          duration: '30 minutos',
+          description: 'Receba feedback profissional sobre seu currículo e perfil LinkedIn.',
+          features: [
+            'Otimização de currículo',
+            'Aprimoramento de perfil LinkedIn',
+            'Otimização de palavras-chave ATS',
+            'Formatação profissional',
+          ],
+        },
+        {
+          name: 'Preparação para Entrevistas',
+          duration: '45 minutos',
+          description: 'Domine técnicas de entrevista e aumente sua confiança.',
+          features: [
+            'Entrevistas simuladas',
+            'Estratégias de resposta',
+            'Coaching de linguagem corporal',
+            'Preparação de perguntas e respostas',
+          ],
+        },
+        {
+          name: 'Negociação Salarial',
+          duration: '1,5 horas',
+          description: 'Negocie seu valor com confiança e obtenha melhor compensação.',
+          features: [
+            'Pesquisa de mercado',
+            'Estratégias de negociação',
+            'Avaliação de ofertas',
+            'Técnicas de contra-oferta',
+          ],
+        },
+        {
+          name: 'Mentoria em Liderança',
+          duration: '1 hora',
+          description: 'Desenvolva habilidades de liderança e gerencie equipes efetivamente.',
+          features: [
+            'Desenvolvimento de liderança',
+            'Gerenciamento de equipes',
+            'Resolução de conflitos',
+            'Coaching executivo',
+          ],
+        },
+        {
+          name: 'Retainer Mensal',
+          duration: '4 horas/mês',
+          description: 'Mentoria contínua com agendamento flexível durante todo o mês.',
+          features: [
+            'Check-ins semanais',
+            'Planejamento de carreira',
+            'Perguntas ilimitadas',
+            'Suporte prioritário',
+          ],
+          popular: true,
+        },
+      ],
+      comparison: {
+        title: 'Comparação de Serviços',
+        features: 'Funcionalidades',
+      },
+      buttons: {
+        scheduleNow: 'Agendar Agora',
+      },
+      mostPopular: '⭐ MAIS POPULAR',
+    },
+    testimonials: {
+      hero: {
+        title: 'Histórias de',
+        titleHighlight: 'Sucesso',
+        description: 'Transformações reais de pessoas que tive o privilégio de mentorear.',
+      },
+      items: [
+        {
+          name: 'Sarah Johnson',
+          title: 'Gerente de Produto',
+          company: 'Tech Corp',
+          content: 'A mentoria do Gabriel foi transformadora. Ele forneceu orientação clara e conselhos práticos que acelerou significativamente meu crescimento profissional.',
+          rating: 5,
+        },
+        {
+          name: 'Michael Chen',
+          title: 'Desenvolvedor Sênior',
+          company: 'StartUp Inc',
+          content: 'O melhor investimento que fiz para minha carreira. Os insights do Gabriel me ajudaram a navegar uma grande transição de carreira suavemente.',
+          rating: 5,
+        },
+        {
+          name: 'Emma Rodriguez',
+          title: 'Gerente de RH',
+          company: 'Global Solutions',
+          content: 'Trabalhar com Gabriel foi incrível. Ele me ajudou a construir confiança e habilidades de liderança que transformaram minha vida profissional.',
+          rating: 5,
+        },
+        {
+          name: 'James Wilson',
+          title: 'Consultor',
+          company: 'Business Advisors',
+          content: 'A abordagem prática e a expertise profunda do Gabriel fizeram toda a diferença. Altamente recomendado!',
+          rating: 5,
+        },
+        {
+          name: 'Lisa Martinez',
+          title: 'Empresária',
+          company: 'Negócio Próprio',
+          content: 'A orientação que recebi foi exatamente o que eu precisava para levar minha carreira para o próximo nível.',
+          rating: 5,
+        },
+        {
+          name: 'David Brown',
+          title: 'Gerente de Finanças',
+          company: 'Global Bank',
+          content: 'Gabriel me ajudou a negociar um aumento de 40% e avançar para uma posição de diretor. Mentor excepcional!',
+          rating: 5,
+        },
+      ],
+    },
+    contact: {
+      hero: {
+        title: 'Entre em',
+        titleHighlight: 'Contato',
+        description: 'Pronto para começar sua jornada de mentoria? Vamos nos conectar e discutir como posso ajudá-lo a alcançar seus objetivos.',
+      },
+      info: {
+        title: 'Informações de Contato',
+        subtitle: 'Sinta-se livre para entrar em contato comigo através de qualquer um desses canais.',
+        email: 'Email',
+        phone: 'Telefone',
+        location: 'Localização',
+        locationValue: 'Disponível para mentoria virtual em todo o mundo',
+        responseTime: 'Tempo de Resposta',
+        responseTimeValue: 'Geralmente dentro de 24 horas',
+        social: 'Conecte-se nas Redes Sociais',
+      },
+      form: {
+        title: 'Envie uma mensagem',
+        labels: {
+          fullName: 'Nome Completo',
+          email: 'Endereço de Email',
+          phone: 'Telefone (Opcional)',
+          subject: 'Assunto',
+          message: 'Mensagem',
+        },
+        placeholders: {
+          fullName: 'João Silva',
+          email: 'joao@exemplo.com',
+          phone: '+55 (11) 98765-4321',
+          subject: 'Estou interessado em coaching de carreira',
+          message: 'Conte-me sobre seus objetivos e o que você está procurando...',
+        },
+        button: 'Enviar Mensagem',
+        sending: 'Enviando...',
+        errors: {
+          nameRequired: 'O nome é obrigatório',
+          emailRequired: 'O email é obrigatório',
+          emailInvalid: 'Por favor, insira um email válido',
+          subjectRequired: 'O assunto é obrigatório',
+          messageRequired: 'A mensagem é obrigatória',
+        },
+        success: 'Mensagem enviada com sucesso! Voltarei em breve.',
+        error: 'Erro ao enviar mensagem',
+      },
+      faq: {
+        title: 'Perguntas Frequentes',
+        items: [
+          {
+            question: 'Quanto tempo dura uma sessão típica de mentoria?',
+            answer: 'As sessões variam de 30 minutos a 1,5 horas dependendo do pacote de serviço escolhido.',
+          },
+          {
+            question: 'Qual é seu tempo de resposta?',
+            answer: 'Normalmente respondo a consultas dentro de 24 horas durante os dias úteis.',
+          },
+          {
+            question: 'Você oferece horários flexíveis?',
+            answer: 'Sim! Trabalho com mentorados em diferentes fusos horários e ofereço opções de agendamento flexível.',
+          },
+          {
+            question: 'E se não estiver satisfeito com a mentoria?',
+            answer: 'Sua satisfação é minha prioridade. Podemos discutir preocupações e ajustar a abordagem de mentoria conforme necessário.',
+          },
+        ],
+      },
+    },
+  },
+  es: {
+    common: {
+      language: 'Idioma',
+      english: 'English',
+      portuguese: 'Português',
+      spanish: 'Español',
+      contactEmail: 'gabrieln.dev3@gmail.com',
+      phone: '+351 928 460 134',
+    },
+    navbar: {
+      home: 'Inicio',
+      about: 'Acerca',
+      services: 'Servicios',
+      testimonials: 'Testimonios',
+      contact: 'Contacto',
+    },
+    home: {
+      hero: {
+        title: 'Transforma tu',
+        titleHighlight: 'Carrera',
+        subtitle: 'Hoy',
+        description: 'Obtén mentoría personalizada de un profesional experimentado de la industria. Acelera tu crecimiento, logra tus objetivos y desbloquea tu potencial completo.',
+        cta1: 'Programar Consulta Gratuita',
+        cta2: 'Explorar Servicios',
+        trustIndicator: 'estudiantes transformados',
+      },
+      stats: [
+        { label: 'Estudiantes Mentorados', value: '20+' },
+        { label: 'Tasa de Éxito', value: '95%' },
+        { label: 'Años de Experiencia', value: '5+' },
+        { label: 'Empresas Ayudadas', value: '1+' },
+      ],
+      features: {
+        title: '¿Por qué elegir MentorHub?',
+        subtitle: 'Obtén la orientación que necesitas para tener éxito en tu carrera y crecimiento personal.',
+        items: [
+          {
+            title: 'Orientación Personalizada',
+            description: 'Mentoría personalizada adaptada a tus objetivos y estilo de aprendizaje específicos.',
+            icon: '🎯',
+          },
+          {
+            title: 'Experiencia de la Industria',
+            description: 'Aprende de alguien con años de experiencia real en el campo.',
+            icon: '💼',
+          },
+          {
+            title: 'Crecimiento de Carrera',
+            description: 'Acelera tu carrera con consejos estratégicos y conocimiento de insider.',
+            icon: '📈',
+          },
+          {
+            title: 'Construcción de Redes',
+            description: 'Conéctate con profesionales y expande tu red profesional.',
+            icon: '🤝',
+          },
+        ],
+      },
+      cta: {
+        title: '¿Listo para Transformar tu Carrera?',
+        subtitle: 'Únete a cientos de profesionales que han logrado sus objetivos con mentoría personalizada.',
+        button: 'Programar tu Consulta Gratuita',
+      },
+    },
+    about: {
+      hero: {
+        title: 'Acerca',
+        titleHighlight: 'de Mí',
+        description: 'Un mentor apasionado dedicado a ayudar a los profesionales a lograr sus objetivos y desbloquear su potencial.',
+      },
+      profile: {
+        name: '¡Hola, Gabriel Nunes!',
+        bio1: 'Con más de 5 años de experiencia en la industria tecnológica, he construido una carrera que abarca desde colaborador individual hasta liderazgo de equipo. Mi viaje ha estado lleno de desafíos, victorias y lecciones invaluables que me apasiona compartir.',
+        bio2: 'Creo que todos tienen el potencial de sobresalir en sus carreras. A través de orientación personalizada, retroalimentación honesta y planificación estratégica, ayudo a los profesionales a navegar su camino profesional y lograr sus ambiciones.',
+        bio3: 'Mi filosofía de mentoría se centra en comprender tus necesidades únicas, construir sobre tus fortalezas y abordar desafíos con consejos prácticos y viables.',
+      },
+      timeline: {
+        title: 'Mi Viaje',
+        events: [
+          { year: '2019', event: 'Comencé mi carrera profesional en tecnología' },
+          { year: '2024', event: 'Me convertí en líder de equipo en Mutant' },
+          { year: '2024-2025', event: 'Fui al banco más grande de Brasil (Intermedium bank)' },
+          { year: '2025-presente', event: 'Desarrollador sénior en Europa' },
+        ],
+      },
+      expertise: {
+        title: 'Áreas de Experiencia',
+        items: ['Desarrollo de Carrera', 'Marca Personal', 'Habilidades de Gestión', 'Equilibrio Trabajo-Vida'],
+      },
+      certifications: {
+        title: 'Certificaciones y Logros',
+        items: [
+          { title: 'AWS Certified Developer', issuer: 'Amazon Web Services' },
+          { title: 'Agile Coach Certification', issuer: 'Scrum Alliance' },
+          { title: '20+ Mentorados Colocados Exitosamente', issuer: 'Desarrollo de Carrera' },
+          { title: 'Orador y Educador en Tech', issuer: 'Varias Conferencias' },
+        ],
+      },
+    },
+    services: {
+      hero: {
+        title: 'Mis Servicios',
+        titleHighlight: 'Servicios',
+        description: 'Elige el paquete de mentoría perfecto adaptado a tus necesidades y objetivos.',
+      },
+      regionIndicator: {
+        currency: 'Moneda',
+        localPricing: 'Precios ajustados localmente para',
+        changeRegion: 'Cambiar región:',
+      },
+      cards: [
+        {
+          name: 'Coaching de Carrera',
+          duration: '1 hora',
+          description: 'Orientación personalizada de carrera para ayudarte a navegar tu camino profesional.',
+          features: [
+            'Evaluación de trayectoria profesional',
+            'Establecimiento y planificación de objetivos',
+            'Información de la industria',
+            'Consejos viables',
+          ],
+        },
+        {
+          name: 'Revisión de Currículum y LinkedIn',
+          duration: '30 minutos',
+          description: 'Obtén retroalimentación profesional sobre tu currículum y perfil de LinkedIn.',
+          features: [
+            'Optimización de currículum',
+            'Mejora de perfil LinkedIn',
+            'Optimización de palabras clave ATS',
+            'Formato profesional',
+          ],
+        },
+        {
+          name: 'Preparación para Entrevistas',
+          duration: '45 minutos',
+          description: 'Domina técnicas de entrevista y aumenta tu confianza.',
+          features: [
+            'Entrevistas simuladas',
+            'Estrategias de respuesta',
+            'Coaching de lenguaje corporal',
+            'Preparación de preguntas y respuestas',
+          ],
+        },
+        {
+          name: 'Negociación Salarial',
+          duration: '1,5 horas',
+          description: 'Negocia tu valor con confianza y obtén mejor compensación.',
+          features: [
+            'Investigación de mercado',
+            'Estrategias de negociación',
+            'Evaluación de ofertas',
+            'Técnicas de contra-oferta',
+          ],
+        },
+        {
+          name: 'Mentoría en Liderazgo',
+          duration: '1 hora',
+          description: 'Desarrolla habilidades de liderazgo y gestiona equipos efectivamente.',
+          features: [
+            'Desarrollo de liderazgo',
+            'Gestión de equipos',
+            'Resolución de conflictos',
+            'Coaching ejecutivo',
+          ],
+        },
+        {
+          name: 'Retainer Mensual',
+          duration: '4 horas/mes',
+          description: 'Mentoría continua con programación flexible durante todo el mes.',
+          features: [
+            'Check-ins semanales',
+            'Planificación de carrera',
+            'Preguntas ilimitadas',
+            'Soporte prioritario',
+          ],
+          popular: true,
+        },
+      ],
+      comparison: {
+        title: 'Comparación de Servicios',
+        features: 'Características',
+      },
+      buttons: {
+        scheduleNow: 'Agendar Ahora',
+      },
+      mostPopular: '⭐ MÁS POPULAR',
+    },
+    testimonials: {
+      hero: {
+        title: 'Historias de',
+        titleHighlight: 'Éxito',
+        description: 'Transformaciones reales de personas que he tenido el privilegio de mentorear.',
+      },
+      items: [
+        {
+          name: 'Sarah Johnson',
+          title: 'Gerente de Producto',
+          company: 'Tech Corp',
+          content: 'La mentoría de Gabriel fue transformadora. Proporcionó orientación clara y consejos prácticos que aceleraron significativamente mi crecimiento profesional.',
+          rating: 5,
+        },
+        {
+          name: 'Michael Chen',
+          title: 'Desarrollador Sénior',
+          company: 'StartUp Inc',
+          content: 'La mejor inversión que hice para mi carrera. Los insights de Gabriel me ayudaron a navegar una importante transición de carrera sin problemas.',
+          rating: 5,
+        },
+        {
+          name: 'Emma Rodriguez',
+          title: 'Gerente de Recursos Humanos',
+          company: 'Global Solutions',
+          content: 'Trabajar con Gabriel fue increíble. Me ayudó a construir confianza y habilidades de liderazgo que transformaron mi vida profesional.',
+          rating: 5,
+        },
+        {
+          name: 'James Wilson',
+          title: 'Consultor',
+          company: 'Business Advisors',
+          content: '¡El enfoque práctico y la experiencia profunda de Gabriel hicieron toda la diferencia. ¡Altamente recomendado!',
+          rating: 5,
+        },
+        {
+          name: 'Lisa Martinez',
+          title: 'Empresaria',
+          company: 'Negocio Propio',
+          content: 'La orientación que recibí fue exactamente lo que necesitaba para llevar mi carrera al siguiente nivel.',
+          rating: 5,
+        },
+        {
+          name: 'David Brown',
+          title: 'Gerente de Finanzas',
+          company: 'Global Bank',
+          content: '¡Gabriel me ayudó a negociar un aumento del 40% y avanzar a una posición de director. ¡Mentor excepcional!',
+          rating: 5,
+        },
+      ],
+    },
+    contact: {
+      hero: {
+        title: 'Ponte en',
+        titleHighlight: 'Contacto',
+        description: '¿Listo para comenzar tu viaje de mentoría? Vamos a conectar y discutir cómo puedo ayudarte a lograr tus objetivos.',
+      },
+      info: {
+        title: 'Información de Contacto',
+        subtitle: 'Siéntete libre de contactarme a través de cualquiera de estos canales.',
+        email: 'Correo Electrónico',
+        phone: 'Teléfono',
+        location: 'Ubicación',
+        locationValue: 'Disponible para mentoría virtual en todo el mundo',
+        responseTime: 'Tiempo de Respuesta',
+        responseTimeValue: 'Generalmente dentro de 24 horas',
+        social: 'Conectar en Redes Sociales',
+      },
+      form: {
+        title: 'Envíame un mensaje',
+        labels: {
+          fullName: 'Nombre Completo',
+          email: 'Dirección de Correo',
+          phone: 'Teléfono (Opcional)',
+          subject: 'Asunto',
+          message: 'Mensaje',
+        },
+        placeholders: {
+          fullName: 'Juan Pérez',
+          email: 'juan@ejemplo.com',
+          phone: '+34 (123) 456-7890',
+          subject: 'Estoy interesado en coaching de carrera',
+          message: 'Cuéntame sobre tus objetivos y qué estás buscando...',
+        },
+        button: 'Enviar Mensaje',
+        sending: 'Enviando...',
+        errors: {
+          nameRequired: 'El nombre es obligatorio',
+          emailRequired: 'El correo es obligatorio',
+          emailInvalid: 'Por favor, introduce un correo válido',
+          subjectRequired: 'El asunto es obligatorio',
+          messageRequired: 'El mensaje es obligatorio',
+        },
+        success: '¡Mensaje enviado con éxito! Me pondré en contacto pronto.',
+        error: 'Error al enviar el mensaje',
+      },
+      faq: {
+        title: 'Preguntas Frecuentes',
+        items: [
+          {
+            question: '¿Cuánto tiempo dura una sesión típica de mentoría?',
+            answer: 'Las sesiones varían de 30 minutos a 1,5 horas dependiendo del paquete de servicio que elijas.',
+          },
+          {
+            question: '¿Cuál es tu tiempo de respuesta?',
+            answer: 'Normalmente respondo a consultas dentro de 24 horas durante los días laborales.',
+          },
+          {
+            question: '¿Ofreces horarios flexibles?',
+            answer: 'Sí, trabajo con mentorados en diferentes zonas horarias y ofrezco opciones de programación flexibles.',
+          },
+          {
+            question: '¿Qué pasa si no estoy satisfecho con la mentoría?',
+            answer: 'Tu satisfacción es mi prioridad. Podemos discutir preocupaciones y ajustar el enfoque de mentoría según sea necesario.',
+          },
+        ],
+      },
+    },
+  },
+}

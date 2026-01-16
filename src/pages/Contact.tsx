@@ -1,6 +1,7 @@
 import { useForm } from 'react-hook-form'
 import { useState } from 'react'
 import { sendEmail } from '../services/email'
+import { useLanguage } from '../hooks/useLanguage'
 
 interface ContactFormData {
   name: string
@@ -11,6 +12,7 @@ interface ContactFormData {
 }
 
 const Contact = () => {
+  const { t, translations } = useLanguage()
   const { register, handleSubmit, formState: { errors }, reset } = useForm<ContactFormData>()
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
@@ -47,10 +49,10 @@ const Contact = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-4">
-              Get in <span className="bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">Touch</span>
+              {t('contact.hero.title')} <span className="bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">{t('contact.hero.titleHighlight')}</span>
             </h1>
             <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-              Ready to start your mentorship journey? Let's connect and discuss how I can help you achieve your goals.
+              {t('contact.hero.description')}
             </p>
           </div>
         </div>
@@ -64,10 +66,10 @@ const Contact = () => {
             <div className="space-y-8">
               <div>
                 <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-                  Contact Information
+                  {t('contact.info.title')}
                 </h3>
                 <p className="text-gray-600 dark:text-gray-400 mb-8">
-                  Feel free to reach out to me through any of these channels.
+                  {t('contact.info.subtitle')}
                 </p>
               </div>
 
@@ -77,7 +79,7 @@ const Contact = () => {
                   <div className="text-3xl">📧</div>
                   <div>
                     <h4 className="font-bold text-gray-900 dark:text-white mb-1">
-                      Email
+                      {t('contact.info.email')}
                     </h4>
                     <a
                       href="mailto:gabrieln.dev3@gmail.com"
@@ -93,7 +95,7 @@ const Contact = () => {
                   <div className="text-3xl">📱</div>
                   <div>
                     <h4 className="font-bold text-gray-900 dark:text-white mb-1">
-                      Phone
+                      {t('contact.info.phone')}
                     </h4>
                     <a
                       href="tel:+351928460134"
@@ -109,10 +111,10 @@ const Contact = () => {
                   <div className="text-3xl">📍</div>
                   <div>
                     <h4 className="font-bold text-gray-900 dark:text-white mb-1">
-                      Location
+                      {t('contact.info.location')}
                     </h4>
                     <p className="text-gray-600 dark:text-gray-400">
-                      Available for virtual mentoring worldwide
+                      {t('contact.info.locationValue')}
                     </p>
                   </div>
                 </div>
@@ -122,10 +124,10 @@ const Contact = () => {
                   <div className="text-3xl">⏱️</div>
                   <div>
                     <h4 className="font-bold text-gray-900 dark:text-white mb-1">
-                      Response Time
+                      {t('contact.info.responseTime')}
                     </h4>
                     <p className="text-gray-600 dark:text-gray-400">
-                      Usually within 24 hours
+                      {t('contact.info.responseTimeValue')}
                     </p>
                   </div>
                 </div>
@@ -134,7 +136,7 @@ const Contact = () => {
               {/* Social Links */}
               <div className="pt-8 border-t border-gray-200 dark:border-gray-700">
                 <h4 className="font-bold text-gray-900 dark:text-white mb-4">
-                  Connect on Social
+                  {t('contact.info.social')}
                 </h4>
                 <div className="flex gap-4">
                   <a
@@ -161,14 +163,14 @@ const Contact = () => {
                 {/* Name */}
                 <div>
                   <label htmlFor="name" className="block text-sm font-semibold text-gray-900 dark:text-white mb-2">
-                    Full Name
+                    {t('contact.form.labels.fullName')}
                   </label>
                   <input
-                    {...register('name', { required: 'Name is required' })}
+                    {...register('name', { required: t('contact.form.errors.nameRequired') })}
                     type="text"
                     id="name"
                     className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-600 focus:border-transparent outline-none transition"
-                    placeholder="John Doe"
+                    placeholder={t('contact.form.placeholders.fullName')}
                   />
                   {errors.name && (
                     <p className="text-red-600 text-sm mt-1">{errors.name.message}</p>
@@ -178,20 +180,20 @@ const Contact = () => {
                 {/* Email */}
                 <div>
                   <label htmlFor="email" className="block text-sm font-semibold text-gray-900 dark:text-white mb-2">
-                    Email Address
+                    {t('contact.form.labels.email')}
                   </label>
                   <input
                     {...register('email', {
-                      required: 'Email is required',
+                      required: t('contact.form.errors.emailRequired'),
                       pattern: {
                         value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
-                        message: 'Please enter a valid email',
+                        message: t('contact.form.errors.emailInvalid'),
                       },
                     })}
                     type="email"
                     id="email"
                     className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-600 focus:border-transparent outline-none transition"
-                    placeholder="john@example.com"
+                    placeholder={t('contact.form.placeholders.email')}
                   />
                   {errors.email && (
                     <p className="text-red-600 text-sm mt-1">{errors.email.message}</p>
@@ -201,28 +203,28 @@ const Contact = () => {
                 {/* Phone */}
                 <div>
                   <label htmlFor="phone" className="block text-sm font-semibold text-gray-900 dark:text-white mb-2">
-                    Phone (Optional)
+                    {t('contact.form.labels.phone')}
                   </label>
                   <input
                     {...register('phone')}
                     type="tel"
                     id="phone"
                     className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-600 focus:border-transparent outline-none transition"
-                    placeholder="+1 (234) 567-890"
+                    placeholder={t('contact.form.placeholders.phone')}
                   />
                 </div>
 
                 {/* Subject */}
                 <div>
                   <label htmlFor="subject" className="block text-sm font-semibold text-gray-900 dark:text-white mb-2">
-                    Subject
+                    {t('contact.form.labels.subject')}
                   </label>
                   <input
-                    {...register('subject', { required: 'Subject is required' })}
+                    {...register('subject', { required: t('contact.form.errors.subjectRequired') })}
                     type="text"
                     id="subject"
                     className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-600 focus:border-transparent outline-none transition"
-                    placeholder="I'm interested in career coaching"
+                    placeholder={t('contact.form.placeholders.subject')}
                   />
                   {errors.subject && (
                     <p className="text-red-600 text-sm mt-1">{errors.subject.message}</p>
@@ -232,14 +234,14 @@ const Contact = () => {
                 {/* Message */}
                 <div>
                   <label htmlFor="message" className="block text-sm font-semibold text-gray-900 dark:text-white mb-2">
-                    Message
+                    {t('contact.form.labels.message')}
                   </label>
                   <textarea
-                    {...register('message', { required: 'Message is required' })}
+                    {...register('message', { required: t('contact.form.errors.messageRequired') })}
                     id="message"
                     rows={5}
                     className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-600 focus:border-transparent outline-none transition resize-none"
-                    placeholder="Tell me about your goals and what you're looking for..."
+                    placeholder={t('contact.form.placeholders.message')}
                   ></textarea>
                   {errors.message && (
                     <p className="text-red-600 text-sm mt-1">{errors.message.message}</p>
@@ -249,12 +251,12 @@ const Contact = () => {
                 {/* Status Messages */}
                 {submitStatus === 'success' && (
                   <div className="p-4 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-lg">
-                    ✓ Message sent successfully! I'll get back to you soon.
+                    ✓ {t('contact.form.success')}
                   </div>
                 )}
                 {submitStatus === 'error' && (
                   <div className="p-4 bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-200 rounded-lg">
-                    <p className="font-semibold mb-1">✗ Error sending message</p>
+                    <p className="font-semibold mb-1">✗ {t('contact.form.error')}</p>
                     <p className="text-sm">{errorMessage || 'Please try again later. Check browser console for details.'}</p>
                   </div>
                 )}
@@ -265,7 +267,7 @@ const Contact = () => {
                   disabled={isSubmitting}
                   className="w-full px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:shadow-lg disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300"
                 >
-                  {isSubmitting ? 'Sending...' : 'Send Message'}
+                  {isSubmitting ? t('contact.form.sending') : t('contact.form.button')}
                 </button>
               </form>
             </div>
@@ -277,27 +279,10 @@ const Contact = () => {
       <section className="py-20 bg-gray-50 dark:bg-gray-900">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-12 text-center">
-            Frequently Asked Questions
+            {t('contact.faq.title')}
           </h2>
           <div className="space-y-6">
-            {[
-              {
-                question: 'How long does a typical mentoring session last?',
-                answer: 'Sessions vary from 30 minutes to 1.5 hours depending on the service package you choose.',
-              },
-              {
-                question: 'What is your response time?',
-                answer: 'I typically respond to inquiries within 24 hours during business days.',
-              },
-              {
-                question: 'Do you offer flexible scheduling?',
-                answer: 'Yes! I work with mentees across different time zones and offer flexible scheduling options.',
-              },
-              {
-                question: 'What if I\'m not satisfied with the mentorship?',
-                answer: 'Your satisfaction is my priority. We can discuss concerns and adjust the mentoring approach as needed.',
-              },
-            ].map((faq, index) => (
+            {translations.contact.faq.items.map((faq, index) => (
               <div
                 key={index}
                 className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow"

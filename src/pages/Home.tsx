@@ -1,37 +1,13 @@
 import { Link } from 'react-router-dom'
 import { useCalendly } from '../hooks/useCalendly'
+import { useLanguage } from '../hooks/useLanguage'
 
 const Home = () => {
   const { openCalendly } = useCalendly()
-  const stats = [
-    { label: 'Students Mentored', value: '20+' },
-    { label: 'Success Rate', value: '95%' },
-    { label: 'Years Experience', value: '5+' },
-    { label: 'Companies Helped', value: '1+' },
-  ]
-
-  const features = [
-    {
-      title: 'Personalized Guidance',
-      description: 'Customized mentoring tailored to your specific goals and learning style.',
-      icon: '🎯',
-    },
-    {
-      title: 'Industry Expertise',
-      description: 'Learn from someone with years of real-world experience in the field.',
-      icon: '💼',
-    },
-    {
-      title: 'Career Growth',
-      description: 'Accelerate your career with strategic advice and insider knowledge.',
-      icon: '📈',
-    },
-    {
-      title: 'Network Building',
-      description: 'Get connected with professionals and expand your professional network.',
-      icon: '🤝',
-    }
-  ]
+  const { t, translations } = useLanguage()
+  
+  const stats = translations.home.stats
+  const features = translations.home.features.items
 
   return (
     <div className="w-full">
@@ -44,11 +20,11 @@ const Home = () => {
             {/* Left Content */}
             <div className="space-y-8">
               <h1 className="text-5xl md:text-6xl font-bold text-gray-900 dark:text-white leading-tight">
-                Transform Your <span className="bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">Career</span> Today
+                {t('home.hero.title')} <span className="bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">{t('home.hero.titleHighlight')}</span> {t('home.hero.subtitle')}
               </h1>
               
               <p className="text-xl text-gray-600 dark:text-gray-300 leading-relaxed">
-                Get personalized mentorship from an experienced industry professional. Accelerate your growth, achieve your goals, and unlock your full potential.
+                {t('home.hero.description')}
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4">
@@ -56,13 +32,13 @@ const Home = () => {
                   onClick={openCalendly}
                   className="inline-block px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300 text-center"
                 >
-                  Schedule Free Consultation
+                  {t('home.hero.cta1')}
                 </button>
                 <Link
                   to="/services"
                   className="inline-block px-8 py-4 border-2 border-blue-600 text-blue-600 dark:text-blue-400 dark:border-blue-400 font-semibold rounded-lg hover:bg-blue-50 dark:hover:bg-blue-500 dark:hover:bg-opacity-10 transition-all duration-300 text-center"
                 >
-                  Explore Services
+                  {t('home.hero.cta2')}
                 </Link>
               </div>
 
@@ -79,7 +55,7 @@ const Home = () => {
                   ))}
                 </div>
                 <p className="text-gray-600 dark:text-gray-400">
-                  <span className="font-semibold text-gray-900 dark:text-white">20+</span> students transformed
+                  <span className="font-semibold text-gray-900 dark:text-white">20+</span> {t('home.hero.trustIndicator')}
                 </p>
               </div>
             </div>
@@ -118,10 +94,10 @@ const Home = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-              Why Choose MentorHub?
+              {t('home.features.title')}
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-              Get the guidance you need to succeed in your career and personal growth.
+              {t('home.features.subtitle')}
             </p>
           </div>
 
@@ -148,16 +124,16 @@ const Home = () => {
       <section className="py-20 bg-gradient-to-r from-blue-600 to-cyan-600">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Ready to Transform Your Career?
+            {t('home.cta.title')}
           </h2>
           <p className="text-xl text-blue-100 mb-8">
-            Join hundreds of professionals who have achieved their goals with personalized mentorship.
+            {t('home.cta.subtitle')}
           </p>
           <button
             onClick={openCalendly}
             className="inline-block px-8 py-4 bg-white text-blue-600 font-bold rounded-lg hover:bg-gray-100 transition-colors duration-300"
           >
-            Schedule Your Free Consultation
+            {t('home.cta.button')}
           </button>
         </div>
       </section>

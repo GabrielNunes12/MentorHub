@@ -1,73 +1,8 @@
-const Testimonials = () => {
-  const testimonials = [
-    {
-      id: 1,
-      name: 'Clara Gabrielle',
-      role: 'Mid-level Software Engineer',
-      company: 'Mutant',
-      image: '👩‍💻',
-      content:
-        'Gabriel\'s mentorship has been of great value. I\'ve been learning a lot from him. He has deep programming knowledge and it shows on the way he teaches and gives support in his sessions. I believe he is a great professional and it feels easy to explain the programming problems I\'ve been facing recently.',
-      rating: 5,
-    },
-    {
-      id: 2,
-      name: 'Michael Chen',
-      role: 'Product Manager',
-      company: 'StartUp Inc',
-      image: '👨‍💼',
-      content:
-        'I improved my leadership skills significantly. The mentor provided actionable advice that directly impacted my team performance and company results.',
-      rating: 5,
-    },
-    {
-      id: 3,
-      name: 'Emily Rodriguez',
-      role: 'UX Designer',
-      company: 'Design Studio',
-      image: '👩‍🎨',
-      content:
-        'The interview preparation sessions were invaluable. I landed 3 job offers and negotiated a 25% salary increase. The confidence boost alone was worth it!',
-      rating: 5,
-    },
-    {
-      id: 4,
-      name: 'David Kim',
-      role: 'Data Analyst',
-      company: 'Analytics Pro',
-      image: '👨‍🔬',
-      content:
-        'Career coaching helped me transition from a junior analyst to a senior role within 18 months. The guidance was clear, practical, and results-driven.',
-      rating: 5,
-    },
-    {
-      id: 5,
-      name: 'Lisa Wang',
-      role: 'Marketing Manager',
-      company: 'Brand Solutions',
-      image: '👩‍💼',
-      content:
-        'The monthly retainer program allowed me to have ongoing support for my career growth. It made all the difference in my professional development.',
-      rating: 5,
-    },
-    {
-      id: 6,
-      name: 'James Wilson',
-      role: 'DevOps Engineer',
-      company: 'Cloud Systems',
-      image: '👨‍💻',
-      content:
-        'I went from struggling with imposter syndrome to being confident in my abilities. The mentor\'s support and guidance were exceptional.',
-      rating: 5,
-    },
-  ]
+import { useLanguage } from '../hooks/useLanguage'
 
-  const stats = [
-    { label: 'Student Satisfaction', value: '98%' },
-    { label: 'Career Goals Achieved', value: '95%' },
-    { label: 'Salary Increase Average', value: '+32%' },
-    { label: 'Promotion Rate', value: '78%' },
-  ]
+const Testimonials = () => {
+  const { t, translations } = useLanguage()
+  const testimonials = translations.testimonials.items
 
   return (
     <div className="w-full">
@@ -76,29 +11,11 @@ const Testimonials = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-4">
-              Success <span className="bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">Stories</span>
+              {t('testimonials.hero.title')} <span className="bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">{t('testimonials.hero.titleHighlight')}</span>
             </h1>
             <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-              Real results from real mentees who transformed their careers with personalized guidance.
+              {t('testimonials.hero.description')}
             </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Stats Section */}
-      <section className="py-16 bg-white dark:bg-gray-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent mb-2">
-                  {stat.value}
-                </div>
-                <p className="text-gray-600 dark:text-gray-400 font-medium">
-                  {stat.label}
-                </p>
-              </div>
-            ))}
           </div>
         </div>
       </section>
@@ -107,9 +24,9 @@ const Testimonials = () => {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {testimonials.map((testimonial) => (
+            {testimonials.map((testimonial, index) => (
               <div
-                key={testimonial.id}
+                key={index}
                 className="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-lg hover:shadow-xl hover:-translate-y-2 transition-all duration-300"
               >
                 {/* Rating */}
@@ -127,16 +44,13 @@ const Testimonials = () => {
                 </p>
 
                 {/* Author */}
-                <div className="flex items-center gap-4 pt-6 border-t border-gray-200 dark:border-gray-700">
-                  <div className="text-5xl">{testimonial.image}</div>
-                  <div>
-                    <h4 className="font-bold text-gray-900 dark:text-white">
-                      {testimonial.name}
-                    </h4>
-                    <p className="text-sm text-gray-600 dark:text-gray-400">
-                      {testimonial.role} at {testimonial.company}
-                    </p>
-                  </div>
+                <div className="pt-6 border-t border-gray-200 dark:border-gray-700">
+                  <h4 className="font-bold text-gray-900 dark:text-white">
+                    {testimonial.name}
+                  </h4>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">
+                    {testimonial.title} at {testimonial.company}
+                  </p>
                 </div>
               </div>
             ))}

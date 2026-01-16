@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { useTheme } from '../hooks/useTheme'
+import { LanguageSelector } from './LanguageSelector'
 
 const Navbar = () => {
   const { isDark, toggleTheme } = useTheme()
@@ -30,7 +31,7 @@ const Navbar = () => {
           </Link>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-6">
             {navLinks.map(({ path, label }) => (
               <Link
                 key={path}
@@ -44,6 +45,7 @@ const Navbar = () => {
                 {label}
               </Link>
             ))}
+            <LanguageSelector />
             <button
               onClick={toggleTheme}
               className="p-2 rounded-lg bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors"
@@ -54,7 +56,8 @@ const Navbar = () => {
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="md:hidden flex items-center space-x-4">
+          <div className="md:hidden flex items-center space-x-2">
+            <LanguageSelector />
             <button
               onClick={toggleTheme}
               className="p-2 rounded-lg bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors"

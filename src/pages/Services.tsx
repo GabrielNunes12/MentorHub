@@ -1,92 +1,18 @@
 import { Link } from 'react-router-dom'
 import { useCalendly } from '../hooks/useCalendly'
 import { useUserRegion } from '../hooks/usePricing'
-import { RegionSelector } from '../components/RegionSelector'
+import { useLanguage } from '../hooks/useLanguage'
 
 const Services = () => {
   const { openCalendly } = useCalendly()
   const { region, currency, convertPrice } = useUserRegion()
-  const services = [
-    {
-      id: 1,
-      name: 'Career Coaching',
-      basePrice: 99,
-      duration: '1 hour',
-      description: 'Personalized career guidance to help you navigate your professional path.',
-      features: [
-        'Career path assessment',
-        'Goal setting & planning',
-        'Industry insights',
-        'Actionable advice',
-      ],
-    },
-    {
-      id: 2,
-      name: 'Resume & LinkedIn Review',
-      basePrice: 49,
-      duration: '30 minutes',
-      description: 'Get professional feedback on your resume and LinkedIn profile.',
-      features: [
-        'Resume optimization',
-        'LinkedIn profile enhancement',
-        'ATS keyword optimization',
-        'Professional formatting',
-      ],
-    },
-    {
-      id: 3,
-      name: 'Interview Preparation',
-      basePrice: 79,
-      duration: '45 minutes',
-      description: 'Master interview techniques and boost your confidence.',
-      features: [
-        'Mock interviews',
-        'Answer strategies',
-        'Body language coaching',
-        'Q&A preparation',
-      ],
-    },
-    {
-      id: 4,
-      name: 'Salary Negotiation',
-      basePrice: 129,
-      duration: '1.5 hours',
-      description: 'Negotiate your worth with confidence and get better compensation.',
-      features: [
-        'Market research',
-        'Negotiation strategies',
-        'Offer evaluation',
-        'Counter-offer techniques',
-      ],
-    },
-    {
-      id: 5,
-      name: 'Leadership Mentorship',
-      basePrice: 149,
-      duration: '1 hour',
-      description: 'Develop leadership skills and manage teams effectively.',
-      features: [
-        'Leadership development',
-        'Team management',
-        'Conflict resolution',
-        'Executive coaching',
-      ],
-    },
-    {
-      id: 6,
-      name: 'Monthly Retainer',
-      basePrice: 299,
-      duration: '4 hours/month',
-      description: 'Ongoing mentorship with flexible scheduling throughout the month.',
-      features: [
-        'Weekly check-ins',
-        'Career planning',
-        'Unlimited questions',
-        'Priority support',
-      ],
-      popular: true,
-    },
-  ]
+  const { t, translations } = useLanguage()
+
+  const services = translations.services.cards.map((card, index) => ({
+    id: index + 1,
+    ...card,
+    basePrice: [99, 49, 79, 129, 149, 299][index],
+  }))
 
   return (
     <div className="w-full">
@@ -95,10 +21,10 @@ const Services = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-4">
-              My <span className="bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">Services</span>
+              {translations.services.hero.title} <span className="bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">{translations.services.hero.titleHighlight}</span>
             </h1>
             <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-              Choose the perfect mentorship package tailored to your needs and goals.
+              {t('services.hero.description')}
             </p>
           </div>
         </div>
@@ -112,13 +38,13 @@ const Services = () => {
             <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
               <div>
                 <p className="font-semibold text-blue-900 dark:text-blue-100 mb-2">
-                  Currency: {currency.symbol} {currency.code}
+                  {t('services.regionIndicator.currency')}: {currency.symbol} {currency.code}
                 </p>
                 <p className="text-sm text-blue-800 dark:text-blue-200">
-                  {region === 'BR' && '🇧🇷 Prices in Brazilian Real with accessibility pricing'}
-                  {region === 'EU' && '🇪🇺 Prices in Euro (Eurozone)'}
-                  {region === 'UK' && '🇬🇧 Prices in British Pound'}
-                  {region === 'US' && '🇺🇸 Prices in US Dollar'}
+                  {region === 'BR' && '🇧🇷 Preços em Real Brasileiro com preços acessíveis'}
+                  {region === 'EU' && '🇪🇺 Preços em Euro (Zona do Euro)'}
+                  {region === 'UK' && '🇬🇧 Preços em Libra Esterlina'}
+                  {region === 'US' && '🇺🇸 Preços em Dólar Americano'}
                 </p>
               </div>
               <div>
@@ -158,7 +84,7 @@ const Services = () => {
               >
                 {service.popular && (
                   <div className="bg-yellow-400 text-gray-900 py-2 px-4 font-bold text-center text-sm">
-                    ⭐ MOST POPULAR
+                    {t('services.mostPopular')}
                   </div>
                 )}
                 
@@ -197,7 +123,7 @@ const Services = () => {
                           : 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white hover:shadow-lg'
                       }`}
                     >
-                      Schedule Now
+                      {t('services.buttons.scheduleNow')}
                     </button>
                   </div>
                 </div>
