@@ -3,11 +3,5 @@
   "devCommand": "npm run dev",
   "installCommand": "npm ci",
   "framework": "vite",
-  "outputDirectory": "dist",
-  "regions": ["iad1"],
-  "cleanUrls": true,
-  "trailingSlash": false,
-  "rewrites": [
-    { "source": "/(.+)", "destination": "/index.html" }
-  ]
+  "outputDirectory": "dist"
 }
