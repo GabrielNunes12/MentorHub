@@ -48,23 +48,28 @@ const Services = () => {
                 </p>
               </div>
               <div>
-                <p className="text-sm text-blue-800 dark:text-blue-200 mb-2 font-semibold">Change region:</p>
+                <p className="text-sm text-blue-800 dark:text-blue-200 mb-2 font-semibold">{t('services.regionIndicator.changeRegion')}</p>
                 <div className="flex gap-2">
-                  {['US', 'BR', 'EU', 'UK'].map((r) => (
+                  {[
+                    { code: 'US', flag: '🇺🇸' },
+                    { code: 'BR', flag: '🇧🇷' },
+                    { code: 'EU', flag: '🇪🇺' },
+                    { code: 'UK', flag: '🇬🇧' },
+                  ].map(({ code, flag }) => (
                     <button
-                      key={r}
+                      key={code}
                       onClick={() => {
-                        // We need to expose setUserRegion - will add to context or pass as prop
-                        localStorage.setItem('userRegion', r)
+                        localStorage.setItem('userRegion', code)
                         window.location.reload()
                       }}
-                      className={`px-3 py-1 rounded text-sm font-semibold transition-all ${
-                        region === r
-                          ? 'bg-blue-600 text-white'
-                          : 'bg-white dark:bg-gray-800 text-blue-600 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-gray-700'
+                      className={`px-3 py-2 rounded text-lg transition-all ${
+                        region === code
+                          ? 'bg-blue-600 text-white shadow-lg'
+                          : 'bg-white dark:bg-gray-800 hover:bg-blue-50 dark:hover:bg-gray-700'
                       }`}
+                      title={code}
                     >
-                      {r}
+                      {flag}
                     </button>
                   ))}
                 </div>
@@ -116,7 +121,7 @@ const Services = () => {
 
                   <div className="flex gap-2">
                     <button
-                      onClick={openCalendly}
+                      onClick={() => openCalendly(service.name)}
                       className={`flex-1 py-3 rounded-lg font-semibold text-center transition-colors ${
                         service.popular
                           ? 'bg-white text-blue-600 hover:bg-gray-100'
@@ -151,7 +156,7 @@ const Services = () => {
                 </tr>
               </thead>
               <tbody>
-                {t('services.comparison.items').map((feature, index) => (
+                {translations.services.comparison.items.map((feature: string, index: number) => (
                   <tr key={index} className="border-b border-gray-200 dark:border-gray-700">
                     <td className="py-4 px-4 font-medium text-gray-900 dark:text-white">
                       {feature}
