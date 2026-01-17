@@ -108,6 +108,10 @@ export const translations = {
         currency: 'Currency',
         localPricing: 'Locally adjusted pricing for',
         changeRegion: 'Change region:',
+        br: '🇧🇷 Prices in Brazilian Real with affordable pricing',
+        eu: '🇪🇺 Prices in Euro (Eurozone)',
+        uk: '🇬🇧 Prices in British Pound',
+        us: '🇺🇸 Prices in US Dollar',
       },
       cards: [
         {
@@ -432,6 +436,10 @@ export const translations = {
         currency: 'Moeda',
         localPricing: 'Preços ajustados localmente para',
         changeRegion: 'Mudar região:',
+        br: '🇧🇷 Preços em Real Brasileiro com preços acessíveis',
+        eu: '🇪🇺 Preços em Euro (Zona do Euro)',
+        uk: '🇬🇧 Preços em Libra Esterlina',
+        us: '🇺🇸 Preços em Dólar Americano',
       },
       cards: [
         {
@@ -756,6 +764,10 @@ export const translations = {
         currency: 'Moneda',
         localPricing: 'Precios ajustados localmente para',
         changeRegion: 'Cambiar región:',
+        br: '🇧🇷 Precios en Real Brasileño con precios asequibles',
+        eu: '🇪🇺 Precios en Euro (Zona Euro)',
+        uk: '🇬🇧 Precios en Libra Esterlina',
+        us: '🇺🇸 Precios en Dólar Estadounidense',
       },
       cards: [
         {

@@ -41,10 +41,10 @@ const Services = () => {
                   {t('services.regionIndicator.currency')}: {currency.symbol} {currency.code}
                 </p>
                 <p className="text-sm text-blue-800 dark:text-blue-200">
-                  {region === 'BR' && '🇧🇷 Preços em Real Brasileiro com preços acessíveis'}
-                  {region === 'EU' && '🇪🇺 Preços em Euro (Zona do Euro)'}
-                  {region === 'UK' && '🇬🇧 Preços em Libra Esterlina'}
-                  {region === 'US' && '🇺🇸 Preços em Dólar Americano'}
+                  {region === 'BR' && t('services.regionIndicator.br')}
+                  {region === 'EU' && t('services.regionIndicator.eu')}
+                  {region === 'UK' && t('services.regionIndicator.uk')}
+                  {region === 'US' && t('services.regionIndicator.us')}
                 </p>
               </div>
               <div>
