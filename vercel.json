@@ -5,10 +5,16 @@
   "framework": "vite",
   "outputDirectory": "dist",
   "regions": ["iad1"],
-  "rewrites": [
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "routes": [
     {
-      "source": "/(.*)",
-      "destination": "/index.html"
+      "src": "^/(?!.*\\.).*$",
+      "dest": "/index.html"
+    },
+    {
+      "src": "/assets/(.*)$",
+      "dest": "/assets/$1"
     }
   ]
 }
