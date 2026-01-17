@@ -1,10 +1,11 @@
 import { Link } from 'react-router-dom'
-import { useCalendly } from '../hooks/useCalendly'
+import { useBooking } from '../hooks/useBooking'
+import { BookingModal } from '../components/BookingModal'
 import { useUserRegion } from '../hooks/usePricing'
 import { useLanguage } from '../hooks/useLanguage'
 
 const Services = () => {
-  const { openCalendly } = useCalendly()
+  const { openBooking, closeBooking, confirmBooking, isModalOpen, selectedService } = useBooking()
   const { region, currency, convertPrice } = useUserRegion()
   const { t, translations } = useLanguage()
 
@@ -62,11 +63,10 @@ const Services = () => {
                         localStorage.setItem('userRegion', code)
                         window.location.href = window.location.href
                       }}
-                      className={`px-3 py-2 rounded text-lg transition-all ${
-                        region === code
-                          ? 'bg-blue-600 text-white shadow-lg'
-                          : 'bg-white dark:bg-gray-800 hover:bg-blue-50 dark:hover:bg-gray-700'
-                      }`}
+                      className={`px-3 py-2 rounded text-lg transition-all ${region === code
+                        ? 'bg-blue-600 text-white shadow-lg'
+                        : 'bg-white dark:bg-gray-800 hover:bg-blue-50 dark:hover:bg-gray-700'
+                        }`}
                       title={code}
                     >
                       {flag}
@@ -81,21 +81,20 @@ const Services = () => {
             {services.map((service) => (
               <div
                 key={service.id}
-                className={`rounded-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-2 ${
-                  service.popular
-                    ? 'bg-gradient-to-br from-blue-600 to-cyan-600 text-white shadow-lg'
-                    : 'bg-white dark:bg-gray-800 text-gray-900 dark:text-white'
-                }`}
+                className={`rounded-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-2 ${service.popular
+                  ? 'bg-gradient-to-br from-blue-600 to-cyan-600 text-white shadow-lg'
+                  : 'bg-white dark:bg-gray-800 text-gray-900 dark:text-white'
+                  }`}
               >
                 {service.popular && (
                   <div className="bg-yellow-400 text-gray-900 py-2 px-4 font-bold text-center text-sm">
                     {t('services.mostPopular')}
                   </div>
                 )}
-                
+
                 <div className="p-8">
                   <h3 className="text-2xl font-bold mb-2">{service.name}</h3>
-                  
+
                   <div className="mb-4">
                     <div className="text-4xl font-bold mb-2">
                       {currency.symbol}{convertPrice(service.basePrice)}
@@ -121,12 +120,11 @@ const Services = () => {
 
                   <div className="flex gap-2">
                     <button
-                      onClick={() => openCalendly(service.name)}
-                      className={`flex-1 py-3 rounded-lg font-semibold text-center transition-colors ${
-                        service.popular
-                          ? 'bg-white text-blue-600 hover:bg-gray-100'
-                          : 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white hover:shadow-lg'
-                      }`}
+                      onClick={() => openBooking(service.name, service.id)}
+                      className={`flex-1 py-3 rounded-lg font-semibold text-center transition-colors ${service.popular
+                        ? 'bg-white text-blue-600 hover:bg-gray-100'
+                        : 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white hover:shadow-lg'
+                        }`}
                     >
                       {t('services.buttons.scheduleNow')}
                     </button>
@@ -190,6 +188,15 @@ const Services = () => {
           </Link>
         </div>
       </section>
+      {/* Booking Modal */}
+      <BookingModal
+        isOpen={isModalOpen}
+        onClose={closeBooking}
+        onConfirm={confirmBooking}
+        serviceName={selectedService}
+        price={services.find(s => s.name === selectedService)?.basePrice ? convertPrice(services.find(s => s.name === selectedService)!.basePrice) : 0}
+        currencySymbol={currency.symbol}
+      />
     </div>
   )
 }

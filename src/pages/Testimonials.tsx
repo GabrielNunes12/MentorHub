@@ -49,7 +49,7 @@ const Testimonials = () => {
                     {testimonial.name}
                   </h4>
                   <p className="text-sm text-gray-600 dark:text-gray-400">
-                    {testimonial.title} at {testimonial.company}
+                    {testimonial.title}{testimonial.company}
                   </p>
                 </div>
               </div>
