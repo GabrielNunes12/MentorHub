@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { useCalendly } from '../hooks/useCalendly'
 import { useLanguage } from '../hooks/useLanguage'
+import mentorHubLogo from '../assets/images/mentorHub-Logo.png'
 
 const Home = () => {
   const { openCalendly } = useCalendly()
@@ -29,7 +30,7 @@ const Home = () => {
 
               <div className="flex flex-col sm:flex-row gap-4">
                 <button
-                  onClick={openCalendly}
+                  onClick={() => openCalendly()}
                   className="inline-block px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300 text-center"
                 >
                   {t('home.hero.cta1')}
@@ -65,7 +66,7 @@ const Home = () => {
               <div className="absolute inset-0 bg-gradient-to-br from-blue-400 to-cyan-400 rounded-2xl opacity-20 blur-3xl"></div>
               <div className="relative w-full h-full flex items-center justify-center">
                 <img 
-                  src="/src/assets/images/mentorHub-Logo.png" 
+                  src={mentorHubLogo} 
                   alt="MentorHub Logo" 
                   className="w-96 h-96 object-contain"
                 />
@@ -134,7 +135,7 @@ const Home = () => {
             {t('home.cta.subtitle')}
           </p>
           <button
-            onClick={openCalendly}
+            onClick={() => openCalendly()}
             className="inline-block px-8 py-4 bg-white text-blue-600 font-bold rounded-lg hover:bg-gray-100 transition-colors duration-300"
           >
             {t('home.cta.button')}

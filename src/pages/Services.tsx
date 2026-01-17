@@ -156,15 +156,15 @@ const Services = () => {
                 </tr>
               </thead>
               <tbody>
-                {translations.services.comparison.items.map((feature: string, index: number) => (
+                {translations.services.comparison.items.map((item: any, index: number) => (
                   <tr key={index} className="border-b border-gray-200 dark:border-gray-700">
                     <td className="py-4 px-4 font-medium text-gray-900 dark:text-white">
-                      {feature}
+                      {item.feature}
                     </td>
-                    <td className="py-4 px-4 text-center">✓</td>
-                    <td className="py-4 px-4 text-center">✓</td>
-                    <td className="py-4 px-4 text-center">✓</td>
-                    <td className="py-4 px-4 text-center">✓</td>
+                    <td className="py-4 px-4 text-center text-lg">{item.careerCoaching ? '✓' : '✕'}</td>
+                    <td className="py-4 px-4 text-center text-lg">{item.resumeReview ? '✓' : '✕'}</td>
+                    <td className="py-4 px-4 text-center text-lg">{item.interviewPrep ? '✓' : '✕'}</td>
+                    <td className="py-4 px-4 text-center text-lg">{item.monthlyRetainer ? '✓' : '✕'}</td>
                   </tr>
                 ))}
               </tbody>
