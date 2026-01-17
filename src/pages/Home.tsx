@@ -61,10 +61,14 @@ const Home = () => {
             </div>
 
             {/* Right Image Placeholder */}
-            <div className="relative h-96 md:h-[500px]">
+            <div className="relative h-96 md:h-[500px] flex items-center justify-center">
               <div className="absolute inset-0 bg-gradient-to-br from-blue-400 to-cyan-400 rounded-2xl opacity-20 blur-3xl"></div>
-              <div className="relative w-full h-full bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center text-white text-6xl font-bold">
-                👨‍💼
+              <div className="relative w-full h-full flex items-center justify-center">
+                <img 
+                  src="/src/assets/images/mentorHub-Logo.png" 
+                  alt="MentorHub Logo" 
+                  className="w-96 h-96 object-contain"
+                />
               </div>
             </div>
           </div>
