@@ -11,23 +11,19 @@ export const LanguageSelector = () => {
 
   return (
     <div className="flex items-center gap-2">
-      <span className="text-sm font-semibold text-gray-700 dark:text-gray-300">
-        {t('common.language')}:
-      </span>
       <div className="flex gap-1">
         {languages.map((lang) => (
           <button
             key={lang.code}
             onClick={() => changeLanguage(lang.code)}
-            className={`px-3 py-1 rounded text-sm font-semibold transition-all flex items-center gap-1 ${
+            className={`px-2 py-1 rounded text-lg transition-all ${
               language === lang.code
-                ? 'bg-blue-600 text-white'
-                : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600'
+                ? 'bg-blue-600 shadow-lg'
+                : 'hover:bg-gray-100 dark:hover:bg-gray-700'
             }`}
             title={lang.label}
           >
-            <span>{lang.flag}</span>
-            <span>{lang.code.toUpperCase()}</span>
+            {lang.flag}
           </button>
         ))}
       </div>
