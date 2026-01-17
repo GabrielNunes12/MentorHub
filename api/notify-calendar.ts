@@ -20,9 +20,19 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     }
 
     try {
+        // Clean up the private key
+        // 1. Remove surrounding double quotes if present
+        // 2. Replace literal \n with actual newlines
+        // 3. Ensure it looks like a valid PEM key
+        let privateKey = process.env.GOOGLE_PRIVATE_KEY
+        if (privateKey.startsWith('"') && privateKey.endsWith('"')) {
+            privateKey = privateKey.slice(1, -1)
+        }
+        privateKey = privateKey.replace(/\\n/g, '\n')
+
         const jwtClient = new google.auth.JWT({
             email: process.env.GOOGLE_CLIENT_EMAIL,
-            key: process.env.GOOGLE_PRIVATE_KEY.replace(/\\n/g, '\n'),
+            key: privateKey,
             scopes: ['https://www.googleapis.com/auth/calendar'],
         })
 
