@@ -60,7 +60,7 @@ const Services = () => {
                       key={code}
                       onClick={() => {
                         localStorage.setItem('userRegion', code)
-                        window.location.reload()
+                        window.location.href = window.location.href
                       }}
                       className={`px-3 py-2 rounded text-lg transition-all ${
                         region === code
