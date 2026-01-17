@@ -70,7 +70,7 @@ export const translations = {
         description: 'A passionate mentor dedicated to helping professionals achieve their goals and unlock their potential.',
       },
       profile: {
-        name: 'Hi, Gabriel Nunes!',
+        name: 'Hi I\'m Gabriel Nunes!',
         bio1: 'With over 5 years of experience in the tech industry, I\'ve built a career that spans from individual contributor to team leadership. My journey has been filled with challenges, victories, and invaluable lessons that I\'m passionate about sharing.',
         bio2: 'I believe that everyone has the potential to excel in their career. Through personalized guidance, honest feedback, and strategic planning, I help professionals navigate their career path and achieve their ambitions.',
         bio3: 'My mentorship philosophy is centered on understanding your unique needs, building on your strengths, and addressing your challenges with practical, actionable advice.',
@@ -326,6 +326,37 @@ export const translations = {
         ],
       },
     },
+    footer: {
+      brand: 'MentorHubTech',
+      tagline: 'Empowering the next generation of professionals through personalized mentorship.',
+      quickLinks: {
+        title: 'Quick Links',
+        home: 'Home',
+        about: 'About',
+        services: 'Services',
+        testimonials: 'Testimonials',
+      },
+      services: {
+        title: 'Services',
+        careerCoaching: 'Career Coaching',
+        techMentoring: 'Tech Mentoring',
+        leadershipTraining: 'Leadership Training',
+        resumeReview: 'Resume Review',
+      },
+      connect: {
+        title: 'Connect',
+        email: 'Email',
+        linkedin: 'LinkedIn',
+        twitter: 'Twitter',
+        contactForm: 'Contact Form',
+      },
+      legal: {
+        copyright: '© {year} MentorHubTech. All rights reserved.',
+        privacy: 'Privacy Policy',
+        terms: 'Terms of Service',
+        sitemap: 'Sitemap',
+      },
+    },
   },
   pt: {
     common: {
@@ -398,7 +429,7 @@ export const translations = {
         description: 'Um mentor apaixonado dedicado a ajudar profissionais a alcançar seus objetivos e desbloquear seu potencial.',
       },
       profile: {
-        name: 'Olá, Gabriel Nunes!',
+        name: 'Olá sou o Gabriel Nunes!',
         bio1: 'Com mais de 5 anos de experiência na indústria de tecnologia, construí uma carreira que vai desde colaborador individual até liderança de equipe. Minha jornada foi repleta de desafios, vitórias e lições inestimáveis que sou apaixonado em compartilhar.',
         bio2: 'Acredito que todos têm potencial para se destacar em suas carreiras. Através de orientação personalizada, feedback honesto e planejamento estratégico, ajudo profissionais a navegar em seus caminhos profissionais e alcançar suas ambições.',
         bio3: 'Minha filosofia de mentoria é centrada em entender suas necessidades únicas, construir sobre seus pontos fortes e abordar desafios com conselhos práticos e viáveis.',
@@ -654,6 +685,37 @@ export const translations = {
         ],
       },
     },
+    footer: {
+      brand: 'MentorHubTech',
+      tagline: 'Capacitando a próxima geração de profissionais através de mentoria personalizada.',
+      quickLinks: {
+        title: 'Links Rápidos',
+        home: 'Início',
+        about: 'Sobre',
+        services: 'Serviços',
+        testimonials: 'Depoimentos',
+      },
+      services: {
+        title: 'Serviços',
+        careerCoaching: 'Coaching de Carreira',
+        techMentoring: 'Mentoria Técnica',
+        leadershipTraining: 'Treinamento de Liderança',
+        resumeReview: 'Revisão de Currículo',
+      },
+      connect: {
+        title: 'Conectar',
+        email: 'Email',
+        linkedin: 'LinkedIn',
+        twitter: 'Twitter',
+        contactForm: 'Formulário de Contato',
+      },
+      legal: {
+        copyright: '© {year} MentorHubTech. Todos os direitos reservados.',
+        privacy: 'Política de Privacidade',
+        terms: 'Termos de Serviço',
+        sitemap: 'Mapa do Site',
+      },
+    },
   },
   es: {
     common: {
@@ -726,7 +788,7 @@ export const translations = {
         description: 'Un mentor apasionado dedicado a ayudar a los profesionales a lograr sus objetivos y desbloquear su potencial.',
       },
       profile: {
-        name: '¡Hola, Gabriel Nunes!',
+        name: '¡Hola soy Gabriel Nunes!',
         bio1: 'Con más de 5 años de experiencia en la industria tecnológica, he construido una carrera que abarca desde colaborador individual hasta liderazgo de equipo. Mi viaje ha estado lleno de desafíos, victorias y lecciones invaluables que me apasiona compartir.',
         bio2: 'Creo que todos tienen el potencial de sobresalir en sus carreras. A través de orientación personalizada, retroalimentación honesta y planificación estratégica, ayudo a los profesionales a navegar su camino profesional y lograr sus ambiciones.',
         bio3: 'Mi filosofía de mentoría se centra en comprender tus necesidades únicas, construir sobre tus fortalezas y abordar desafíos con consejos prácticos y viables.',
@@ -980,6 +1042,37 @@ export const translations = {
             answer: 'Tu satisfacción es mi prioridad. Podemos discutir preocupaciones y ajustar el enfoque de mentoría según sea necesario.',
           },
         ],
+      },
+    },
+    footer: {
+      brand: 'MentorHubTech',
+      tagline: 'Empoderando a la próxima generación de profesionales a través de mentoría personalizada.',
+      quickLinks: {
+        title: 'Enlaces Rápidos',
+        home: 'Inicio',
+        about: 'Acerca de',
+        services: 'Servicios',
+        testimonials: 'Testimonios',
+      },
+      services: {
+        title: 'Servicios',
+        careerCoaching: 'Coaching de Carrera',
+        techMentoring: 'Mentoría Técnica',
+        leadershipTraining: 'Capacitación de Liderazgo',
+        resumeReview: 'Revisión de CV',
+      },
+      connect: {
+        title: 'Conectar',
+        email: 'Correo',
+        linkedin: 'LinkedIn',
+        twitter: 'Twitter',
+        contactForm: 'Formulario de Contacto',
+      },
+      legal: {
+        copyright: '© {year} MentorHubTech. Todos los derechos reservados.',
+        privacy: 'Política de Privacidad',
+        terms: 'Términos de Servicio',
+        sitemap: 'Mapa del Sitio',
       },
     },
   },

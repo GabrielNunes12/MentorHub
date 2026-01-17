@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom'
+import { useLanguage } from '../hooks/useLanguage'
 
 const Footer = () => {
+  const { t } = useLanguage()
   const currentYear = new Date().getFullYear()
 
   return (
@@ -10,43 +12,43 @@ const Footer = () => {
           {/* Brand */}
           <div>
             <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-              MentorHub
+              {t('footer.brand')}
             </h3>
             <p className="text-gray-400">
-              Empowering the next generation of professionals through personalized mentorship.
+              {t('footer.tagline')}
             </p>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-semibold mb-4">Quick Links</h4>
+            <h4 className="font-semibold mb-4">{t('footer.quickLinks.title')}</h4>
             <ul className="space-y-2 text-gray-400">
-              <li><Link to="/" className="hover:text-blue-400 transition-colors">Home</Link></li>
-              <li><Link to="/about" className="hover:text-blue-400 transition-colors">About</Link></li>
-              <li><Link to="/services" className="hover:text-blue-400 transition-colors">Services</Link></li>
-              <li><Link to="/testimonials" className="hover:text-blue-400 transition-colors">Testimonials</Link></li>
+              <li><Link to="/" className="hover:text-blue-400 transition-colors">{t('footer.quickLinks.home')}</Link></li>
+              <li><Link to="/about" className="hover:text-blue-400 transition-colors">{t('footer.quickLinks.about')}</Link></li>
+              <li><Link to="/services" className="hover:text-blue-400 transition-colors">{t('footer.quickLinks.services')}</Link></li>
+              <li><Link to="/testimonials" className="hover:text-blue-400 transition-colors">{t('footer.quickLinks.testimonials')}</Link></li>
             </ul>
           </div>
 
           {/* Services */}
           <div>
-            <h4 className="font-semibold mb-4">Services</h4>
+            <h4 className="font-semibold mb-4">{t('footer.services.title')}</h4>
             <ul className="space-y-2 text-gray-400">
-              <li><a href="#services" className="hover:text-blue-400 transition-colors">Career Coaching</a></li>
-              <li><a href="#services" className="hover:text-blue-400 transition-colors">Tech Mentoring</a></li>
-              <li><a href="#services" className="hover:text-blue-400 transition-colors">Leadership Training</a></li>
-              <li><a href="#services" className="hover:text-blue-400 transition-colors">Resume Review</a></li>
+              <li><a href="/services" className="hover:text-blue-400 transition-colors">{t('footer.services.careerCoaching')}</a></li>
+              <li><a href="/services" className="hover:text-blue-400 transition-colors">{t('footer.services.techMentoring')}</a></li>
+              <li><a href="/services" className="hover:text-blue-400 transition-colors">{t('footer.services.leadershipTraining')}</a></li>
+              <li><a href="/services" className="hover:text-blue-400 transition-colors">{t('footer.services.resumeReview')}</a></li>
             </ul>
           </div>
 
           {/* Contact */}
           <div>
-            <h4 className="font-semibold mb-4">Connect</h4>
+            <h4 className="font-semibold mb-4">{t('footer.connect.title')}</h4>
             <ul className="space-y-2 text-gray-400">
-              <li><a href="mailto:hello@mentorhub.com" className="hover:text-blue-400 transition-colors">Email</a></li>
+              <li><a href="mailto:hello@mentorhub.com" className="hover:text-blue-400 transition-colors">{t('footer.connect.email')}</a></li>
               <li><a href="#" className="hover:text-blue-400 transition-colors">LinkedIn</a></li>
               <li><a href="#" className="hover:text-blue-400 transition-colors">Twitter</a></li>
-              <li><Link to="/contact" className="hover:text-blue-400 transition-colors">Contact Form</Link></li>
+              <li><Link to="/contact" className="hover:text-blue-400 transition-colors">{t('footer.connect.contactForm')}</Link></li>
             </ul>
           </div>
         </div>
@@ -55,17 +57,17 @@ const Footer = () => {
         <div className="border-t border-gray-800 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm">
-              © {currentYear} MentorHub. All rights reserved.
+              {t('footer.legal.copyright').replace('{year}', currentYear.toString())}
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <a href="#" className="text-gray-400 hover:text-blue-400 transition-colors text-sm">
-                Privacy Policy
+                {t('footer.legal.privacy')}
               </a>
               <a href="#" className="text-gray-400 hover:text-blue-400 transition-colors text-sm">
-                Terms of Service
+                {t('footer.legal.terms')}
               </a>
               <a href="#" className="text-gray-400 hover:text-blue-400 transition-colors text-sm">
-                Sitemap
+                {t('footer.legal.sitemap')}
               </a>
             </div>
           </div>
