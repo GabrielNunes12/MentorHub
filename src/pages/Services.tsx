@@ -196,6 +196,7 @@ const Services = () => {
         serviceName={selectedService}
         price={services.find(s => s.name === selectedService)?.basePrice ? convertPrice(services.find(s => s.name === selectedService)!.basePrice) : 0}
         currencySymbol={currency.symbol}
+        currencyCode={currency.code}
       />
     </div>
   )

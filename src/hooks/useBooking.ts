@@ -17,9 +17,9 @@ export const useBooking = () => {
         setSelectedServiceId(0)
     }
 
-    const confirmBooking = async (date: Date, time: string, servicePrice: number = 50) => { // Default price or fetch from config
+    const confirmBooking = async (date: Date, time: string, servicePrice: number, currency: string) => {
         try {
-            console.log('Initiating checkout for:', { service: selectedService, date, time })
+            console.log('Initiating checkout for:', { service: selectedService, date, time, currency, amount: servicePrice })
 
             const response = await fetch('/api/create-checkout-session', {
                 method: 'POST',
@@ -29,8 +29,8 @@ export const useBooking = () => {
                 body: JSON.stringify({
                     serviceName: selectedService,
                     serviceId: selectedServiceId,
-                    amount: servicePrice, // You might want to map serviceId to actual prices securely on backend or here
-                    currency: 'usd', // Default currency
+                    amount: servicePrice,
+                    currency: currency,
                     date: date.toISOString(),
                     time,
                     userEmail: 'user@example.com', //Ideally get from user input or auth context

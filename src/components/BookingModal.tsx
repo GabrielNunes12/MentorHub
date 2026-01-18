@@ -7,17 +7,18 @@ import { useLanguage } from '../hooks/useLanguage'
 interface BookingModalProps {
     isOpen: boolean
     onClose: () => void
-    onConfirm: (date: Date, time: string) => void
+    onConfirm: (date: Date, time: string, price: number, currency: string) => void
     serviceName: string
     price: number
     currencySymbol: string
+    currencyCode: string
 }
 
 const TIME_SLOTS = [
     '09:00', '10:00', '11:00', '13:00', '14:00', '15:00', '16:00', '17:00'
 ]
 
-export const BookingModal = ({ isOpen, onClose, onConfirm, serviceName, price, currencySymbol }: BookingModalProps) => {
+export const BookingModal = ({ isOpen, onClose, onConfirm, serviceName, price, currencySymbol, currencyCode }: BookingModalProps) => {
     const [step, setStep] = useState<'date' | 'time' | 'confirm'>('date')
     const [selectedDate, setSelectedDate] = useState<Date>()
     const [selectedTime, setSelectedTime] = useState<string>()
@@ -39,7 +40,7 @@ export const BookingModal = ({ isOpen, onClose, onConfirm, serviceName, price, c
 
     const handleConfirm = () => {
         if (selectedDate && selectedTime) {
-            onConfirm(selectedDate, selectedTime)
+            onConfirm(selectedDate, selectedTime, price, currencyCode)
         }
     }
 
