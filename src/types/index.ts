@@ -1,15 +1,16 @@
 export interface Mentor {
   id: string
   name: string
-  title: string
+  role: string
   bio: string
   image: string
-  email: string
-  linkedIn?: string
-  twitter?: string
-  yearsOfExperience: number
-  studentsMentored: number
-  successRate: number
+  skills: string[]
+  social: {
+    linkedin?: string
+    github?: string
+    twitter?: string
+    email?: string
+  }
 }
 
 export interface Service {

@@ -25,6 +25,7 @@ const Footer = () => {
             <ul className="space-y-2 text-gray-400">
               <li><Link to="/" className="hover:text-blue-400 transition-colors">{t('footer.quickLinks.home')}</Link></li>
               <li><Link to="/about" className="hover:text-blue-400 transition-colors">{t('footer.quickLinks.about')}</Link></li>
+              <li><Link to="/mentors" className="hover:text-blue-400 transition-colors">{t('navbar.mentors')}</Link></li>
               <li><Link to="/services" className="hover:text-blue-400 transition-colors">{t('footer.quickLinks.services')}</Link></li>
               <li><Link to="/testimonials" className="hover:text-blue-400 transition-colors">{t('footer.quickLinks.testimonials')}</Link></li>
             </ul>
@@ -66,6 +67,9 @@ const Footer = () => {
               <a href="#" className="text-gray-400 hover:text-blue-400 transition-colors text-sm">
                 {t('footer.legal.terms')}
               </a>
+              <Link to="/refund-policy" className="text-gray-400 hover:text-blue-400 transition-colors text-sm">
+                {t('footer.legal.refundPolicy')}
+              </Link>
               <a href="#" className="text-gray-400 hover:text-blue-400 transition-colors text-sm">
                 {t('footer.legal.sitemap')}
               </a>

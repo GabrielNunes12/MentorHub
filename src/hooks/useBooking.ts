@@ -1,14 +1,5 @@
 import { useState } from 'react'
 
-const STRIPE_LINKS: Record<number, string> = {
-    1: 'https://buy.stripe.com/aFa7sN65tdW28nX0Fx87K02', // Career Coaching
-    2: 'https://buy.stripe.com/3cI6oJbpN6tAdIh87Z87K00', // Resume & LinkedIn Review
-    3: 'https://buy.stripe.com/cNicN7bpNcRY9s1ewn87K01', // Interview Preparation
-    4: 'https://buy.stripe.com/fZubJ365t7xEeMl87Z87K05', // Salary Negotiation
-    5: 'https://buy.stripe.com/00w6oJalJ2dk1Zzbkb87K04', // Leadership Mentorship
-    6: 'https://buy.stripe.com/7sYdRbbpN9FM33Ddsj87K03'  // Monthly Retainer
-}
-
 export const useBooking = () => {
     const [isModalOpen, setIsModalOpen] = useState(false)
     const [selectedService, setSelectedService] = useState<string>('')
@@ -26,34 +17,38 @@ export const useBooking = () => {
         setSelectedServiceId(0)
     }
 
-    const confirmBooking = async (date: Date, time: string) => {
+    const confirmBooking = async (date: Date, time: string, servicePrice: number = 50) => { // Default price or fetch from config
         try {
-            // Notify Google Calendar
-            await fetch('/api/notify-calendar', {
+            console.log('Initiating checkout for:', { service: selectedService, date, time })
+
+            const response = await fetch('/api/create-checkout-session', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify({
                     serviceName: selectedService,
+                    serviceId: selectedServiceId,
+                    amount: servicePrice, // You might want to map serviceId to actual prices securely on backend or here
+                    currency: 'usd', // Default currency
                     date: date.toISOString(),
                     time,
+                    userEmail: 'user@example.com', //Ideally get from user input or auth context
                 }),
             })
+
+            const data = await response.json()
+
+            if (response.ok && data.url) {
+                window.location.href = data.url
+            } else {
+                console.error('Failed to create checkout session:', data.error)
+                alert('Failed to initiate payment. Please try again.')
+            }
+
         } catch (error) {
-            console.error('Failed to notify calendar:', error)
-            // Continue to payment even if notification fails
-        }
-
-        console.log('Booking confirmed:', { service: selectedService, date, time })
-
-        // Redirect to Stripe
-        const stripeUrl = STRIPE_LINKS[selectedServiceId]
-        if (stripeUrl) {
-            window.location.href = stripeUrl
-        } else {
-            console.error('No Stripe link found for service ID:', selectedServiceId)
-            alert('Payment link not available for this service yet.')
+            console.error('Error during checkout redirection:', error)
+            alert('An unexpected error occurred.')
         }
     }
 

@@ -13,7 +13,37 @@ export const translations = {
       about: 'About',
       services: 'Services',
       testimonials: 'Testimonials',
+      mentors: 'Mentors',
       contact: 'Contact',
+    },
+    mentors: [
+      {
+        id: 'gabriel',
+        name: 'Gabriel Nunes',
+        role: 'Senior Developer & Tech Lead',
+        bio: 'With over 5 years of experience in the tech industry, I built a career that spans from individual contributor to team leadership.',
+        skills: ['Java', 'Spring Boot', 'GCP', 'Leadership', 'Mentoring', 'Agile', 'SQL'],
+        social: {
+          linkedin: 'https://www.linkedin.com/in/gabriel-nunes1/',
+          github: 'https://github.com/GabrielN12',
+          email: 'gabrieln.dev3@gmail.com'
+        }
+      },
+      {
+        id: 'romulo',
+        name: 'Romulo Semião',
+        role: 'Frontend Engineer',
+        bio: 'Frontend Engineer with experience at Capgemini Engineering, working on complex interfaces and agile methodologies.',
+        skills: ['React.js', 'TypeScript', 'SASS', 'HTML', 'NoSQL'],
+        social: {
+          linkedin: 'https://www.linkedin.com/in/romulosemiao',
+          github: 'https://github.com/RomuloSemiao',
+          email: 'r.semiao.a@gmail.com'
+        }
+      }
+    ],
+    mentorsPage: {
+      subtitle: 'Meet our experienced mentors ready to guide you.',
     },
     home: {
       hero: {
@@ -59,7 +89,7 @@ export const translations = {
       },
       cta: {
         title: 'Ready to Transform Your Career?',
-        subtitle: 'Join hundreds of professionals who have achieved their goals with personalized mentorship.',
+        subtitle: 'Join 20 professionals who have achieved their goals with personalized mentorship.',
         button: 'Schedule Your Free Consultation',
       },
     },
@@ -113,6 +143,7 @@ export const translations = {
         uk: '🇬🇧 Prices in British Pound',
         us: '🇺🇸 Prices in US Dollar',
       },
+
       cards: [
         {
           name: 'Career Coaching',
@@ -219,11 +250,28 @@ export const translations = {
       },
       mostPopular: '⭐ MOST POPULAR',
     },
+    refundPolicy: {
+      title: 'Refund Policy',
+      content: {
+        intro: 'We want you to be completely satisfied with your mentorship experience. If you are not satisfied with the service provided, you may request a refund according to the following terms:',
+        conditions: [
+          'Refund requests must be made within 7 days of the session date.',
+          'Cancellations made less than 24 hours before a scheduled session are not eligible for a refund.',
+          'If the mentor cancels a session, a full refund or rescheduling will be offered.',
+          'Refunds will be processed to the original payment method within 5-10 business days.',
+        ],
+        contact: 'To request a refund, please contact us at',
+      },
+    },
     testimonials: {
       hero: {
         title: 'Success Stories',
         titleHighlight: 'Stories',
         description: 'Real transformations from people I\'ve had the privilege to mentor.',
+      },
+      cta: {
+        title: 'Your Success Story Starts Here',
+        button: 'Start Your Journey Today',
       },
       items: [
         {
@@ -364,6 +412,7 @@ export const translations = {
       legal: {
         copyright: '© {year} MentorHubTech. All rights reserved.',
         privacy: 'Privacy Policy',
+        refundPolicy: 'Refund Policy',
         terms: 'Terms of Service',
         sitemap: 'Sitemap',
       },
@@ -383,7 +432,37 @@ export const translations = {
       about: 'Sobre',
       services: 'Serviços',
       testimonials: 'Depoimentos',
+      mentors: 'Mentores',
       contact: 'Contato',
+    },
+    mentors: [
+      {
+        id: 'gabriel',
+        name: 'Gabriel Nunes',
+        role: 'Desenvolvedor Sênior & Tech Lead',
+        bio: 'Com mais de 5 anos de experiência na indústria de tecnologia, construí uma carreira que vai desde colaborador individual até liderança de equipe.',
+        skills: ['Java', 'Spring Boot', 'GCP', 'Leadership', 'Mentoring', 'Agile', 'SQL'],
+        social: {
+          linkedin: 'https://www.linkedin.com/in/gabriel-nunes1/',
+          github: 'https://github.com/GabrielN12',
+          email: 'gabrieln.dev3@gmail.com'
+        }
+      },
+      {
+        id: 'romulo',
+        name: 'Romulo Semião',
+        role: 'Engenheiro Frontend',
+        bio: 'Engenheiro Frontend com experiência na Capgemini Engineering, trabalhando em interfaces complexas e metodologias ágeis.',
+        skills: ['React.js', 'TypeScript', 'SASS', 'HTML', 'NoSQL'],
+        social: {
+          linkedin: 'https://www.linkedin.com/in/romulosemiao',
+          github: 'https://github.com/RomuloSemiao',
+          email: 'r.semiao.a@gmail.com'
+        }
+      }
+    ],
+    mentorsPage: {
+      subtitle: 'Conheça nossos mentores experientes prontos para guiá-lo.',
     },
     home: {
       hero: {
@@ -429,7 +508,7 @@ export const translations = {
       },
       cta: {
         title: 'Pronto para Transformar sua Carreira?',
-        subtitle: 'Junte-se a centenas de profissionais que alcançaram seus objetivos com mentoria personalizada.',
+        subtitle: 'Junte-se a 20 profissionais que alcançaram seus objetivos com mentoria personalizada.',
         button: 'Agendar sua Consulta Gratuita',
       },
     },
@@ -483,6 +562,7 @@ export const translations = {
         uk: '🇬🇧 Preços em Libra Esterlina',
         us: '🇺🇸 Preços em Dólar Americano',
       },
+
       cards: [
         {
           name: 'Coaching de Carreira',
@@ -589,11 +669,28 @@ export const translations = {
       },
       mostPopular: '⭐ MAIS POPULAR',
     },
+    refundPolicy: {
+      title: 'Política de Reembolso',
+      content: {
+        intro: 'Queremos que você esteja completamente satisfeito com sua experiência de mentoria. Se não estiver satisfeito com o serviço prestado, você pode solicitar um reembolso de acordo com os seguintes termos:',
+        conditions: [
+          'Os pedidos de reembolso devem ser feitos dentro de 7 dias da data da sessão.',
+          'Cancelamentos feitos com menos de 24 horas antes de uma sessão agendada não são elegíveis para reembolso.',
+          'Se o mentor cancelar uma sessão, será oferecido um reembolso total ou reagendamento.',
+          'Os reembolsos serão processados para o método de pagamento original dentro de 5 a 10 dias úteis.',
+        ],
+        contact: 'Para solicitar um reembolso, entre em contato conosco em',
+      },
+    },
     testimonials: {
       hero: {
         title: 'Histórias de',
         titleHighlight: 'Sucesso',
         description: 'Transformações reais de pessoas que tive o privilégio de mentorear.',
+      },
+      cta: {
+        title: 'Sua História de Sucesso Começa Aqui',
+        button: 'Comece Sua Jornada Hoje',
       },
       items: [
         {
@@ -734,6 +831,7 @@ export const translations = {
       legal: {
         copyright: '© {year} MentorHubTech. Todos os direitos reservados.',
         privacy: 'Política de Privacidade',
+        refundPolicy: 'Política de Reembolso',
         terms: 'Termos de Serviço',
         sitemap: 'Mapa do Site',
       },
@@ -753,7 +851,37 @@ export const translations = {
       about: 'Acerca',
       services: 'Servicios',
       testimonials: 'Testimonios',
+      mentors: 'Mentores',
       contact: 'Contacto',
+    },
+    mentors: [
+      {
+        id: 'gabriel',
+        name: 'Gabriel Nunes',
+        role: 'Desarrollador Senior & Tech Lead',
+        bio: 'Con más de 5 años de experiencia en la industria tecnológica, he construido una carrera que abarca desde colaborador individual hasta liderazgo de equipo.',
+        skills: ['Java', 'Spring Boot', 'GCP', 'Liderazgo', 'Mentoría', 'Agile', 'SQL'],
+        social: {
+          linkedin: 'https://www.linkedin.com/in/gabriel-nunes1/',
+          github: 'https://github.com/GabrielN12',
+          email: 'gabrieln.dev3@gmail.com'
+        }
+      },
+      {
+        id: 'romulo',
+        name: 'Romulo Semião',
+        role: 'Ingeniero Frontend',
+        bio: 'Ingeniero Frontend con experiencia en Capgemini Engineering, trabajando en interfaces complejas y metodologias ágiles.',
+        skills: ['React.js', 'TypeScript', 'SASS', 'HTML', 'NoSQL'],
+        social: {
+          linkedin: 'https://www.linkedin.com/in/romulosemiao',
+          github: 'https://github.com/RomuloSemiao',
+          email: 'r.semiao.a@gmail.com'
+        }
+      }
+    ],
+    mentorsPage: {
+      subtitle: 'Conozca a nuestros mentores experimentados listos para guiarlo.',
     },
     home: {
       hero: {
@@ -799,7 +927,7 @@ export const translations = {
       },
       cta: {
         title: '¿Listo para Transformar tu Carrera?',
-        subtitle: 'Únete a cientos de profesionales que han logrado sus objetivos con mentoría personalizada.',
+        subtitle: 'Únete a 20 profesionales que han logrado sus objetivos con mentoría personalizada.',
         button: 'Programar tu Consulta Gratuita',
       },
       booking: {
@@ -865,6 +993,7 @@ export const translations = {
         uk: '🇬🇧 Precios en Libra Esterlina',
         us: '🇺🇸 Precios en Dólar Estadounidense',
       },
+
       cards: [
         {
           name: 'Coaching de Carrera',
@@ -960,18 +1089,35 @@ export const translations = {
       },
       mostPopular: '⭐ MÁS POPULAR',
     },
+    refundPolicy: {
+      title: 'Política de Reembolso',
+      content: {
+        intro: 'Queremos que esté completamente satisfecho con su experiencia de mentoría. Si no está satisfecho con el servicio proporcionado, puede solicitar un reembolso de acuerdo con los siguientes términos:',
+        conditions: [
+          'Las solicitudes de reembolso deben realizarse dentro de los 7 días posteriores a la fecha de la sesión.',
+          'Las cancelaciones realizadas con menos de 24 horas antes de una sesión programada no son elegibles para reembolso.',
+          'Si el mentor cancela una sesión, se ofrecerá un reembolso completo o una reprogramación.',
+          'Los reembolsos se procesarán al método de pago original dentro de 5 a 10 días hábiles.',
+        ],
+        contact: 'Para solicitar un reembolso, contáctenos en',
+      },
+    },
     testimonials: {
       hero: {
         title: 'Historias de',
         titleHighlight: 'Éxito',
         description: 'Transformaciones reales de personas que he tenido el privilegio de mentorear.',
       },
+      cta: {
+        title: 'Tu Historia de Éxito Comienza Aquí',
+        button: 'Comienza Tu Viaje Hoy',
+      },
       items: [
         {
           name: 'Clara Gabrielle',
-          title: 'Desarrolladora Pleno',
+          title: 'Desarrolladora Mid',
           company: ' en Mutant',
-          content: 'La mentoría de Gabriel fue de gran valor. He estado aprendiendo mucho de él. Tiene un conocimiento profundo en programación y eso se refleja en la forma en que enseña y da soporte en sus sesiones. Creo que es un excelente profesional y siento facilidad al explicar los problemas de programación que he venido enfrentando últimamente.',
+          content: 'La mentoría de Gabriel ha sido de gran valor. He aprendido mucho con él. Tiene un profundo conocimiento de programación y se nota en la forma en que enseña y brinda apoyo en sus sesiones. Creo que es un gran profesional y es fácil explicar los problemas de programación que he enfrentado recientemente.',
           rating: 5,
         },
         {
@@ -1105,6 +1251,7 @@ export const translations = {
       legal: {
         copyright: '© {year} MentorHubTech. Todos los derechos reservados.',
         privacy: 'Política de Privacidad',
+        refundPolicy: 'Política de Reembolso',
         terms: 'Términos de Servicio',
         sitemap: 'Mapa del Sitio',
       },

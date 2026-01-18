@@ -17,6 +17,7 @@ const Navbar = () => {
   const navLinks = [
     { path: '/', label: t('navbar.home') },
     { path: '/about', label: t('navbar.about') },
+    { path: '/mentors', label: t('navbar.mentors') },
     { path: '/services', label: t('navbar.services') },
     { path: '/testimonials', label: t('navbar.testimonials') },
     { path: '/contact', label: t('navbar.contact') },
@@ -38,11 +39,10 @@ const Navbar = () => {
               <Link
                 key={path}
                 to={path}
-                className={`transition-colors ${
-                  location.pathname === path
+                className={`transition-colors ${location.pathname === path
                     ? 'text-blue-600 dark:text-blue-400 font-semibold'
                     : 'text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400'
-                }`}
+                  }`}
               >
                 {label}
               </Link>
@@ -86,11 +86,10 @@ const Navbar = () => {
               <Link
                 key={path}
                 to={path}
-                className={`block py-2 px-4 rounded transition-colors ${
-                  location.pathname === path
+                className={`block py-2 px-4 rounded transition-colors ${location.pathname === path
                     ? 'text-blue-600 dark:text-blue-400 bg-gray-100 dark:bg-gray-700 font-semibold'
                     : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700'
-                }`}
+                  }`}
               >
                 {label}
               </Link>

@@ -62,16 +62,16 @@ const Testimonials = () => {
       <section className="py-20 bg-gradient-to-r from-blue-600 to-cyan-600">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Your Success Story Starts Here
+            {t('testimonials.cta.title')}
           </h2>
           <p className="text-xl text-blue-100 mb-8">
-            Join hundreds of professionals who have achieved their goals with personalized mentorship.
+            {t('home.cta.subtitle')}
           </p>
           <a
             href="/contact"
             className="inline-block px-8 py-4 bg-white text-blue-600 font-bold rounded-lg hover:bg-gray-100 transition-colors duration-300"
           >
-            Start Your Journey Today
+            {t('testimonials.cta.button')}
           </a>
         </div>
       </section>

@@ -5,6 +5,9 @@ import About from './pages/About'
 import Services from './pages/Services'
 import Testimonials from './pages/Testimonials'
 import Contact from './pages/Contact'
+import RefundPolicy from './pages/RefundPolicy'
+import Mentors from './pages/Mentors'
+import Success from './pages/Success'
 import './styles/globals.css'
 
 function App() {
@@ -17,6 +20,9 @@ function App() {
           <Route path="/services" element={<Services />} />
           <Route path="/testimonials" element={<Testimonials />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/refund-policy" element={<RefundPolicy />} />
+          <Route path="/mentors" element={<Mentors />} />
+          <Route path="/success" element={<Success />} />
         </Routes>
       </Layout>
     </Router>
