@@ -47,7 +47,7 @@ const Success = () => {
                 {status === 'loading' && (
                     <div className="space-y-4">
                         <div className="animate-spin w-12 h-12 border-4 border-blue-600 border-t-transparent rounded-full mx-auto"></div>
-                        <p className="text-gray-600 dark:text-gray-300 font-medium">Verifying your payment...</p>
+                        <p className="text-gray-600 dark:text-gray-300 font-medium">{t('successPage.loading')}</p>
                     </div>
                 )}
 
@@ -56,18 +56,18 @@ const Success = () => {
                         <div className="w-20 h-20 bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center mx-auto">
                             <span className="text-4xl">✅</span>
                         </div>
-                        <h1 className="text-3xl font-bold text-gray-900 dark:text-white">Payment Successful!</h1>
+                        <h1 className="text-3xl font-bold text-gray-900 dark:text-white">{t('successPage.title')}</h1>
                         <p className="text-gray-600 dark:text-gray-300">
-                            Your mentorship session for <strong>{bookingDetails?.serviceName}</strong> has been confirmed.
+                            {t('successPage.confirmationPrefix')} <strong>{bookingDetails?.serviceName}</strong> {t('successPage.confirmationSuffix')}
                         </p>
                         <p className="text-sm text-gray-500 dark:text-gray-400">
-                            We have sent a calendar invitation to your email.
+                            {t('successPage.emailSent')}
                         </p>
                         <Link
                             to="/"
                             className="inline-block w-full py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-lg transition-colors"
                         >
-                            Return Home
+                            {t('successPage.returnHome')}
                         </Link>
                     </div>
                 )}
@@ -77,15 +77,15 @@ const Success = () => {
                         <div className="w-20 h-20 bg-red-100 dark:bg-red-900/30 rounded-full flex items-center justify-center mx-auto">
                             <span className="text-4xl">❌</span>
                         </div>
-                        <h1 className="text-3xl font-bold text-gray-900 dark:text-white">Something went wrong</h1>
+                        <h1 className="text-3xl font-bold text-gray-900 dark:text-white">{t('successPage.errorTitle')}</h1>
                         <p className="text-gray-600 dark:text-gray-300">
-                            We couldn't verify your payment details using session: {sessionId?.slice(0, 8)}...
+                            {t('successPage.errorMessagePrefix')} {sessionId?.slice(0, 8)}...
                         </p>
                         <Link
                             to="/contact"
                             className="inline-block w-full py-3 bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white font-bold rounded-lg hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors"
                         >
-                            Contact Support
+                            {t('successPage.contactSupport')}
                         </Link>
                     </div>
                 )}

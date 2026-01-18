@@ -45,6 +45,17 @@ export const translations = {
     mentorsPage: {
       subtitle: 'Meet our experienced mentors ready to guide you.',
     },
+    successPage: {
+      title: 'Payment Successful!',
+      loading: 'Verifying your payment...',
+      confirmationPrefix: 'Your mentorship session for',
+      confirmationSuffix: 'has been confirmed.',
+      emailSent: 'We have sent a calendar invitation to your email.',
+      returnHome: 'Return Home',
+      errorTitle: 'Something went wrong',
+      errorMessagePrefix: "We couldn't verify your payment details using session:",
+      contactSupport: 'Contact Support'
+    },
     home: {
       hero: {
         title: 'Transform Your',
@@ -464,6 +475,17 @@ export const translations = {
     mentorsPage: {
       subtitle: 'Conheça nossos mentores experientes prontos para guiá-lo.',
     },
+    successPage: {
+      title: 'Pagamento Concluído!',
+      loading: 'Verificando seu pagamento...',
+      confirmationPrefix: 'Sua sessão de mentoria para',
+      confirmationSuffix: 'foi confirmada.',
+      emailSent: 'Enviamos um convite de calendário para o seu e-mail.',
+      returnHome: 'Voltar ao Início',
+      errorTitle: 'Algo deu errado',
+      errorMessagePrefix: 'Não conseguimos verificar os detalhes do seu pagamento usando a sessão:',
+      contactSupport: 'Contatar Suporte'
+    },
     home: {
       hero: {
         title: 'Transforme sua',
@@ -882,6 +904,17 @@ export const translations = {
     ],
     mentorsPage: {
       subtitle: 'Conozca a nuestros mentores experimentados listos para guiarlo.',
+    },
+    successPage: {
+      title: '¡Pago Exitoso!',
+      loading: 'Verificando su pago...',
+      confirmationPrefix: 'Tu sesión de mentoría para',
+      confirmationSuffix: 'ha sido confirmada.',
+      emailSent: 'Hemos enviado una invitación de calendario a tu correo electrónico.',
+      returnHome: 'Volver al Inicio',
+      errorTitle: 'Algo salió mal',
+      errorMessagePrefix: 'No pudimos verificar los detalles de su pago usando la sesión:',
+      contactSupport: 'Contactar Soporte'
     },
     home: {
       hero: {
