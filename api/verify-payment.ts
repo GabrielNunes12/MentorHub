@@ -1,23 +1,32 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node'
 import Stripe from 'stripe'
 import { google } from 'googleapis'
+import { z } from 'zod'
+
+const schema = z.object({
+    sessionId: z.string().min(1)
+})
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
+    if (req.method === 'OPTIONS') {
+        return res.status(200).end()
+    }
+
     if (req.method !== 'POST') {
         return res.status(405).json({ error: 'Method not allowed' })
     }
 
-    const { sessionId } = req.body
-
-    if (!process.env.STRIPE_SECRET_KEY) {
-        return res.status(500).json({ error: 'Missing Stripe Secret Key' })
-    }
-
-    const stripe = new Stripe(process.env.STRIPE_SECRET_KEY, {
-        apiVersion: '2025-12-15.clover',
-    })
-
     try {
+        const { sessionId } = schema.parse(req.body)
+
+        if (!process.env.STRIPE_SECRET_KEY) {
+            return res.status(500).json({ error: 'Missing Stripe Secret Key' })
+        }
+
+        const stripe = new Stripe(process.env.STRIPE_SECRET_KEY, {
+            apiVersion: '2025-12-15.clover',
+        })
+
         // 1. Retrieve session from Stripe
         const session = await stripe.checkout.sessions.retrieve(sessionId)
 
@@ -64,6 +73,23 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
         const endDate = new Date(startDate)
         endDate.setHours(startDate.getHours() + 1)
 
+        // Check for existing event to prevent duplicates
+        const existingEvents = await calendar.events.list({
+            calendarId: process.env.GOOGLE_CALENDAR_ID,
+            timeMin: startDate.toISOString(),
+            timeMax: endDate.toISOString(),
+            singleEvents: true,
+        })
+
+        const eventExists = existingEvents.data.items?.some(event =>
+            event.summary === `Mentorship: ${serviceName} - ${userName}`
+        )
+
+        if (eventExists) {
+            console.log('Event already exists, skipping creation')
+            return res.status(200).json({ success: true, booking: metadata })
+        }
+
         await calendar.events.insert({
             calendarId: process.env.GOOGLE_CALENDAR_ID,
             requestBody: {
@@ -83,7 +109,12 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
         return res.status(200).json({ success: true, booking: metadata })
 
+
     } catch (error: any) {
+        if (error instanceof z.ZodError) {
+            console.error('Validation Error:', error.errors)
+            return res.status(400).json({ error: 'Invalid input data', details: error.errors })
+        }
         console.error('Payment Verification Error:', error)
         return res.status(500).json({ error: error.message || 'Failed to verify payment' })
     }

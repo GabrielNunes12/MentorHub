@@ -1,6 +1,7 @@
 import express from 'express'
 import cors from 'cors'
 import dotenv from 'dotenv'
+import helmet from 'helmet'
 import handler from './api/notify-calendar'
 import createCheckoutSession from './api/create-checkout-session'
 import verifyPayment from './api/verify-payment'
@@ -8,7 +9,13 @@ import verifyPayment from './api/verify-payment'
 dotenv.config({ path: '.env.local' })
 
 const app = express()
-app.use(cors())
+
+app.use(helmet())
+app.use(cors({
+    origin: ['http://localhost:5173', 'https://mentor-hub.space'],
+    methods: ['GET', 'POST', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization']
+}))
 app.use(express.json())
 
 app.post('/api/notify-calendar', async (req, res) => {

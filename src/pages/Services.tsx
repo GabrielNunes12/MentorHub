@@ -3,17 +3,29 @@ import { useBooking } from '../hooks/useBooking'
 import { BookingModal } from '../components/BookingModal'
 import { useUserRegion } from '../hooks/usePricing'
 import { useLanguage } from '../hooks/useLanguage'
+import { pricingStructure } from '../data/pricing'
 
 const Services = () => {
   const { openBooking, closeBooking, confirmBooking, isModalOpen, selectedService } = useBooking()
   const { region, currency, convertPrice } = useUserRegion()
   const { t, translations } = useLanguage()
 
-  const services = translations.services.cards.map((card, index) => ({
-    id: index + 1,
-    ...card,
-    basePrice: [99, 49, 79, 129, 149, 299][index],
-  }))
+  const services = translations.services.cards.map((card, index) => {
+    const prices = pricingStructure[index]
+    let finalPrice = prices.US // Default to US
+
+    if (region === 'BR') finalPrice = prices.BR
+    else if (region === 'EU') finalPrice = prices.EU
+    else if (region === 'US') finalPrice = prices.US
+    else finalPrice = convertPrice(prices.US) // Fallback for UK/Other using conversion strategy
+
+    return {
+      id: index + 1,
+      ...card,
+      displayPrice: finalPrice,
+      basePrice: prices.US // Keep track of base for reference if needed
+    }
+  })
 
   return (
     <div className="w-full">
@@ -97,7 +109,7 @@ const Services = () => {
 
                   <div className="mb-4">
                     <div className="text-4xl font-bold mb-2">
-                      {currency.symbol}{convertPrice(service.basePrice)}
+                      {currency.symbol}{service.displayPrice}
                     </div>
                     <p className={`text-sm ${service.popular ? 'text-blue-100' : 'text-gray-600 dark:text-gray-400'}`}>
                       {service.duration}
@@ -194,7 +206,7 @@ const Services = () => {
         onClose={closeBooking}
         onConfirm={confirmBooking}
         serviceName={selectedService}
-        price={services.find(s => s.name === selectedService)?.basePrice ? convertPrice(services.find(s => s.name === selectedService)!.basePrice) : 0}
+        price={services.find(s => s.name === selectedService)?.displayPrice || 0}
         currencySymbol={currency.symbol}
         currencyCode={currency.code}
       />

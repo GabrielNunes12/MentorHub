@@ -1,22 +1,37 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node'
 import Stripe from 'stripe'
+import { z } from 'zod'
+
+const schema = z.object({
+    serviceName: z.string().min(1),
+    amount: z.number().positive(),
+    currency: z.string().length(3),
+    date: z.string().datetime().or(z.string()), // Accept ISO string or other date formats if needed
+    time: z.string().regex(/^\d{2}:\d{2}$/, "Invalid time format (HH:MM)"),
+    userEmail: z.string().email(),
+    serviceId: z.number().or(z.string()).optional()
+})
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
+    if (req.method === 'OPTIONS') {
+        return res.status(200).end()
+    }
+
     if (req.method !== 'POST') {
         return res.status(405).json({ error: 'Method not allowed' })
     }
 
-    const { serviceName, amount, currency, date, time, userEmail, serviceId } = req.body
-
-    if (!process.env.STRIPE_SECRET_KEY) {
-        return res.status(500).json({ error: 'Missing Stripe Secret Key' })
-    }
-
-    const stripe = new Stripe(process.env.STRIPE_SECRET_KEY, {
-        apiVersion: '2025-12-15.clover', // Use latest or pinning version
-    })
-
     try {
+        const { serviceName, amount, currency, date, time, userEmail, serviceId } = schema.parse(req.body)
+
+        if (!process.env.STRIPE_SECRET_KEY) {
+            return res.status(500).json({ error: 'Missing Stripe Secret Key' })
+        }
+
+        const stripe = new Stripe(process.env.STRIPE_SECRET_KEY, {
+            apiVersion: '2025-12-15.clover', // Use latest or pinning version
+        })
+
         // Construct detailed description
         const description = `Mentorship Session: ${serviceName} on ${new Date(date).toLocaleDateString()} at ${time}`
 
@@ -48,12 +63,17 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
                 serviceName,
                 date,
                 time,
-                serviceId: serviceId?.toString(),
+                serviceId: serviceId ? serviceId.toString() : '',
             },
         })
 
         return res.status(200).json({ url: session.url })
+
     } catch (error: any) {
+        if (error instanceof z.ZodError) {
+            console.error('Validation Error:', error.errors)
+            return res.status(400).json({ error: 'Invalid input data', details: error.errors })
+        }
         console.error('Stripe Checkout Error:', error)
         return res.status(500).json({ error: error.message || 'Failed to create checkout session' })
     }

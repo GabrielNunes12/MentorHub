@@ -168,7 +168,7 @@ export const translations = {
           ],
         },
         {
-          name: 'Resume & LinkedIn Review',
+          name: 'Tech Profile Optimization (ATS & GitHub)',
           duration: '30 minutes',
           description: 'Get professional feedback on your resume and LinkedIn profile.',
           features: [
@@ -179,7 +179,7 @@ export const translations = {
           ],
         },
         {
-          name: 'Interview Preparation',
+          name: 'Tech Interview & System Design Prep',
           duration: '45 minutes',
           description: 'Master interview techniques and boost your confidence.',
           features: [
@@ -190,7 +190,7 @@ export const translations = {
           ],
         },
         {
-          name: 'Salary Negotiation',
+          name: 'Rate Negotiation Strategy',
           duration: '1.5 hours',
           description: 'Negotiate your worth with confidence and get better compensation.',
           features: [
@@ -212,7 +212,7 @@ export const translations = {
           ],
         },
         {
-          name: 'Monthly Retainer',
+          name: 'Speed mentorship (Tech Lead Path)',
           duration: '4 hours/month',
           description: 'Ongoing mentorship with flexible scheduling throughout the month.',
           features: [
@@ -228,9 +228,9 @@ export const translations = {
         title: 'Service Comparison',
         features: 'Features',
         careerCoaching: 'Career Coaching',
-        resumeReview: 'Resume Review',
-        interviewPrep: 'Interview Prep',
-        monthlyRetainer: 'Monthly Retainer',
+        resumeReview: 'Profile Optimization',
+        interviewPrep: 'Tech Interview Prep',
+        monthlyRetainer: 'Speed Mentorship',
         items: [
           { feature: 'One-on-one sessions', careerCoaching: true, resumeReview: true, interviewPrep: true, monthlyRetainer: true },
           { feature: 'Career assessment', careerCoaching: true, resumeReview: false, interviewPrep: false, monthlyRetainer: true },
@@ -598,7 +598,7 @@ export const translations = {
           ],
         },
         {
-          name: 'Revisão de Currículo e LinkedIn',
+          name: 'Otimização de Perfil Tech (ATS & GitHub)',
           duration: '30 minutos',
           description: 'Receba feedback profissional sobre seu currículo e perfil LinkedIn.',
           features: [
@@ -609,7 +609,7 @@ export const translations = {
           ],
         },
         {
-          name: 'Preparação para Entrevistas',
+          name: 'Preparação para Entrevista Técnica e System Design',
           duration: '45 minutos',
           description: 'Domine técnicas de entrevista e aumente sua confiança.',
           features: [
@@ -620,7 +620,7 @@ export const translations = {
           ],
         },
         {
-          name: 'Negociação Salarial',
+          name: 'Estratégia de Negociação de Taxas',
           duration: '1,5 horas',
           description: 'Negocie seu valor com confiança e obtenha melhor compensação.',
           features: [
@@ -642,7 +642,7 @@ export const translations = {
           ],
         },
         {
-          name: 'Retainer Mensal',
+          name: 'Mentoria Rápida (Caminho para Tech Lead)',
           duration: '4 horas/mês',
           description: 'Mentoria contínua com agendamento flexível durante todo o mês.',
           features: [
@@ -658,9 +658,9 @@ export const translations = {
         title: 'Comparação de Serviços',
         features: 'Funcionalidades',
         careerCoaching: 'Coaching de Carreira',
-        resumeReview: 'Revisão de Currículo',
-        interviewPrep: 'Preparação para Entrevista',
-        monthlyRetainer: 'Contrato Mensal',
+        resumeReview: 'Otimização de Perfil',
+        interviewPrep: 'Prep Entrevista Técnica',
+        monthlyRetainer: 'Mentoria Rápida',
         items: [
           { feature: 'Sessões individuais', careerCoaching: true, resumeReview: true, interviewPrep: true, monthlyRetainer: true },
           { feature: 'Avaliação de carreira', careerCoaching: true, resumeReview: false, interviewPrep: false, monthlyRetainer: true },
@@ -1040,7 +1040,7 @@ export const translations = {
           ],
         },
         {
-          name: 'Revisión de Currículum y LinkedIn',
+          name: 'Optimización de Perfil Tech (ATS y GitHub)',
           duration: '30 minutos',
           description: 'Obtén retroalimentación profesional sobre tu currículum y perfil de LinkedIn.',
           features: [
@@ -1051,7 +1051,7 @@ export const translations = {
           ],
         },
         {
-          name: 'Preparación para Entrevistas',
+          name: 'Prep Entrevista Técnica y Diseño de Sistemas',
           duration: '45 minutos',
           description: 'Domina técnicas de entrevista y aumenta tu confianza.',
           features: [
@@ -1062,7 +1062,7 @@ export const translations = {
           ],
         },
         {
-          name: 'Negociación Salarial',
+          name: 'Estrategia de Negociación de Tarifas',
           duration: '1,5 horas',
           description: 'Negocia tu valor con confianza y obtén mejor compensación.',
           features: [
@@ -1084,7 +1084,7 @@ export const translations = {
           ],
         },
         {
-          name: 'Retainer Mensual',
+          name: 'Mentoría Rápida (Camino a Tech Lead)',
           duration: '4 horas/mes',
           description: 'Mentoría continua con programación flexible durante todo el mes.',
           features: [
@@ -1100,9 +1100,9 @@ export const translations = {
         title: 'Comparación de Servicios',
         features: 'Características',
         careerCoaching: 'Coaching de Carrera',
-        resumeReview: 'Revisión de Currículum',
-        interviewPrep: 'Preparación para Entrevistas',
-        monthlyRetainer: 'Paquete Mensual',
+        resumeReview: 'Optimización de Perfil',
+        interviewPrep: 'Prep Entrevista Técnica',
+        monthlyRetainer: 'Mentoría Rápida',
         items: [
           { feature: 'Sesiones individuales', careerCoaching: true, resumeReview: true, interviewPrep: true, monthlyRetainer: true },
           { feature: 'Evaluación de carrera', careerCoaching: true, resumeReview: false, interviewPrep: false, monthlyRetainer: true },
