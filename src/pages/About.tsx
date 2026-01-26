@@ -1,4 +1,4 @@
-import myPhoto from '../assets/images/my-photo.png'
+import myPhoto from '../assets/images/photo-pica.png'
 import { useLanguage } from '../hooks/useLanguage'
 
 const About = () => {
@@ -32,7 +32,7 @@ const About = () => {
               <img
                 src={myPhoto}
                 alt="Gabriel Nunes"
-                className="relative w-full h-full object-cover rounded-2xl shadow-2xl border-4 border-white dark:border-gray-700"
+                className="relative w-full h-full object-cover object-top rounded-2xl shadow-2xl border-4 border-white dark:border-gray-700"
               />
             </div>
 

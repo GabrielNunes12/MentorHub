@@ -1,6 +1,6 @@
 import { useLanguage } from '../hooks/useLanguage'
 import type { Mentor } from '../types'
-import myPhoto from '../assets/images/my-photo.png'
+import myPhoto from '../assets/images/my-photo-2.png'
 import romuloPhoto from '../assets/images/romulo.png'
 
 // Map mentor IDs to images
@@ -42,7 +42,7 @@ const Mentors = () => {
                                     <img
                                         src={mentorImages[mentor.id]}
                                         alt={mentor.name}
-                                        className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+                                        className="w-full h-full object-cover object-top transform group-hover:scale-110 transition-transform duration-500"
                                     />
                                     <div className="absolute bottom-4 left-4 z-20">
                                         <h3 className="text-2xl font-bold text-white mb-1">{mentor.name}</h3>
