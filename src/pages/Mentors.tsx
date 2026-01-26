@@ -9,6 +9,8 @@ const mentorImages: Record<string, string> = {
     romulo: romuloPhoto
 }
 
+import SEO from '../components/SEO'
+
 const Mentors = () => {
     const { t, translations } = useLanguage()
     // @ts-ignore - Temporary ignore until we fix the type inference fully or types are updated
@@ -16,6 +18,11 @@ const Mentors = () => {
 
     return (
         <div className="w-full">
+            <SEO
+                title="Meet Our Mentors"
+                description="Connect with experienced mentors like Gabriel Nunes and Romulo Semião. Get guidance on Backend, Frontend, and Career growth."
+                canonical={`${window.location.origin}/mentors`}
+            />
             {/* Hero Section */}
             <section className="py-20 bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-gray-900 dark:to-gray-800">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

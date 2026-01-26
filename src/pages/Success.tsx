@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react'
 import { useSearchParams, Link } from 'react-router-dom'
 import { useLanguage } from '../hooks/useLanguage'
 
+import SEO from '../components/SEO'
+
 const Success = () => {
     const [searchParams] = useSearchParams()
     const sessionId = searchParams.get('session_id')
@@ -43,6 +45,11 @@ const Success = () => {
 
     return (
         <div className="min-h-screen bg-gray-50 dark:bg-gray-900 flex items-center justify-center px-4">
+            <SEO
+                title="Payment Successful"
+                description="Your mentorship session has been successfully booked."
+                noindex={true}
+            />
             <div className="max-w-md w-full bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-xl text-center">
                 {status === 'loading' && (
                     <div className="space-y-4">

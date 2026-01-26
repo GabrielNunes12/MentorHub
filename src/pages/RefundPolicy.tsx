@@ -1,11 +1,18 @@
 import { useLanguage } from '../hooks/useLanguage'
 
+import SEO from '../components/SEO'
+
 const RefundPolicy = () => {
     const { t, translations } = useLanguage()
     const refundContent = translations.refundPolicy?.content || { conditions: [] }
 
     return (
         <div className="w-full pt-20 pb-20">
+            <SEO
+                title="Refund Policy"
+                description="Read our refund policy regarding mentorship sessions and rescheduling."
+                canonical={`${window.location.origin}/refund-policy`}
+            />
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
                 <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-8">
                     {t('refundPolicy.title')}

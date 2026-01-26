@@ -1,11 +1,18 @@
 import { useLanguage } from '../hooks/useLanguage'
 
+import SEO from '../components/SEO'
+
 const Testimonials = () => {
   const { t, translations } = useLanguage()
   const testimonials = translations.testimonials.items
 
   return (
     <div className="w-full">
+      <SEO
+        title="Student Success Stories"
+        description="Read how MentorHubTech has helped developers transform their careers, land new jobs, and negotiate better salaries."
+        canonical={`${window.location.origin}/testimonials`}
+      />
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-gray-900 dark:to-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

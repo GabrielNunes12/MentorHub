@@ -11,6 +11,8 @@ interface ContactFormData {
   message: string
 }
 
+import SEO from '../components/SEO'
+
 const Contact = () => {
   const { t, translations } = useLanguage()
   const { register, handleSubmit, formState: { errors }, reset } = useForm<ContactFormData>()
@@ -44,6 +46,11 @@ const Contact = () => {
 
   return (
     <div className="w-full">
+      <SEO
+        title="Contact MentorHubTech"
+        description="Get in touch with Gabriel Nunes for mentorship tailored to your career goals. Schedule a consultation or send a message."
+        canonical={`${window.location.origin}/contact`}
+      />
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-gray-900 dark:to-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

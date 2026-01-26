@@ -1,6 +1,8 @@
 import myPhoto from '../assets/images/photo-pica.png'
 import { useLanguage } from '../hooks/useLanguage'
 
+import SEO from '../components/SEO'
+
 const About = () => {
   const { t, translations } = useLanguage()
   const timeline = translations.about.timeline.events
@@ -9,6 +11,11 @@ const About = () => {
 
   return (
     <div className="w-full">
+      <SEO
+        title="About Gabriel Nunes"
+        description="Learn about Gabriel Nunes, a Senior Developer and Tech Lead with over 5 years of experience in mentorship and software engineering."
+        canonical={`${window.location.origin}/about`}
+      />
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-gray-900 dark:to-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

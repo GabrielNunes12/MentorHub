@@ -73,7 +73,7 @@ export const translations = {
         { label: 'Companies Helped', value: '1+' },
       ],
       features: {
-        title: 'Why Choose MentorHub?',
+        title: 'Why Choose MentorHubTech?',
         subtitle: 'Get the guidance you need to succeed in your career and personal growth.',
         items: [
           {
@@ -450,7 +450,7 @@ export const translations = {
         { label: 'Empresas Ajudadas', value: '1+' },
       ],
       features: {
-        title: 'Por que escolher MentorHub?',
+        title: 'Por que escolher MentorHubTech?',
         subtitle: 'Obtenha a orientação que você precisa para ter sucesso em sua carreira e crescimento pessoal.',
         items: [
           {
@@ -827,7 +827,7 @@ export const translations = {
         { label: 'Empresas Ayudadas', value: '1+' },
       ],
       features: {
-        title: '¿Por qué elegir MentorHub?',
+        title: '¿Por qué elegir MentorHubTech?',
         subtitle: 'Obtén la orientación que necesitas para tener éxito en tu carrera y crecimiento personal.',
         items: [
           {

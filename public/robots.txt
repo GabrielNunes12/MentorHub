@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://mentor-hub.space/sitemap.xml

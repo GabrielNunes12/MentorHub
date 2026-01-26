@@ -3,19 +3,26 @@ import { useCalendly } from '../hooks/useCalendly'
 import { useLanguage } from '../hooks/useLanguage'
 import mentorHubLogo from '../assets/images/mentorHub-Logo.png'
 
+import SEO from '../components/SEO'
+
 const Home = () => {
   const { openCalendly } = useCalendly()
   const { t, translations } = useLanguage()
-  
+
   const stats = translations.home.stats
   const features = translations.home.features.items
 
   return (
     <div className="w-full">
+      <SEO
+        title="Career Mentorship for Developers"
+        description="Get personalized mentorship from an experienced Tech Lead. Accelerate your career in Backend or Frontend development with MentorHubTech."
+        canonical={window.location.origin}
+      />
       {/* Hero Section */}
       <section className="min-h-[90vh] flex items-center bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-gray-900 dark:to-gray-800 relative overflow-hidden">
         <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 w-96 h-96 bg-blue-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"></div>
-        
+
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             {/* Left Content */}
@@ -23,7 +30,7 @@ const Home = () => {
               <h1 className="text-5xl md:text-6xl font-bold text-gray-900 dark:text-white leading-tight">
                 {t('home.hero.title')} <span className="bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">{t('home.hero.titleHighlight')}</span> {t('home.hero.subtitle')}
               </h1>
-              
+
               <p className="text-xl text-gray-600 dark:text-gray-300 leading-relaxed">
                 {t('home.hero.description')}
               </p>
@@ -65,9 +72,9 @@ const Home = () => {
             <div className="relative h-96 md:h-[500px] flex items-center justify-center">
               <div className="absolute inset-0 bg-gradient-to-br from-blue-400 to-cyan-400 rounded-2xl opacity-20 blur-3xl"></div>
               <div className="relative w-full h-full flex items-center justify-center">
-                <img 
-                  src={mentorHubLogo} 
-                  alt="MentorHub Logo" 
+                <img
+                  src={mentorHubLogo}
+                  alt="MentorHubTech Logo"
                   className="w-96 h-96 object-contain"
                 />
               </div>

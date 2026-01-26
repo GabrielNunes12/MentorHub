@@ -5,6 +5,8 @@ import { useUserRegion } from '../hooks/usePricing'
 import { useLanguage } from '../hooks/useLanguage'
 import { pricingStructure } from '../data/pricing'
 
+import SEO from '../components/SEO'
+
 const Services = () => {
   const { openBooking, closeBooking, confirmBooking, isModalOpen, selectedService } = useBooking()
   const { region, currency, convertPrice } = useUserRegion()
@@ -29,6 +31,11 @@ const Services = () => {
 
   return (
     <div className="w-full">
+      <SEO
+        title="Mentorship Services"
+        description="Choose from specialized Backend and Frontend mentorship plans tailored to accelerate your career growth."
+        canonical={`${window.location.origin}/services`}
+      />
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-gray-900 dark:to-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
