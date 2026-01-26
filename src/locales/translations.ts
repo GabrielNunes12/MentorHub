@@ -157,71 +157,27 @@ export const translations = {
 
       cards: [
         {
-          name: 'Career Coaching',
+          name: 'Backend Mentorship',
           duration: '1 hour',
-          description: 'Personalized career guidance to help you navigate your professional path.',
+          description: 'Master backend development with AI, architectures, and best practices.',
           features: [
-            'Career path assessment',
-            'Goal setting & planning',
-            'Industry insights',
-            'Actionable advice',
-          ],
-        },
-        {
-          name: 'Tech Profile Optimization (ATS & GitHub)',
-          duration: '30 minutes',
-          description: 'Get professional feedback on your resume and LinkedIn profile.',
-          features: [
-            'Resume optimization',
-            'LinkedIn profile enhancement',
-            'ATS keyword optimization',
-            'Professional formatting',
-          ],
-        },
-        {
-          name: 'Tech Interview & System Design Prep',
-          duration: '45 minutes',
-          description: 'Master interview techniques and boost your confidence.',
-          features: [
-            'Mock interviews',
-            'Answer strategies',
-            'Body language coaching',
-            'Q&A preparation',
-          ],
-        },
-        {
-          name: 'Rate Negotiation Strategy',
-          duration: '1.5 hours',
-          description: 'Negotiate your worth with confidence and get better compensation.',
-          features: [
-            'Market research',
-            'Negotiation strategies',
-            'Offer evaluation',
-            'Counter-offer techniques',
-          ],
-        },
-        {
-          name: 'Leadership Mentorship',
-          duration: '1 hour',
-          description: 'Develop leadership skills and manage teams effectively.',
-          features: [
-            'Leadership development',
-            'Team management',
-            'Conflict resolution',
-            'Executive coaching',
-          ],
-        },
-        {
-          name: 'Speed mentorship (Tech Lead Path)',
-          duration: '4 hours/month',
-          description: 'Ongoing mentorship with flexible scheduling throughout the month.',
-          features: [
-            'Weekly check-ins',
-            'Career planning',
-            'Unlimited questions',
-            'Priority support',
+            'AI & Complex Problem Solving',
+            'Design Patterns & Architectures',
+            'Data Structures & Algorithms',
+            'Clean Code & SOLID Principles',
           ],
           popular: true,
+        },
+        {
+          name: 'Frontend Mentorship',
+          duration: '1 hour',
+          description: 'Build modern user interfaces with React, AI, and best practices.',
+          features: [
+            'Components & React.js',
+            'AI Integration',
+            'Separation of Concerns',
+            'Modern UI/UX Patterns',
+          ],
         },
       ],
       comparison: {
@@ -231,14 +187,7 @@ export const translations = {
         resumeReview: 'Profile Optimization',
         interviewPrep: 'Tech Interview Prep',
         monthlyRetainer: 'Speed Mentorship',
-        items: [
-          { feature: 'One-on-one sessions', careerCoaching: true, resumeReview: true, interviewPrep: true, monthlyRetainer: true },
-          { feature: 'Career assessment', careerCoaching: true, resumeReview: false, interviewPrep: false, monthlyRetainer: true },
-          { feature: 'Interview coaching', careerCoaching: true, resumeReview: false, interviewPrep: true, monthlyRetainer: true },
-          { feature: 'Unlimited messages', careerCoaching: false, resumeReview: false, interviewPrep: false, monthlyRetainer: true },
-          { feature: 'Resume review', careerCoaching: false, resumeReview: true, interviewPrep: false, monthlyRetainer: true },
-          { feature: 'Priority support', careerCoaching: false, resumeReview: false, interviewPrep: true, monthlyRetainer: true },
-        ],
+        items: [],
       },
       buttons: {
         scheduleNow: 'Schedule Now',
@@ -408,10 +357,8 @@ export const translations = {
       },
       services: {
         title: 'Services',
-        careerCoaching: 'Career Coaching',
-        techMentoring: 'Tech Mentoring',
-        leadershipTraining: 'Leadership Training',
-        resumeReview: 'Resume Review',
+        careerCoaching: 'Backend Mentorship',
+        techMentoring: 'Frontend Mentorship',
       },
       connect: {
         title: 'Connect',
@@ -587,71 +534,27 @@ export const translations = {
 
       cards: [
         {
-          name: 'Coaching de Carreira',
+          name: 'Mentoria Backend',
           duration: '1 hora',
-          description: 'Orientação personalizada de carreira para ajudá-lo a navegar seu caminho profissional.',
+          description: 'Domine o desenvolvimento backend com IA, arquiteturas e melhores práticas.',
           features: [
-            'Avaliação de caminho profissional',
-            'Definição e planejamento de metas',
-            'Insights da indústria',
-            'Conselhos acionáveis',
-          ],
-        },
-        {
-          name: 'Otimização de Perfil Tech (ATS & GitHub)',
-          duration: '30 minutos',
-          description: 'Receba feedback profissional sobre seu currículo e perfil LinkedIn.',
-          features: [
-            'Otimização de currículo',
-            'Aprimoramento de perfil LinkedIn',
-            'Otimização de palavras-chave ATS',
-            'Formatação profissional',
-          ],
-        },
-        {
-          name: 'Preparação para Entrevista Técnica e System Design',
-          duration: '45 minutos',
-          description: 'Domine técnicas de entrevista e aumente sua confiança.',
-          features: [
-            'Entrevistas simuladas',
-            'Estratégias de resposta',
-            'Coaching de linguagem corporal',
-            'Preparação de perguntas e respostas',
-          ],
-        },
-        {
-          name: 'Estratégia de Negociação de Taxas',
-          duration: '1,5 horas',
-          description: 'Negocie seu valor com confiança e obtenha melhor compensação.',
-          features: [
-            'Pesquisa de mercado',
-            'Estratégias de negociação',
-            'Avaliação de ofertas',
-            'Técnicas de contra-oferta',
-          ],
-        },
-        {
-          name: 'Mentoria em Liderança',
-          duration: '1 hora',
-          description: 'Desenvolva habilidades de liderança e gerencie equipes efetivamente.',
-          features: [
-            'Desenvolvimento de liderança',
-            'Gerenciamento de equipes',
-            'Resolução de conflitos',
-            'Coaching executivo',
-          ],
-        },
-        {
-          name: 'Mentoria Rápida (Caminho para Tech Lead)',
-          duration: '4 horas/mês',
-          description: 'Mentoria contínua com agendamento flexível durante todo o mês.',
-          features: [
-            'Check-ins semanais',
-            'Planejamento de carreira',
-            'Perguntas ilimitadas',
-            'Suporte prioritário',
+            'IA e Resolução de Problemas Complexos',
+            'Padrões de Projeto e Arquiteturas',
+            'Estruturas de Dados e Algoritmos',
+            'Código Limpo e Princípios SOLID',
           ],
           popular: true,
+        },
+        {
+          name: 'Mentoria Frontend',
+          duration: '1 hora',
+          description: 'Construa interfaces modernas com React, IA e melhores práticas.',
+          features: [
+            'Componentes e React.js',
+            'Integração de IA',
+            'Separação de Preocupações (SoC)',
+            'Padrões Modernos de UI/UX',
+          ],
         },
       ],
       comparison: {
@@ -661,14 +564,7 @@ export const translations = {
         resumeReview: 'Otimização de Perfil',
         interviewPrep: 'Prep Entrevista Técnica',
         monthlyRetainer: 'Mentoria Rápida',
-        items: [
-          { feature: 'Sessões individuais', careerCoaching: true, resumeReview: true, interviewPrep: true, monthlyRetainer: true },
-          { feature: 'Avaliação de carreira', careerCoaching: true, resumeReview: false, interviewPrep: false, monthlyRetainer: true },
-          { feature: 'Coaching de entrevista', careerCoaching: true, resumeReview: false, interviewPrep: true, monthlyRetainer: true },
-          { feature: 'Mensagens ilimitadas', careerCoaching: false, resumeReview: false, interviewPrep: false, monthlyRetainer: true },
-          { feature: 'Revisão de currículo', careerCoaching: false, resumeReview: true, interviewPrep: false, monthlyRetainer: true },
-          { feature: 'Suporte prioritário', careerCoaching: false, resumeReview: false, interviewPrep: true, monthlyRetainer: true },
-        ],
+        items: [],
       },
       buttons: {
         scheduleNow: 'Agendar Agora',
@@ -838,10 +734,8 @@ export const translations = {
       },
       services: {
         title: 'Serviços',
-        careerCoaching: 'Coaching de Carreira',
-        techMentoring: 'Mentoria Técnica',
-        leadershipTraining: 'Treinamento de Liderança',
-        resumeReview: 'Revisão de Currículo',
+        careerCoaching: 'Mentoria Backend',
+        techMentoring: 'Mentoria Frontend',
       },
       connect: {
         title: 'Conectar',
@@ -1029,71 +923,27 @@ export const translations = {
 
       cards: [
         {
-          name: 'Coaching de Carrera',
+          name: 'Mentoría Backend',
           duration: '1 hora',
-          description: 'Orientación personalizada de carrera para ayudarte a navegar tu camino profesional.',
+          description: 'Domina el desarrollo backend con IA, arquitecturas y mejores prácticas.',
           features: [
-            'Evaluación de trayectoria profesional',
-            'Establecimiento y planificación de objetivos',
-            'Información de la industria',
-            'Consejos viables',
-          ],
-        },
-        {
-          name: 'Optimización de Perfil Tech (ATS y GitHub)',
-          duration: '30 minutos',
-          description: 'Obtén retroalimentación profesional sobre tu currículum y perfil de LinkedIn.',
-          features: [
-            'Optimización de currículum',
-            'Mejora de perfil LinkedIn',
-            'Optimización de palabras clave ATS',
-            'Formato profesional',
-          ],
-        },
-        {
-          name: 'Prep Entrevista Técnica y Diseño de Sistemas',
-          duration: '45 minutos',
-          description: 'Domina técnicas de entrevista y aumenta tu confianza.',
-          features: [
-            'Entrevistas simuladas',
-            'Estrategias de respuesta',
-            'Coaching de lenguaje corporal',
-            'Preparación de preguntas y respuestas',
-          ],
-        },
-        {
-          name: 'Estrategia de Negociación de Tarifas',
-          duration: '1,5 horas',
-          description: 'Negocia tu valor con confianza y obtén mejor compensación.',
-          features: [
-            'Investigación de mercado',
-            'Estrategias de negociación',
-            'Evaluación de ofertas',
-            'Técnicas de contra-oferta',
-          ],
-        },
-        {
-          name: 'Mentoría en Liderazgo',
-          duration: '1 hora',
-          description: 'Desarrolla habilidades de liderazgo y gestiona equipos efectivamente.',
-          features: [
-            'Desarrollo de liderazgo',
-            'Gestión de equipos',
-            'Resolución de conflictos',
-            'Coaching ejecutivo',
-          ],
-        },
-        {
-          name: 'Mentoría Rápida (Camino a Tech Lead)',
-          duration: '4 horas/mes',
-          description: 'Mentoría continua con programación flexible durante todo el mes.',
-          features: [
-            'Check-ins semanales',
-            'Planificación de carrera',
-            'Preguntas ilimitadas',
-            'Soporte prioritario',
+            'IA y Resolución de Problemas Complejos',
+            'Patrones de Diseño y Arquitecturas',
+            'Estructuras de Datos y Algoritmos',
+            'Código Limpio y Principios SOLID',
           ],
           popular: true,
+        },
+        {
+          name: 'Mentoría Frontend',
+          duration: '1 hora',
+          description: 'Construye interfaces modernas con React, IA y mejores prácticas.',
+          features: [
+            'Componentes y React.js',
+            'Integración de IA',
+            'Separación de Responsabilidades',
+            'Patrones Modernos de UI/UX',
+          ],
         },
       ],
       comparison: {
@@ -1103,14 +953,7 @@ export const translations = {
         resumeReview: 'Optimización de Perfil',
         interviewPrep: 'Prep Entrevista Técnica',
         monthlyRetainer: 'Mentoría Rápida',
-        items: [
-          { feature: 'Sesiones individuales', careerCoaching: true, resumeReview: true, interviewPrep: true, monthlyRetainer: true },
-          { feature: 'Evaluación de carrera', careerCoaching: true, resumeReview: false, interviewPrep: false, monthlyRetainer: true },
-          { feature: 'Coaching de entrevista', careerCoaching: true, resumeReview: false, interviewPrep: true, monthlyRetainer: true },
-          { feature: 'Mensajes ilimitados', careerCoaching: false, resumeReview: false, interviewPrep: false, monthlyRetainer: true },
-          { feature: 'Revisión de currículum', careerCoaching: false, resumeReview: true, interviewPrep: false, monthlyRetainer: true },
-          { feature: 'Soporte prioritario', careerCoaching: false, resumeReview: false, interviewPrep: true, monthlyRetainer: true },
-        ],
+        items: [],
       },
       buttons: {
         scheduleNow: 'Agendar Ahora',
@@ -1269,10 +1112,8 @@ export const translations = {
       },
       services: {
         title: 'Servicios',
-        careerCoaching: 'Coaching de Carrera',
-        techMentoring: 'Mentoría Técnica',
-        leadershipTraining: 'Capacitación de Liderazgo',
-        resumeReview: 'Revisión de CV',
+        careerCoaching: 'Mentoría Backend',
+        techMentoring: 'Mentoría Frontend',
       },
       connect: {
         title: 'Conectar',

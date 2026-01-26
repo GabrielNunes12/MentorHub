@@ -149,39 +149,41 @@ const Services = () => {
       </section>
 
       {/* Comparison Table */}
-      <section className="py-20 bg-gray-50 dark:bg-gray-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-12 text-center">
-            {t('services.comparison.title')}
-          </h2>
-          <div className="overflow-x-auto">
-            <table className="w-full text-left">
-              <thead>
-                <tr className="border-b-2 border-gray-300 dark:border-gray-700">
-                  <th className="py-4 px-4 font-bold text-gray-900 dark:text-white">{t('services.comparison.features')}</th>
-                  <th className="py-4 px-4 text-center text-gray-900 dark:text-white">{t('services.comparison.careerCoaching')}</th>
-                  <th className="py-4 px-4 text-center text-gray-900 dark:text-white">{t('services.comparison.resumeReview')}</th>
-                  <th className="py-4 px-4 text-center text-gray-900 dark:text-white">{t('services.comparison.interviewPrep')}</th>
-                  <th className="py-4 px-4 text-center text-gray-900 dark:text-white">{t('services.comparison.monthlyRetainer')}</th>
-                </tr>
-              </thead>
-              <tbody>
-                {translations.services.comparison.items.map((item: any, index: number) => (
-                  <tr key={index} className="border-b border-gray-200 dark:border-gray-700">
-                    <td className="py-4 px-4 font-medium text-gray-900 dark:text-white">
-                      {item.feature}
-                    </td>
-                    <td className="py-4 px-4 text-center text-lg">{item.careerCoaching ? '✓' : '✕'}</td>
-                    <td className="py-4 px-4 text-center text-lg">{item.resumeReview ? '✓' : '✕'}</td>
-                    <td className="py-4 px-4 text-center text-lg">{item.interviewPrep ? '✓' : '✕'}</td>
-                    <td className="py-4 px-4 text-center text-lg">{item.monthlyRetainer ? '✓' : '✕'}</td>
+      {translations.services.comparison.items.length > 0 && (
+        <section className="py-20 bg-gray-50 dark:bg-gray-900">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-12 text-center">
+              {t('services.comparison.title')}
+            </h2>
+            <div className="overflow-x-auto">
+              <table className="w-full text-left">
+                <thead>
+                  <tr className="border-b-2 border-gray-300 dark:border-gray-700">
+                    <th className="py-4 px-4 font-bold text-gray-900 dark:text-white">{t('services.comparison.features')}</th>
+                    <th className="py-4 px-4 text-center text-gray-900 dark:text-white">{t('services.comparison.careerCoaching')}</th>
+                    <th className="py-4 px-4 text-center text-gray-900 dark:text-white">{t('services.comparison.resumeReview')}</th>
+                    <th className="py-4 px-4 text-center text-gray-900 dark:text-white">{t('services.comparison.interviewPrep')}</th>
+                    <th className="py-4 px-4 text-center text-gray-900 dark:text-white">{t('services.comparison.monthlyRetainer')}</th>
                   </tr>
-                ))}
-              </tbody>
-            </table>
+                </thead>
+                <tbody>
+                  {translations.services.comparison.items.map((item: any, index: number) => (
+                    <tr key={index} className="border-b border-gray-200 dark:border-gray-700">
+                      <td className="py-4 px-4 font-medium text-gray-900 dark:text-white">
+                        {item.feature}
+                      </td>
+                      <td className="py-4 px-4 text-center text-lg">{item.careerCoaching ? '✓' : '✕'}</td>
+                      <td className="py-4 px-4 text-center text-lg">{item.resumeReview ? '✓' : '✕'}</td>
+                      <td className="py-4 px-4 text-center text-lg">{item.interviewPrep ? '✓' : '✕'}</td>
+                      <td className="py-4 px-4 text-center text-lg">{item.monthlyRetainer ? '✓' : '✕'}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
 
       {/* CTA Section */}
       <section className="py-20">
