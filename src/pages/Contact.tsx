@@ -97,22 +97,6 @@ const Contact = () => {
                   </div>
                 </div>
 
-                {/* Phone */}
-                <div className="flex gap-4">
-                  <div className="text-3xl">📱</div>
-                  <div>
-                    <h4 className="font-bold text-gray-900 dark:text-white mb-1">
-                      {t('contact.info.phone')}
-                    </h4>
-                    <a
-                      href="tel:+351928460134"
-                      className="text-blue-600 dark:text-blue-400 hover:underline"
-                    >
-                      +351 928 460 134
-                    </a>
-                  </div>
-                </div>
-
                 {/* Location */}
                 <div className="flex gap-4">
                   <div className="text-3xl">📍</div>

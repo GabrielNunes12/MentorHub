@@ -45,8 +45,7 @@ const Footer = () => {
             <h4 className="font-semibold mb-4">{t('footer.connect.title')}</h4>
             <ul className="space-y-2 text-gray-400">
               <li><a href="mailto:gabrieln.dev3@gmail.com" className="hover:text-blue-400 transition-colors">{t('footer.connect.email')}</a></li>
-              <li><a href="#" className="hover:text-blue-400 transition-colors">LinkedIn</a></li>
-              <li><a href="#" className="hover:text-blue-400 transition-colors">Twitter</a></li>
+              <li><a href="https://www.linkedin.com/in/gabriel-nunes1/" className="hover:text-blue-400 transition-colors">LinkedIn</a></li>
               <li><Link to="/contact" className="hover:text-blue-400 transition-colors">{t('footer.connect.contactForm')}</Link></li>
             </ul>
           </div>
