@@ -13,38 +13,9 @@ export const translations = {
       about: 'About',
       services: 'Services',
       testimonials: 'Testimonials',
-      mentors: 'Mentors',
       contact: 'Contact',
     },
-    mentors: [
-      {
-        id: 'gabriel',
-        name: 'Gabriel Nunes',
-        role: 'Senior Developer & Tech Lead',
-        bio: 'With over 5 years of experience in the tech industry, I built a career that spans from individual contributor to team leadership.',
-        skills: ['Java', 'Spring Boot', 'GCP', 'Leadership', 'Mentoring', 'Agile', 'SQL'],
-        social: {
-          linkedin: 'https://www.linkedin.com/in/gabriel-nunes1/',
-          github: 'https://github.com/GabrielN12',
-          email: 'gabrieln.dev3@gmail.com'
-        }
-      },
-      {
-        id: 'romulo',
-        name: 'Romulo Semião',
-        role: 'Frontend Engineer',
-        bio: 'Frontend Engineer with experience at Capgemini Engineering, working on complex interfaces and agile methodologies.',
-        skills: ['React.js', 'TypeScript', 'SASS', 'HTML', 'NoSQL'],
-        social: {
-          linkedin: 'https://www.linkedin.com/in/romulosemiao',
-          github: 'https://github.com/RomuloSemiao',
-          email: 'r.semiao.a@gmail.com'
-        }
-      }
-    ],
-    mentorsPage: {
-      subtitle: 'Meet our experienced mentors ready to guide you.',
-    },
+
     successPage: {
       title: 'Payment Successful!',
       loading: 'Verifying your payment...',
@@ -58,92 +29,84 @@ export const translations = {
     },
     home: {
       hero: {
-        title: 'Transform Your',
-        titleHighlight: 'Career',
+        title: 'Secure Your',
+        titleHighlight: 'Digital Assets',
         subtitle: 'Today',
-        description: 'Get personalized mentorship from an experienced industry professional. Accelerate your growth, achieve your goals, and unlock your full potential.',
-        cta1: 'Schedule Free Consultation',
+        description: 'Comprehensive vulnerability assessments and code auditing. Identify weaknesses before attackers do.',
+        cta1: 'Start Security Audit',
         cta2: 'Explore Services',
-        trustIndicator: 'students transformed',
+        trustIndicator: 'systems secured',
       },
       stats: [
-        { label: 'Students Mentored', value: '20+' },
-        { label: 'Success Rate', value: '95%' },
+        { label: 'Vulnerabilities Found', value: '500+' },
+        { label: 'Systems Secured', value: '50+' },
         { label: 'Years Experience', value: '5+' },
-        { label: 'Companies Helped', value: '1+' },
+        { label: 'Critical Bugs Fixed', value: '100+' },
       ],
       features: {
-        title: 'Why Choose MentorHubTech?',
-        subtitle: 'Get the guidance you need to succeed in your career and personal growth.',
+        title: 'Why Choose Our Security Services?',
+        subtitle: 'Protect your business with proactive security measures and expert analysis.',
         items: [
           {
-            title: 'Personalized Guidance',
-            description: 'Customized mentoring tailored to your specific goals and learning style.',
-            icon: '🎯',
+            title: 'Vulnerability Assessment',
+            description: 'Systematic review of security weaknesses in an information system.',
+            icon: '🛡️',
           },
           {
-            title: 'Industry Expertise',
-            description: 'Learn from someone with years of real-world experience in the field.',
-            icon: '💼',
+            title: 'Code Auditing',
+            description: 'Deep dive into your codebase to find logic flaws and security holes.',
+            icon: '🔍',
           },
           {
-            title: 'Career Growth',
-            description: 'Accelerate your career with strategic advice and insider knowledge.',
-            icon: '📈',
+            title: 'Breach Detection',
+            description: 'Identify signs of compromise and secure your infrastructure.',
+            icon: '🚨',
           },
           {
-            title: 'Network Building',
-            description: 'Get connected with professionals and expand your professional network.',
+            title: 'Security Consultation',
+            description: 'Expert advice on securing your architecture and development pipeline.',
             icon: '🤝',
           },
         ],
       },
       cta: {
-        title: 'Ready to Transform Your Career?',
-        subtitle: 'Join 20 professionals who have achieved their goals with personalized mentorship.',
-        button: 'Schedule Your Free Consultation',
+        title: 'Ready to Secure Your System?',
+        subtitle: 'Join over 50 companies that have secured their assets with our help.',
+        button: 'Schedule Your Security Audit',
       },
     },
     about: {
       hero: {
         title: 'About',
-        titleHighlight: 'Me',
-        description: 'A passionate mentor dedicated to helping professionals achieve their goals and unlock their potential.',
+        titleHighlight: 'Us',
+        description: 'Passionate security researchers dedicated to making the web safer.',
       },
       profile: {
-        name: 'Hi I\'m Gabriel Nunes!',
-        bio1: 'With over 5 years of experience in the tech industry, I\'ve built a career that spans from individual contributor to team leadership. My journey has been filled with challenges, victories, and invaluable lessons that I\'m passionate about sharing.',
-        bio2: 'I believe that everyone has the potential to excel in their career. Through personalized guidance, honest feedback, and strategic planning, I help professionals navigate their career path and achieve their ambitions.',
-        bio3: 'My mentorship philosophy is centered on understanding your unique needs, building on your strengths, and addressing your challenges with practical, actionable advice.',
+        name: 'We are Security Experts',
+        bio1: 'With years of experience in cybersecurity and ethical hacking, we specialize in finding vulnerabilities before malicious actors do.',
+        bio2: 'Our mission is to help businesses secure their data and infrastructure through rigorous testing and analysis.',
+        bio3: 'We believe in a proactive approach to security, identifying weak points and providing actionable remediation steps.',
       },
       timeline: {
-        title: 'My Journey',
+        title: 'Our Journey',
         events: [
-          { year: '2019', event: 'Started my professional career in tech' },
-          { year: '2024', event: 'Became a team lead at a Mutant' },
-          { year: '2024-2025', event: 'Went to a biggest bank in Brazil (Intermedium bank)' },
-          { year: '2025-present', event: 'Senior developer in Europe' },
+          { year: '2019', event: 'Started in tech field' },
+          { year: '2022', event: 'Found a minor bug on Tinder' },
+          { year: '2023', event: 'Led a squad in technology field in a Telecom sector' },
+          { year: '2025', event: 'Worked in a major bank in Brazil' },
+          { year: '2026-present', event: 'Work as full-time independent security consulting and in Portugal' },
         ],
       },
       expertise: {
         title: 'Areas of Expertise',
-        items: ['Career Development', 'Personal Branding', 'Management Skills', 'Work-Life Balance'],
-      },
-      certifications: {
-        title: 'Certifications & Achievements',
-        items: [
-          { title: 'AWS Certified Developer', issuer: 'Amazon Web Services' },
-          { title: 'Agile Coach Certification', issuer: 'Scrum Alliance' },
-          { title: '20+ Mentees Successfully Placed', issuer: 'Career Development' },
-          { title: 'Tech Speaker & Educator', issuer: 'Various Conferences' },
-        ],
+        items: ['Security Architecture', 'Code Review', 'Vulnerability Assessment'],
       },
     },
     services: {
       hero: {
-        title: 'My Services',
+        title: 'Our Services',
         titleHighlight: 'Services',
-        description: 'Choose the perfect mentorship package tailored to your needs and goals.',
+        description: 'Choose the perfect security package to protect your assets.',
       },
       regionIndicator: {
         currency: 'Currency',
@@ -157,45 +120,45 @@ export const translations = {
 
       cards: [
         {
-          name: 'Backend Mentorship',
-          duration: '1 hour',
-          description: 'Master backend development with AI, architectures, and best practices.',
+          name: 'Security Audit',
+          duration: 'Per Session',
+          description: 'Comprehensive analysis of your system architecture and code.',
           features: [
-            'AI & Complex Problem Solving',
-            'Design Patterns & Architectures',
-            'Data Structures & Algorithms',
-            'Clean Code & SOLID Principles',
+            'Architecture Review',
+            'Code Analysis',
+            'Vulnerability Scanning',
+            'Report & Recommendations',
           ],
           popular: true,
         },
         {
-          name: 'Frontend Mentorship',
-          duration: '1 hour',
-          description: 'Build modern user interfaces with React, AI, and best practices.',
+          name: 'Code Auditing',
+          duration: 'Per Session',
+          description: 'Deep dive into your codebase to find logic flaws and security holes.',
           features: [
-            'Components & React.js',
-            'AI Integration',
-            'Separation of Concerns',
-            'Modern UI/UX Patterns',
+            'Static Code Analysis',
+            'Logic Flaw Detection',
+            'Dependency Auditing',
+            'Best Practices Review',
           ],
         },
       ],
       comparison: {
         title: 'Service Comparison',
         features: 'Features',
-        careerCoaching: 'Career Coaching',
-        resumeReview: 'Profile Optimization',
-        interviewPrep: 'Tech Interview Prep',
-        monthlyRetainer: 'Speed Mentorship',
+        careerCoaching: 'Vulnerability Scan',
+        resumeReview: 'Code Review',
+        interviewPrep: 'Exploitation',
+        monthlyRetainer: 'Detailed Report',
         items: [],
       },
       buttons: {
         scheduleNow: 'Schedule Now',
       },
       cta: {
-        title: 'Still not sure? Schedule a free consultation.',
-        subtitle: 'Let\'s discuss your goals and find the perfect mentorship package for you.',
-        button: 'Get Free Consultation',
+        title: 'Concerned about security? Schedule a consultation.',
+        subtitle: 'Let\'s identify your risks and secure your infrastructure.',
+        button: 'Get Free Security Consultation',
       },
       booking: {
         selectDate: 'Select Date',
@@ -213,7 +176,7 @@ export const translations = {
     refundPolicy: {
       title: 'Refund Policy',
       content: {
-        intro: 'We want you to be completely satisfied with your mentorship experience. If you are not satisfied with the service provided, you may request a refund according to the following terms:',
+        intro: 'We want you to be confident in our findings. If you are not satisfied with the report provided, you may request a refund according to the following terms:',
         conditions: [
           'Refund requests must be made within 7 days of the session date.',
           'Cancellations made less than 24 hours before a scheduled session are not eligible for a refund.',
@@ -225,9 +188,9 @@ export const translations = {
     },
     testimonials: {
       hero: {
-        title: 'Success Stories',
+        title: 'Client Stories',
         titleHighlight: 'Stories',
-        description: 'Real transformations from people I\'ve had the privilege to mentor.',
+        description: 'Real feedback from companies we helped secure.',
       },
       cta: {
         title: 'Your Success Story Starts Here',
@@ -235,45 +198,17 @@ export const translations = {
       },
       items: [
         {
-          name: 'Clara Gabrielle',
-          title: 'Mid level developer',
-          company: ' at Mutant',
-          content: 'Gabriel\'s mentorship has been of great value. I\'ve been learning a lot from him. He has deep programming knowledge and it shows on the way he teaches and gives support in his sessions. I believe he is a great professional and it feels easy to explain the programming problems I\'ve been facing recently.',
+          name: 'Tech Corp',
+          title: 'CTO',
+          company: ' at Major Tech',
+          content: 'Found critical vulnerabilities that could have cost us millions. Professional and thorough.',
           rating: 5,
         },
         {
-          name: 'Michael Chen',
-          title: 'Senior Developer',
-          company: ' at StartUp Inc',
-          content: 'The best investment I made for my career. Gabriel\'s insights helped me navigate a major career transition smoothly.',
-          rating: 5,
-        },
-        {
-          name: 'Emma Rodriguez',
-          title: 'Site Reliability Engineer (SRE)',
-          company: ' at CloudScale',
-          content: 'Working with Gabriel was incredible. He helped me build confidence and leadership skills that changed my professional life.',
-          rating: 5,
-        },
-        {
-          name: 'James Wilson',
-          title: 'DevOps Engineer',
-          company: ' at Pipeline Ops',
-          content: 'Gabriel\'s practical approach and deep expertise made all the difference. Highly recommended!',
-          rating: 5,
-        },
-        {
-          name: 'Lisa Martinez',
-          title: 'Software Architect',
-          company: ' at NextGen Tech',
-          content: 'The guidance I received was exactly what I needed to take my career to the next level.',
-          rating: 5,
-        },
-        {
-          name: 'David Brown',
-          title: 'Full Stack Developer',
-          company: ' at FinTech Core',
-          content: 'Gabriel helped me negotiate a 40% salary increase and advance to a lead position. Exceptional mentor!',
+          name: 'FinBank',
+          title: 'CISO',
+          company: ' at FinBank',
+          content: 'The penetration test was eye-opening. We are now much more secure thanks to their work.',
           rating: 5,
         },
       ],
@@ -282,7 +217,7 @@ export const translations = {
       hero: {
         title: 'Get in',
         titleHighlight: 'Touch',
-        description: 'Ready to start your mentorship journey? Let\'s connect and discuss how I can help you achieve your goals.',
+        description: 'Ready to secure your business? Let\'s connect and discuss how we can help.',
       },
       info: {
         title: 'Contact Information',
@@ -308,8 +243,8 @@ export const translations = {
           fullName: 'John Doe',
           email: 'john@example.com',
           phone: '+1 (234) 567-890',
-          subject: 'I\'m interested in career coaching',
-          message: 'Tell me about your goals and what you\'re looking for...',
+          subject: 'I\'m interested in a Security Audit',
+          message: 'Tell me about your system and what you need tested...',
         },
         button: 'Send Message',
         sending: 'Sending...',
@@ -327,8 +262,8 @@ export const translations = {
         title: 'Frequently Asked Questions',
         items: [
           {
-            question: 'How long does a typical mentoring session last?',
-            answer: 'Sessions vary from 30 minutes to 1.5 hours depending on the service package you choose.',
+            question: 'How long does a security audit take?',
+            answer: 'It depends on the scope, but typically 1-2 weeks for a thorough assessment.',
           },
           {
             question: 'What is your response time?',
@@ -339,15 +274,15 @@ export const translations = {
             answer: 'Yes! I work with mentees across different time zones and offer flexible scheduling options.',
           },
           {
-            question: 'What if I\'m not satisfied with the mentorship?',
-            answer: 'Your satisfaction is my priority. We can discuss concerns and adjust the mentoring approach as needed.',
+            question: 'What if you find no bugs?',
+            answer: 'While rare, if we find nothing, you get peace of mind and a clean bill of health report.',
           },
         ],
       },
     },
     footer: {
       brand: 'MentorHubTech',
-      tagline: 'Empowering the next generation of professionals through personalized mentorship.',
+      tagline: 'Securing the digital world one audit at a time.',
       quickLinks: {
         title: 'Quick Links',
         home: 'Home',
@@ -357,8 +292,8 @@ export const translations = {
       },
       services: {
         title: 'Services',
-        careerCoaching: 'Backend Mentorship',
-        techMentoring: 'Frontend Mentorship',
+        careerCoaching: 'Security Audit',
+        techMentoring: 'Code Auditing',
       },
       connect: {
         title: 'Connect',
@@ -373,6 +308,48 @@ export const translations = {
         refundPolicy: 'Refund Policy',
         terms: 'Terms of Service',
         sitemap: 'Sitemap',
+      },
+    },
+    privacyPolicy: {
+      title: 'Privacy Policy',
+      content: {
+        intro: 'At MentorHubTech, we take your privacy seriously. This Privacy Policy explains how we collect, use, and protect your personal information.',
+        sections: [
+          {
+            heading: 'Information We Collect',
+            body: 'We collect information you provide directly to us, such as your name, email address, and payment information when you schedule a service.',
+          },
+          {
+            heading: 'How We Use Your Information',
+            body: 'We use your information to provide security services, process payments, and communicate with you about your projects.',
+          },
+          {
+            heading: 'Data Protection',
+            body: 'We implement rigorous security measures to protect your data. As a security firm, we treat client confidentiality with the utmost priority.',
+          },
+        ],
+        lastUpdated: 'Last Updated: February 2026',
+      },
+    },
+    termsOfService: {
+      title: 'Terms of Service',
+      content: {
+        intro: 'By accessing or using our services, you agree to be bound by these Terms of Service.',
+        sections: [
+          {
+            heading: 'Services',
+            body: 'We provide security auditing and vulnerability assessment services. While we strive to identify as many issues as possible, we cannot guarantee that a system is 100% secure.',
+          },
+          {
+            heading: 'Confidentiality',
+            body: 'We agree to keep all findings confidential. You agree to provide necessary access for us to perform the agreed-upon services.',
+          },
+          {
+            heading: 'Liability',
+            body: 'MentorHubTech is not liable for any damages arising from the use of our services, except in cases of gross negligence.',
+          },
+        ],
+        lastUpdated: 'Last Updated: February 2026',
       },
     },
   },
@@ -390,137 +367,89 @@ export const translations = {
       about: 'Sobre',
       services: 'Serviços',
       testimonials: 'Depoimentos',
-      mentors: 'Mentores',
       contact: 'Contato',
     },
-    mentors: [
-      {
-        id: 'gabriel',
-        name: 'Gabriel Nunes',
-        role: 'Desenvolvedor Sênior & Tech Lead',
-        bio: 'Com mais de 5 anos de experiência na indústria de tecnologia, construí uma carreira que vai desde colaborador individual até liderança de equipe.',
-        skills: ['Java', 'Spring Boot', 'GCP', 'Leadership', 'Mentoring', 'Agile', 'SQL'],
-        social: {
-          linkedin: 'https://www.linkedin.com/in/gabriel-nunes1/',
-          github: 'https://github.com/GabrielN12',
-          email: 'gabrieln.dev3@gmail.com'
-        }
-      },
-      {
-        id: 'romulo',
-        name: 'Romulo Semião',
-        role: 'Engenheiro Frontend',
-        bio: 'Engenheiro Frontend com experiência na Capgemini Engineering, trabalhando em interfaces complexas e metodologias ágeis.',
-        skills: ['React.js', 'TypeScript', 'SASS', 'HTML', 'NoSQL'],
-        social: {
-          linkedin: 'https://www.linkedin.com/in/romulosemiao',
-          github: 'https://github.com/RomuloSemiao',
-          email: 'r.semiao.a@gmail.com'
-        }
-      }
-    ],
-    mentorsPage: {
-      subtitle: 'Conheça nossos mentores experientes prontos para guiá-lo.',
-    },
-    successPage: {
-      title: 'Pagamento Concluído!',
-      loading: 'Verificando seu pagamento...',
-      confirmationPrefix: 'Sua sessão de mentoria para',
-      confirmationSuffix: 'foi confirmada.',
-      emailSent: 'Enviamos um convite de calendário para o seu e-mail.',
-      returnHome: 'Voltar ao Início',
-      errorTitle: 'Algo deu errado',
-      errorMessagePrefix: 'Não conseguimos verificar os detalhes do seu pagamento usando a sessão:',
-      contactSupport: 'Contatar Suporte'
-    },
+
     home: {
       hero: {
-        title: 'Transforme sua',
-        titleHighlight: 'Carreira',
+        title: 'Proteja seus',
+        titleHighlight: 'Ativos Digitais',
         subtitle: 'Hoje',
-        description: 'Obtenha mentoria personalizada de um profissional experiente da indústria. Acelere seu crescimento, alcance seus objetivos e desbloqueie seu potencial total.',
-        cta1: 'Agendar Consulta Gratuita',
+        description: 'Avaliações de vulnerabilidade e auditoria de código abrangentes. Identifique fraquezas antes que os atacantes o façam.',
+        cta1: 'Iniciar Auditoria de Segurança',
         cta2: 'Explorar Serviços',
-        trustIndicator: 'alunos transformados',
+        trustIndicator: 'sistemas protegidos',
       },
       stats: [
-        { label: 'Alunos Mentorados', value: '20+' },
-        { label: 'Taxa de Sucesso', value: '95%' },
+        { label: 'Vulnerabilidades Encontradas', value: '500+' },
+        { label: 'Sistemas Protegidos', value: '50+' },
         { label: 'Anos de Experiência', value: '5+' },
-        { label: 'Empresas Ajudadas', value: '1+' },
+        { label: 'Bugs Críticos Corrigidos', value: '100+' },
       ],
       features: {
-        title: 'Por que escolher MentorHubTech?',
-        subtitle: 'Obtenha a orientação que você precisa para ter sucesso em sua carreira e crescimento pessoal.',
+        title: 'Por que escolher Nossos Serviços de Segurança?',
+        subtitle: 'Proteja seu negócio com medidas de segurança proativas e análise especializada.',
         items: [
           {
-            title: 'Orientação Personalizada',
-            description: 'Mentoria customizada adaptada aos seus objetivos e estilo de aprendizado específicos.',
-            icon: '🎯',
+            title: 'Avaliação de Vulnerabilidade',
+            description: 'Revisão sistemática de fraquezas de segurança em um sistema de informação.',
+            icon: '🛡️',
           },
           {
-            title: 'Expertise da Indústria',
-            description: 'Aprenda com alguém que possui anos de experiência real no campo.',
-            icon: '💼',
+            title: 'Auditoria de Código',
+            description: 'Mergulho profundo em sua base de código para encontrar falhas lógicas e brechas de segurança.',
+            icon: '🔍',
           },
           {
-            title: 'Crescimento de Carreira',
-            description: 'Acelere sua carreira com conselhos estratégicos e conhecimento de insider.',
-            icon: '📈',
+            title: 'Detecção de Violações',
+            description: 'Identifique sinais de comprometimento e proteja sua infraestrutura.',
+            icon: '🚨',
           },
           {
-            title: 'Construção de Rede',
-            description: 'Conecte-se com profissionais e expanda sua rede profissional.',
+            title: 'Consultoria de Segurança',
+            description: 'Conselhos de especialistas sobre como proteger sua arquitetura e pipeline de desenvolvimento.',
             icon: '🤝',
           },
         ],
       },
       cta: {
-        title: 'Pronto para Transformar sua Carreira?',
-        subtitle: 'Junte-se a 20 profissionais que alcançaram seus objetivos com mentoria personalizada.',
-        button: 'Agendar sua Consulta Gratuita',
+        title: 'Pronto para Proteger seu Sistema?',
+        subtitle: 'Junte-se a mais de 50 empresas que protegeram seus ativos com nossa ajuda.',
+        button: 'Agendar sua Auditoria de Segurança',
       },
     },
     about: {
       hero: {
         title: 'Sobre',
-        titleHighlight: 'Mim',
-        description: 'Um mentor apaixonado dedicado a ajudar profissionais a alcançar seus objetivos e desbloquear seu potencial.',
+        titleHighlight: 'Nós',
+        description: 'Pesquisadores de segurança apaixonados dedicados a tornar a web mais segura.',
       },
       profile: {
-        name: 'Olá sou o Gabriel Nunes!',
-        bio1: 'Com mais de 5 anos de experiência na indústria de tecnologia, construí uma carreira que vai desde colaborador individual até liderança de equipe. Minha jornada foi repleta de desafios, vitórias e lições inestimáveis que sou apaixonado em compartilhar.',
-        bio2: 'Acredito que todos têm potencial para se destacar em suas carreiras. Através de orientação personalizada, feedback honesto e planejamento estratégico, ajudo profissionais a navegar em seus caminhos profissionais e alcançar suas ambições.',
-        bio3: 'Minha filosofia de mentoria é centrada em entender suas necessidades únicas, construir sobre seus pontos fortes e abordar desafios com conselhos práticos e viáveis.',
+        name: 'Somos Especialistas em Segurança',
+        bio1: 'Com anos de experiência em cibersegurança e hacking ético, nos especializamos em encontrar vulnerabilidades antes que atores maliciosos o façam.',
+        bio2: 'Nossa missão é ajudar empresas a proteger seus dados e infraestrutura através de testes e análises rigorosos.',
+        bio3: 'Acreditamos em uma abordagem proativa para a segurança, identificando pontos fracos e fornecendo passos de remediação acionáveis.',
       },
       timeline: {
-        title: 'Minha Jornada',
+        title: 'Nossa Jornada',
         events: [
-          { year: '2019', event: 'Comecei minha carreira profissional em tecnologia' },
-          { year: '2024', event: 'Virei líder de equipe em Mutant' },
-          { year: '2024-2025', event: 'Fui para o maior banco do Brasil (Intermedium bank)' },
-          { year: '2025-presente', event: 'Desenvolvedor sênior na Europa' },
+          { year: '2019', event: 'Iniciei na área de tecnologia' },
+          { year: '2022', event: 'Encontrei um bug menor no Tinder' },
+          { year: '2023', event: 'Liderei uma squad na área de tecnologia no setor de Telecom' },
+          { year: '2025', event: 'Trabalhei em um grande banco no Brasil' },
+          { year: '2026-presente', event: 'Trabalho como consultor de segurança independente em tempo integral e em Portugal' },
         ],
       },
       expertise: {
         title: 'Áreas de Expertise',
-        items: ['Desenvolvimento de Carreira', 'Marca Pessoal', 'Habilidades de Gestão', 'Equilíbrio Trabalho-Vida'],
-      },
-      certifications: {
-        title: 'Certificações e Realizações',
-        items: [
-          { title: 'AWS Certified Developer', issuer: 'Amazon Web Services' },
-          { title: 'Agile Coach Certification', issuer: 'Scrum Alliance' },
-          { title: '20+ Mentorados Colocados com Sucesso', issuer: 'Desenvolvimento de Carreira' },
-          { title: 'Palestrante e Educador em Tech', issuer: 'Várias Conferências' },
-        ],
+        items: ['Arquitetura de Segurança', 'Revisão de Código', 'Avaliação de Vulnerabilidade'],
       },
     },
     services: {
       hero: {
-        title: 'Meus Serviços',
+        title: 'Nossos Serviços',
         titleHighlight: 'Serviços',
-        description: 'Escolha o pacote de mentoria perfeito adaptado às suas necessidades e objetivos.',
+        description: 'Escolha o pacote de segurança perfeito para proteger seus ativos.',
       },
       regionIndicator: {
         currency: 'Moeda',
@@ -534,26 +463,26 @@ export const translations = {
 
       cards: [
         {
-          name: 'Mentoria Backend',
-          duration: '1 hora',
-          description: 'Domine o desenvolvimento backend com IA, arquiteturas e melhores práticas.',
+          name: 'Auditoria de Segurança',
+          duration: 'Por Sessão',
+          description: 'Análise abrangente da arquitetura e código do seu sistema.',
           features: [
-            'IA e Resolução de Problemas Complexos',
-            'Padrões de Projeto e Arquiteturas',
-            'Estruturas de Dados e Algoritmos',
-            'Código Limpo e Princípios SOLID',
+            'Revisão de Arquitetura',
+            'Análise de Código',
+            'Varredura de Vulnerabilidade',
+            'Relatório e Recomendações',
           ],
           popular: true,
         },
         {
-          name: 'Mentoria Frontend',
-          duration: '1 hora',
-          description: 'Construa interfaces modernas com React, IA e melhores práticas.',
+          name: 'Auditoria de Código',
+          duration: 'Por Sessão',
+          description: 'Mergulho profundo em sua base de código para encontrar falhas lógicas e brechas de segurança.',
           features: [
-            'Componentes e React.js',
-            'Integração de IA',
-            'Separação de Preocupações (SoC)',
-            'Padrões Modernos de UI/UX',
+            'Análise Estática de Código',
+            'Detecção de Falhas Lógicas',
+            'Auditoria de Dependências',
+            'Revisão de Melhores Práticas',
           ],
         },
       ],
@@ -704,8 +633,8 @@ export const translations = {
         title: 'Perguntas Frequentes',
         items: [
           {
-            question: 'Quanto tempo dura uma sessão típica de mentoria?',
-            answer: 'As sessões variam de 30 minutos a 1,5 horas dependendo do pacote de serviço escolhido.',
+            question: 'Quanto tempo leva uma auditoria de segurança?',
+            answer: 'Depende do escopo, mas tipicamente 1-2 semanas para uma avaliação completa.',
           },
           {
             question: 'Qual é seu tempo de resposta?',
@@ -713,18 +642,18 @@ export const translations = {
           },
           {
             question: 'Você oferece horários flexíveis?',
-            answer: 'Sim! Trabalho com mentorados em diferentes fusos horários e ofereço opções de agendamento flexível.',
+            answer: 'Sim! Trabalho com clientes em diferentes fusos horários e ofereço opções de agendamento flexível.',
           },
           {
-            question: 'E se não estiver satisfeito com a mentoria?',
-            answer: 'Sua satisfação é minha prioridade. Podemos discutir preocupações e ajustar a abordagem de mentoria conforme necessário.',
+            question: 'E se vocês não encontrarem bugs?',
+            answer: 'Embora raro, se não encontrarmos nada, você recebe tranquilidade e um relatório de aprovação limpo.',
           },
         ],
       },
     },
     footer: {
       brand: 'MentorHubTech',
-      tagline: 'Capacitando a próxima geração de profissionais através de mentoria personalizada.',
+      tagline: 'Protegendo o mundo digital, uma auditoria de cada vez.',
       quickLinks: {
         title: 'Links Rápidos',
         home: 'Início',
@@ -734,8 +663,8 @@ export const translations = {
       },
       services: {
         title: 'Serviços',
-        careerCoaching: 'Mentoria Backend',
-        techMentoring: 'Mentoria Frontend',
+        careerCoaching: 'Auditoria de Segurança',
+        techMentoring: 'Auditoria de Código',
       },
       connect: {
         title: 'Conectar',
@@ -750,6 +679,48 @@ export const translations = {
         refundPolicy: 'Política de Reembolso',
         terms: 'Termos de Serviço',
         sitemap: 'Mapa do Site',
+      },
+    },
+    privacyPolicy: {
+      title: 'Política de Privacidade',
+      content: {
+        intro: 'Na MentorHubTech, levamos sua privacidade a sério. Esta Política de Privacidade explica como coletamos, usamos e protegemos suas informações pessoais.',
+        sections: [
+          {
+            heading: 'Informações que Coletamos',
+            body: 'Coletamos informações que você nos fornece diretamente, como seu nome, endereço de email e informações de pagamento ao agendar um serviço.',
+          },
+          {
+            heading: 'Como Usamos Suas Informações',
+            body: 'Usamos suas informações para fornecer serviços de segurança, processar pagamentos e nos comunicar com você sobre seus projetos.',
+          },
+          {
+            heading: 'Proteção de Dados',
+            body: 'Implementamos medidas de segurança rigorosas para proteger seus dados. Como uma empresa de segurança, tratamos a confidencialidade do cliente com a máxima prioridade.',
+          },
+        ],
+        lastUpdated: 'Última Atualização: Fevereiro 2026',
+      },
+    },
+    termsOfService: {
+      title: 'Termos de Serviço',
+      content: {
+        intro: 'Ao acessar ou usar nossos serviços, você concorda em ficar vinculado a estes Termos de Serviço.',
+        sections: [
+          {
+            heading: 'Serviços',
+            body: 'Fornecemos serviços de auditoria de segurança e avaliação de vulnerabilidade. Embora nos esforcemos para identificar o máximo possível de problemas, não podemos garantir que um sistema esteja 100% seguro.',
+          },
+          {
+            heading: 'Confidencialidade',
+            body: 'Concordamos em manter todas as descobertas confidenciais. Você concorda em fornecer o acesso necessário para realizarmos os serviços acordados.',
+          },
+          {
+            heading: 'Responsabilidade',
+            body: 'A MentorHubTech não se responsabiliza por quaisquer danos decorrentes do uso de nossos serviços, exceto em casos de negligência grave.',
+          },
+        ],
+        lastUpdated: 'Última Atualização: Fevereiro 2026',
       },
     },
   },
@@ -767,38 +738,9 @@ export const translations = {
       about: 'Acerca',
       services: 'Servicios',
       testimonials: 'Testimonios',
-      mentors: 'Mentores',
       contact: 'Contacto',
     },
-    mentors: [
-      {
-        id: 'gabriel',
-        name: 'Gabriel Nunes',
-        role: 'Desarrollador Senior & Tech Lead',
-        bio: 'Con más de 5 años de experiencia en la industria tecnológica, he construido una carrera que abarca desde colaborador individual hasta liderazgo de equipo.',
-        skills: ['Java', 'Spring Boot', 'GCP', 'Liderazgo', 'Mentoría', 'Agile', 'SQL'],
-        social: {
-          linkedin: 'https://www.linkedin.com/in/gabriel-nunes1/',
-          github: 'https://github.com/GabrielN12',
-          email: 'gabrieln.dev3@gmail.com'
-        }
-      },
-      {
-        id: 'romulo',
-        name: 'Romulo Semião',
-        role: 'Ingeniero Frontend',
-        bio: 'Ingeniero Frontend con experiencia en Capgemini Engineering, trabajando en interfaces complejas y metodologias ágiles.',
-        skills: ['React.js', 'TypeScript', 'SASS', 'HTML', 'NoSQL'],
-        social: {
-          linkedin: 'https://www.linkedin.com/in/romulosemiao',
-          github: 'https://github.com/RomuloSemiao',
-          email: 'r.semiao.a@gmail.com'
-        }
-      }
-    ],
-    mentorsPage: {
-      subtitle: 'Conozca a nuestros mentores experimentados listos para guiarlo.',
-    },
+
     successPage: {
       title: '¡Pago Exitoso!',
       loading: 'Verificando su pago...',
@@ -812,50 +754,50 @@ export const translations = {
     },
     home: {
       hero: {
-        title: 'Transforma tu',
-        titleHighlight: 'Carrera',
+        title: 'Protege tus',
+        titleHighlight: 'Activos Digitales',
         subtitle: 'Hoy',
-        description: 'Obtén mentoría personalizada de un profesional experimentado de la industria. Acelera tu crecimiento, logra tus objetivos y desbloquea tu potencial completo.',
-        cta1: 'Programar Consulta Gratuita',
+        description: 'Evaluaciones integrales de vulnerabilidad y auditoría de código. Identifica debilidades antes que los atacantes.',
+        cta1: 'Iniciar Auditoría de Seguridad',
         cta2: 'Explorar Servicios',
-        trustIndicator: 'estudiantes transformados',
+        trustIndicator: 'sistemas asegurados',
       },
       stats: [
-        { label: 'Estudiantes Mentorados', value: '20+' },
-        { label: 'Tasa de Éxito', value: '95%' },
+        { label: 'Vulnerabilidades Encontradas', value: '500+' },
+        { label: 'Sistemas Asegurados', value: '50+' },
         { label: 'Años de Experiencia', value: '5+' },
-        { label: 'Empresas Ayudadas', value: '1+' },
+        { label: 'Bugs Críticos Corregidos', value: '100+' },
       ],
       features: {
-        title: '¿Por qué elegir MentorHubTech?',
-        subtitle: 'Obtén la orientación que necesitas para tener éxito en tu carrera y crecimiento personal.',
+        title: '¿Por qué elegir Nuestros Servicios de Seguridad?',
+        subtitle: 'Protege tu negocio con medidas de seguridad proactivas y análisis experto.',
         items: [
           {
-            title: 'Orientación Personalizada',
-            description: 'Mentoría personalizada adaptada a tus objetivos y estilo de aprendizaje específicos.',
-            icon: '🎯',
+            title: 'Evaluación de Vulnerabilidad',
+            description: 'Revisión sistemática de debilidades de seguridad en un sistema de información.',
+            icon: '🛡️',
           },
           {
-            title: 'Experiencia de la Industria',
-            description: 'Aprende de alguien con años de experiencia real en el campo.',
-            icon: '💼',
+            title: 'Auditoría de Código',
+            description: 'Inmersión profunda en tu código base para encontrar fallos lógicos y agujeros de seguridad.',
+            icon: '🔍',
           },
           {
-            title: 'Crecimiento de Carrera',
-            description: 'Acelera tu carrera con consejos estratégicos y conocimiento de insider.',
-            icon: '📈',
+            title: 'Detección de Brechas',
+            description: 'Identifica signos de compromiso y asegura tu infraestructura.',
+            icon: '🚨',
           },
           {
-            title: 'Construcción de Redes',
-            description: 'Conéctate con profesionales y expande tu red profesional.',
+            title: 'Consultoría de Seguridad',
+            description: 'Asesoramiento experto sobre cómo asegurar tu arquitectura y pipeline de desarrollo.',
             icon: '🤝',
           },
         ],
       },
       cta: {
-        title: '¿Listo para Transformar tu Carrera?',
-        subtitle: 'Únete a 20 profesionales que han logrado sus objetivos con mentoría personalizada.',
-        button: 'Programar tu Consulta Gratuita',
+        title: '¿Listo para Asegurar tu Sistema?',
+        subtitle: 'Únete a más de 50 empresas que han asegurado sus activos con nuestra ayuda.',
+        button: 'Programar tu Auditoría de Seguridad',
       },
       booking: {
         selectDate: 'Seleccionar Fecha',
@@ -873,43 +815,35 @@ export const translations = {
     about: {
       hero: {
         title: 'Acerca',
-        titleHighlight: 'de Mí',
-        description: 'Un mentor apasionado dedicado a ayudar a los profesionales a lograr sus objetivos y desbloquear su potencial.',
+        titleHighlight: 'de Nosotros',
+        description: 'Investigadores de seguridad apasionados dedicados a hacer la web más segura.',
       },
       profile: {
-        name: '¡Hola soy Gabriel Nunes!',
-        bio1: 'Con más de 5 años de experiencia en la industria tecnológica, he construido una carrera que abarca desde colaborador individual hasta liderazgo de equipo. Mi viaje ha estado lleno de desafíos, victorias y lecciones invaluables que me apasiona compartir.',
-        bio2: 'Creo que todos tienen el potencial de sobresalir en sus carreras. A través de orientación personalizada, retroalimentación honesta y planificación estratégica, ayudo a los profesionales a navegar su camino profesional y lograr sus ambiciones.',
-        bio3: 'Mi filosofía de mentoría se centra en comprender tus necesidades únicas, construir sobre tus fortalezas y abordar desafíos con consejos prácticos y viables.',
+        name: 'Somos Expertos en Seguridad',
+        bio1: 'Con años de experiencia en ciberseguridad y hacking ético, nos especializamos en encontrar vulnerabilidades antes que los actores maliciosos lo hagan.',
+        bio2: 'Nuestra misión es ayudar a las empresas a asegurar sus datos e infraestructura a través de pruebas y análisis rigurosos.',
+        bio3: 'Creemos en un enfoque proactivo de la seguridad, identificando puntos débiles y proporcionando pasos de remediación accionables.',
       },
       timeline: {
-        title: 'Mi Viaje',
+        title: 'Nuestro Viaje',
         events: [
-          { year: '2019', event: 'Comencé mi carrera profesional en tecnología' },
-          { year: '2024', event: 'Me convertí en líder de equipo en Mutant' },
-          { year: '2024-2025', event: 'Fui al banco más grande de Brasil (Intermedium bank)' },
-          { year: '2025-presente', event: 'Desarrollador sénior en Europa' },
+          { year: '2019', event: 'Comencé en el campo tecnológico' },
+          { year: '2022', event: 'Encontré un error menor en Tinder' },
+          { year: '2023', event: 'Lideré un equipo en el campo tecnológico en el sector de Telecomunicaciones' },
+          { year: '2025', event: 'Trabajé en un banco importante en Brasil' },
+          { year: '2026-presente', event: 'Trabajo como consultor de seguridad independiente a tiempo completo y en Portugal' },
         ],
       },
       expertise: {
         title: 'Áreas de Experiencia',
-        items: ['Desarrollo de Carrera', 'Marca Personal', 'Habilidades de Gestión', 'Equilibrio Trabajo-Vida'],
-      },
-      certifications: {
-        title: 'Certificaciones y Logros',
-        items: [
-          { title: 'AWS Certified Developer', issuer: 'Amazon Web Services' },
-          { title: 'Agile Coach Certification', issuer: 'Scrum Alliance' },
-          { title: '20+ Mentorados Colocados Exitosamente', issuer: 'Desarrollo de Carrera' },
-          { title: 'Orador y Educador en Tech', issuer: 'Varias Conferencias' },
-        ],
+        items: ['Arquitectura de Seguridad', 'Revisión de Código', 'Evaluación de Vulnerabilidad'],
       },
     },
     services: {
       hero: {
-        title: 'Mis Servicios',
+        title: 'Nuestros Servicios',
         titleHighlight: 'Servicios',
-        description: 'Elige el paquete de mentoría perfecto adaptado a tus necesidades y objetivos.',
+        description: 'Elige el paquete de seguridad perfecto para proteger tus activos.',
       },
       regionIndicator: {
         currency: 'Moneda',
@@ -923,52 +857,52 @@ export const translations = {
 
       cards: [
         {
-          name: 'Mentoría Backend',
-          duration: '1 hora',
-          description: 'Domina el desarrollo backend con IA, arquitecturas y mejores prácticas.',
+          name: 'Auditoría de Seguridad',
+          duration: 'Por Sesión',
+          description: 'Análisis integral de la arquitectura y código de tu sistema.',
           features: [
-            'IA y Resolución de Problemas Complejos',
-            'Patrones de Diseño y Arquitecturas',
-            'Estructuras de Datos y Algoritmos',
-            'Código Limpio y Principios SOLID',
+            'Revisión de Arquitectura',
+            'Análisis de Código',
+            'Escaneo de Vulnerabilidades',
+            'Informe y Recomendaciones',
           ],
           popular: true,
         },
         {
-          name: 'Mentoría Frontend',
-          duration: '1 hora',
-          description: 'Construye interfaces modernas con React, IA y mejores prácticas.',
+          name: 'Auditoría de Código',
+          duration: 'Por Sesión',
+          description: 'Inmersión profunda en tu código base para encontrar fallos lógicos y agujeros de seguridad.',
           features: [
-            'Componentes y React.js',
-            'Integración de IA',
-            'Separación de Responsabilidades',
-            'Patrones Modernos de UI/UX',
+            'Análisis de Código Estático',
+            'Detección de Fallos Lógicos',
+            'Auditoría de Dependencias',
+            'Revisión de Mejores Prácticas',
           ],
         },
       ],
       comparison: {
         title: 'Comparación de Servicios',
         features: 'Características',
-        careerCoaching: 'Coaching de Carrera',
-        resumeReview: 'Optimización de Perfil',
-        interviewPrep: 'Prep Entrevista Técnica',
-        monthlyRetainer: 'Mentoría Rápida',
+        careerCoaching: 'Escaneo de Vulnerabilidad',
+        resumeReview: 'Revisión de Código',
+        interviewPrep: 'Explotación',
+        monthlyRetainer: 'Informe Detallado',
         items: [],
       },
       buttons: {
         scheduleNow: 'Agendar Ahora',
       },
       cta: {
-        title: '¿Aún no estás seguro? Agenda una consulta gratuita.',
-        subtitle: 'Discutamos tus objetivos y encontremos el paquete de mentoría perfecto para ti.',
-        button: 'Obtener Consulta Gratuita',
+        title: '¿Preocupado por la seguridad? Agenda una consulta.',
+        subtitle: 'Identifiquemos tus riesgos y aseguremos tu infraestructura.',
+        button: 'Obtener Consulta de Seguridad Gratuita',
       },
       mostPopular: '⭐ MÁS POPULAR',
     },
     refundPolicy: {
       title: 'Política de Reembolso',
       content: {
-        intro: 'Queremos que esté completamente satisfecho con su experiencia de mentoría. Si no está satisfecho con el servicio proporcionado, puede solicitar un reembolso de acuerdo con los siguientes términos:',
+        intro: 'Queremos que confíes en nuestros hallazgos. Si no estás satisfecho con el informe proporcionado, puedes solicitar un reembolso de acuerdo con los siguientes términos:',
         conditions: [
           'Las solicitudes de reembolso deben realizarse dentro de los 7 días posteriores a la fecha de la sesión.',
           'Las cancelaciones realizadas con menos de 24 horas antes de una sesión programada no son elegibles para reembolso.',
@@ -981,8 +915,8 @@ export const translations = {
     testimonials: {
       hero: {
         title: 'Historias de',
-        titleHighlight: 'Éxito',
-        description: 'Transformaciones reales de personas que he tenido el privilegio de mentorear.',
+        titleHighlight: 'Clientes',
+        description: 'Comentarios reales de empresas que ayudamos a asegurar.',
       },
       cta: {
         title: 'Tu Historia de Éxito Comienza Aquí',
@@ -990,45 +924,17 @@ export const translations = {
       },
       items: [
         {
-          name: 'Clara Gabrielle',
-          title: 'Desarrolladora Mid',
-          company: ' en Mutant',
-          content: 'La mentoría de Gabriel ha sido de gran valor. He aprendido mucho con él. Tiene un profundo conocimiento de programación y se nota en la forma en que enseña y brinda apoyo en sus sesiones. Creo que es un gran profesional y es fácil explicar los problemas de programación que he enfrentado recientemente.',
+          name: 'Tech Corp',
+          title: 'CTO',
+          company: ' en Major Tech',
+          content: 'Encontraron vulnerabilidades críticas que podrían habernos costado millones. Profesional y minucioso.',
           rating: 5,
         },
         {
-          name: 'Michael Chen',
-          title: 'Desarrollador Sénior',
-          company: ' en StartUp Inc',
-          content: 'La mejor inversión que hice para mi carrera. Los insights de Gabriel me ayudaron a navegar una importante transición de carrera sin problemas.',
-          rating: 5,
-        },
-        {
-          name: 'Emma Rodriguez',
-          title: 'Ingeniera SRE',
-          company: ' en CloudScale',
-          content: 'Trabajar con Gabriel fue increíble. Me ayudó a construir confianza y habilidades de liderazgo que transformaron mi vida profesional.',
-          rating: 5,
-        },
-        {
-          name: 'James Wilson',
-          title: 'Ingeniero DevOps',
-          company: ' en Pipeline Ops',
-          content: '¡El enfoque práctico y la experiencia profunda de Gabriel hicieron toda la diferencia. ¡Altamente recomendado!',
-          rating: 5,
-        },
-        {
-          name: 'Lisa Martinez',
-          title: 'Arquitecta de Software',
-          company: ' en NextGen Tech',
-          content: 'La orientación que recibí fue exactamente lo que necesitaba para llevar mi carrera al siguiente nivel.',
-          rating: 5,
-        },
-        {
-          name: 'David Brown',
-          title: 'Desarrollador Full Stack',
-          company: ' en FinTech Core',
-          content: '¡Gabriel me ayudó a negociar un aumento del 40% y avanzar a una posición de liderazgo. ¡Mentor excepcional!',
+          name: 'FinBank',
+          title: 'CISO',
+          company: ' en FinBank',
+          content: 'La prueba de penetración fue reveladora. Ahora estamos mucho más seguros gracias a su trabajo.',
           rating: 5,
         },
       ],
@@ -1037,7 +943,7 @@ export const translations = {
       hero: {
         title: 'Ponte en',
         titleHighlight: 'Contacto',
-        description: '¿Listo para comenzar tu viaje de mentoría? Vamos a conectar y discutir cómo puedo ayudarte a lograr tus objetivos.',
+        description: '¿Listo para asegurar tu negocio? Vamos a conectar y discutir cómo podemos ayudar.',
       },
       info: {
         title: 'Información de Contacto',
@@ -1063,8 +969,8 @@ export const translations = {
           fullName: 'Juan Pérez',
           email: 'juan@ejemplo.com',
           phone: '+34 (123) 456-7890',
-          subject: 'Estoy interesado en coaching de carrera',
-          message: 'Cuéntame sobre tus objetivos y qué estás buscando...',
+          subject: 'Estoy interesado en una Auditoría de Seguridad',
+          message: 'Cuéntame sobre tu sistema y qué necesitas probar...',
         },
         button: 'Enviar Mensaje',
         sending: 'Enviando...',
@@ -1082,8 +988,8 @@ export const translations = {
         title: 'Preguntas Frecuentes',
         items: [
           {
-            question: '¿Cuánto tiempo dura una sesión típica de mentoría?',
-            answer: 'Las sesiones varían de 30 minutos a 1,5 horas dependiendo del paquete de servicio que elijas.',
+            question: '¿Cuánto tiempo lleva una auditoría de seguridad?',
+            answer: 'Depende del alcance, pero típicamente 1-2 semanas para una evaluación completa.',
           },
           {
             question: '¿Cuál es tu tiempo de respuesta?',
@@ -1091,18 +997,18 @@ export const translations = {
           },
           {
             question: '¿Ofreces horarios flexibles?',
-            answer: 'Sí, trabajo con mentorados en diferentes zonas horarias y ofrezco opciones de programación flexibles.',
+            answer: 'Sí, trabajo con clientes en diferentes zonas horarias y ofrezco opciones de programación flexibles.',
           },
           {
-            question: '¿Qué pasa si no estoy satisfecho con la mentoría?',
-            answer: 'Tu satisfacción es mi prioridad. Podemos discutir preocupaciones y ajustar el enfoque de mentoría según sea necesario.',
+            question: '¿Qué pasa si no encuentran bugs?',
+            answer: 'Aunque es raro, si no encontramos nada, obtienes tranquilidad y un informe de aprobación limpio.',
           },
         ],
       },
     },
     footer: {
       brand: 'MentorHubTech',
-      tagline: 'Empoderando a la próxima generación de profesionales a través de mentoría personalizada.',
+      tagline: 'Protegiendo el mundo digital, una auditoría a la vez.',
       quickLinks: {
         title: 'Enlaces Rápidos',
         home: 'Inicio',
@@ -1112,8 +1018,8 @@ export const translations = {
       },
       services: {
         title: 'Servicios',
-        careerCoaching: 'Mentoría Backend',
-        techMentoring: 'Mentoría Frontend',
+        careerCoaching: 'Auditoría de Seguridad',
+        techMentoring: 'Auditoría de Código',
       },
       connect: {
         title: 'Conectar',
@@ -1128,6 +1034,48 @@ export const translations = {
         refundPolicy: 'Política de Reembolso',
         terms: 'Términos de Servicio',
         sitemap: 'Mapa del Sitio',
+      },
+    },
+    privacyPolicy: {
+      title: 'Política de Privacidad',
+      content: {
+        intro: 'En MentorHubTech, tomamos su privacidad muy en serio. Esta Política de Privacidad explica cómo recopilamos, utilizamos y protegemos su información personal.',
+        sections: [
+          {
+            heading: 'Información que Recopilamos',
+            body: 'Recopilamos información que usted nos proporciona directamente, como su nombre, dirección de correo electrónico e información de pago al programar un servicio.',
+          },
+          {
+            heading: 'Cómo Usamos Su Información',
+            body: 'Utilizamos su información para proporcionar servicios de seguridad, procesar pagos y comunicarnos con usted sobre sus proyectos.',
+          },
+          {
+            heading: 'Protección de Datos',
+            body: 'Implementamos rigurosas medidas de seguridad para proteger sus datos. Como empresa de seguridad, tratamos la confidencialidad del cliente con la máxima prioridad.',
+          },
+        ],
+        lastUpdated: 'Última Actualización: Febrero 2026',
+      },
+    },
+    termsOfService: {
+      title: 'Términos de Servicio',
+      content: {
+        intro: 'Al acceder o utilizar nuestros servicios, usted acepta estar sujeto a estos Términos de Servicio.',
+        sections: [
+          {
+            heading: 'Servicios',
+            body: 'Proporcionamos servicios de auditoría de seguridad y evaluación de vulnerabilidades. Aunque nos esforzamos por identificar tantos problemas como sea posible, no podemos garantizar que un sistema sea 100% seguro.',
+          },
+          {
+            heading: 'Confidencialidade',
+            body: 'Acordamos mantener todos los hallazgos confidenciales. Usted acepta proporcionar el acceso necesario para que realicemos los servicios acordados.',
+          },
+          {
+            heading: 'Responsabilidad',
+            body: 'MentorHubTech no es responsable de ningún daño derivado del uso de nuestros servicios, excepto en casos de negligencia grave.',
+          },
+        ],
+        lastUpdated: 'Última Actualización: Febrero 2026',
       },
     },
   },

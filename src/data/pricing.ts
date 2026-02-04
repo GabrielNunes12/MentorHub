@@ -2,6 +2,6 @@
 const createPrice = (US: number, EU: number, BR: number) => ({ US, EU, BR })
 
 export const pricingStructure = [
-    createPrice(75, 70, 350),    // Backend Mentorship
-    createPrice(55, 50, 250),    // Frontend Mentorship
+    createPrice(22, 20, 50),    // Security Audit
+    createPrice(22, 20, 50),    // Code Auditing
 ]

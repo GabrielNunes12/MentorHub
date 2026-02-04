@@ -7,7 +7,7 @@ const About = () => {
   const { t, translations } = useLanguage()
   const timeline = translations.about.timeline.events
   const expertise = translations.about.expertise.items
-  const certifications = translations.about.certifications.items
+
 
   return (
     <div className="w-full">
@@ -98,11 +98,11 @@ const About = () => {
           <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-12 text-center">
             {t('about.expertise.title')}
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="flex flex-wrap justify-center gap-6">
             {expertise.map((skill, index) => (
               <div
                 key={index}
-                className="bg-gradient-to-br from-blue-500 to-cyan-500 p-6 rounded-lg text-white font-semibold text-center hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+                className="bg-gradient-to-br from-blue-500 to-cyan-500 p-6 rounded-lg text-white font-semibold text-center hover:shadow-lg hover:-translate-y-1 transition-all duration-300 w-full sm:w-auto sm:min-w-[280px]"
               >
                 {skill}
               </div>
@@ -111,30 +111,7 @@ const About = () => {
         </div>
       </section>
 
-      {/* Certifications Section */}
-      <section className="py-20 bg-gray-50 dark:bg-gray-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-12 text-center">
-            {t('about.certifications.title')}
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            {certifications.map((cert, index) => (
-              <div
-                key={index}
-                className="bg-white dark:bg-gray-700 p-8 rounded-lg shadow-lg text-center hover:shadow-xl transition-shadow"
-              >
-                <div className="text-5xl mb-4">🏆</div>
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
-                  {cert.title}
-                </h3>
-                <p className="text-gray-600 dark:text-gray-400">
-                  {cert.issuer}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+
     </div>
   )
 }
