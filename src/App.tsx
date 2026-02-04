@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { Analytics } from '@vercel/analytics/react'
 import Layout from './components/Layout'
 import Home from './pages/Home'
 import About from './pages/About'
@@ -25,6 +26,7 @@ function App() {
           <Route path="/success" element={<Success />} />
         </Routes>
       </Layout>
+      <Analytics />
     </Router>
   )
 }
