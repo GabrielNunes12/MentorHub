@@ -173,6 +173,25 @@ export const translations = {
       },
       mostPopular: '⭐ MOST POPULAR',
     },
+    mentorhubtech: {
+      studios: {
+        title: 'MentorHubTech Studios',
+        subtitle: 'Game dev: studio and teams',
+        description: 'Specialized game development, production studio and team hiring services.',
+        back: 'Back to home',
+      },
+      it: {
+        title: 'MentorHubTech IT',
+        subtitle: 'Outsourcing and IT solutions',
+        description: 'Remote teams, on-demand projects and specialized technical support.',
+        back: 'Back to home',
+      },
+      section: {
+        title: 'MentorHubTech — Our Solutions',
+        subtitle: 'We are a hub of specialized services. Choose the unit that fits your needs.'
+      }
+    },
+    
     refundPolicy: {
       title: 'Refund Policy',
       content: {
@@ -515,6 +534,24 @@ export const translations = {
         back: 'Voltar',
       },
       mostPopular: '⭐ MAIS POPULAR',
+    },
+    mentorhubtech: {
+      studios: {
+        title: 'MentorHubTech Studios',
+        subtitle: 'Game dev: estúdio e equipes',
+        description: 'Mentoria especializada em desenvolvimento de jogos, produção e contratação de equipes.',
+        back: 'Voltar para a home',
+      },
+      it: {
+        title: 'MentorHubTech IT',
+        subtitle: 'Outsourcing e soluções de TI',
+        description: 'Equipes remotas, projetos sob demanda e suporte técnico especializado.',
+        back: 'Voltar para a home',
+      },
+      section: {
+        title: 'MentorHubTech — Nossas soluções',
+        subtitle: 'Agora somos uma matriz que reúne serviços especializados. Escolha a unidade que melhor atende sua necessidade.'
+      },
     },
     refundPolicy: {
       title: 'Política de Reembolso',
@@ -898,6 +935,24 @@ export const translations = {
         button: 'Obtener Consulta de Seguridad Gratuita',
       },
       mostPopular: '⭐ MÁS POPULAR',
+    },
+    mentorhubtech: {
+      studios: {
+        title: 'MentorHubTech Studios',
+        subtitle: 'Game dev: estudio y equipos',
+        description: 'Mentoría especializada en desarrollo de juegos, estudio de producción y contratación de equipos.',
+        back: 'Volver al inicio',
+      },
+      it: {
+        title: 'MentorHubTech IT',
+        subtitle: 'Outsourcing y soluciones TI',
+        description: 'Equipos remotos, proyectos a demanda y soporte técnico especializado.',
+        back: 'Volver al inicio',
+      },
+      section: {
+        title: 'MentorHubTech — Nuestras soluciones',
+        subtitle: 'Somos una matriz que reúne servicios especializados. Elige la unidad que mejor se ajuste a tus necesidades.'
+      },
     },
     refundPolicy: {
       title: 'Política de Reembolso',
