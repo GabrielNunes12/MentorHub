@@ -1,5 +1,6 @@
 import myPhoto from '../assets/images/photo-pica.png'
 import { useLanguage } from '../hooks/useLanguage'
+import PathNode from '../components/PathNode'
 
 import SEO from '../components/SEO'
 
@@ -7,23 +8,30 @@ const About = () => {
   const { t, translations } = useLanguage()
   const timeline = translations.about.timeline.events
   const expertise = translations.about.expertise.items
-
+  const profile = translations.about.profile
 
   return (
     <div className="w-full">
       <SEO
-        title="About Gabriel Nunes"
-        description="Learn about Gabriel Nunes, a Senior Developer and Tech Lead with over 5 years of experience in mentorship and software engineering."
+        title="About MentorHub"
+        description="Learn about MentorHub, a segregation platform offering specialized paths for gaming excellence and professional growth."
         canonical={`${window.location.origin}/about`}
       />
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-gray-900 dark:to-gray-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative py-24 bg-gradient-to-br from-slate-50 to-slate-50 dark:from-slate-950 dark:to-slate-950 overflow-hidden">
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute bottom-0 left-0 w-full h-16 bg-gradient-to-t from-slate-50/30 via-transparent to-transparent dark:from-slate-950/20"></div>
+          <div className="absolute top-0 left-0 w-full h-16 bg-gradient-to-b from-slate-50/30 via-transparent to-transparent dark:from-slate-950/20"></div>
+        </div>
+
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-4">
-              {t('about.hero.title')} <span className="bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">{t('about.hero.titleHighlight')}</span>
+            <h1 className="flex items-center justify-center space-x-6 text-5xl md:text-6xl font-bold text-slate-900 dark:text-slate-50 tracking-tighter">
+              <PathNode variant="professional" size="lg" className="flex-shrink-0" />
+              <span>{t('about.hero.title')}</span>
+              <span className="bg-gradient-to-r from-gaming to-professional bg-clip-text text-transparent">{t('about.hero.titleHighlight')}</span>
             </h1>
-            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+            <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
               {t('about.hero.description')}
             </p>
           </div>
@@ -31,29 +39,40 @@ const About = () => {
       </section>
 
       {/* Profile Section */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative py-24 bg-slate-50 dark:bg-slate-950 overflow-hidden">
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute bottom-0 left-0 w-full h-16 bg-gradient-to-t from-slate-50/30 via-transparent to-transparent dark:from-slate-950/20"></div>
+          <div className="absolute top-0 left-0 w-full h-16 bg-gradient-to-b from-slate-50/30 via-transparent to-transparent dark:from-slate-950/20"></div>
+        </div>
+
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div className="relative h-96 md:h-[500px]">
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-400 to-cyan-400 rounded-2xl opacity-20 blur-3xl"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-gaming/10 to-professional/10 rounded-2xl blur-3xl"></div>
               <img
                 src={myPhoto}
-                alt="Gabriel Nunes"
-                className="relative w-full h-full object-cover object-top rounded-2xl shadow-2xl border-4 border-white dark:border-gray-700"
+                alt={profile.name}
+                className="relative w-full h-full object-cover object-top rounded-2xl shadow-2xl border-4 border-slate-200 dark:border-slate-800"
               />
+              {/* Decorative path elements */}
+              <div className="absolute left-0 top-0 h-full w-full pointer-events-none">
+                <div className="absolute left-1/2 -translate-x-1/2 top-0 h-full w-[2px] bg-gradient-to-b from-gaming via-transparent to-professional"></div>
+                <div className="absolute left-1/2 -translate-x-1/2 top-0 h-full w-[2px] bg-gradient-to-b from-professional via-transparent to-gaming"></div>
+              </div>
             </div>
 
             <div className="space-y-6">
-              <h2 className="text-4xl font-bold text-gray-900 dark:text-white">
-                {t('about.profile.name')}
+              <h2 className="flex items-center space-x-4 text-4xl font-bold text-slate-900 dark:text-slate-50">
+                <PathNode variant="professional" size="lg" className="flex-shrink-0" />
+                <span>{t('about.profile.name')}</span>
               </h2>
-              <p className="text-lg text-gray-600 dark:text-gray-400">
+              <p className="text-base text-slate-600 dark:text-slate-400 leading-relaxed">
                 {t('about.profile.bio1')}
               </p>
-              <p className="text-lg text-gray-600 dark:text-gray-400">
+              <p className="text-base text-slate-600 dark:text-slate-400 leading-relaxed">
                 {t('about.profile.bio2')}
               </p>
-              <p className="text-lg text-gray-600 dark:text-gray-400">
+              <p className="text-base text-slate-600 dark:text-slate-400 leading-relaxed">
                 {t('about.profile.bio3')}
               </p>
             </div>
@@ -62,56 +81,76 @@ const About = () => {
       </section>
 
       {/* Timeline Section */}
-      <section className="py-20 bg-gray-50 dark:bg-gray-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-16 text-center">
-            {t('about.timeline.title')}
+      <section className="relative py-24 bg-slate-50 dark:bg-slate-950 overflow-hidden">
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute bottom-0 left-0 w-full h-16 bg-gradient-to-t from-slate-50/30 via-transparent to-transparent dark:from-slate-950/20"></div>
+          <div className="absolute top-0 left-0 w-full h-16 bg-gradient-to-b from-slate-50/30 via-transparent to-transparent dark:from-slate-950/20"></div>
+        </div>
+
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="flex items-center justify-center space-x-6 text-4xl font-bold text-slate-900 dark:text-slate-50 mb-16">
+            <PathNode variant="connection" size="lg" className="flex-shrink-0" />
+            <span>{t('about.timeline.title')}</span>
           </h2>
-          <div className="space-y-8 max-w-4xl mx-auto">
-            {timeline.map((item, index) => (
-              <div key={index} className="flex gap-8">
-                <div className="flex flex-col items-center">
-                  <div className="w-12 h-12 rounded-full bg-gradient-to-r from-blue-600 to-cyan-600 flex items-center justify-center text-white font-bold">
-                    {index + 1}
+          <div className="relative max-w-4xl mx-auto">
+            {/* Vertical timeline line */}
+            <div className="absolute left-1/2 -translate-x-1/2 top-0 h-full w-[2px] bg-gradient-to-b from-gaming via-transparent to-professional"></div>
+
+            <div className="relative space-y-8 pl-8">
+              {timeline.map((item, index) => (
+                <div key={index} className="relative">
+                  {/* Timeline point */}
+                  <div className="absolute left-0 -translate-x-1/2 top-0">
+                    <div className={`${index % 2 === 0 ? 'bg-gaming' : 'bg-professional'} w-8 h-8 rounded-full flex items-center justify-center text-slate-50 text-xs font-bold`}>
+                      {index + 1}
+                    </div>
                   </div>
-                  {index < timeline.length - 1 && (
-                    <div className="w-1 h-20 bg-gradient-to-b from-blue-600 to-cyan-600 mt-2"></div>
-                  )}
+
+                  {/* Timeline content */}
+                  <div className="ml-8">
+                    <h3 className="text-xl font-bold text-slate-900 dark:text-slate-50 mb-2">
+                      {item.year}
+                    </h3>
+                    <p className="text-sm text-slate-600 dark:text-slate-400">
+                      {item.event}
+                    </p>
+                  </div>
                 </div>
-                <div className="pb-8">
-                  <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
-                    {item.year}
-                  </h3>
-                  <p className="text-lg text-gray-600 dark:text-gray-400">
-                    {item.event}
-                  </p>
-                </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
       {/* Expertise Section */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-12 text-center">
-            {t('about.expertise.title')}
+      <section className="relative py-24 bg-slate-50 dark:bg-slate-950 overflow-hidden">
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute bottom-0 left-0 w-full h-16 bg-gradient-to-t from-slate-50/30 via-transparent to-transparent dark:from-slate-950/20"></div>
+          <div className="absolute top-0 left-0 w-full h-16 bg-gradient-to-b from-slate-50/30 via-transparent to-transparent dark:from-slate-950/20"></div>
+        </div>
+
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="flex items-center justify-center space-x-6 text-4xl font-bold text-slate-900 dark:text-slate-50 mb-12">
+            <PathNode variant="professional" size="lg" className="flex-shrink-0" />
+            <span>{t('about.expertise.title')}</span>
           </h2>
           <div className="flex flex-wrap justify-center gap-6">
             {expertise.map((skill, index) => (
               <div
                 key={index}
-                className="bg-gradient-to-br from-blue-500 to-cyan-500 p-6 rounded-lg text-white font-semibold text-center hover:shadow-lg hover:-translate-y-1 transition-all duration-300 w-full sm:w-auto sm:min-w-[280px]"
+                className="group flex-1 min-w-[280px] bg-white dark:bg-slate-900 p-8 rounded-xl shadow-sm hover:shadow-md transform transition-all duration-300 hover:-translate-y-2"
               >
-                {skill}
+                <div className="mb-4 flex items-center justify-center w-16 h-16 bg-gradient-to-br from-gaming to-professional rounded-xl">
+                  <PathNode variant={index % 2 === 0 ? 'gaming' : 'professional'} size="md" className="text-slate-50" />
+                </div>
+                <h3 className="text-lg font-bold text-slate-900 dark:text-slate-50 mb-2">
+                  {skill}
+                </h3>
               </div>
             ))}
           </div>
         </div>
       </section>
-
-
     </div>
   )
 }

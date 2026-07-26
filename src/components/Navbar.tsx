@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom'
 import { useTheme } from '../hooks/useTheme'
 import { useLanguage } from '../hooks/useLanguage'
 import { LanguageSelector } from './LanguageSelector'
+import PathNode from './PathNode'
 
 const Navbar = () => {
   const { isDark, toggleTheme } = useTheme()
@@ -22,12 +23,13 @@ const Navbar = () => {
   ]
 
   return (
-    <nav className="sticky top-0 z-50 bg-white dark:bg-gray-800 shadow-md transition-colors duration-300">
+    <nav className="sticky top-0 z-50 bg-slate-50 dark:bg-slate-950 shadow-md transition-colors duration-300 backdrop-blur-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <Link to="/" className="flex items-center">
-            <span className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">
-              MentorHubTech
+          <Link to="/" className="flex items-center space-x-3">
+            <PathNode variant="professional" size="lg" className="flex-shrink-0" />
+            <span className="font-bold text-2xl bg-gradient-to-r from-gaming to-professional bg-clip-text text-transparent">
+              MentorHub
             </span>
           </Link>
 
@@ -37,18 +39,18 @@ const Navbar = () => {
               <Link
                 key={path}
                 to={path}
-                className={`transition-colors ${location.pathname === path
-                  ? 'text-blue-600 dark:text-blue-400 font-semibold'
-                  : 'text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400'
-                  }`}
+                className={`flex items-center space-x-2 transition-all duration-300 ${location.pathname === path
+                  ? 'text-gaming font-semibold'
+                  : 'text-slate-600 dark:text-slate-400 hover:text-gaming'}`}
               >
-                {label}
+                <PathNode variant="connection" size="sm" className="flex-shrink-0" />
+                <span>{label}</span>
               </Link>
             ))}
             <LanguageSelector />
             <button
               onClick={toggleTheme}
-              className="p-2 rounded-lg bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors"
+              className="p-2 rounded-lg bg-slate-100 dark:bg-slate-900 hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors"
               aria-label="Toggle theme"
             >
               {isDark ? '☀️' : '🌙'}
@@ -60,14 +62,14 @@ const Navbar = () => {
             <LanguageSelector />
             <button
               onClick={toggleTheme}
-              className="p-2 rounded-lg bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors"
+              className="p-2 rounded-lg bg-slate-100 dark:bg-slate-900 hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors"
               aria-label="Toggle theme"
             >
               {isDark ? '☀️' : '🌙'}
             </button>
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-700 dark:text-gray-300"
+              className="text-slate-600 dark:text-slate-400"
               aria-label="Toggle menu"
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -79,17 +81,17 @@ const Navbar = () => {
 
         {/* Mobile Menu */}
         {isOpen && (
-          <div className="md:hidden pb-4 border-t border-gray-200 dark:border-gray-700">
+          <div className="md:hidden pb-4 border-t border-slate-200 dark:border-slate-700">
             {navLinks.map(({ path, label }) => (
               <Link
                 key={path}
                 to={path}
-                className={`block py-2 px-4 rounded transition-colors ${location.pathname === path
-                  ? 'text-blue-600 dark:text-blue-400 bg-gray-100 dark:bg-gray-700 font-semibold'
-                  : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700'
-                  }`}
+                className={`block px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-900 transition-colors border-b border-slate-100 dark:border-slate-800 last:border-b-0 ${location.pathname === path
+                  ? 'font-semibold text-gaming'
+                  : ''}`}
               >
-                {label}
+                <PathNode variant="connection" size="sm" className="mr-2 flex-shrink-0" />
+                <span>{label}</span>
               </Link>
             ))}
           </div>

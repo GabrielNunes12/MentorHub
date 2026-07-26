@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useSearchParams, Link } from 'react-router-dom'
 import { useLanguage } from '../hooks/useLanguage'
-
+import PathNode from '../components/PathNode'
 import SEO from '../components/SEO'
 
 const Success = () => {
@@ -44,36 +44,39 @@ const Success = () => {
     }, [sessionId])
 
     return (
-        <div className="min-h-screen bg-gray-50 dark:bg-gray-900 flex items-center justify-center px-4">
+        <div className="min-h-screen bg-slate-50 dark:bg-slate-950 flex items-center justify-center px-4">
             <SEO
                 title="Payment Successful"
                 description="Your mentorship session has been successfully booked."
                 noindex={true}
             />
-            <div className="max-w-md w-full bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-xl text-center">
+            <div className="relative z-10 max-w-md w-full bg-slate-50 dark:bg-slate-900 p-8 rounded-2xl shadow-xl text-center">
                 {status === 'loading' && (
                     <div className="space-y-4">
-                        <div className="animate-spin w-12 h-12 border-4 border-blue-600 border-t-transparent rounded-full mx-auto"></div>
-                        <p className="text-gray-600 dark:text-gray-300 font-medium">{t('successPage.loading')}</p>
+                        <div className="flex items-center justify-center">
+                            <PathNode variant="connection" size="lg" className="animate-spin border-4 border-gaming/50" />
+                        </div>
+                        <p className="text-base text-slate-600 dark:text-slate-400 font-medium">{t('successPage.loading')}</p>
                     </div>
                 )}
 
                 {status === 'success' && (
                     <div className="space-y-6">
-                        <div className="w-20 h-20 bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center mx-auto">
-                            <span className="text-4xl">✅</span>
+                        <div className="flex items-center justify-center">
+                            <PathNode variant="professional" size="lg" className="text-green-600" />
                         </div>
-                        <h1 className="text-3xl font-bold text-gray-900 dark:text-white">{t('successPage.title')}</h1>
-                        <p className="text-gray-600 dark:text-gray-300">
-                            {t('successPage.confirmationPrefix')} <strong>{bookingDetails?.serviceName}</strong> {t('successPage.confirmationSuffix')}
+                        <h1 className="text-3xl font-bold text-slate-900 dark:text-slate-50">{t('successPage.title')}</h1>
+                        <p className="text-base text-slate-600 dark:text-slate-400">
+                            {t('successPage.confirmationPrefix')} <strong className="bg-gradient-to-r from-gaming to-professional bg-clip-text text-transparent">{bookingDetails?.serviceName}</strong> {t('successPage.confirmationSuffix')}
                         </p>
-                        <p className="text-sm text-gray-500 dark:text-gray-400">
+                        <p className="text-sm text-slate-500 dark:text-slate-400">
                             {t('successPage.emailSent')}
                         </p>
                         <Link
                             to="/"
-                            className="inline-block w-full py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-lg transition-colors"
+                            className="flex items-center justify-center w-full py-3 text-lg font-semibold bg-gaming text-slate-50 hover:bg-gaming/10 rounded-xl"
                         >
+                            <PathNode variant="professional" size="md" className="mr-3" />
                             {t('successPage.returnHome')}
                         </Link>
                     </div>
@@ -81,17 +84,18 @@ const Success = () => {
 
                 {status === 'error' && (
                     <div className="space-y-6">
-                        <div className="w-20 h-20 bg-red-100 dark:bg-red-900/30 rounded-full flex items-center justify-center mx-auto">
-                            <span className="text-4xl">❌</span>
+                        <div className="flex items-center justify-center">
+                            <PathNode variant="connection" size="lg" className="text-red-600" />
                         </div>
-                        <h1 className="text-3xl font-bold text-gray-900 dark:text-white">{t('successPage.errorTitle')}</h1>
-                        <p className="text-gray-600 dark:text-gray-300">
+                        <h1 className="text-3xl font-bold text-slate-900 dark:text-slate-50">{t('successPage.errorTitle')}</h1>
+                        <p className="text-base text-slate-600 dark:text-slate-400">
                             {t('successPage.errorMessagePrefix')} {sessionId?.slice(0, 8)}...
                         </p>
                         <Link
                             to="/contact"
-                            className="inline-block w-full py-3 bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white font-bold rounded-lg hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors"
+                            className="flex items-center justify-center w-full py-3 text-lg font-semibold border-2 border-slate-50 bg-slate-50 hover:bg-slate-100 text-slate-900 rounded-xl"
                         >
+                            <PathNode variant="connection" size="md" className="mr-3" />
                             {t('successPage.contactSupport')}
                         </Link>
                     </div>
