@@ -1,5 +1,3 @@
-import React from 'react'
-
 interface PathNodeProps {
   variant?: 'gaming' | 'professional' | 'connection' | 'neutral'
   size?: 'sm' | 'md' | 'lg'
