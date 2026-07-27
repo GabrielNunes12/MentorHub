@@ -15,7 +15,7 @@ const Services = () => {
 
   const services = translations.services.cards.map((card, index) => {
     const prices = pricingStructure[index]
-    let finalPrice = prices.US // Default to US
+    let finalPrice: number
 
     if (region === 'BR') finalPrice = prices.BR
     else if (region === 'EU') finalPrice = prices.EU
@@ -90,10 +90,11 @@ const Services = () => {
                     { code: 'UK', flag: '🇬🇧' },
                   ].map(({ code, flag }) => (
                     <button
+                      type="button"
                       key={code}
                       onClick={() => {
                         localStorage.setItem('userRegion', code)
-                        window.location.href = window.location.href
+                        window.location.reload()
                       }}
                       className={`px-3 py-2 rounded text-lg transition-all ${region === code
                         ? 'bg-gaming text-white shadow-lg'
@@ -146,8 +147,8 @@ const Services = () => {
                   </p>
 
                   <ul className="space-y-3 mb-6">
-                    {service.features.map((feature, index) => (
-                      <li key={index} className="flex items-center gap-3">
+                    {service.features.map((feature) => (
+                      <li key={feature} className="flex items-center gap-3">
                         <div className="flex-shrink-0">
                           <PathNode variant="connection" size="sm" className="text-amber-500" />
                         </div>
@@ -158,6 +159,7 @@ const Services = () => {
 
                   <div className="flex gap-3">
                     <button
+                      type="button"
                       onClick={() => openBooking(service.name, service.id)}
                       className={`flex-1 py-3 text-lg font-semibold rounded-lg transition-all duration-300 ${service.popular
                         ? 'bg-slate-50 text-slate-900 hover:bg-slate-100 dark:bg-slate-950 dark:text-slate-50 dark:hover:bg-slate-900'
@@ -199,8 +201,14 @@ const Services = () => {
                   </tr>
                 </thead>
                 <tbody>
-                  {translations.services.comparison.items.map((item: any, index: number) => (
-                    <tr key={index} className="border-b border-slate-100 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-900 transition-colors">
+                  {translations.services.comparison.items.map((item: {
+                    feature: string
+                    careerCoaching: boolean
+                    resumeReview: boolean
+                    interviewPrep: boolean
+                    monthlyRetainer: boolean
+                  }) => (
+                    <tr key={item.feature} className="border-b border-slate-100 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-900 transition-colors">
                       <td className="py-4 px-4 font-medium text-slate-900 dark:text-slate-50">
                         {item.feature}
                       </td>
@@ -241,6 +249,7 @@ const Services = () => {
               {t('services.cta.button')}
             </Link>
             <button
+              type="button"
               onClick={() => openBooking(services.find(s => !s.popular)?.name || services[0].name, services.find(s => !s.popular)?.id || 1)}
               className="flex items-center justify-center px-8 py-4 text-lg font-semibold border-2 border-slate-50 bg-slate-50 hover:bg-slate-100 text-slate-900 rounded-xl hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
             >

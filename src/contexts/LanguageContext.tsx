@@ -1,4 +1,4 @@
-import { createContext, useState, useEffect } from 'react'
+import { createContext, useState, useEffect, useCallback, useMemo } from 'react'
 import type { ReactNode } from 'react'
 import { translations } from '../locales/translations'
 
@@ -38,12 +38,12 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
     setIsInitialized(true)
   }, [])
 
-  const changeLanguage = (newLanguage: Language) => {
+  const changeLanguage = useCallback((newLanguage: Language) => {
     setLanguage(newLanguage)
     localStorage.setItem('appLanguage', newLanguage)
-  }
+  }, [])
 
-  const t = (key: string): any => {
+  const t = useCallback((key: string): any => {
     const keys = key.split('.')
     let value: any = translations[language]
 
@@ -52,18 +52,18 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
     }
 
     return value || key
-  }
+  }, [language])
 
-  // Don't render children until language is initialized
-  if (!isInitialized) {
-    return null
-  }
-
-  const value: LanguageContextType = {
+  const value: LanguageContextType = useMemo(() => ({
     language,
     changeLanguage,
     t,
     translations: translations[language],
+  }), [language, changeLanguage, t])
+
+  // Don't render children until language is initialized
+  if (!isInitialized) {
+    return null
   }
 
   return (

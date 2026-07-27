@@ -13,6 +13,7 @@ export const LanguageSelector = () => {
     <div className="flex items-center gap-1 p-1 rounded-full bg-slate-100/80 dark:bg-white/5 border border-transparent dark:border-white/10">
       {languages.map((lang) => (
         <button
+          type="button"
           key={lang.code}
           onClick={() => changeLanguage(lang.code)}
           className={`flex items-center justify-center w-7 h-7 rounded-full text-sm transition-all duration-300 ${

@@ -28,7 +28,7 @@ const RefundPolicy = () => {
 
                     <ol className="list-decimal pl-8 space-y-4 mb-8 text-slate-600 dark:text-slate-400">
                         {refundContent.conditions.map((condition: string, index: number) => (
-                            <li key={index} className="flex flex-col space-y-1">
+                            <li key={condition} className="flex flex-col space-y-1">
                                 <div className="flex items-start space-x-3">
                                     <div className="flex-shrink-0 flex items-center justify-center w-6 h-6 bg-gaming/20 text-gaming rounded-full text-sm font-medium">
                                         {index + 1}

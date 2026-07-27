@@ -90,7 +90,7 @@ const About = () => {
 
             <div className="relative space-y-8 pl-8">
               {timeline.map((item, index) => (
-                <div key={index} className="relative">
+                <div key={item.year} className="relative">
                   {/* Timeline point */}
                   <div className="absolute left-0 -translate-x-1/2 top-0">
                     <div className={`${index % 2 === 0 ? 'bg-gaming' : 'bg-professional'} w-8 h-8 rounded-full flex items-center justify-center text-slate-50 text-xs font-bold`}>
@@ -128,7 +128,7 @@ const About = () => {
           <div className="flex flex-wrap justify-center gap-6">
             {expertise.map((skill, index) => (
               <div
-                key={index}
+                key={skill}
                 className="group flex-1 min-w-[280px] bg-white dark:bg-slate-900 p-8 rounded-xl shadow-sm hover:shadow-md transform transition-all duration-300 hover:-translate-y-2"
               >
                 <div className="mb-4 flex items-center justify-center w-16 h-16 bg-gradient-to-br from-gaming to-professional rounded-xl">

@@ -43,15 +43,15 @@ const Testimonials = () => {
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {testimonials.map((testimonial, index) => (
+            {testimonials.map((testimonial) => (
               <div
-                key={index}
+                key={testimonial.name}
                 className="group bg-slate-50 dark:bg-slate-900 rounded-2xl shadow-sm p-8 hover:shadow-md transition-all duration-300 hover:-translate-y-2"
               >
                 {/* Rating */}
                 <div className="flex gap-2 mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
-                    <span key={i} className="text-amber-400 text-xl">
+                    <span key={`${testimonial.name}-star-${i}`} className="text-amber-400 text-xl">
                       ⭐
                     </span>
                   ))}

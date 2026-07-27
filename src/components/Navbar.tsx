@@ -46,6 +46,7 @@ const Navbar = () => {
             ))}
             <LanguageSelector />
             <button
+              type="button"
               onClick={toggleTheme}
               className="p-2 rounded-full bg-slate-100/80 dark:bg-white/5 border border-transparent dark:border-white/10 text-slate-600 dark:text-slate-300 hover:text-gaming dark:hover:text-professional hover:shadow-glow-purple transition-all duration-300"
               aria-label="Toggle theme"
@@ -66,6 +67,7 @@ const Navbar = () => {
           <div className="md:hidden flex items-center space-x-2">
             <LanguageSelector />
             <button
+              type="button"
               onClick={toggleTheme}
               className="p-2 rounded-full bg-slate-100/80 dark:bg-white/5 border border-transparent dark:border-white/10 text-slate-600 dark:text-slate-300"
               aria-label="Toggle theme"
@@ -81,6 +83,7 @@ const Navbar = () => {
               )}
             </button>
             <button
+              type="button"
               onClick={() => setIsOpen(!isOpen)}
               className="text-slate-600 dark:text-slate-400"
               aria-label="Toggle menu"

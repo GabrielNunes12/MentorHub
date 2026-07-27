@@ -62,6 +62,7 @@ export const BookingModal = ({ isOpen, onClose, onConfirm, serviceName, price, c
                         {step === 'confirm' && t('services.booking.confirmBooking')}
                     </h3>
                     <button
+                        type="button"
                         onClick={reset}
                         className="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"
                     >
@@ -91,6 +92,7 @@ export const BookingModal = ({ isOpen, onClose, onConfirm, serviceName, price, c
                         <div className="grid grid-cols-2 gap-3">
                             {TIME_SLOTS.map((time) => (
                                 <button
+                                    type="button"
                                     key={time}
                                     onClick={() => handleTimeSelect(time)}
                                     className="p-3 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-blue-500 hover:bg-blue-50 dark:hover:bg-gray-700 transition-all text-gray-700 dark:text-gray-200"
@@ -123,6 +125,7 @@ export const BookingModal = ({ isOpen, onClose, onConfirm, serviceName, price, c
                             </div>
 
                             <button
+                                type="button"
                                 onClick={handleConfirm}
                                 className="w-full py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-bold rounded-lg hover:shadow-lg transform hover:-translate-y-1 transition-all"
                             >
@@ -130,6 +133,7 @@ export const BookingModal = ({ isOpen, onClose, onConfirm, serviceName, price, c
                             </button>
 
                             <button
+                                type="button"
                                 onClick={() => setStep('time')}
                                 className="w-full py-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white"
                             >

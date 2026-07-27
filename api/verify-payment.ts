@@ -69,7 +69,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
         const startDate = new Date(date)
         const [hours, minutes] = time.split(':')
-        startDate.setHours(parseInt(hours), parseInt(minutes))
+        startDate.setHours(Number.parseInt(hours), Number.parseInt(minutes))
         const endDate = new Date(startDate)
         endDate.setHours(startDate.getHours() + 1)
 

@@ -200,7 +200,7 @@ const Contact = () => {
                     {...register('email', {
                       required: t('contact.form.errors.emailRequired'),
                       pattern: {
-                        value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+                        value: /^[^\s@]+@([^\s@.]+\.)+[^\s@.]+$/,
                         message: t('contact.form.errors.emailInvalid'),
                       },
                     })}
@@ -310,9 +310,9 @@ const Contact = () => {
             <span>{t('contact.faq.title')}</span>
           </h2>
           <div className="space-y-6">
-            {translations.contact.faq.items.map((faq, index) => (
+            {translations.contact.faq.items.map((faq) => (
               <div
-                key={index}
+                key={faq.question}
                 className="group bg-slate-50 dark:bg-slate-900 rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1"
               >
                 <h3 className="flex items-center space-x-3 text-lg font-bold text-slate-900 dark:text-slate-50 mb-2">

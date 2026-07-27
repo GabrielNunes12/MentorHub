@@ -79,7 +79,7 @@ const Footer = () => {
               <li><Link to="/refund-policy" className="transition-all duration-300 hover:text-slate-50 hover:translate-x-1 inline-block">
                 {t('footer.legal.refundPolicy')}
               </Link></li>
-              <li><a href="#" className="transition-all duration-300 hover:text-slate-50 hover:translate-x-1 inline-block">
+              <li><a href="/sitemap.xml" className="transition-all duration-300 hover:text-slate-50 hover:translate-x-1 inline-block">
                 {t('footer.legal.sitemap')}
               </a></li>
             </ul>
@@ -102,7 +102,7 @@ const Footer = () => {
               <Link to="/refund-policy" className="transition-all duration-300 hover:text-slate-50 hover:translate-x-1 inline-block">
                 {t('footer.legal.refundPolicy')}
               </Link>
-              <a href="#" className="transition-all duration-300 hover:text-slate-50 hover:translate-x-1 inline-block">
+              <a href="/sitemap.xml" className="transition-all duration-300 hover:text-slate-50 hover:translate-x-1 inline-block">
                 {t('footer.legal.sitemap')}
               </a>
             </div>

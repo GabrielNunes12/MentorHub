@@ -27,8 +27,8 @@ const PrivacyPolicy = () => {
                     </p>
 
                     <div className="space-y-8">
-                        {content.sections?.map((section: any, index: number) => (
-                            <div key={index}>
+                        {content.sections?.map((section: { heading: string; body: string }) => (
+                            <div key={section.heading}>
                                 <h2 className="flex items-center space-x-4 text-2xl font-semibold text-slate-900 dark:text-slate-50 mb-4">
                                     <PathNode variant="connection" size="md" className="flex-shrink-0" />
                                     <span>{section.heading}</span>

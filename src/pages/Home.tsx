@@ -64,6 +64,7 @@ const Home = () => {
             {/* CTAs */}
             <div className="mt-10 flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
               <button
+                type="button"
                 onClick={() => openCalendly()}
                 className="group relative inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-semibold text-white rounded-xl bg-gradient-to-r from-gaming to-professional shadow-glow-purple hover:shadow-glow-emerald-lg hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300"
               >
@@ -83,9 +84,9 @@ const Home = () => {
             {/* Social proof */}
             <div className="mt-16 flex flex-col items-center gap-3">
               <div className="flex -space-x-3">
-                {HERO_BADGES.map((badge, i) => (
+                {HERO_BADGES.map((badge) => (
                   <div
-                    key={i}
+                    key={badge.initials}
                     className={`relative w-11 h-11 rounded-full ring-2 ring-[#05060f] bg-gradient-to-br ${badge.from} ${badge.to} flex items-center justify-center font-mono text-xs font-semibold text-white shadow-glow-purple`}
                   >
                     {badge.initials}
@@ -115,8 +116,8 @@ const Home = () => {
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4 text-center">
-            {stats.map((stat, index) => (
-              <div key={index} className="p-6 bg-white dark:bg-slate-900 rounded-xl shadow-sm hover:shadow-md transition-all duration-300">
+            {stats.map((stat) => (
+              <div key={stat.label} className="p-6 bg-white dark:bg-slate-900 rounded-xl shadow-sm hover:shadow-md transition-all duration-300">
                 <div className="mb-4">
                   <span className="text-2xl font-bold bg-gradient-to-r from-gaming to-professional bg-clip-text text-transparent">
                     {stat.value}
@@ -146,7 +147,7 @@ const Home = () => {
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {features.map((feature, index) => (
               <div
-                key={index}
+                key={feature.title}
                 className="group bg-white dark:bg-slate-900 p-8 rounded-xl shadow-sm hover:shadow-md transform transition-all duration-300 hover:-translate-y-2"
               >
                 <div className="mb-6">
@@ -182,6 +183,7 @@ const Home = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <button
+              type="button"
               onClick={() => openCalendly()}
               className="flex items-center justify-center px-8 py-4 text-lg font-semibold bg-slate-50 text-slate-900 rounded-xl hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
             >
