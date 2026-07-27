@@ -10,7 +10,7 @@ const TermsOfService = () => {
         <div className="w-full pt-20 pb-20 relative overflow-hidden">
             <SEO
                 title="Terms of Service"
-                description="Read our terms of service and conditions for using our platform."
+                description="Review the terms and conditions for using MentorHubTech's game development mentorship and consulting services."
                 canonical={`${window.location.origin}/terms-of-service`}
             />
             <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">

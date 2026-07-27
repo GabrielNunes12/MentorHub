@@ -15,7 +15,7 @@ const SEO = ({ title, description, canonical, ogImage, noindex = false }: SEOPro
     return (
         <Helmet>
             {/* Basic Metrics */}
-            <title>{title} | MentorHub</title>
+            <title>{title} | MentorHubTech</title>
             <meta name="description" content={description} />
             <link rel="canonical" href={currentUrl} />
 

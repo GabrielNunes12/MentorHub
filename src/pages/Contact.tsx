@@ -48,8 +48,8 @@ const Contact = () => {
   return (
     <div className="w-full">
       <SEO
-        title="Contact MentorHub"
-        description="Get in touch with MentorHub for inquiries about our gaming and professional development platforms."
+        title="Contact MentorHubTech"
+        description="Get in touch with MentorHubTech for inquiries about our game development mentorship and consulting services."
         canonical={`${window.location.origin}/contact`}
       />
       {/* Hero Section */}

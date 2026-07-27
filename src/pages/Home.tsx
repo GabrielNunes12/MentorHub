@@ -16,8 +16,8 @@ const Home = () => {
   return (
     <div className="w-full">
       <SEO
-        title="Unlock Your Potential"
-        description="Choose your path: Gaming excellence or professional growth through our specialized platforms."
+        title="Level Up Your Game Development"
+        description="Expert guidance and mentorship for game developers and studios. From concept to launch, we help you create exceptional gaming experiences."
         canonical={window.location.origin}
       />
       {/* Hero Section */}

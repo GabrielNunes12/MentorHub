@@ -33,8 +33,8 @@ const Services = () => {
   return (
     <div className="w-full">
       <SEO
-        title="MentorHub Solutions"
-        description="Discover our two specialized platforms designed for different paths of growth and achievement."
+        title="Our Game Development Services"
+        description="Choose the perfect mentorship package to level up your game development skills."
         canonical={`${window.location.origin}/services`}
       />
       {/* Hero Section */}

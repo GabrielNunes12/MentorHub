@@ -10,7 +10,7 @@ const PrivacyPolicy = () => {
         <div className="w-full pt-20 pb-20 relative overflow-hidden">
             <SEO
                 title="Privacy Policy"
-                description="Read our privacy policy regarding data collection and protection."
+                description="Read our privacy policy regarding data collection and protection for our mentorship services."
                 canonical={`${window.location.origin}/privacy-policy`}
             />
             <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:py-8">

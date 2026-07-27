@@ -13,8 +13,8 @@ const About = () => {
   return (
     <div className="w-full">
       <SEO
-        title="About MentorHub"
-        description="Learn about MentorHub, a segregation platform offering specialized paths for gaming excellence and professional growth."
+        title="About MentorHubTech"
+        description="Learn about MentorHubTech, specialized game development mentorship and consulting services for developers and studios."
         canonical={`${window.location.origin}/about`}
       />
       {/* Hero Section */}

@@ -9,8 +9,8 @@ const Testimonials = () => {
   return (
     <div className="w-full">
       <SEO
-        title="Student Success Stories"
-        description="Read how MentorHub has helped developers transform their careers, land new jobs, and negotiate better salaries."
+        title="Developer Success Stories"
+        description="Read how MentorHubTech has helped game developers level up their skills, launch games, and advance their careers."
         canonical={`${window.location.origin}/testimonials`}
       />
       {/* Hero Section */}
