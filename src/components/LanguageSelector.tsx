@@ -10,23 +10,21 @@ export const LanguageSelector = () => {
   ]
 
   return (
-    <div className="flex items-center gap-2">
-      <div className="flex gap-1">
-        {languages.map((lang) => (
-          <button
-            key={lang.code}
-            onClick={() => changeLanguage(lang.code)}
-            className={`px-2 py-1 rounded text-lg transition-all ${
-              language === lang.code
-                ? 'bg-blue-600 shadow-lg'
-                : 'hover:bg-gray-100 dark:hover:bg-gray-700'
-            }`}
-            title={lang.label}
-          >
-            {lang.flag}
-          </button>
-        ))}
-      </div>
+    <div className="flex items-center gap-1 p-1 rounded-full bg-slate-100/80 dark:bg-white/5 border border-transparent dark:border-white/10">
+      {languages.map((lang) => (
+        <button
+          key={lang.code}
+          onClick={() => changeLanguage(lang.code)}
+          className={`flex items-center justify-center w-7 h-7 rounded-full text-sm transition-all duration-300 ${
+            language === lang.code
+              ? 'bg-gradient-to-br from-gaming to-professional shadow-glow-purple scale-105'
+              : 'opacity-60 hover:opacity-100'
+          }`}
+          title={lang.label}
+        >
+          {lang.flag}
+        </button>
+      ))}
     </div>
   )
 }

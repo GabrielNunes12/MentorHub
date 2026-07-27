@@ -317,6 +317,13 @@ export const translations = {
         about: 'About',
         services: 'Services',
         testimonials: 'Testimonials',
+        gaming: 'Gaming Platform',
+        contact: 'Contact',
+      },
+      platforms: {
+        title: 'Platforms',
+        gaming: 'Game Development',
+        solutions: 'IT Solutions',
       },
       services: {
         title: 'Services',
@@ -331,6 +338,7 @@ export const translations = {
         contactForm: 'Contact Form',
       },
       legal: {
+        title: 'Legal',
         copyright: '© {year} MentorHubTech. All rights reserved.',
         privacy: 'Privacy Policy',
         refundPolicy: 'Refund Policy',
@@ -352,7 +360,7 @@ export const translations = {
             body: 'We use your information to provide mentorship services, process payments, and communicate with you about your projects.',
           },
           {
-            heading: 'Data Protection'
+            heading: 'Data Protection',
             body: 'We implement rigorous security measures to protect your data. We treat client confidentiality with the utmost priority.',
           },
         ],
@@ -369,11 +377,11 @@ export const translations = {
             body: 'We provide game development mentorship and consulting services. While we strive to provide valuable guidance, individual results may vary based on effort and implementation.',
           },
           {
-            heading: 'Confidentiality'
+            heading: 'Confidentiality',
             body: 'We agree to keep all findings confidential. You agree to provide necessary access for us to perform the agreed-upon services.',
           },
           {
-            heading: 'Liability'
+            heading: 'Liability',
             body: 'MentorHubTech is not liable for any damages arising from the use of our services, except in cases of gross negligence.',
           },
         ],
@@ -459,7 +467,7 @@ export const translations = {
         bio3: 'Acreditamos em uma abordagem prática para o aprendizado, fornecendo conselhos práticos e passos acionáveis para melhorar suas habilidades de desenvolvimento de jogos.',
       },
       timeline: {
-        title: 'Nossa Jornada'
+        title: 'Nossa Jornada',
         events: [
           { year: '2019', event: 'Iniciei no desenvolvimento de jogos' },
           { year: '2022', event: 'Publiquei meu primeiro jogo indie no Steam' },
@@ -469,654 +477,670 @@ export const translations = {
         ],
       },
       expertise: {
-        title: 'Áreas de Expertise'
+        title: 'Áreas de Expertise',
         items: ['Design de Jogos', 'Programação de Jogos', 'Arte & Animação de Jogos', 'Produção de Jogos', 'Negócios & Publicação de Jogos'],
       },
     },
     services: {
       hero: {
-        title: 'Nossos Serviços'
-        titleHighlight: 'Serviços'
+        title: 'Nossos Serviços',
+        titleHighlight: 'Serviços',
         description: 'Escolha o pacote de mentoria perfeito para elevar suas habilidades de desenvolvimento de jogos.'
       },
       regionIndicator: {
-        currency: 'Moeda'
-        localPricing: 'Preços ajustados localmente para'
-        changeRegion: 'Mudar região:'
-        br: '🇧🇷 Preços em Real Brasileiro com preços acessíveis'
-        eu: '🇪🇺 Preços em Euro (Zona do Euro)'
-        uk: '🇬🇧 Preços em Libra Esterlina'
-        us: '🇺🇸 Preços em Dólar Americano'
+        currency: 'Moeda',
+        localPricing: 'Preços ajustados localmente para',
+        changeRegion: 'Mudar região:',
+        br: '🇧🇷 Preços em Real Brasileiro com preços acessíveis',
+        eu: '🇪🇺 Preços em Euro (Zona do Euro)',
+        uk: '🇬🇧 Preços em Libra Esterlina',
+        us: '🇺🇸 Preços em Dólar Americano',
       },
 
       cards: [
         {
-          name: 'Mentoria em Desenvolvimento de Jogos'
-          duration: 'Por Sessão'
-          description: 'Mentoria abrangente que abrange todos os aspectos do desenvolvimento de jogos, do conceito ao lançamento.'
+          name: 'Mentoria em Desenvolvimento de Jogos',
+          duration: 'Por Sessão',
+          description: 'Mentoria abrangente que abrange todos os aspectos do desenvolvimento de jogos, do conceito ao lançamento.',
           features: [
-            'Orientação em Design de Jogos'
-            'Ajuda em Programação Técnica'
-            'Feedback em Arte & Animação'
-            'Planejamento de Produção'
+            'Orientação em Design de Jogos',
+            'Ajuda em Programação Técnica',
+            'Feedback em Arte & Animação',
+            'Planejamento de Produção',
             'Estratégia de Negócios & Marketing'
-          ]
+          ],
           popular: true
-        }
+        },
         {
-          name: 'Consultoria Técnica'
-          duration: 'Por Sessão'
-          description: 'Aprofunde-se em desafios técnicos específicos do seu projeto de desenvolvimento de jogos.'
+          name: 'Consultoria Técnica',
+          duration: 'Por Sessão',
+          description: 'Aprofunde-se em desafios técnicos específicos do seu projeto de desenvolvimento de jogos.',
           features: [
-            'Orientação Específica para Engines'
-            'Otimização de Performance'
-            'Correção de Bugs & Depuração'
-            'Revisão de Arquitetura'
-            'Revisão de Código & Melhores Práticas'
+            'Orientação Específica para Engines',
+            'Otimização de Performance',
+            'Correção de Bugs & Depuração',
+            'Revisão de Arquitetura',
+            'Revisão de Código & Melhores Práticas',
           ]
         }
-      ]
+      ],
       comparison: {
-        title: 'Comparação de Serviços'
-        features: 'Funcionalidades'
-        careerCoaching: 'Orientação de Carreira'
-        resumeReview: 'Revisão de Portfólio'
-        interviewPrep: 'Preparação para Entrevista'
-        monthlyRetainer: 'Mentoria Contínua'
+        title: 'Comparação de Serviços',
+        features: 'Funcionalidades',
+        careerCoaching: 'Orientação de Carreira',
+        resumeReview: 'Revisão de Portfólio',
+        interviewPrep: 'Preparação para Entrevista',
+        monthlyRetainer: 'Mentoria Contínua',
         items: []
-      }
+      },
       buttons: {
         scheduleNow: 'Agendar Agora'
-      }
+      },
       cta: {
-        title: 'Quer Melhorar suas Habilidades em Desenvolvimento de Jogos? Agende uma Consulta.'
-        subtitle: 'Vamos discutir seus objetivos e criar um plano de mentoria personalizado.'
+        title: 'Quer Melhorar suas Habilidades em Desenvolvimento de Jogos? Agende uma Consulta.',
+        subtitle: 'Vamos discutir seus objetivos e criar um plano de mentoria personalizado.',
         button: 'Obter Consulta Gratuita'
-      }
+      },
       booking: {
-        selectDate: 'Selecionar Data'
-        selectTime: 'Selecionar Horário'
-        confirmBooking: 'Confirmar Agendamento'
-        service: 'Serviço'
-        date: 'Data'
-        time: 'Horário'
-        total: 'Total'
-        confirmPay: 'Confirmar & Pagar'
+        selectDate: 'Selecionar Data',
+        selectTime: 'Selecionar Horário',
+        confirmBooking: 'Confirmar Agendamento',
+        service: 'Serviço',
+        date: 'Data',
+        time: 'Horário',
+        total: 'Total',
+        confirmPay: 'Confirmar & Pagar',
         back: 'Voltar'
-      }
+      },
       mostPopular: '⭐ MAIS POPULAR'
-    }
+    },
     mentorhubtech: {
       studios: {
-        title: 'MentorHubTech Studios'
-        subtitle: 'Game dev: estúdio e equipes'
-        description: 'Mentoria especializada em desenvolvimento de jogos para estúdios e equipes de desenvolvimento.'
+        title: 'MentorHubTech Studios',
+        subtitle: 'Game dev: estúdio e equipes',
+        description: 'Mentoria especializada em desenvolvimento de jogos para estúdios e equipes de desenvolvimento.',
         back: 'Voltar para a home'
-      }
+      },
       it: {
-        title: 'MentorHubTech Consulting'
-        subtitle: 'Consultoria e mentoria em desenvolvimento de jogos'
-        description: 'Serviços personalizados de mentoria e consultoria para desenvolvedores individuais de jogos.'
+        title: 'MentorHubTech Consulting',
+        subtitle: 'Consultoria e mentoria em desenvolvimento de jogos',
+        description: 'Serviços personalizados de mentoria e consultoria para desenvolvedores individuais de jogos.',
         back: 'Voltar para a home'
-      }
+      },
       section: {
-        title: 'MentorHubTech — Nossos Serviços'
+        title: 'MentorHubTech — Nossos Serviços',
         subtitle: 'Somos um núcleo que reúne serviços especializados de desenvolvimento de jogos. Escolha o serviço que melhor atende sua necessidade.'
       }
-    }
+    },
     refundPolicy: {
-      title: 'Política de Reembolso'
+      title: 'Política de Reembolso',
       content: {
-        intro: 'Queremos que você tenha confiança em nossa mentoria. Se não estiver satisfeito com a sessão fornecida, você pode solicitar um reembolso de acordo com os seguintes termos:'
+        intro: 'Queremos que você tenha confiança em nossa mentoria. Se não estiver satisfeito com a sessão fornecida, você pode solicitar um reembolso de acordo com os seguintes termos:',
         conditions: [
-          'Os pedidos de reembolso devem ser feitos dentro de 7 dias da data da sessão.'
-          'Cancelamentos feitos com menos de 24 horas antes de uma sessão agendada não são elegíveis para reembolso.'
-          'Se o mentor cancelar uma sessão, será oferecido um reembolso total ou reagendamento.'
+          'Os pedidos de reembolso devem ser feitos dentro de 7 dias da data da sessão.',
+          'Cancelamentos feitos com menos de 24 horas antes de uma sessão agendada não são elegíveis para reembolso.',
+          'Se o mentor cancelar uma sessão, será oferecido um reembolso total ou reagendamento.',
           'Os reembolsos serão processados para o método de pagamento original dentro de 5 a 10 dias úteis.'
-        ]
+        ],
         contact: 'Para solicitar um reembolso, entre em contato conosco em'
       }
-    }
+    },
     testimonials: {
       hero: {
-        title: 'Histórias de Desenvolvedores'
-        titleHighlight: 'Histórias'
-        description: 'Feedback real de desenvolvedores de jogos que ajudamos a melhorar suas habilidades.'
-      }
+        title: 'Histórias de Desenvolvedores',
+        titleHighlight: 'Histórias',
+        description: 'Feedback real de desenvolvedores de jogos que ajudamos a melhorar suas habilidades.',
+      },
       cta: {
-        title: 'Sua História de Sucesso Começa Aqui'
-        button: 'Comece Sua Jornada Hoje'
-      }
+        title: 'Sua História de Sucesso Começa Aqui',
+        button: 'Comece Sua Jornada Hoje',
+      },
       items: [
         {
-          name: 'PixelForge Studios'
-          title: 'Designer Principal de Jogos'
-          company: ' em Estúdio Indie'
-          content: 'A mentoria nos ajudou a redesenhar as mecânicas do jogo, resultando em 40% mais retenção de jogadores. Orientação especializada que realmente funciona.'
+          name: 'PixelForge Studios',
+          title: 'Designer Principal de Jogos',
+          company: ' em Estúdio Indie',
+          content: 'A mentoria nos ajudou a redesenhar as mecânicas do jogo, resultando em 40% mais retenção de jogadores. Orientação especializada que realmente funciona.',
           rating: 5
-        }
+        },
         {
-          name: 'Indev Solo'
-          title: 'Desenvolvedor Solo'
-          company: ''
-          content: 'De lutar com o Unity a publicar meu primeiro jogo no Steam - essa mentoria tornou isso possível. Valeu cada centavo.'
+          name: 'Indev Solo',
+          title: 'Desenvolvedor Solo',
+          company: '',
+          content: 'De lutar com o Unity a publicar meu primeiro jogo no Steam - essa mentoria tornou isso possível. Valeu cada centavo.',
           rating: 5
-        }
+        },
         {
-          name: 'GameForge Coletivo'
-          title: 'Diretor Técnico'
-          company: ' em Estúdio Móvel'
-          content: 'Nossa equipe aprendeu técnicas de otimização que dobraram o desempenho dos nossos jogos em dispositivos móveis. Profissional e minucioso.'
+          name: 'GameForge Coletivo',
+          title: 'Diretor Técnico',
+          company: ' em Estúdio Móvel',
+          content: 'Nossa equipe aprendeu técnicas de otimização que dobraram o desempenho dos nossos jogos em dispositivos móveis. Profissional e minucioso.',
           rating: 5
         }
       ]
-    }
+    },
     contact: {
       hero: {
-        title: 'Entre em'
-        titleHighlight: 'Contato'
+        title: 'Entre em',
+        titleHighlight: 'Contato',
         description: 'Pronto para elevar seu desenvolvimento de jogos? Vamos nos conectar e discutir como posso ajudá-lo a alcançar seus objetivos.'
-      }
+      },
       info: {
-        title: 'Informações de Contato'
-        subtitle: 'Sinta-se livre para entrar em contato comigo através de qualquer um desses canais.'
-        email: 'Email'
-        phone: 'Telefone'
-        location: 'Localização'
-        locationValue: 'Disponível para mentoria virtual em todo o mundo'
-        responseTime: 'Tempo de Resposta'
-        responseTimeValue: 'Geralmente dentro de 24 horas'
+        title: 'Informações de Contato',
+        subtitle: 'Sinta-se livre para entrar em contato comigo através de qualquer um desses canais.',
+        email: 'Email',
+        phone: 'Telefone',
+        location: 'Localização',
+        locationValue: 'Disponível para mentoria virtual em todo o mundo',
+        responseTime: 'Tempo de Resposta',
+        responseTimeValue: 'Geralmente dentro de 24 horas',
         social: 'Conecte-se nas Redes Sociais'
-      }
+      },
       form: {
-        title: 'Envie uma mensagem'
+        title: 'Envie uma mensagem',
         labels: {
-          fullName: 'Nome Completo'
-          email: 'Endereço de Email'
-          phone: 'Telefone (Opcional)'
-          subject: 'Assunto'
+          fullName: 'Nome Completo',
+          email: 'Endereço de Email',
+          phone: 'Telefone (Opcional)',
+          subject: 'Assunto',
           message: 'Mensagem'
-        }
+        },
         placeholders: {
-          fullName: 'João Silva'
-          email: 'joao@exemplo.com'
-          phone: '+55 (11) 98765-4321'
-          subject: 'Estou interessado em mentoria em desenvolvimento de jogos'
+          fullName: 'João Silva',
+          email: 'joao@exemplo.com',
+          phone: '+55 (11) 98765-4321',
+          subject: 'Estou interessado em mentoria em desenvolvimento de jogos',
           message: 'Conte-me sobre seu projeto de jogo e o que você precisa de ajuda...'
-        }
-        button: 'Enviar Mensagem'
-        sending: 'Enviando...'
+        },
+        button: 'Enviar Mensagem',
+        sending: 'Enviando...',
         errors: {
-          nameRequired: 'O nome é obrigatório'
-          emailRequired: 'O email é obrigatório'
-          emailInvalid: 'Por favor, insira um email válido'
-          subjectRequired: 'O assunto é obrigatório'
+          nameRequired: 'O nome é obrigatório',
+          emailRequired: 'O email é obrigatório',
+          emailInvalid: 'Por favor, insira um email válido',
+          subjectRequired: 'O assunto é obrigatório',
           messageRequired: 'A mensagem é obrigatória'
-        }
-        success: 'Mensagem enviada com sucesso! Voltarei em breve.'
+        },
+        success: 'Mensagem enviada com sucesso! Voltarei em breve.',
         error: 'Erro ao enviar mensagem'
-      }
+      },
       faq: {
-        title: 'Perguntas Frequentes'
+        title: 'Perguntas Frequentes',
         items: [
           {
-            question: 'Quanto tempo dura uma sessão de mentoria normalmente?'
+            question: 'Quanto tempo dura uma sessão de mentoria normalmente?',
             answer: 'As sessões normalmente têm 60 minutos, mas oferecemos horários flexíveis baseado nas suas necessidades.'
-          }
+          },
           {
-            question: 'Qual é seu tempo de resposta?'
+            question: 'Qual é seu tempo de resposta?',
             answer: 'Normalmente respondo a consultas dentro de 24 horas durante os dias úteis.'
-          }
+          },
           {
-            question: 'Você oferece horários flexíveis?'
+            question: 'Você oferece horários flexíveis?',
             answer: 'Sim! Trabalho com desenvolvedores em diferentes fusos horários e ofereço opções de agendamento flexível.'
-          }
+          },
           {
-            question: 'E se eu estiver apenas começando no desenvolvimento de jogos?'
+            question: 'E se eu estiver apenas começando no desenvolvimento de jogos?',
             answer: 'Perfeito! Nos especializamos em ajudar iniciantes a começar com as bases certas e evitar erros comuns de iniciantes.'
           }
         ]
       }
-    }
+    },
     footer: {
-      brand: 'MentorHubTech'
-      tagline: 'Elevando desenvolvedores de jogos uma sessão de cada vez.'
+      brand: 'MentorHubTech',
+      tagline: 'Elevando desenvolvedores de jogos uma sessão de cada vez.',
       quickLinks: {
-        title: 'Links Rápidos'
-        home: 'Início'
-        about: 'Sobre'
-        services: 'Serviços'
-        testimonials: 'Depoimentos'
-      }
+        title: 'Links Rápidos',
+        home: 'Início',
+        about: 'Sobre',
+        services: 'Serviços',
+        testimonials: 'Depoimentos',
+        gaming: 'Plataforma de Jogos',
+        contact: 'Contato'
+      },
+      platforms: {
+        title: 'Plataformas',
+        gaming: 'Desenvolvimento de Jogos',
+        solutions: 'Soluções de TI'
+      },
       services: {
-        title: 'Serviços'
-        careerCoaching: 'Orientação de Carreira'
+        title: 'Serviços',
+        careerCoaching: 'Orientação de Carreira',
         techMentoring: 'Consultoria Técnica'
-      }
+      },
       connect: {
-        title: 'Conectar'
-        email: 'Email'
-        linkedin: 'LinkedIn'
-        twitter: 'Twitter'
+        title: 'Conectar',
+        email: 'Email',
+        linkedin: 'LinkedIn',
+        twitter: 'Twitter',
         contactForm: 'Formulário de Contato'
-      }
+      },
       legal: {
-        copyright: '© {year} MentorHubTech. Todos os direitos reservados.'
-        privacy: 'Política de Privacidade'
-        refundPolicy: 'Política de Reembolso'
-        terms: 'Termos de Serviço'
+        title: 'Legal',
+        copyright: '© {year} MentorHubTech. Todos os direitos reservados.',
+        privacy: 'Política de Privacidade',
+        refundPolicy: 'Política de Reembolso',
+        terms: 'Termos de Serviço',
         sitemap: 'Mapa do Site'
       }
-    }
+    },
     privacyPolicy: {
-      title: 'Política de Privacidade'
+      title: 'Política de Privacidade',
       content: {
-        intro: 'Na MentorHubTech, levamos sua privacidade a sério. Esta Política de Privacidade explica como coletamos, usamos e protegemos suas informações pessoais.'
+        intro: 'Na MentorHubTech, levamos sua privacidade a sério. Esta Política de Privacidade explica como coletamos, usamos e protegemos suas informações pessoais.',
         sections: [
           {
-            heading: 'Informações que Coletamos'
+            heading: 'Informações que Coletamos',
             body: 'Coletamos informações que você nos fornece diretamente, como seu nome, endereço de email e informações de pagamento ao agendar um serviço.'
-          }
+          },
           {
-            heading: 'Como Usamos Suas Informações'
+            heading: 'Como Usamos Suas Informações',
             body: 'Usamos suas informações para fornecer serviços de mentoria, processar pagamentos e nos comunicar com você sobre seus projetos.'
-          }
+          },
           {
-            heading: 'Proteção de Dados'
+            heading: 'Proteção de Dados',
             body: 'Implementamos medidas de segurança rigorosas para proteger seus dados. Como uma empresa de mentoria, tratamos a confidencialidade do cliente com a máxima prioridade.'
           }
-        ]
+        ],
         lastUpdated: 'Última Atualização: Fevereiro 2026'
       }
-    }
+    },
     termsOfService: {
-      title: 'Termos de Serviço'
+      title: 'Termos de Serviço',
       content: {
-        intro: 'Ao acessar ou usar nossos serviços, você concorda em ficar vinculado a estes Termos de Serviço.'
+        intro: 'Ao acessar ou usar nossos serviços, você concorda em ficar vinculado a estes Termos de Serviço.',
         sections: [
           {
-            heading: 'Serviços'
+            heading: 'Serviços',
             body: 'Fornecemos serviços de mentoria e consultoria em desenvolvimento de jogos. Embora nos esforçemos para fornecer orientação valiosa, os resultados individuais podem variar com base no esforço e na implementação.'
-          }
+          },
           {
-            heading: 'Confidencialidade'
+            heading: 'Confidencialidade',
             body: 'Concordamos em manter todas as descobertas confidenciais. Você concorda em fornecer o acesso necessário para que realizemos os serviços acordados.'
-          }
+          },
           {
-            heading: 'Responsabilidade'
+            heading: 'Responsabilidade',
             body: 'A MentorHubTech não se responsabiliza por quaisquer danos decorrentes do uso de nossos serviços, exceto em casos de negligência grave.'
           }
-        ]
+        ],
         lastUpdated: 'Última Atualização: Fevereiro 2026'
       }
     }
-  }
+  },
   es: {
     common: {
-      language: 'Idioma'
-      english: 'English'
-      portuguese: 'Português'
-      spanish: 'Español'
-      contactEmail: 'gabrieln.dev3@gmail.com'
+      language: 'Idioma',
+      english: 'English',
+      portuguese: 'Português',
+      spanish: 'Español',
+      contactEmail: 'gabrieln.dev3@gmail.com',
       phone: '+351 928 460 134'
-    }
+    },
     navbar: {
-      home: 'Inicio'
-      about: 'Acerca'
-      services: 'Servicios'
-      testimonios: 'Testimonios'
+      home: 'Inicio',
+      about: 'Acerca',
+      services: 'Servicios',
+      testimonios: 'Testimonios',
       contact: 'Contacto'
-    }
+    },
 
     home: {
       hero: {
-        title: 'Mejora tu'
-        titleHighlight: 'Desarrollo de Juegos'
-        subtitle: 'Hoy'
-        description: 'Orientación experta y mentoría para desarrolladores de juegos y estudios. Desde el concepto hasta el lanzamiento, te ayudamos a crear experiencias de juego excepcionales.'
-        cta1: 'Comenzar Mentoría en Desarrollode de Juegos'
-        cta2: 'Explorar Nuestros Servicios'
+        title: 'Mejora tu',
+        titleHighlight: 'Desarrollo de Juegos',
+        subtitle: 'Hoy',
+        description: 'Orientación experta y mentoría para desarrolladores de juegos y estudios. Desde el concepto hasta el lanzamiento, te ayudamos a crear experiencias de juego excepcionales.',
+        cta1: 'Comenzar Mentoría en Desarrollo de Juegos',
+        cta2: 'Explorar Nuestros Servicios',
         trustIndicator: 'juegos lanzados'
-      }
+      },
       stats: [
-        { label: 'Juegos Lanzados', value: '50+' }
-        { label: 'Desarrolladores Mentorizados', value: '100+' }
-        { label: 'Años de Experiencia', value: '5+' }
+        { label: 'Juegos Lanzados', value: '50+' },
+        { label: 'Desarrolladores Mentorizados', value: '100+' },
+        { label: 'Años de Experiencia', value: '5+' },
         { label: 'Proyectos Exitosos', value: '25+' }
-      ]
+      ],
       features: {
-        title: '¿Por qué elegir Nuestra Mentoría en Desarrollo de Juegos?'
-        subtitle: 'Orientación experta para ayudarte a crear juegos excepcionales y mejorar tus habilidades de desarrollo.'
+        title: '¿Por qué elegir Nuestra Mentoría en Desarrollo de Juegos?',
+        subtitle: 'Orientación experta para ayudarte a crear juegos excepcionales y mejorar tus habilidades de desarrollo.',
         items: [
           {
-            title: 'Mentoría en Diseño de Juegos'
-            description: 'Aprende mecánicas de juegos, diseño de niveles y estrategias de compromiso de jugadores de expertos de la industria.'
+            title: 'Mentoría en Diseño de Juegos',
+            description: 'Aprende mecánicas de juegos, diseño de niveles y estrategias de compromiso de jugadores de expertos de la industria.',
             icon: '🎮'
-          }
+          },
           {
-            title: 'Desarrollo Técnico'
-            description: 'Domina motores de juegos, lenguajes de programación y técnicas de optimización para un rendimiento óptimo.'
+            title: 'Desarrollo Técnico',
+            description: 'Domina motores de juegos, lenguajes de programación y técnicas de optimización para un rendimiento óptimo.',
             icon: '💻'
-          }
+          },
           {
-            title: 'Orientación en Arte & Animación'
-            description: 'Desarrolla tus habilidades artísticas y aprende flujos de trabajo estándar de animación de la industria.'
+            title: 'Orientación en Arte & Animación',
+            description: 'Desarrolla tus habilidades artísticas y aprende flujos de trabajo estándar de animación de la industria.',
             icon: '🎨'
-          }
+          },
           {
-            title: 'Negocios & Publicación'
-            description: 'Aprende a monetizar tus juegos, publicar en plataformas y hacer crecer tu negocio de desarrollo de juegos.'
+            title: 'Negocios & Publicación',
+            description: 'Aprende a monetizar tus juegos, publicar en plataformas y hacer crecer tu negocio de desarrollo de juegos.',
             icon: '💼'
           }
         ]
-      }
+      },
       cta: {
-        title: '¿Listo para Mejorar tu Desarrollo de Juegos?'
-        subtitle: 'Únete a más de 50 desarrolladores que han lanzado juegos exitosos con nuestra mentoría.'
-        button: 'Comienza Tu Viaje en Desarrollode de Juegos'
+        title: '¿Listo para Mejorar tu Desarrollo de Juegos?',
+        subtitle: 'Únete a más de 50 desarrolladores que han lanzado juegos exitosos con nuestra mentoría.',
+        button: 'Comienza Tu Viaje en Desarrollo de Juegos'
       }
-    }
+    },
     about: {
       hero: {
-        title: 'Acerca'
-        titleHighlight: 'de Nosotros'
+        title: 'Acerca',
+        titleHighlight: 'de Nosotros',
         description: 'Desarrolladores de juegos apasionados y veteranos de la industria dedicados a ayudarte a tener éxito en el desarrollo de juegos.'
-      }
+      },
       profile: {
-        name: 'Somos Mentores de Desarrollo de Juegos'
-        bio1: 'Con años de experiencia en desarrollo de juegos, publicación y liderazgo en la industria, nos especializamos en ayudar a desarrolladores de juegos en todos los niveles a alcanzar sus objetivos.'
-        bio2: 'Nuestra misión es ayudar a desarrolladores de juegos aspirantes y establecidos a crear mejores juegos a través de orientación experta y mentoría práctica.'
+        name: 'Somos Mentores de Desarrollo de Juegos',
+        bio1: 'Con años de experiencia en desarrollo de juegos, publicación y liderazgo en la industria, nos especializamos en ayudar a desarrolladores de juegos en todos los niveles a alcanzar sus objetivos.',
+        bio2: 'Nuestra misión es ayudar a desarrolladores de juegos aspirantes y establecidos a crear mejores juegos a través de orientación experta y mentoría práctica.',
         bio3: 'Creemos en un enfoque práctico para el aprendizaje, proporcionando consejos prácticos y pasos accionables para mejorar tus habilidades de desarrollo de juegos.'
-      }
+      },
       timeline: {
-        title: 'Nuestro Viaje'
+        title: 'Nuestro Viaje',
         events: [
-          { year: '2019', event: 'Comencé en el desarrollo de juegos' }
-          { year: '2022', event: 'Publicé mi primer juego indie en Steam' }
-          { year: '2023', event: 'Lideré un equipo de desarrollo de juegos para un estudio móvil' }
-          { year: '2025', event: 'Consulté para un estudio de juegos AAA sobre operaciones en vivo' }
+          { year: '2019', event: 'Comencé en el desarrollo de juegos' },
+          { year: '2022', event: 'Publicé mi primer juego indie en Steam' },
+          { year: '2023', event: 'Lideré un equipo de desarrollo de juegos para un estudio móvil' },
+          { year: '2025', event: 'Consulté para un estudio de juegos AAA sobre operaciones en vivo' },
           { year: '2026-presente', event: 'Trabajo como mentor independiente de desarrollo de juegos y consultor a tiempo completo en Portugal' }
         ]
-      }
+      },
       expertise: {
-        title: 'Áreas de Experiencia'
+        title: 'Áreas de Experiencia',
         items: ['Diseño de Juegos', 'Programación de Juegos', 'Arte & Animación de Juegos', 'Producción de Juegos', 'Negocios & Publicación de Juegos']
       }
-    }
+    },
     services: {
       hero: {
-        title: 'Nuestros Servicios'
-        titleHighlight: 'Servicios'
+        title: 'Nuestros Servicios',
+        titleHighlight: 'Servicios',
         description: 'Elige el paquete de mentoría perfecto para mejorar tus habilidades de desarrollo de juegos.'
-      }
+      },
       regionIndicator: {
-        currency: 'Moneda'
-        localPricing: 'Precios ajustados localmente para'
-        changeRegion: 'Cambiar región:'
-        br: '🇧🇷 Precios en Real Brasileño con precios asequibles'
-        eu: '🇪🇺 Precios in Euro (Zona Euro)'
-        uk: '🇬🇧 Precios in Libra Esterlina'
+        currency: 'Moneda',
+        localPricing: 'Precios ajustados localmente para',
+        changeRegion: 'Cambiar región:',
+        br: '🇧🇷 Precios en Real Brasileño con precios asequibles',
+        eu: '🇪🇺 Precios in Euro (Zona Euro)',
+        uk: '🇬🇧 Precios in Libra Esterlina',
         us: '🇺🇸 Precios in Dólar Estadounidense'
-      }
+      },
 
       cards: [
         {
-          name: 'Mentoría en Desarrollode de Juegos'
-          duration: 'Por Sesión'
-          description: 'Mentoría integral que cubre todos los aspectos del desarrollo de juegos, desde el concepto hasta el lanzamiento.'
+          name: 'Mentoría en Desarrollo de Juegos',
+          duration: 'Por Sesión',
+          description: 'Mentoría integral que cubre todos los aspectos del desarrollo de juegos, desde el concepto hasta el lanzamiento.',
           features: [
-            'Orientación en Diseño de Juegos'
-            'Ayuda en Programación Técnica'
-            'Feedback en Arte & Animación'
-            'Planificación de Producción'
+            'Orientación en Diseño de Juegos',
+            'Ayuda en Programación Técnica',
+            'Feedback en Arte & Animación',
+            'Planificación de Producción',
             'Estrategia de Negocios & Marketing'
-          ]
+          ],
           popular: true
-        }
+        },
         {
-          name: 'Consultoría Técnica'
-          duration: 'Por Sesión'
-          description: 'Sumérgete en desafíos técnicos específicos de tu proyecto de desarrollo de juegos.'
+          name: 'Consultoría Técnica',
+          duration: 'Por Sesión',
+          description: 'Sumérgete en desafíos técnicos específicos de tu proyecto de desarrollo de juegos.',
           features: [
-            'Orientación Específica para Motores'
-            'Optimización de Rendimiento'
-            'Corrección de Errores & Depuración'
-            'Revisión de Arquitectura'
+            'Orientación Específica para Motores',
+            'Optimización de Rendimiento',
+            'Corrección de Errores & Depuración',
+            'Revisión de Arquitectura',
             'Revisión de Código & Mejores Prácticas'
           ]
         }
-      ]
+      ],
       comparison: {
-        title: 'Comparación de Servicios'
-        features: 'Características'
-        careerCoaching: 'Orientación de Carrera'
-        resumeReview: 'Revisión de Portafolio'
-        interviewPrep: 'Preparación para Entrevista'
-        monthlyRetainer: 'Mentoría Continua'
+        title: 'Comparación de Servicios',
+        features: 'Características',
+        careerCoaching: 'Orientación de Carrera',
+        resumeReview: 'Revisión de Portafolio',
+        interviewPrep: 'Preparación para Entrevista',
+        monthlyRetainer: 'Mentoría Continua',
         items: []
-      }
+      },
       buttons: {
         scheduleNow: 'Agendar Ahora'
-      }
+      },
       cta: {
-        title: '¿Quieres Mejorar tus Habilidades en Desarrollode de Juegos? Programa una Consulta.'
-        subtitle: 'Identifiquemos tus objetivos y creemos un plan de mentoría personalizado.'
+        title: '¿Quieres Mejorar tus Habilidades en Desarrollo de Juegos? Programa una Consulta.',
+        subtitle: 'Identifiquemos tus objetivos y creemos un plan de mentoría personalizado.',
         button: 'Obtener Consulta Gratuita'
-      }
+      },
       booking: {
-        selectDate: 'Seleccionar Fecha'
-        selectTime: 'Seleccionar Hora'
-        confirmBooking: 'Confirmar Reserva'
-        service: 'Servicio'
-        date: 'Fecha'
-        time: 'Hora'
-        total: 'Total'
-        confirmPay: 'Confirmar y Pagar'
+        selectDate: 'Seleccionar Fecha',
+        selectTime: 'Seleccionar Hora',
+        confirmBooking: 'Confirmar Reserva',
+        service: 'Servicio',
+        date: 'Fecha',
+        time: 'Hora',
+        total: 'Total',
+        confirmPay: 'Confirmar y Pagar',
         back: 'Atrás'
-      }
+      },
       mostPopular: '⭐ MÁS POPULAR'
-    }
+    },
     mentorhubtech: {
       studios: {
-        title: 'MentorHubTech Studios'
-        subtitle: 'Game dev: estudio y equipos'
-        description: 'Mentoría especializada en desarrollo de juegos para estudios y equipos de desarrollo.'
+        title: 'MentorHubTech Studios',
+        subtitle: 'Game dev: estudio y equipos',
+        description: 'Mentoría especializada en desarrollo de juegos para estudios y equipos de desarrollo.',
         back: 'Volver al inicio'
-      }
+      },
       it: {
-        title: 'MentorHubTech Consulting'
-        subtitle: 'Consultoría y mentoria en desarrollo de juegos'
-        description: 'Servicios personalizados de mentoría y consulta para desarrolladores individuales de juegos.'
+        title: 'MentorHubTech Consulting',
+        subtitle: 'Consultoría y mentoria en desarrollo de juegos',
+        description: 'Servicios personalizados de mentoría y consulta para desarrolladores individuales de juegos.',
         back: 'Volver al inicio'
-      }
+      },
       section: {
-        title: 'MentorHubTech — Nuestros servicios'
+        title: 'MentorHubTech — Nuestros servicios',
         subtitle: 'Somos una matriz que reúne servicios especializados de desarrollo de juegos. Elige el servicio que mejor se ajuste a tus necesidades.'
       }
-    }
+    },
     refundPolicy: {
-      title: 'Política de Reembolso'
+      title: 'Política de Reembolso',
       content: {
-        intro: 'Queremos que confíes en nuestra mentoría. Si no estás satisfecho con la sesión proporcionada, puedes solicitar un reembolso de acuerdo con los siguientes términos:'
+        intro: 'Queremos que confíes en nuestra mentoría. Si no estás satisfecho con la sesión proporcionada, puedes solicitar un reembolso de acuerdo con los siguientes términos:',
         conditions: [
-          'Las solicitudes de reembolso deben realizarse dentro de los 7 días posteriores a la fecha de la sesión.'
-          'Las cancelaciones realizadas con menos de 24 horas antes de una sesión programada no son elegibles para reembolso.'
-          'Si el mentor cancela una sesión, se ofrecerá un reembolso completo o una reprogramación.'
+          'Las solicitudes de reembolso deben realizarse dentro de los 7 días posteriores a la fecha de la sesión.',
+          'Las cancelaciones realizadas con menos de 24 horas antes de una sesión programada no son elegibles para reembolso.',
+          'Si el mentor cancela una sesión, se ofrecerá un reembolso completo o una reprogramación.',
           'Los reembolsos se procesarán al método de pago original dentro de 5 a 10 días hábiles.'
-        ]
+        ],
         contact: 'Para solicitar un reembolso, contáctenos en'
       }
-    }
+    },
     testimonials: {
       hero: {
-        title: 'Historias de Desarrolladores'
-        titleHighlight: 'Historias'
+        title: 'Historias de Desarrolladores',
+        titleHighlight: 'Historias',
         description: 'Comentarios reales de desarrolladores de juegos que ayudamos a mejorar sus habilidades.'
-      }
+      },
       cta: {
-        title: 'Tu Historia de Éxito Comienza Aquí'
+        title: 'Tu Historia de Éxito Comienza Aquí',
         button: 'Comienza Tu Viaje Hoy'
-      }
+      },
       items: [
         {
-          name: 'PixelForge Studios'
-          title: 'Diseñador Principal de Juegos'
-          company: ' en Estudio Indie'
-          content: 'La mentoría nos ayudó a rediseñar las mecánicas del juego,resultando en un 40% más de retención de jugadores. Orientación experta que realmente funciona.'
+          name: 'PixelForge Studios',
+          title: 'Diseñador Principal de Juegos',
+          company: ' en Estudio Indie',
+          content: 'La mentoría nos ayudó a rediseñar las mecánicas del juego,resultando en un 40% más de retención de jugadores. Orientación experta que realmente funciona.',
           rating: 5
-        }
+        },
         {
-          name: 'Indev Solo'
-          title: 'Desarrollador Solo'
-          company: ''
-          content: 'De luchar con Unity a publicar mi primer juego en Steam - esta mentoría lo hizo posible. Vale cada centavo.'
+          name: 'Indev Solo',
+          title: 'Desarrollador Solo',
+          company: '',
+          content: 'De luchar con Unity a publicar mi primer juego en Steam - esta mentoría lo hizo posible. Vale cada centavo.',
           rating: 5
-        }
+        },
         {
-          name: 'GameForge Colectivo'
-          title: 'Director Técnico'
-          company: ' en Estudio Móvil'
-          content: 'Nuestro equipo aprendió técnicas de optimización que duplicaron el rendimiento de nuestros juegos en dispositivos móviles. Profesional y exhaustivo.'
+          name: 'GameForge Colectivo',
+          title: 'Director Técnico',
+          company: ' en Estudio Móvil',
+          content: 'Nuestro equipo aprendió técnicas de optimización que duplicaron el rendimiento de nuestros juegos en dispositivos móviles. Profesional y exhaustivo.',
           rating: 5
         }
       ]
-    }
+    },
     contact: {
       hero: {
-        title: 'Ponte en'
-        titleHighlight: 'Contacto'
+        title: 'Ponte en',
+        titleHighlight: 'Contacto',
         description: '¿Listo para mejorar tu desarrollo de juegos? Vamos a conectar y discutir cómo podemos ayudar.'
-      }
+      },
       info: {
-        title: 'Información de Contacto'
-        subtitle: 'Siéntete libre de contactarme a través de cualquiera de estos canales.'
-        email: 'Correo Electrónico'
-        phone: 'Teléfono'
-        location: 'Ubicación'
-        locationValue: 'Disponible para mentoría virtual en todo el mundo'
-        responseTime: 'Tiempo de Respuesta'
-        responseTimeValue: 'Generalmente dentro de 24 horas'
+        title: 'Información de Contacto',
+        subtitle: 'Siéntete libre de contactarme a través de cualquiera de estos canales.',
+        email: 'Correo Electrónico',
+        phone: 'Teléfono',
+        location: 'Ubicación',
+        locationValue: 'Disponible para mentoría virtual en todo el mundo',
+        responseTime: 'Tiempo de Respuesta',
+        responseTimeValue: 'Generalmente dentro de 24 horas',
         social: 'Conectar en Redes Sociales'
-      }
+      },
       form: {
-        title: 'Envíame un mensaje'
+        title: 'Envíame un mensaje',
         labels: {
-          fullName: 'Nombre Completo'
-          email: 'Dirección de Correo'
-          phone: 'Teléfono (Opcional)'
-          subject: 'Asunto'
+          fullName: 'Nombre Completo',
+          email: 'Dirección de Correo',
+          phone: 'Teléfono (Opcional)',
+          subject: 'Asunto',
           message: 'Mensaje'
-        }
+        },
         placeholders: {
-          fullName: 'Juan Pérez'
-          email: 'juan@ejemplo.com'
-          phone: '+34 (123) 456-7890'
-          subject: 'Estoy interesado en una Mentoría en Desarrollode de Juegos'
+          fullName: 'Juan Pérez',
+          email: 'juan@ejemplo.com',
+          phone: '+34 (123) 456-7890',
+          subject: 'Estoy interesado en una Mentoría en Desarrollo de Juegos',
           message: 'Cuéntame sobre tu proyecto de juego y qué necesitas probar...'
-        }
-        button: 'Enviar Mensaje'
-        sending: 'Enviando...'
+        },
+        button: 'Enviar Mensaje',
+        sending: 'Enviando...',
         errors: {
-          nameRequired: 'El nombre es obligatorio'
-          emailRequired: 'El correo es obligatorio'
-          emailInvalid: 'Por favor, introduce un correo válido'
-          subjectRequired: 'El asunto es obligatorio'
+          nameRequired: 'El nombre es obligatorio',
+          emailRequired: 'El correo es obligatorio',
+          emailInvalid: 'Por favor, introduce un correo válido',
+          subjectRequired: 'El asunto es obligatorio',
           messageRequired: 'El mensaje es obligatorio'
-        }
-        success: '¡Mensaje enviado con éxito! Me pondré en contacto pronto.'
+        },
+        success: '¡Mensaje enviado con éxito! Me pondré en contacto pronto.',
         error: 'Error al enviar el mensaje'
-      }
+      },
       faq: {
-        title: 'Preguntas Frecuentes'
+        title: 'Preguntas Frecuentes',
         items: [
           {
-            question: '¿Cuánto dura una sesión de mentoría típicamente?'
+            question: '¿Cuánto dura una sesión de mentoría típicamente?',
             answer: 'Las sesiones suelen durar 60 minutos, pero ofrecemos horarios flexibles según tus necesidades.'
-          }
+          },
           {
-            question: '¿Cuál es tu tiempo de respuesta?'
+            question: '¿Cuál es tu tiempo de respuesta?',
             answer: 'Normalmente respondo a consultas dentro de 24 horas durante los días laborables.'
-          }
+          },
           {
-            question: '¿Ofreces horarios flexibles?'
+            question: '¿Ofreces horarios flexibles?',
             answer: 'Sí, trabajo con clientes en diferentes zonas horarias y ofrezco opciones de programación flexibles.'
-          }
+          },
           {
-            question: '¿Qué pasa si estoy empezando en el desarrollo de juegos?'
+            question: '¿Qué pasa si estoy empezando en el desarrollo de juegos?',
             answer: '¡Perfecto! Nos especializamos en ayudar a principiantes a comenzar con las bases correctas y evitar errores comunes de principiantes.'
           }
         ]
       }
-    }
+    },
     footer: {
-      brand: 'MentorHubTech'
-      tagline: 'Elevando desarrolladores de juegos una sesión a la vez.'
+      brand: 'MentorHubTech',
+      tagline: 'Elevando desarrolladores de juegos una sesión a la vez.',
       quickLinks: {
-        title: 'Enlaces Rápidos'
-        home: 'Inicio'
-        about: 'Acerca de'
-        services: 'Servicios'
-        testimonios: 'Testimonios'
-      }
+        title: 'Enlaces Rápidos',
+        home: 'Inicio',
+        about: 'Acerca de',
+        services: 'Servicios',
+        testimonios: 'Testimonios',
+        gaming: 'Plataforma de Juegos',
+        contact: 'Contacto'
+      },
+      platforms: {
+        title: 'Plataformas',
+        gaming: 'Desarrollo de Juegos',
+        solutions: 'Soluciones de TI'
+      },
       services: {
-        title: 'Servicios'
-        careerCoaching: 'Orientación de Carrera'
+        title: 'Servicios',
+        careerCoaching: 'Orientación de Carrera',
         techMentoring: 'Consultoría Técnica'
-      }
+      },
       connect: {
-        title: 'Conectar'
-        email: 'Correo'
-        linkedin: 'LinkedIn'
-        twitter: 'Twitter'
+        title: 'Conectar',
+        email: 'Correo',
+        linkedin: 'LinkedIn',
+        twitter: 'Twitter',
         contactForm: 'Formulario de Contacto'
-      }
+      },
       legal: {
-        copyright: '© {year} MentorHubTech. Todos los derechos reservados.'
-        privacy: 'Política de Privacidad'
-        refundPolicy: 'Política de Reembolso'
-        terms: 'Términos de Servicio'
+        title: 'Legal',
+        copyright: '© {year} MentorHubTech. Todos los derechos reservados.',
+        privacy: 'Política de Privacidad',
+        refundPolicy: 'Política de Reembolso',
+        terms: 'Términos de Servicio',
         sitemap: 'Mapa del Sitio'
       }
-    }
+    },
     privacyPolicy: {
-      title: 'Política de Privacida'
+      title: 'Política de Privacida',
       content: {
-        intro: 'En MentorHubTech, tomamos su privacidad muy en serio. Esta Política de Privacidad explica cómo recopilamos, utilizamos y protegemos su información personal.'
+        intro: 'En MentorHubTech, tomamos su privacidad muy en serio. Esta Política de Privacidad explica cómo recopilamos, utilizamos y protegemos su información personal.',
         sections: [
           {
-            heading: 'Información que Recopilamos'
+            heading: 'Información que Recopilamos',
             body: 'Recopilamos información que usted nos proporciona directamente, como su nombre, dirección de correo electrónico e información de pago al programar un servicio.'
-          }
+          },
           {
-            heading: 'Cómo Usamos Su Información'
+            heading: 'Cómo Usamos Su Información',
             body: 'Utilizamos su información para proporcionar servicios de mentoría, procesar pagos y comunicarnos con usted sobre sus proyectos.'
-          }
+          },
           {
-            heading: 'Protección de Datos'
+            heading: 'Protección de Datos',
             body: 'Implementamos rigurosas medidas de seguridad para proteger sus datos. Como empresa de mentoría, tratamos la confidencialidad del cliente con la máxima prioridad.'
           }
-        ]
+        ],
         lastUpdated: 'Última Actualización: Febrero 2026'
       }
-    }
+    },
     termsOfService: {
-      title: 'Términos de Servicio'
+      title: 'Términos de Servicio',
       content: {
-        intro: 'Al acceder o utilizar nuestros servicios, usted acepta estar sujeto a estos Términos de Servicio.'
+        intro: 'Al acceder o utilizar nuestros servicios, usted acepta estar sujeto a estos Términos de Servicio.',
         sections: [
           {
-            heading: 'Servicios'
+            heading: 'Servicios',
             body: 'Proporcionamos servicios de mentoría y consultoría en desarrollo de juegos. Aunque nos esforzamos por ofrecer orientación valiosa, los resultados individuales pueden variar según el esfuerzo y la implementación.'
-          }
+          },
           {
-            heading: 'Confidencialidad'
+            heading: 'Confidencialidad',
             body: 'Acordamos mantener todos los hallazgos confidenciales. Usted acepta proporcionar el acceso necesario para que realicemos los servicios acordados.'
-          }
+          },
           {
-            heading: 'Responsabilidad'
+            heading: 'Responsabilidad',
             body: 'MentorHubTech no es responsable de ningún daño derivado del uso de nuestros servicios, excepto en casos de negligencia grave.'
           }
-        ]
+        ],
         lastUpdated: 'Última Atualización: Febrero 2026'
       }
     }

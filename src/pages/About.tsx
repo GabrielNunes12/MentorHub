@@ -26,9 +26,8 @@ const About = () => {
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h1 className="flex items-center justify-center space-x-6 text-5xl md:text-6xl font-bold text-slate-900 dark:text-slate-50 tracking-tighter">
-              <PathNode variant="professional" size="lg" className="flex-shrink-0" />
-              <span>{t('about.hero.title')}</span>
+            <h1 className="text-5xl md:text-6xl font-bold text-slate-900 dark:text-slate-50 tracking-tighter">
+              {t('about.hero.title')}{' '}
               <span className="bg-gradient-to-r from-gaming to-professional bg-clip-text text-transparent">{t('about.hero.titleHighlight')}</span>
             </h1>
             <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
@@ -54,17 +53,11 @@ const About = () => {
                 alt={profile.name}
                 className="relative w-full h-full object-cover object-top rounded-2xl shadow-2xl border-4 border-slate-200 dark:border-slate-800"
               />
-              {/* Decorative path elements */}
-              <div className="absolute left-0 top-0 h-full w-full pointer-events-none">
-                <div className="absolute left-1/2 -translate-x-1/2 top-0 h-full w-[2px] bg-gradient-to-b from-gaming via-transparent to-professional"></div>
-                <div className="absolute left-1/2 -translate-x-1/2 top-0 h-full w-[2px] bg-gradient-to-b from-professional via-transparent to-gaming"></div>
-              </div>
             </div>
 
             <div className="space-y-6">
-              <h2 className="flex items-center space-x-4 text-4xl font-bold text-slate-900 dark:text-slate-50">
-                <PathNode variant="professional" size="lg" className="flex-shrink-0" />
-                <span>{t('about.profile.name')}</span>
+              <h2 className="text-4xl font-bold text-slate-900 dark:text-slate-50">
+                {t('about.profile.name')}
               </h2>
               <p className="text-base text-slate-600 dark:text-slate-400 leading-relaxed">
                 {t('about.profile.bio1')}
@@ -88,9 +81,8 @@ const About = () => {
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="flex items-center justify-center space-x-6 text-4xl font-bold text-slate-900 dark:text-slate-50 mb-16">
-            <PathNode variant="connection" size="lg" className="flex-shrink-0" />
-            <span>{t('about.timeline.title')}</span>
+          <h2 className="text-center text-4xl font-bold text-slate-900 dark:text-slate-50 mb-16">
+            {t('about.timeline.title')}
           </h2>
           <div className="relative max-w-4xl mx-auto">
             {/* Vertical timeline line */}
@@ -130,9 +122,8 @@ const About = () => {
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="flex items-center justify-center space-x-6 text-4xl font-bold text-slate-900 dark:text-slate-50 mb-12">
-            <PathNode variant="professional" size="lg" className="flex-shrink-0" />
-            <span>{t('about.expertise.title')}</span>
+          <h2 className="text-center text-4xl font-bold text-slate-900 dark:text-slate-50 mb-12">
+            {t('about.expertise.title')}
           </h2>
           <div className="flex flex-wrap justify-center gap-6">
             {expertise.map((skill, index) => (

@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom'
 import { useLanguage } from '../hooks/useLanguage'
-import PathNode from './PathNode'
 
 const Footer = () => {
   const { t } = useLanguage()
@@ -18,9 +17,8 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
           {/* Brand */}
           <div>
-            <h3 className="flex items-center space-x-4 text-2xl font-bold mb-4 bg-gradient-to-r from-gaming to-professional bg-clip-text text-transparent">
-              <PathNode variant="professional" size="md" className="flex-shrink-0" />
-              <span>{t('footer.brand')}</span>
+            <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-gaming to-professional bg-clip-text text-transparent">
+              {t('footer.brand')}
             </h3>
             <p className="text-slate-400 max-w-md">
               {t('footer.tagline')}
@@ -29,74 +27,60 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h4 className="flex items-center space-x-3 font-semibold mb-4 text-slate-50">
-              <PathNode variant="connection" size="md" className="flex-shrink-0" />
-              <span>{t('footer.quickLinks.title')}</span>
+            <h4 className="font-semibold mb-4 text-slate-50">
+              {t('footer.quickLinks.title')}
             </h4>
             <ul className="space-y-2 text-slate-400">
-              <li><Link to="/" className="flex items-center space-x-2 transition-all duration-300 hover:text-slate-50 hover:-translate-x-1">
-                <PathNode variant="connection" size="sm" className="flex-shrink-0" />
-                <span>{t('footer.quickLinks.home')}</span>
+              <li><Link to="/" className="transition-all duration-300 hover:text-slate-50 hover:translate-x-1 inline-block">
+                {t('footer.quickLinks.home')}
               </Link></li>
-              <li><Link to="/about" className="flex items-center space-x-2 transition-all duration-300 hover:text-slate-50 hover:-translate-x-1">
-                <PathNode variant="connection" size="sm" className="flex-shrink-0" />
-                <span>{t('footer.quickLinks.about')}</span>
+              <li><Link to="/about" className="transition-all duration-300 hover:text-slate-50 hover:translate-x-1 inline-block">
+                {t('footer.quickLinks.about')}
               </Link></li>
-              <li><Link to="/services" className="flex items-center space-x-2 transition-all duration-300 hover:text-slate-50 hover:-translate-x-1">
-                <PathNode variant="connection" size="sm" className="flex-shrink-0" />
-                <span>{t('footer.quickLinks.services')}</span>
+              <li><Link to="/services" className="transition-all duration-300 hover:text-slate-50 hover:translate-x-1 inline-block">
+                {t('footer.quickLinks.services')}
               </Link></li>
-              <li><a href="https://mentorhubgaming.com" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 transition-all duration-300 hover:text-slate-50 hover:-translate-x-1">
-                <PathNode variant="gaming" size="sm" className="flex-shrink-0" />
-                <span>{t('footer.quickLinks.gaming')}</span>
+              <li><a href="https://mentorhubgaming.com" target="_blank" rel="noopener noreferrer" className="transition-all duration-300 hover:text-slate-50 hover:translate-x-1 inline-block">
+                {t('footer.quickLinks.gaming')}
               </a></li>
-              <li><Link to="/contact" className="flex items-center space-x-2 transition-all duration-300 hover:text-slate-50 hover:-translate-x-1">
-                <PathNode variant="connection" size="sm" className="flex-shrink-0" />
-                <span>{t('footer.quickLinks.contact')}</span>
+              <li><Link to="/contact" className="transition-all duration-300 hover:text-slate-50 hover:translate-x-1 inline-block">
+                {t('footer.quickLinks.contact')}
               </Link></li>
             </ul>
           </div>
 
           {/* Platforms */}
           <div>
-            <h4 className="flex items-center space-x-3 font-semibold mb-4 text-slate-50">
-              <PathNode variant="connection" size="md" className="flex-shrink-0" />
-              <span>{t('footer.platforms.title')}</span>
+            <h4 className="font-semibold mb-4 text-slate-50">
+              {t('footer.platforms.title')}
             </h4>
             <ul className="space-y-2 text-slate-400">
-              <li><a href="https://mentorhubgaming.com" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 transition-all duration-300 hover:text-slate-50 hover:-translate-x-1">
-                <PathNode variant="gaming" size="sm" className="flex-shrink-0" />
-                <span>{t('footer.platforms.gaming')}</span>
+              <li><a href="https://mentorhubgaming.com" target="_blank" rel="noopener noreferrer" className="transition-all duration-300 hover:text-slate-50 hover:translate-x-1 inline-block">
+                {t('footer.platforms.gaming')}
               </a></li>
-              <li><Link to="/services" className="flex items-center space-x-2 transition-all duration-300 hover:text-slate-50 hover:-translate-x-1">
-                <PathNode variant="professional" size="sm" className="flex-shrink-0" />
-                <span>{t('footer.platforms.solutions')}</span>
+              <li><Link to="/services" className="transition-all duration-300 hover:text-slate-50 hover:translate-x-1 inline-block">
+                {t('footer.platforms.solutions')}
               </Link></li>
             </ul>
           </div>
 
           {/* Legal */}
           <div>
-            <h4 className="flex items-center space-x-3 font-semibold mb-4 text-slate-50">
-              <PathNode variant="connection" size="md" className="flex-shrink-0" />
-              <span>{t('footer.legal.title')}</span>
+            <h4 className="font-semibold mb-4 text-slate-50">
+              {t('footer.legal.title')}
             </h4>
             <ul className="space-y-2 text-slate-400">
-              <li><Link to="/privacy-policy" className="flex items-center space-x-2 transition-all duration-300 hover:text-slate-50 hover:-translate-x-1">
-                <PathNode variant="connection" size="sm" className="flex-shrink-0" />
-                <span>{t('footer.legal.privacy')}</span>
+              <li><Link to="/privacy-policy" className="transition-all duration-300 hover:text-slate-50 hover:translate-x-1 inline-block">
+                {t('footer.legal.privacy')}
               </Link></li>
-              <li><Link to="/terms-of-service" className="flex items-center space-x-2 transition-all duration-300 hover:text-slate-50 hover:-translate-x-1">
-                <PathNode variant="connection" size="sm" className="flex-shrink-0" />
-                <span>{t('footer.legal.terms')}</span>
+              <li><Link to="/terms-of-service" className="transition-all duration-300 hover:text-slate-50 hover:translate-x-1 inline-block">
+                {t('footer.legal.terms')}
               </Link></li>
-              <li><Link to="/refund-policy" className="flex items-center space-x-2 transition-all duration-300 hover:text-slate-50 hover:-translate-x-1">
-                <PathNode variant="connection" size="sm" className="flex-shrink-0" />
-                <span>{t('footer.legal.refundPolicy')}</span>
+              <li><Link to="/refund-policy" className="transition-all duration-300 hover:text-slate-50 hover:translate-x-1 inline-block">
+                {t('footer.legal.refundPolicy')}
               </Link></li>
-              <li><a href="#" className="flex items-center space-x-2 transition-all duration-300 hover:text-slate-50 hover:-translate-x-1">
-                <PathNode variant="connection" size="sm" className="flex-shrink-0" />
-                <span>{t('footer.legal.sitemap')}</span>
+              <li><a href="#" className="transition-all duration-300 hover:text-slate-50 hover:translate-x-1 inline-block">
+                {t('footer.legal.sitemap')}
               </a></li>
             </ul>
           </div>
@@ -105,26 +89,21 @@ const Footer = () => {
         {/* Bottom Section */}
         <div className="border-t border-slate-200 dark:border-slate-700 pt-10">
           <div className="flex flex-col md:flex-row justify-between items-center text-slate-400">
-            <p className="flex items-center space-x-2 text-sm">
-              <PathNode variant="connection" size="xs" className="flex-shrink-0" />
-              <span>{t('footer.legal.copyright').replace('{year}', currentYear.toString())}</span>
+            <p className="text-sm">
+              {t('footer.legal.copyright').replace('{year}', currentYear.toString())}
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0 text-sm">
-              <Link to="/privacy-policy" className="flex items-center space-x-2 transition-all duration-300 hover:text-slate-50 hover:-translate-x-1">
-                <PathNode variant="connection" size="xs" className="flex-shrink-0" />
-                <span>{t('footer.legal.privacy')}</span>
+              <Link to="/privacy-policy" className="transition-all duration-300 hover:text-slate-50 hover:translate-x-1 inline-block">
+                {t('footer.legal.privacy')}
               </Link>
-              <Link to="/terms-of-service" className="flex items-center space-x-2 transition-all duration-300 hover:text-slate-50 hover:-translate-x-1">
-                <PathNode variant="connection" size="xs" className="flex-shrink-0" />
-                <span>{t('footer.legal.terms')}</span>
+              <Link to="/terms-of-service" className="transition-all duration-300 hover:text-slate-50 hover:translate-x-1 inline-block">
+                {t('footer.legal.terms')}
               </Link>
-              <Link to="/refund-policy" className="flex items-center space-x-2 transition-all duration-300 hover:text-slate-50 hover:-translate-x-1">
-                <PathNode variant="connection" size="xs" className="flex-shrink-0" />
-                <span>{t('footer.legal.refundPolicy')}</span>
+              <Link to="/refund-policy" className="transition-all duration-300 hover:text-slate-50 hover:translate-x-1 inline-block">
+                {t('footer.legal.refundPolicy')}
               </Link>
-              <a href="#" className="flex items-center space-x-2 transition-all duration-300 hover:text-slate-50 hover:-translate-x-1">
-                <PathNode variant="connection" size="xs" className="flex-shrink-0" />
-                <span>{t('footer.legal.sitemap')}</span>
+              <a href="#" className="transition-all duration-300 hover:text-slate-50 hover:translate-x-1 inline-block">
+                {t('footer.legal.sitemap')}
               </a>
             </div>
           </div>

@@ -27,9 +27,32 @@ export default {
       },
       fontFamily: {
         // Primary fonts
-        sans: ['Inter', 'sans-serif'],
-        // Display font for headings
-        display: ['Orbitron', 'sans-serif'],
+        sans: ['"Plus Jakarta Sans"', 'Inter', 'sans-serif'],
+        // Display font for headings — geometric, high-authority
+        display: ['"Space Grotesk"', '"Plus Jakarta Sans"', 'sans-serif'],
+        // Monospace accent font for metrics / metadata
+        mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace'],
+      },
+      boxShadow: {
+        'glow-purple': '0 0 40px -8px rgba(139, 92, 246, 0.55)',
+        'glow-emerald': '0 0 40px -8px rgba(16, 185, 129, 0.55)',
+        'glow-purple-lg': '0 0 70px -12px rgba(139, 92, 246, 0.7)',
+        'glow-emerald-lg': '0 0 70px -12px rgba(16, 185, 129, 0.7)',
+      },
+      keyframes: {
+        blob: {
+          '0%, 100%': { transform: 'translate(0px, 0px) scale(1)' },
+          '33%': { transform: 'translate(30px, -30px) scale(1.1)' },
+          '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+        },
+        'gradient-x': {
+          '0%, 100%': { backgroundPosition: '0% 50%' },
+          '50%': { backgroundPosition: '100% 50%' },
+        },
+      },
+      animation: {
+        blob: 'blob 11s infinite ease-in-out',
+        'gradient-x': 'gradient-x 4s ease-in-out infinite',
       },
       // Typography scale
       fontSize: {
