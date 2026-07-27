@@ -308,6 +308,40 @@ export const translations = {
         ],
       },
     },
+    chatbot: {
+      openLabel: 'Open chat',
+      closeLabel: 'Close chat',
+      title: 'MentorHub Assistant',
+      subtitle: "We're happy to help",
+      greeting: "Hi! 👋 Pick a question below and I'll answer right away.",
+      quickRepliesLabel: 'Choose a question',
+      restart: 'Start over',
+      contactRedirect: "Taking you to our contact page...",
+      goToContact: 'Go to Contact Page',
+      questions: [
+        {
+          question: 'What services do you offer?',
+          answer: 'We offer Game Development Mentorship and Technical Consulting, covering everything from game design to programming, art, and business/publishing.',
+        },
+        {
+          question: 'How much does mentorship cost?',
+          answer: 'Pricing is adjusted to your region (BR, EU, UK, US). Check the Services page for up-to-date rates.',
+        },
+        {
+          question: 'How long does a session last?',
+          answer: 'Sessions are typically 60 minutes, with flexible timing available based on your needs.',
+        },
+        {
+          question: 'Do you offer flexible scheduling?',
+          answer: 'Yes! We work with developers across different time zones and offer flexible scheduling options.',
+        },
+        {
+          question: 'I want to get in touch',
+          answer: "Great! Let's connect.",
+          action: 'contact',
+        },
+      ],
+    },
     footer: {
       brand: 'MentorHubTech',
       tagline: 'Leveling up game developers one session at a time.',
@@ -686,6 +720,40 @@ export const translations = {
         ]
       }
     },
+    chatbot: {
+      openLabel: 'Abrir chat',
+      closeLabel: 'Fechar chat',
+      title: 'Assistente MentorHub',
+      subtitle: 'Estamos aqui para ajudar',
+      greeting: 'Olá! 👋 Escolha uma pergunta abaixo e eu respondo na hora.',
+      quickRepliesLabel: 'Escolha uma pergunta',
+      restart: 'Recomeçar',
+      contactRedirect: 'Levando você para a página de contato...',
+      goToContact: 'Ir para a Página de Contato',
+      questions: [
+        {
+          question: 'Quais serviços vocês oferecem?',
+          answer: 'Oferecemos Mentoria em Desenvolvimento de Jogos e Consultoria Técnica, cobrindo desde design de jogos até programação, arte e negócios/publicação.',
+        },
+        {
+          question: 'Quanto custa a mentoria?',
+          answer: 'Os preços são ajustados para sua região (BR, EU, UK, US). Consulte a página de Serviços para valores atualizados.',
+        },
+        {
+          question: 'Quanto tempo dura uma sessão?',
+          answer: 'As sessões normalmente têm 60 minutos, com horários flexíveis disponíveis conforme sua necessidade.',
+        },
+        {
+          question: 'Vocês oferecem horários flexíveis?',
+          answer: 'Sim! Trabalhamos com desenvolvedores em diferentes fusos horários e oferecemos opções de agendamento flexível.',
+        },
+        {
+          question: 'Quero entrar em contato',
+          answer: 'Ótimo! Vamos nos conectar.',
+          action: 'contact',
+        },
+      ],
+    },
     footer: {
       brand: 'MentorHubTech',
       tagline: 'Elevando desenvolvedores de jogos uma sessão de cada vez.',
@@ -1063,6 +1131,40 @@ export const translations = {
           }
         ]
       }
+    },
+    chatbot: {
+      openLabel: 'Abrir chat',
+      closeLabel: 'Cerrar chat',
+      title: 'Asistente MentorHub',
+      subtitle: 'Estamos aquí para ayudar',
+      greeting: '¡Hola! 👋 Elige una pregunta abajo y te respondo enseguida.',
+      quickRepliesLabel: 'Elige una pregunta',
+      restart: 'Comenzar de nuevo',
+      contactRedirect: 'Te llevamos a la página de contacto...',
+      goToContact: 'Ir a la Página de Contacto',
+      questions: [
+        {
+          question: '¿Qué servicios ofrecen?',
+          answer: 'Ofrecemos Mentoría en Desarrollo de Juegos y Consultoría Técnica, cubriendo desde diseño de juegos hasta programación, arte y negocios/publicación.',
+        },
+        {
+          question: '¿Cuánto cuesta la mentoría?',
+          answer: 'Los precios se ajustan a tu región (BR, EU, UK, US). Consulta la página de Servicios para las tarifas actuales.',
+        },
+        {
+          question: '¿Cuánto dura una sesión?',
+          answer: 'Las sesiones suelen durar 60 minutos, con horarios flexibles disponibles según tu necesidad.',
+        },
+        {
+          question: '¿Ofrecen horarios flexibles?',
+          answer: '¡Sí! Trabajamos con desarrolladores en diferentes zonas horarias y ofrecemos opciones de programación flexible.',
+        },
+        {
+          question: 'Quiero ponerme en contacto',
+          answer: '¡Genial! Vamos a conectar.',
+          action: 'contact',
+        },
+      ],
     },
     footer: {
       brand: 'MentorHubTech',
