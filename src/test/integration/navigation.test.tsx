@@ -31,14 +31,20 @@ describe('site navigation', () => {
     expect(await screen.findByLabelText(/name/i)).toBeInTheDocument()
   })
 
-  it('redirects /services to the Studios page', async () => {
+  it('navigates to Services and shows both platforms', async () => {
     const user = userEvent.setup()
     renderWithProviders(<AppRoutes />, { route: '/' })
 
     const [navServices] = screen.getAllByRole('link', { name: 'Services' })
     await user.click(navServices)
 
-    expect(await screen.findByRole('link', { name: /back/i })).toHaveAttribute('href', '/')
+    expect(await screen.findByText('MentorHub Gaming Studios')).toBeInTheDocument()
+    expect(screen.getByText('MentorHub Solutions')).toBeInTheDocument()
+    expect(screen.getByRole('link', { name: /Visit Gaming Studios/ })).toHaveAttribute(
+      'href',
+      'https://mentorhubgaming.com'
+    )
+    expect(screen.getByRole('link', { name: /Get in Touch/ })).toHaveAttribute('href', '/contact')
   })
 
   it('returns to Home via the logo', async () => {

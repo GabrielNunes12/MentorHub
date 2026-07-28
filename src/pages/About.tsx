@@ -85,8 +85,8 @@ const About = () => {
             {t('about.timeline.title')}
           </h2>
           <div className="relative max-w-4xl mx-auto">
-            {/* Vertical timeline line */}
-            <div className="absolute left-1/2 -translate-x-1/2 top-0 h-full w-[2px] bg-gradient-to-b from-gaming via-transparent to-professional"></div>
+            {/* Vertical timeline line, aligned with the timeline dots below (pl-8) */}
+            <div className="absolute left-8 -translate-x-1/2 top-0 h-full w-[2px] bg-gradient-to-b from-gaming via-transparent to-professional"></div>
 
             <div className="relative space-y-8 pl-8">
               {timeline.map((item, index) => (

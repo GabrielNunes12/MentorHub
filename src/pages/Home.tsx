@@ -193,7 +193,7 @@ const Home = () => {
               to="/services"
               className="flex items-center justify-center px-8 py-4 text-lg font-semibold border-2 border-slate-50 bg-slate-50 hover:bg-slate-100 text-slate-900 rounded-xl hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
             >
-              {t('home.cta.button')}
+              {t('home.cta.secondaryButton')}
             </Link>
           </div>
         </div>

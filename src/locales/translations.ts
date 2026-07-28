@@ -83,6 +83,7 @@ export const translations = {
         title: 'Ready to Level Up Your Game Development?',
         subtitle: 'Join over 50 developers who have launched successful games with our mentorship.',
         button: 'Start Your Game Development Journey',
+        secondaryButton: 'Explore Our Services',
       },
     },
     about: {
@@ -116,7 +117,21 @@ export const translations = {
       hero: {
         title: 'Our Services',
         titleHighlight: 'Services',
-        description: 'Choose the perfect mentorship package to level up your game development skills.',
+        description: 'We are a hub of specialized game development services. Choose the platform that fits your needs.',
+      },
+      platforms: {
+        gaming: {
+          name: 'MentorHub Gaming Studios',
+          subtitle: 'Game dev for studios and teams',
+          description: 'Specialized game development mentorship for studios and development teams.',
+          cta: 'Visit Gaming Studios',
+        },
+        solutions: {
+          name: 'MentorHub Solutions',
+          subtitle: 'Consulting for individual developers',
+          description: 'Personalized mentorship and consulting services for individual game developers.',
+          cta: 'Get in Touch',
+        },
       },
       regionIndicator: {
         currency: 'Currency',
@@ -185,25 +200,6 @@ export const translations = {
       },
       mostPopular: '⭐ MOST POPULAR',
     },
-    mentorhubtech: {
-      studios: {
-        title: 'MentorHubTech Studios',
-        subtitle: 'Game dev: studio and teams',
-        description: 'Specialized game development mentorship for studios and development teams.',
-        back: 'Back to home',
-      },
-      it: {
-        title: 'MentorHubTech Consulting',
-        subtitle: 'Game development consulting and mentorship',
-        description: 'Personalized mentorship and consulting services for individual game developers.',
-        back: 'Back to home',
-      },
-      section: {
-        title: 'MentorHubTech — Our Services',
-        subtitle: 'We are a hub of specialized game development services. Choose the service that fits your needs.'
-      }
-    },
-
     refundPolicy: {
       title: 'Refund Policy',
       content: {
@@ -492,6 +488,7 @@ export const translations = {
         title: 'Pronto para Elevar seu Desenvolvimento de Jogos?',
         subtitle: 'Junte-se a mais de 50 desenvolvedores que lançaram jogos bem-sucedidos com nossa mentoria.',
         button: 'Comece Sua Jornada em Desenvolvimento de Jogos',
+        secondaryButton: 'Explorar Nossos Serviços',
       },
     },
     about: {
@@ -525,7 +522,21 @@ export const translations = {
       hero: {
         title: 'Nossos Serviços',
         titleHighlight: 'Serviços',
-        description: 'Escolha o pacote de mentoria perfeito para elevar suas habilidades de desenvolvimento de jogos.'
+        description: 'Somos um núcleo que reúne serviços especializados de desenvolvimento de jogos. Escolha a plataforma que melhor atende sua necessidade.'
+      },
+      platforms: {
+        gaming: {
+          name: 'MentorHub Gaming Studios',
+          subtitle: 'Desenvolvimento de jogos para estúdios e equipes',
+          description: 'Mentoria especializada em desenvolvimento de jogos para estúdios e equipes de desenvolvimento.',
+          cta: 'Visitar Gaming Studios',
+        },
+        solutions: {
+          name: 'MentorHub Solutions',
+          subtitle: 'Consultoria para desenvolvedores individuais',
+          description: 'Serviços personalizados de mentoria e consultoria para desenvolvedores individuais de jogos.',
+          cta: 'Entrar em Contato',
+        },
       },
       regionIndicator: {
         currency: 'Moeda',
@@ -593,24 +604,6 @@ export const translations = {
         back: 'Voltar'
       },
       mostPopular: '⭐ MAIS POPULAR'
-    },
-    mentorhubtech: {
-      studios: {
-        title: 'MentorHubTech Studios',
-        subtitle: 'Game dev: estúdio e equipes',
-        description: 'Mentoria especializada em desenvolvimento de jogos para estúdios e equipes de desenvolvimento.',
-        back: 'Voltar para a home'
-      },
-      it: {
-        title: 'MentorHubTech Consulting',
-        subtitle: 'Consultoria e mentoria em desenvolvimento de jogos',
-        description: 'Serviços personalizados de mentoria e consultoria para desenvolvedores individuais de jogos.',
-        back: 'Voltar para a home'
-      },
-      section: {
-        title: 'MentorHubTech — Nossos Serviços',
-        subtitle: 'Somos um núcleo que reúne serviços especializados de desenvolvimento de jogos. Escolha o serviço que melhor atende sua necessidade.'
-      }
     },
     refundPolicy: {
       title: 'Política de Reembolso',
@@ -899,7 +892,8 @@ export const translations = {
       cta: {
         title: '¿Listo para Mejorar tu Desarrollo de Juegos?',
         subtitle: 'Únete a más de 50 desarrolladores que han lanzado juegos exitosos con nuestra mentoría.',
-        button: 'Comienza Tu Viaje en Desarrollo de Juegos'
+        button: 'Comienza Tu Viaje en Desarrollo de Juegos',
+        secondaryButton: 'Explorar Nuestros Servicios'
       }
     },
     about: {
@@ -933,7 +927,21 @@ export const translations = {
       hero: {
         title: 'Nuestros Servicios',
         titleHighlight: 'Servicios',
-        description: 'Elige el paquete de mentoría perfecto para mejorar tus habilidades de desarrollo de juegos.'
+        description: 'Somos una matriz que reúne servicios especializados de desarrollo de juegos. Elige la plataforma que mejor se ajuste a tus necesidades.'
+      },
+      platforms: {
+        gaming: {
+          name: 'MentorHub Gaming Studios',
+          subtitle: 'Desarrollo de juegos para estudios y equipos',
+          description: 'Mentoría especializada en desarrollo de juegos para estudios y equipos de desarrollo.',
+          cta: 'Visitar Gaming Studios',
+        },
+        solutions: {
+          name: 'MentorHub Solutions',
+          subtitle: 'Consultoría para desarrolladores individuales',
+          description: 'Servicios personalizados de mentoría y consulta para desarrolladores individuales de juegos.',
+          cta: 'Ponerse en Contacto',
+        },
       },
       regionIndicator: {
         currency: 'Moneda',
@@ -1001,24 +1009,6 @@ export const translations = {
         back: 'Atrás'
       },
       mostPopular: '⭐ MÁS POPULAR'
-    },
-    mentorhubtech: {
-      studios: {
-        title: 'MentorHubTech Studios',
-        subtitle: 'Game dev: estudio y equipos',
-        description: 'Mentoría especializada en desarrollo de juegos para estudios y equipos de desarrollo.',
-        back: 'Volver al inicio'
-      },
-      it: {
-        title: 'MentorHubTech Consulting',
-        subtitle: 'Consultoría y mentoria en desarrollo de juegos',
-        description: 'Servicios personalizados de mentoría y consulta para desarrolladores individuales de juegos.',
-        back: 'Volver al inicio'
-      },
-      section: {
-        title: 'MentorHubTech — Nuestros servicios',
-        subtitle: 'Somos una matriz que reúne servicios especializados de desarrollo de juegos. Elige el servicio que mejor se ajuste a tus necesidades.'
-      }
     },
     refundPolicy: {
       title: 'Política de Reembolso',
