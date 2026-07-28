@@ -353,7 +353,7 @@ export const translations = {
       ],
     },
     footer: {
-      brand: 'MentorHubTech',
+      brand: 'MentorHub',
       tagline: 'Leveling up game developers one session at a time.',
       quickLinks: {
         title: 'Quick Links',
@@ -383,7 +383,7 @@ export const translations = {
       },
       legal: {
         title: 'Legal',
-        copyright: '© {year} MentorHubTech. All rights reserved.',
+        copyright: '© {year} MentorHub. All rights reserved.',
         privacy: 'Privacy Policy',
         refundPolicy: 'Refund Policy',
         terms: 'Terms of Service',
@@ -761,7 +761,7 @@ export const translations = {
       ],
     },
     footer: {
-      brand: 'MentorHubTech',
+      brand: 'MentorHub',
       tagline: 'Elevando desenvolvedores de jogos uma sessão de cada vez.',
       quickLinks: {
         title: 'Links Rápidos',
@@ -791,7 +791,7 @@ export const translations = {
       },
       legal: {
         title: 'Legal',
-        copyright: '© {year} MentorHubTech. Todos os direitos reservados.',
+        copyright: '© {year} MentorHub. Todos os direitos reservados.',
         privacy: 'Política de Privacidade',
         refundPolicy: 'Política de Reembolso',
         terms: 'Termos de Serviço',
@@ -1169,7 +1169,7 @@ export const translations = {
       ],
     },
     footer: {
-      brand: 'MentorHubTech',
+      brand: 'MentorHub',
       tagline: 'Elevando desarrolladores de juegos una sesión a la vez.',
       quickLinks: {
         title: 'Enlaces Rápidos',
@@ -1199,7 +1199,7 @@ export const translations = {
       },
       legal: {
         title: 'Legal',
-        copyright: '© {year} MentorHubTech. Todos los derechos reservados.',
+        copyright: '© {year} MentorHub. Todos los derechos reservados.',
         privacy: 'Política de Privacidad',
         refundPolicy: 'Política de Reembolso',
         terms: 'Términos de Servicio',
