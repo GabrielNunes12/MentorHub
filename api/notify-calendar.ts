@@ -1,5 +1,5 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node'
-import { google } from 'googleapis'
+import { getBookingWindow, getGoogleCalendarClient, hasGoogleCalendarCredentials } from './_lib/googleCalendar'
 
 // NOTE: You need to set these environment variables in Vercel
 // GOOGLE_CLIENT_EMAIL
@@ -13,39 +13,15 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
     const { serviceName, date, time, userEmail } = req.body
 
-    if (!process.env.GOOGLE_CLIENT_EMAIL || !process.env.GOOGLE_PRIVATE_KEY || !process.env.GOOGLE_CALENDAR_ID) {
+    if (!hasGoogleCalendarCredentials()) {
         console.error('Missing Google Credentials')
         // For now, we return success to not block the flow if credentials are missing
         return res.status(200).json({ message: 'Notification skipped (missing credentials)' })
     }
 
     try {
-        // Clean up the private key
-        // 1. Remove surrounding double quotes if present
-        // 2. Replace literal \n with actual newlines
-        // 3. Ensure it looks like a valid PEM key
-        let privateKey = process.env.GOOGLE_PRIVATE_KEY
-        if (privateKey.startsWith('"') && privateKey.endsWith('"')) {
-            privateKey = privateKey.slice(1, -1)
-        }
-        privateKey = privateKey.replace(/\\n/g, '\n')
-
-        const jwtClient = new google.auth.JWT({
-            email: process.env.GOOGLE_CLIENT_EMAIL,
-            key: privateKey,
-            scopes: ['https://www.googleapis.com/auth/calendar'],
-        })
-
-        const calendar = google.calendar({ version: 'v3', auth: jwtClient })
-
-        // Parse date and time to create start/end ISO strings
-        // Assuming date is ISO string and time is "HH:MM"
-        const startDate = new Date(date)
-        const [hours, minutes] = time.split(':')
-        startDate.setHours(Number.parseInt(hours), Number.parseInt(minutes))
-
-        const endDate = new Date(startDate)
-        endDate.setHours(startDate.getHours() + 1) // Default 1 hour duration
+        const calendar = getGoogleCalendarClient()
+        const { startDate, endDate } = getBookingWindow(date, time)
 
         await calendar.events.insert({
             calendarId: process.env.GOOGLE_CALENDAR_ID,

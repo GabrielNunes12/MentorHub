@@ -1,3 +1,13 @@
+interface LegalSection {
+  heading: string
+  body: string
+}
+
+const legalPage = (title: string, intro: string, sections: LegalSection[], lastUpdated: string) => ({
+  title,
+  content: { intro, sections, lastUpdated },
+})
+
 export const translations = {
   en: {
     common: {
@@ -380,48 +390,44 @@ export const translations = {
         sitemap: 'Sitemap',
       },
     },
-    privacyPolicy: {
-      title: 'Privacy Policy',
-      content: {
-        intro: 'At MentorHubTech, we take your privacy seriously. This Privacy Policy explains how we collect, use, and protect your personal information.',
-        sections: [
-          {
-            heading: 'Information We Collect',
-            body: 'We collect information you provide directly to us, such as your name, email address, and payment information when you schedule a service.',
-          },
-          {
-            heading: 'How We Use Your Information',
-            body: 'We use your information to provide mentorship services, process payments, and communicate with you about your projects.',
-          },
-          {
-            heading: 'Data Protection',
-            body: 'We implement rigorous security measures to protect your data. We treat client confidentiality with the utmost priority.',
-          },
-        ],
-        lastUpdated: 'Last Updated: February 2026',
-      },
-    },
-    termsOfService: {
-      title: 'Terms of Service',
-      content: {
-        intro: 'By accessing or using our services, you agree to be bound by these Terms of Service.',
-        sections: [
-          {
-            heading: 'Services',
-            body: 'We provide game development mentorship and consulting services. While we strive to provide valuable guidance, individual results may vary based on effort and implementation.',
-          },
-          {
-            heading: 'Confidentiality',
-            body: 'We agree to keep all findings confidential. You agree to provide necessary access for us to perform the agreed-upon services.',
-          },
-          {
-            heading: 'Liability',
-            body: 'MentorHubTech is not liable for any damages arising from the use of our services, except in cases of gross negligence.',
-          },
-        ],
-        lastUpdated: 'Last Updated: February 2026',
-      },
-    },
+    privacyPolicy: legalPage(
+      'Privacy Policy',
+      'At MentorHubTech, we take your privacy seriously. This Privacy Policy explains how we collect, use, and protect your personal information.',
+      [
+        {
+          heading: 'Information We Collect',
+          body: 'We collect information you provide directly to us, such as your name, email address, and payment information when you schedule a service.',
+        },
+        {
+          heading: 'How We Use Your Information',
+          body: 'We use your information to provide mentorship services, process payments, and communicate with you about your projects.',
+        },
+        {
+          heading: 'Data Protection',
+          body: 'We implement rigorous security measures to protect your data. We treat client confidentiality with the utmost priority.',
+        },
+      ],
+      'Last Updated: February 2026',
+    ),
+    termsOfService: legalPage(
+      'Terms of Service',
+      'By accessing or using our services, you agree to be bound by these Terms of Service.',
+      [
+        {
+          heading: 'Services',
+          body: 'We provide game development mentorship and consulting services. While we strive to provide valuable guidance, individual results may vary based on effort and implementation.',
+        },
+        {
+          heading: 'Confidentiality',
+          body: 'We agree to keep all findings confidential. You agree to provide necessary access for us to perform the agreed-upon services.',
+        },
+        {
+          heading: 'Liability',
+          body: 'MentorHubTech is not liable for any damages arising from the use of our services, except in cases of gross negligence.',
+        },
+      ],
+      'Last Updated: February 2026',
+    ),
   },
   pt: {
     common: {
@@ -792,48 +798,44 @@ export const translations = {
         sitemap: 'Mapa do Site'
       }
     },
-    privacyPolicy: {
-      title: 'Política de Privacidade',
-      content: {
-        intro: 'Na MentorHubTech, levamos sua privacidade a sério. Esta Política de Privacidade explica como coletamos, usamos e protegemos suas informações pessoais.',
-        sections: [
-          {
-            heading: 'Informações que Coletamos',
-            body: 'Coletamos informações que você nos fornece diretamente, como seu nome, endereço de email e informações de pagamento ao agendar um serviço.'
-          },
-          {
-            heading: 'Como Usamos Suas Informações',
-            body: 'Usamos suas informações para fornecer serviços de mentoria, processar pagamentos e nos comunicar com você sobre seus projetos.'
-          },
-          {
-            heading: 'Proteção de Dados',
-            body: 'Implementamos medidas de segurança rigorosas para proteger seus dados. Como uma empresa de mentoria, tratamos a confidencialidade do cliente com a máxima prioridade.'
-          }
-        ],
-        lastUpdated: 'Última Atualização: Fevereiro 2026'
-      }
-    },
-    termsOfService: {
-      title: 'Termos de Serviço',
-      content: {
-        intro: 'Ao acessar ou usar nossos serviços, você concorda em ficar vinculado a estes Termos de Serviço.',
-        sections: [
-          {
-            heading: 'Serviços',
-            body: 'Fornecemos serviços de mentoria e consultoria em desenvolvimento de jogos. Embora nos esforçemos para fornecer orientação valiosa, os resultados individuais podem variar com base no esforço e na implementação.'
-          },
-          {
-            heading: 'Confidencialidade',
-            body: 'Concordamos em manter todas as descobertas confidenciais. Você concorda em fornecer o acesso necessário para que realizemos os serviços acordados.'
-          },
-          {
-            heading: 'Responsabilidade',
-            body: 'A MentorHubTech não se responsabiliza por quaisquer danos decorrentes do uso de nossos serviços, exceto em casos de negligência grave.'
-          }
-        ],
-        lastUpdated: 'Última Atualização: Fevereiro 2026'
-      }
-    }
+    privacyPolicy: legalPage(
+      'Política de Privacidade',
+      'Na MentorHubTech, levamos sua privacidade a sério. Esta Política de Privacidade explica como coletamos, usamos e protegemos suas informações pessoais.',
+      [
+        {
+          heading: 'Informações que Coletamos',
+          body: 'Coletamos informações que você nos fornece diretamente, como seu nome, endereço de email e informações de pagamento ao agendar um serviço.'
+        },
+        {
+          heading: 'Como Usamos Suas Informações',
+          body: 'Usamos suas informações para fornecer serviços de mentoria, processar pagamentos e nos comunicar com você sobre seus projetos.'
+        },
+        {
+          heading: 'Proteção de Dados',
+          body: 'Implementamos medidas de segurança rigorosas para proteger seus dados. Como uma empresa de mentoria, tratamos a confidencialidade do cliente com a máxima prioridade.'
+        }
+      ],
+      'Última Atualização: Fevereiro 2026',
+    ),
+    termsOfService: legalPage(
+      'Termos de Serviço',
+      'Ao acessar ou usar nossos serviços, você concorda em ficar vinculado a estes Termos de Serviço.',
+      [
+        {
+          heading: 'Serviços',
+          body: 'Fornecemos serviços de mentoria e consultoria em desenvolvimento de jogos. Embora nos esforçemos para fornecer orientação valiosa, os resultados individuais podem variar com base no esforço e na implementação.'
+        },
+        {
+          heading: 'Confidencialidade',
+          body: 'Concordamos em manter todas as descobertas confidenciais. Você concorda em fornecer o acesso necessário para que realizemos os serviços acordados.'
+        },
+        {
+          heading: 'Responsabilidade',
+          body: 'A MentorHubTech não se responsabiliza por quaisquer danos decorrentes do uso de nossos serviços, exceto em casos de negligência grave.'
+        }
+      ],
+      'Última Atualização: Fevereiro 2026',
+    ),
   },
   es: {
     common: {
@@ -1204,47 +1206,43 @@ export const translations = {
         sitemap: 'Mapa del Sitio'
       }
     },
-    privacyPolicy: {
-      title: 'Política de Privacida',
-      content: {
-        intro: 'En MentorHubTech, tomamos su privacidad muy en serio. Esta Política de Privacidad explica cómo recopilamos, utilizamos y protegemos su información personal.',
-        sections: [
-          {
-            heading: 'Información que Recopilamos',
-            body: 'Recopilamos información que usted nos proporciona directamente, como su nombre, dirección de correo electrónico e información de pago al programar un servicio.'
-          },
-          {
-            heading: 'Cómo Usamos Su Información',
-            body: 'Utilizamos su información para proporcionar servicios de mentoría, procesar pagos y comunicarnos con usted sobre sus proyectos.'
-          },
-          {
-            heading: 'Protección de Datos',
-            body: 'Implementamos rigurosas medidas de seguridad para proteger sus datos. Como empresa de mentoría, tratamos la confidencialidad del cliente con la máxima prioridad.'
-          }
-        ],
-        lastUpdated: 'Última Actualización: Febrero 2026'
-      }
-    },
-    termsOfService: {
-      title: 'Términos de Servicio',
-      content: {
-        intro: 'Al acceder o utilizar nuestros servicios, usted acepta estar sujeto a estos Términos de Servicio.',
-        sections: [
-          {
-            heading: 'Servicios',
-            body: 'Proporcionamos servicios de mentoría y consultoría en desarrollo de juegos. Aunque nos esforzamos por ofrecer orientación valiosa, los resultados individuales pueden variar según el esfuerzo y la implementación.'
-          },
-          {
-            heading: 'Confidencialidad',
-            body: 'Acordamos mantener todos los hallazgos confidenciales. Usted acepta proporcionar el acceso necesario para que realicemos los servicios acordados.'
-          },
-          {
-            heading: 'Responsabilidad',
-            body: 'MentorHubTech no es responsable de ningún daño derivado del uso de nuestros servicios, excepto en casos de negligencia grave.'
-          }
-        ],
-        lastUpdated: 'Última Atualización: Febrero 2026'
-      }
-    }
+    privacyPolicy: legalPage(
+      'Política de Privacida',
+      'En MentorHubTech, tomamos su privacidad muy en serio. Esta Política de Privacidad explica cómo recopilamos, utilizamos y protegemos su información personal.',
+      [
+        {
+          heading: 'Información que Recopilamos',
+          body: 'Recopilamos información que usted nos proporciona directamente, como su nombre, dirección de correo electrónico e información de pago al programar un servicio.'
+        },
+        {
+          heading: 'Cómo Usamos Su Información',
+          body: 'Utilizamos su información para proporcionar servicios de mentoría, procesar pagos y comunicarnos con usted sobre sus proyectos.'
+        },
+        {
+          heading: 'Protección de Datos',
+          body: 'Implementamos rigurosas medidas de seguridad para proteger sus datos. Como empresa de mentoría, tratamos la confidencialidad del cliente con la máxima prioridad.'
+        }
+      ],
+      'Última Actualización: Febrero 2026',
+    ),
+    termsOfService: legalPage(
+      'Términos de Servicio',
+      'Al acceder o utilizar nuestros servicios, usted acepta estar sujeto a estos Términos de Servicio.',
+      [
+        {
+          heading: 'Servicios',
+          body: 'Proporcionamos servicios de mentoría y consultoría en desarrollo de juegos. Aunque nos esforzamos por ofrecer orientación valiosa, los resultados individuales pueden variar según el esfuerzo y la implementación.'
+        },
+        {
+          heading: 'Confidencialidad',
+          body: 'Acordamos mantener todos los hallazgos confidenciales. Usted acepta proporcionar el acceso necesario para que realicemos los servicios acordados.'
+        },
+        {
+          heading: 'Responsabilidad',
+          body: 'MentorHubTech no es responsable de ningún daño derivado del uso de nuestros servicios, excepto en casos de negligencia grave.'
+        }
+      ],
+      'Última Atualização: Febrero 2026',
+    ),
   }
 }
