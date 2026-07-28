@@ -66,6 +66,10 @@
       "destination": "/api/notify-calendar"
     },
     {
+      "source": "/api/contact",
+      "destination": "/api/contact"
+    },
+    {
       "source": "/api/(.*)",
       "destination": "/api/$1"
     },

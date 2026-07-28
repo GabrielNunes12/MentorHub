@@ -5,6 +5,7 @@ import helmet from 'helmet'
 import handler from './api/notify-calendar'
 import createCheckoutSession from './api/create-checkout-session'
 import verifyPayment from './api/verify-payment'
+import contact from './api/contact'
 
 dotenv.config({ path: '.env.local' })
 
@@ -42,6 +43,15 @@ app.post('/api/verify-payment', async (req, res) => {
         await verifyPayment(req as any, res as any)
     } catch (error) {
         console.error('Error in verify payment handler:', error)
+        res.status(500).json({ error: 'Internal Server Error' })
+    }
+})
+
+app.post('/api/contact', async (req, res) => {
+    try {
+        await contact(req as any, res as any)
+    } catch (error) {
+        console.error('Error in contact handler:', error)
         res.status(500).json({ error: 'Internal Server Error' })
     }
 })
