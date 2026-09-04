@@ -132,6 +132,12 @@ export const translations = {
           description: 'Personalized mentorship and consulting services for individual game developers.',
           cta: 'Get in Touch',
         },
+        blog: {
+          name: 'SynDevs',
+          subtitle: 'A terminal-styled tech blog',
+          description: 'Dev posts, tutorials, and behind-the-scenes writeups from the MentorHub team.',
+          cta: 'Read the Blog',
+        },
       },
       regionIndicator: {
         currency: 'Currency',
@@ -538,6 +544,12 @@ export const translations = {
           description: 'Serviços personalizados de mentoria e consultoria para desenvolvedores individuais de jogos.',
           cta: 'Entrar em Contato',
         },
+        blog: {
+          name: 'SynDevs',
+          subtitle: 'Um blog de tecnologia estilo terminal',
+          description: 'Posts, tutoriais e bastidores escritos pela equipe do MentorHub.',
+          cta: 'Ler o Blog',
+        },
       },
       regionIndicator: {
         currency: 'Moeda',
@@ -943,6 +955,12 @@ export const translations = {
           subtitle: 'Consultoría para desarrolladores individuales',
           description: 'Servicios personalizados de mentoría y consulta para desarrolladores individuales de juegos.',
           cta: 'Ponerse en Contacto',
+        },
+        blog: {
+          name: 'SynDevs',
+          subtitle: 'Un blog tecnológico con estilo terminal',
+          description: 'Publicaciones, tutoriales y contenido detrás de escena del equipo de MentorHub.',
+          cta: 'Leer el Blog',
         },
       },
       regionIndicator: {
