@@ -52,10 +52,10 @@ const Footer = () => {
               {t('footer.platforms.title')}
             </h4>
             <ul className="space-y-2 text-slate-400 font-mono text-sm">
-              <li><a href="https://gaming.mentor-hub.space" target="_blank" rel="noopener noreferrer" className="transition-all duration-300 hover:text-games hover:translate-x-1 inline-block">
+              <li><a href="https://gaming.mentor-hub.space" target="_blank" rel="noopener noreferrer" className="transition-all duration-300 hover:text-games-bright hover:translate-x-1 inline-block">
                 {t('footer.platforms.games')}
               </a></li>
-              <li><Link to="/services" className="transition-all duration-300 hover:text-outsourcing hover:translate-x-1 inline-block">
+              <li><Link to="/services" className="transition-all duration-300 hover:text-outsourcing-bright hover:translate-x-1 inline-block">
                 {t('footer.platforms.outsourcing')}
               </Link></li>
               <li><a href="https://syndevs.mentor-hub.space" target="_blank" rel="noopener noreferrer" className="transition-all duration-300 hover:text-slate-50 hover:translate-x-1 inline-block">
