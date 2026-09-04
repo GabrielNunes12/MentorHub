@@ -26,8 +26,21 @@ app.post('/api/contact', async (req, res) => {
 })
 
 const PORT = 3001
-app.listen(PORT, () => {
+const server = app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`)
+})
+
+server.on('error', (err: NodeJS.ErrnoException) => {
+    if (err.code === 'EADDRINUSE') {
+        console.error(
+            `Port ${PORT} is already in use. Another process (likely a leftover ` +
+            `"tsx server.ts" from a previous dev session) is still bound to it. ` +
+            `Stop that process and re-run "npm run dev".`
+        )
+    } else {
+        console.error('Failed to start local API server:', err)
+    }
+    process.exit(1)
 })
 
 process.on('uncaughtException', (err) => {
