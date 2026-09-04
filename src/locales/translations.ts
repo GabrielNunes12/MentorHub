@@ -364,6 +364,7 @@ export const translations = {
         title: 'Platforms',
         gaming: 'Game Development',
         solutions: 'IT Solutions',
+        blog: 'Blog',
       },
       services: {
         title: 'Services',
@@ -768,7 +769,8 @@ export const translations = {
       platforms: {
         title: 'Plataformas',
         gaming: 'Desenvolvimento de Jogos',
-        solutions: 'Soluções de TI'
+        solutions: 'Soluções de TI',
+        blog: 'Blog'
       },
       services: {
         title: 'Serviços',
@@ -1173,7 +1175,8 @@ export const translations = {
       platforms: {
         title: 'Plataformas',
         gaming: 'Desarrollo de Juegos',
-        solutions: 'Soluciones de TI'
+        solutions: 'Soluciones de TI',
+        blog: 'Blog'
       },
       services: {
         title: 'Servicios',

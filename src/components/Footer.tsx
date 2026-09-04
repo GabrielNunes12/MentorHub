@@ -61,6 +61,9 @@ const Footer = () => {
               <li><Link to="/services" className="transition-all duration-300 hover:text-slate-50 hover:translate-x-1 inline-block">
                 {t('footer.platforms.solutions')}
               </Link></li>
+              <li><a href="https://syndevs.mentor-hub.space" target="_blank" rel="noopener noreferrer" className="transition-all duration-300 hover:text-slate-50 hover:translate-x-1 inline-block">
+                {t('footer.platforms.blog')}
+              </a></li>
             </ul>
           </div>
 
