@@ -33,8 +33,8 @@ export const translations = {
         cta2: 'Discuss a Project',
       },
       stats: [
-        { label: 'games_shipped', value: '6' },
-        { label: 'projects_delivered', value: '18' },
+        { label: 'games_shipped', value: '2' },
+        { label: 'projects_delivered', value: '5' },
         { label: 'years_operating', value: '5+' },
       ],
       features: {
@@ -345,8 +345,8 @@ export const translations = {
         cta2: 'Discutir um Projeto',
       },
       stats: [
-        { label: 'jogos_lançados', value: '6' },
-        { label: 'projetos_entregues', value: '18' },
+        { label: 'jogos_lançados', value: '2' },
+        { label: 'projetos_entregues', value: '5' },
         { label: 'anos_de_atuação', value: '5+' },
       ],
       features: {
@@ -657,8 +657,8 @@ export const translations = {
         cta2: 'Discutir un Proyecto'
       },
       stats: [
-        { label: 'juegos_lanzados', value: '6' },
-        { label: 'proyectos_entregados', value: '18' },
+        { label: 'juegos_lanzados', value: '2' },
+        { label: 'proyectos_entregados', value: '5' },
         { label: 'años_operando', value: '5+' }
       ],
       features: {
