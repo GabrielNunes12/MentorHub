@@ -54,18 +54,6 @@
   ],
   "rewrites": [
     {
-      "source": "/api/create-checkout-session",
-      "destination": "/api/create-checkout-session"
-    },
-    {
-      "source": "/api/verify-payment",
-      "destination": "/api/verify-payment"
-    },
-    {
-      "source": "/api/notify-calendar",
-      "destination": "/api/notify-calendar"
-    },
-    {
       "source": "/api/contact",
       "destination": "/api/contact"
     },

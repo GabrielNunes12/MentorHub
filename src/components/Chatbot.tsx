@@ -68,37 +68,37 @@ export const Chatbot = () => {
         <div
           role="dialog"
           aria-labelledby={titleId}
-          className="mb-4 w-[calc(100vw-3rem)] max-w-sm flex flex-col overflow-hidden rounded-2xl border border-slate-200/60 dark:border-white/10 bg-white dark:bg-slate-900 shadow-2xl"
+          className="mb-4 w-[calc(100vw-3rem)] max-w-sm flex flex-col overflow-hidden rounded-2xl border border-edge bg-surface shadow-2xl"
         >
           {/* Header */}
-          <div className="flex items-center justify-between bg-gradient-to-r from-gaming to-professional px-4 py-3">
+          <div className="flex items-center justify-between bg-obsidian px-4 py-3">
             <div>
-              <p id={titleId} className="font-display font-bold text-white leading-tight">
+              <p id={titleId} className="font-display font-bold text-games-bright leading-tight">
                 {t('chatbot.title')}
               </p>
-              <p className="text-xs text-white/80">{t('chatbot.subtitle')}</p>
+              <p className="text-xs text-obsidian-dim">{t('chatbot.subtitle')}</p>
             </div>
             <button
               onClick={() => setIsOpen(false)}
               aria-label={t('chatbot.closeLabel')}
-              className="text-white/90 hover:text-white transition-colors"
+              className="text-obsidian-dim hover:text-games-bright transition-colors"
             >
               ✕
             </button>
           </div>
 
           {/* Messages */}
-          <div className="flex-1 max-h-80 overflow-y-auto px-4 py-4 space-y-3 bg-slate-50 dark:bg-slate-950">
+          <div className="flex-1 max-h-80 overflow-y-auto px-4 py-4 space-y-3 bg-bg">
             {messages.map((message) => (
               <div
                 key={message.id}
                 className={`flex ${message.sender === 'user' ? 'justify-end' : 'justify-start'}`}
               >
                 <div
-                  className={`max-w-[85%] rounded-2xl px-3 py-2 text-sm ${
+                  className={`max-w-[85%] rounded-2xl px-3 py-2 text-sm font-mono ${
                     message.sender === 'user'
-                      ? 'bg-gaming text-white rounded-br-sm'
-                      : 'bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 border border-slate-200/60 dark:border-white/10 rounded-bl-sm'
+                      ? 'bg-games text-ink rounded-br-sm'
+                      : 'bg-surface text-ink border border-edge rounded-bl-sm'
                   }`}
                 >
                   {message.text}
@@ -109,8 +109,8 @@ export const Chatbot = () => {
           </div>
 
           {/* Quick replies */}
-          <div className="border-t border-slate-200/60 dark:border-white/10 px-4 py-3 space-y-2">
-            <p className="text-2xs uppercase tracking-wide text-slate-500 dark:text-slate-400 font-semibold">
+          <div className="border-t border-edge px-4 py-3 space-y-2">
+            <p className="text-2xs uppercase tracking-wide text-dim font-semibold">
               {t('chatbot.quickRepliesLabel')}
             </p>
             <div className="flex flex-wrap gap-2">
@@ -118,14 +118,14 @@ export const Chatbot = () => {
                 <button
                   key={item.question}
                   onClick={() => handleQuestionClick(item)}
-                  className="text-xs px-3 py-1.5 rounded-full border border-gaming/40 text-gaming dark:text-professional dark:border-professional/40 hover:bg-gaming hover:text-white dark:hover:bg-professional dark:hover:text-slate-950 transition-colors"
+                  className="text-xs px-3 py-1.5 rounded-full border border-edge text-muted hover:border-games hover:text-games transition-colors"
                 >
                   {item.question}
                 </button>
               ))}
               <button
                 onClick={handleRestart}
-                className="text-xs px-3 py-1.5 rounded-full border border-slate-300 dark:border-white/10 text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-white transition-colors"
+                className="text-xs px-3 py-1.5 rounded-full border border-edge text-dim hover:text-ink transition-colors"
               >
                 {t('chatbot.restart')}
               </button>
@@ -138,7 +138,7 @@ export const Chatbot = () => {
       <button
         onClick={() => setIsOpen((prev) => !prev)}
         aria-label={isOpen ? t('chatbot.closeLabel') : t('chatbot.openLabel')}
-        className="w-14 h-14 rounded-full bg-gradient-to-r from-gaming to-professional text-white shadow-glow-purple flex items-center justify-center hover:scale-105 transition-transform duration-300"
+        className="w-14 h-14 rounded-full bg-obsidian border border-games-bright text-games-bright shadow-glow-games flex items-center justify-center hover:scale-105 transition-transform duration-300"
       >
         {isOpen ? (
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>

@@ -2,12 +2,8 @@ export const useCalendly = () => {
   const defaultCalendlyUrl = import.meta.env.VITE_CALENDLY_URL || 'https://calendly.com/prismaticnetwork12'
 
   const serviceUrls = {
-    'Career Coaching': 'https://calendly.com/d/ctjv-525-36m/mentorship-career',
-    'Resume & LinkedIn Review': 'https://calendly.com/d/cyd5-24n-428/mentorship-resume',
-    'Interview Prep': 'https://calendly.com/d/cx7r-7df-vtz/mentorship-interview-prep',
-    'Salary Negotiation': defaultCalendlyUrl,
-    'Leadership Mentorship': defaultCalendlyUrl,
-    'Monthly Retainer': defaultCalendlyUrl,
+    'Outsourcing Discovery Call': defaultCalendlyUrl,
+    'Games & Partnership Inquiry': defaultCalendlyUrl,
   }
 
   const openCalendly = (serviceName?: string) => {

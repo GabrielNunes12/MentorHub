@@ -8,8 +8,8 @@ describe('language switching', () => {
     const user = userEvent.setup()
     renderWithProviders(<AppRoutes />, { route: '/' })
 
-    expect(screen.getByRole('heading', { level: 1 }).textContent).toContain('Level Up Your')
-    const [navAbout] = screen.getAllByRole('link', { name: 'About' })
+    expect(screen.getByText(/MentorHub ships original games/)).toBeInTheDocument()
+    const [navAbout] = screen.getAllByRole('link', { name: './about' })
     expect(navAbout).toBeInTheDocument()
 
     // Navbar renders the selector twice (desktop + mobile); either flips the
@@ -18,9 +18,9 @@ describe('language switching', () => {
     await user.click(ptButton)
 
     await vi.waitFor(() =>
-      expect(screen.getByRole('heading', { level: 1 }).textContent).toContain('Eleve seu')
+      expect(screen.getByText(/A MentorHub lança jogos originais/)).toBeInTheDocument()
     )
-    expect(screen.getAllByRole('link', { name: 'Sobre' })[0]).toBeInTheDocument()
+    expect(screen.getAllByRole('link', { name: './sobre' })[0]).toBeInTheDocument()
     expect(localStorage.getItem('appLanguage')).toBe('pt')
   })
 
@@ -28,6 +28,6 @@ describe('language switching', () => {
     localStorage.setItem('appLanguage', 'es')
     renderWithProviders(<AppRoutes />, { route: '/' })
 
-    expect(screen.getByRole('heading', { level: 1 }).textContent).toContain('Mejora tu')
+    expect(screen.getByText(/MentorHub lanza juegos originales/)).toBeInTheDocument()
   })
 })

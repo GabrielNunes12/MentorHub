@@ -34,10 +34,10 @@ describe('Chatbot', () => {
 
     await user.click(screen.getByRole('button', { name: 'Open chat' }))
 
-    expect(screen.getByRole('button', { name: 'What services do you offer?' })).toBeInTheDocument()
-    expect(screen.getByRole('button', { name: 'How much does mentorship cost?' })).toBeInTheDocument()
-    expect(screen.getByRole('button', { name: 'How long does a session last?' })).toBeInTheDocument()
-    expect(screen.getByRole('button', { name: 'Do you offer flexible scheduling?' })).toBeInTheDocument()
+    expect(screen.getByRole('button', { name: 'What does MentorHub do?' })).toBeInTheDocument()
+    expect(screen.getByRole('button', { name: 'Can I see your games?' })).toBeInTheDocument()
+    expect(screen.getByRole('button', { name: 'How does outsourcing work?' })).toBeInTheDocument()
+    expect(screen.getByRole('button', { name: 'Do you work with teams in different time zones?' })).toBeInTheDocument()
     expect(screen.getByRole('button', { name: 'I want to get in touch' })).toBeInTheDocument()
     expect(screen.getByRole('button', { name: 'Start over' })).toBeInTheDocument()
   })
@@ -47,11 +47,11 @@ describe('Chatbot', () => {
     renderWithProviders(<Chatbot />, { route: '/' })
 
     await user.click(screen.getByRole('button', { name: 'Open chat' }))
-    await user.click(screen.getByRole('button', { name: 'How long does a session last?' }))
+    await user.click(screen.getByRole('button', { name: 'How does outsourcing work?' }))
 
     // One instance is the quick-reply button, the other is the new chat bubble echoing the question
-    expect(screen.getAllByText('How long does a session last?')).toHaveLength(2)
-    expect(screen.getByText(/Sessions are typically 60 minutes/)).toBeInTheDocument()
+    expect(screen.getAllByText('How does outsourcing work?')).toHaveLength(2)
+    expect(screen.getByText(/You hand us the whole project/)).toBeInTheDocument()
   })
 
   it('appends multiple question/answer pairs in the order they were asked', async () => {
@@ -59,12 +59,12 @@ describe('Chatbot', () => {
     renderWithProviders(<Chatbot />, { route: '/' })
 
     await user.click(screen.getByRole('button', { name: 'Open chat' }))
-    await user.click(screen.getByRole('button', { name: 'What services do you offer?' }))
-    await user.click(screen.getByRole('button', { name: 'Do you offer flexible scheduling?' }))
+    await user.click(screen.getByRole('button', { name: 'What does MentorHub do?' }))
+    await user.click(screen.getByRole('button', { name: 'Do you work with teams in different time zones?' }))
 
     const dialog = screen.getByRole('dialog')
-    const serviceAnswer = within(dialog).getByText(/Game Development Mentorship and Technical Consulting/)
-    const schedulingAnswer = within(dialog).getByText(/different time zones/)
+    const serviceAnswer = within(dialog).getByText(/two lines of business/)
+    const schedulingAnswer = within(dialog).getByText(/time zones and adapt/)
 
     // The scheduling question was asked after the services question, so its answer
     // must appear later in the DOM (chat log renders top-to-bottom in ask order).
@@ -101,11 +101,11 @@ describe('Chatbot', () => {
     renderWithProviders(<Chatbot />, { route: '/' })
 
     await user.click(screen.getByRole('button', { name: 'Open chat' }))
-    await user.click(screen.getByRole('button', { name: 'How long does a session last?' }))
-    expect(screen.getByText(/Sessions are typically 60 minutes/)).toBeInTheDocument()
+    await user.click(screen.getByRole('button', { name: 'How does outsourcing work?' }))
+    expect(screen.getByText(/You hand us the whole project/)).toBeInTheDocument()
 
     await user.click(screen.getByRole('button', { name: 'Start over' }))
-    expect(screen.queryByText(/Sessions are typically 60 minutes/)).not.toBeInTheDocument()
+    expect(screen.queryByText(/You hand us the whole project/)).not.toBeInTheDocument()
     expect(screen.getByText(/pick a question below/i)).toBeInTheDocument()
   })
 })

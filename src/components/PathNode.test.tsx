@@ -8,22 +8,17 @@ const getColorDot = (container: HTMLElement) =>
 describe('PathNode', () => {
   it('renders the neutral variant by default', () => {
     const { container } = render(<PathNode />)
-    expect(getColorDot(container)?.className).toContain('bg-gray-300')
+    expect(getColorDot(container)?.className).toContain('bg-edge')
   })
 
-  it('renders the gaming variant color', () => {
-    const { container } = render(<PathNode variant="gaming" />)
-    expect(getColorDot(container)?.className).toContain('bg-gaming')
+  it('renders the games variant color', () => {
+    const { container } = render(<PathNode variant="games" />)
+    expect(getColorDot(container)?.className).toContain('bg-games')
   })
 
-  it('renders the professional variant color', () => {
-    const { container } = render(<PathNode variant="professional" />)
-    expect(getColorDot(container)?.className).toContain('bg-professional')
-  })
-
-  it('renders the connection variant color', () => {
-    const { container } = render(<PathNode variant="connection" />)
-    expect(getColorDot(container)?.className).toContain('bg-connection')
+  it('renders the outsourcing variant color', () => {
+    const { container } = render(<PathNode variant="outsourcing" />)
+    expect(getColorDot(container)?.className).toContain('bg-outsourcing')
   })
 
   it('scales sizing classes with the size prop', () => {

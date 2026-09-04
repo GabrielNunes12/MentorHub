@@ -5,7 +5,7 @@ const PrivacyPolicy = () => (
         translationKey="privacyPolicy"
         path="/privacy-policy"
         seoTitle="Privacy Policy"
-        seoDescription="Read our privacy policy regarding data collection and protection for our mentorship services."
+        seoDescription="Read our privacy policy regarding data collection and protection for our games and outsourcing services."
     />
 )
 

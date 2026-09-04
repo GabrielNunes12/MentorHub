@@ -26,14 +26,14 @@ describe('Footer', () => {
     expect(container.textContent).not.toContain('footer.')
   })
 
-  it('links the gaming and IT platform items to the right destinations', async () => {
+  it('links the games and outsourcing platform items to the right destinations', async () => {
     renderFooterInLanguage('en')
 
-    expect(await screen.findByText('Game Development')).toHaveAttribute(
+    expect(await screen.findByText('Games')).toHaveAttribute(
       'href',
-      'https://mentorhubgaming.com'
+      'https://gaming.mentor-hub.space'
     )
-    expect(screen.getByText('IT Solutions').closest('a')).toHaveAttribute('href', '/services')
+    expect(screen.getByText('Outsourcing').closest('a')).toHaveAttribute('href', '/services')
   })
 
   it('renders the copyright line with the current year interpolated', async () => {

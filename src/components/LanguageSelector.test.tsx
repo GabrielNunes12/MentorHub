@@ -15,8 +15,8 @@ describe('LanguageSelector', () => {
   it('highlights English as active by default', () => {
     renderWithProviders(<LanguageSelector />)
 
-    expect(screen.getByTitle('English').className).toContain('shadow-glow-purple')
-    expect(screen.getByTitle('Português').className).not.toContain('shadow-glow-purple')
+    expect(screen.getByTitle('English').className).toContain('border-games')
+    expect(screen.getByTitle('Português').className).not.toContain('border-games')
   })
 
   it('switches the active language and persists the choice on click', async () => {
@@ -25,7 +25,7 @@ describe('LanguageSelector', () => {
 
     await user.click(screen.getByTitle('Português'))
 
-    expect(screen.getByTitle('Português').className).toContain('shadow-glow-purple')
+    expect(screen.getByTitle('Português').className).toContain('border-games')
     expect(localStorage.getItem('appLanguage')).toBe('pt')
   })
 })

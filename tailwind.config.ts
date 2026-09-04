@@ -7,52 +7,58 @@ export default {
   theme: {
     extend: {
       colors: {
-        // Base colors
+        // Theme surface tokens (flip via .dark — see src/styles/globals.css)
+        'bg': 'var(--bg)',
+        'surface': 'var(--surface)',
+        'edge': 'var(--edge)',
+        'ink': 'var(--ink)',
+        'muted': 'var(--muted)',
+        'dim': 'var(--dim)',
+
+        // Business-line accents
+        'games': 'var(--games)', // terminal green
+        'outsourcing': 'var(--outsourcing)', // amber
+
+        // Fixed (non-theme-flipping) terminal palette — for panels that stay
+        // dark regardless of the light/dark toggle (hero, CTA band, chatbot header)
+        'obsidian': '#0B0E0C',
+        'obsidian-surface': '#12160F',
+        'obsidian-edge': '#1D2620',
+        'obsidian-fg': '#F2FBF4',
+        'obsidian-dim': '#8FA396',
+        'games-bright': '#7CF29C',
+        'outsourcing-bright': '#F2C94C',
+
+        // Base colors (still used directly in a few places)
         'slate-900': '#0F172A',
         'slate-950': '#020617',
         'slate-50': '#F8FAFC',
         'slate-600': '#4B5563',
         'slate-700': '#374151',
         'slate-800': '#1F2937',
-
-        // Path colors
-        'gaming': '#8B5CF6', // Vibrant Purple
-        'professional': '#10B981', // Emerald Green
-        'connection': '#FBBF24', // Warm Amber
-
-        // Keep some original colors for backward compatibility during transition
-        'primary': '#6366F1', // Indigo
-        'secondary': '#1E293B', // Dark slate
-        'accent': '#EC4899', // Fuchsia
       },
       fontFamily: {
-        // Primary fonts
-        sans: ['"Plus Jakarta Sans"', 'Inter', 'sans-serif'],
-        // Display font for headings — geometric, high-authority
-        display: ['"Space Grotesk"', '"Plus Jakarta Sans"', 'sans-serif'],
+        // Body copy
+        sans: ['"Inter"', 'system-ui', 'sans-serif'],
+        // Display font for headings — monospace, terminal-styled
+        display: ['"JetBrains Mono"', 'ui-monospace', 'monospace'],
         // Monospace accent font for metrics / metadata
         mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace'],
       },
       boxShadow: {
-        'glow-purple': '0 0 40px -8px rgba(139, 92, 246, 0.55)',
-        'glow-emerald': '0 0 40px -8px rgba(16, 185, 129, 0.55)',
-        'glow-purple-lg': '0 0 70px -12px rgba(139, 92, 246, 0.7)',
-        'glow-emerald-lg': '0 0 70px -12px rgba(16, 185, 129, 0.7)',
+        'glow-games': '0 0 40px -8px rgba(124, 242, 156, 0.45)',
+        'glow-outsourcing': '0 0 40px -8px rgba(242, 201, 76, 0.45)',
+        'glow-games-lg': '0 0 70px -12px rgba(124, 242, 156, 0.6)',
+        'glow-outsourcing-lg': '0 0 70px -12px rgba(242, 201, 76, 0.6)',
       },
       keyframes: {
-        blob: {
-          '0%, 100%': { transform: 'translate(0px, 0px) scale(1)' },
-          '33%': { transform: 'translate(30px, -30px) scale(1.1)' },
-          '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
-        },
-        'gradient-x': {
-          '0%, 100%': { backgroundPosition: '0% 50%' },
-          '50%': { backgroundPosition: '100% 50%' },
+        blink: {
+          '0%, 49%': { opacity: '1' },
+          '50%, 100%': { opacity: '0' },
         },
       },
       animation: {
-        blob: 'blob 11s infinite ease-in-out',
-        'gradient-x': 'gradient-x 4s ease-in-out infinite',
+        blink: 'blink 1s step-end infinite',
       },
       // Typography scale
       fontSize: {
@@ -65,11 +71,11 @@ export default {
         'xs': ['0.875rem', { lineHeight: '1.5' }], // 14px
         '2xs': ['0.75rem', { lineHeight: '1.4' }], // 12px
       },
-      // Border radius
+      // Border radius — sharp/technical, matches the terminal direction
       borderRadius: {
-        'xl': '0.75rem', // 12px
-        '2xl': '1rem', // 16px
-        '3xl': '1.25rem', // 20px
+        'xl': '0.25rem', // 4px
+        '2xl': '0.375rem', // 6px
+        '3xl': '0.5rem', // 8px
       },
       // Spacing (4px grid)
       spacing: {

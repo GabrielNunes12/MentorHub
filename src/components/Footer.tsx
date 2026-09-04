@@ -17,7 +17,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
           {/* Brand */}
           <div>
-            <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-gaming to-professional bg-clip-text text-transparent">
+            <h3 className="font-display text-2xl font-bold mb-4 text-slate-50">
               {t('footer.brand')}
             </h3>
             <p className="text-slate-400 max-w-md">
@@ -27,39 +27,36 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-semibold mb-4 text-slate-50">
+            <h4 className="font-mono font-semibold mb-4 text-slate-50">
               {t('footer.quickLinks.title')}
             </h4>
-            <ul className="space-y-2 text-slate-400">
+            <ul className="space-y-2 text-slate-400 font-mono text-sm">
               <li><Link to="/" className="transition-all duration-300 hover:text-slate-50 hover:translate-x-1 inline-block">
-                {t('footer.quickLinks.home')}
+                ./{t('footer.quickLinks.home')}
               </Link></li>
               <li><Link to="/about" className="transition-all duration-300 hover:text-slate-50 hover:translate-x-1 inline-block">
-                {t('footer.quickLinks.about')}
+                ./{t('footer.quickLinks.about')}
               </Link></li>
               <li><Link to="/services" className="transition-all duration-300 hover:text-slate-50 hover:translate-x-1 inline-block">
-                {t('footer.quickLinks.services')}
+                ./{t('footer.quickLinks.services')}
               </Link></li>
-              <li><a href="https://mentorhubgaming.com" target="_blank" rel="noopener noreferrer" className="transition-all duration-300 hover:text-slate-50 hover:translate-x-1 inline-block">
-                {t('footer.quickLinks.gaming')}
-              </a></li>
               <li><Link to="/contact" className="transition-all duration-300 hover:text-slate-50 hover:translate-x-1 inline-block">
-                {t('footer.quickLinks.contact')}
+                ./{t('footer.quickLinks.contact')}
               </Link></li>
             </ul>
           </div>
 
           {/* Platforms */}
           <div>
-            <h4 className="font-semibold mb-4 text-slate-50">
+            <h4 className="font-mono font-semibold mb-4 text-slate-50">
               {t('footer.platforms.title')}
             </h4>
-            <ul className="space-y-2 text-slate-400">
-              <li><a href="https://mentorhubgaming.com" target="_blank" rel="noopener noreferrer" className="transition-all duration-300 hover:text-slate-50 hover:translate-x-1 inline-block">
-                {t('footer.platforms.gaming')}
+            <ul className="space-y-2 text-slate-400 font-mono text-sm">
+              <li><a href="https://gaming.mentor-hub.space" target="_blank" rel="noopener noreferrer" className="transition-all duration-300 hover:text-games hover:translate-x-1 inline-block">
+                {t('footer.platforms.games')}
               </a></li>
-              <li><Link to="/services" className="transition-all duration-300 hover:text-slate-50 hover:translate-x-1 inline-block">
-                {t('footer.platforms.solutions')}
+              <li><Link to="/services" className="transition-all duration-300 hover:text-outsourcing hover:translate-x-1 inline-block">
+                {t('footer.platforms.outsourcing')}
               </Link></li>
               <li><a href="https://syndevs.mentor-hub.space" target="_blank" rel="noopener noreferrer" className="transition-all duration-300 hover:text-slate-50 hover:translate-x-1 inline-block">
                 {t('footer.platforms.blog')}
@@ -90,26 +87,8 @@ const Footer = () => {
         </div>
 
         {/* Bottom Section */}
-        <div className="border-t border-slate-200 dark:border-slate-700 pt-10">
-          <div className="flex flex-col md:flex-row justify-between items-center text-slate-400">
-            <p className="text-sm">
-              {t('footer.legal.copyright').replace('{year}', currentYear.toString())}
-            </p>
-            <div className="flex space-x-6 mt-4 md:mt-0 text-sm">
-              <Link to="/privacy-policy" className="transition-all duration-300 hover:text-slate-50 hover:translate-x-1 inline-block">
-                {t('footer.legal.privacy')}
-              </Link>
-              <Link to="/terms-of-service" className="transition-all duration-300 hover:text-slate-50 hover:translate-x-1 inline-block">
-                {t('footer.legal.terms')}
-              </Link>
-              <Link to="/refund-policy" className="transition-all duration-300 hover:text-slate-50 hover:translate-x-1 inline-block">
-                {t('footer.legal.refundPolicy')}
-              </Link>
-              <a href="/sitemap.xml" className="transition-all duration-300 hover:text-slate-50 hover:translate-x-1 inline-block">
-                {t('footer.legal.sitemap')}
-              </a>
-            </div>
-          </div>
+        <div className="border-t border-slate-800 pt-8 font-mono text-xs text-slate-500">
+          {t('footer.legal.copyright').replace('{year}', currentYear.toString())}
         </div>
       </div>
     </footer>

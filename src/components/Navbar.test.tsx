@@ -10,17 +10,17 @@ describe('Navbar', () => {
   it('renders a link for every nav item', () => {
     renderWithProviders(<Navbar />, { route: '/' })
 
-    expect(screen.getByRole('link', { name: 'Home' })).toBeInTheDocument()
-    expect(screen.getByRole('link', { name: 'About' })).toBeInTheDocument()
-    expect(screen.getByRole('link', { name: 'Services' })).toBeInTheDocument()
-    expect(screen.getByRole('link', { name: 'Contact' })).toBeInTheDocument()
+    expect(screen.getByRole('link', { name: './home' })).toBeInTheDocument()
+    expect(screen.getByRole('link', { name: './about' })).toBeInTheDocument()
+    expect(screen.getByRole('link', { name: './services' })).toBeInTheDocument()
+    expect(screen.getByRole('link', { name: './contact' })).toBeInTheDocument()
   })
 
   it('highlights only the link matching the current route', () => {
     renderWithProviders(<Navbar />, { route: '/about' })
 
-    expect(hasExactClass(screen.getByRole('link', { name: 'About' }), 'text-gaming')).toBe(true)
-    expect(hasExactClass(screen.getByRole('link', { name: 'Home' }), 'text-gaming')).toBe(false)
+    expect(hasExactClass(screen.getByRole('link', { name: './about' }), 'text-games')).toBe(true)
+    expect(hasExactClass(screen.getByRole('link', { name: './home' }), 'text-games')).toBe(false)
   })
 
   it('toggles the dark class on <html> when the theme button is clicked', async () => {
@@ -41,10 +41,10 @@ describe('Navbar', () => {
     const user = userEvent.setup()
     renderWithProviders(<Navbar />, { route: '/' })
 
-    expect(screen.getAllByRole('link', { name: 'About' })).toHaveLength(1)
+    expect(screen.getAllByRole('link', { name: './about' })).toHaveLength(1)
 
     await user.click(screen.getByRole('button', { name: 'Toggle menu' }))
 
-    expect(screen.getAllByRole('link', { name: 'About' })).toHaveLength(2)
+    expect(screen.getAllByRole('link', { name: './about' })).toHaveLength(2)
   })
 })

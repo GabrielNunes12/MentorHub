@@ -26,14 +26,14 @@ describe('useCalendly', () => {
     )
   })
 
-  it('opens the service-specific URL when it is known', () => {
+  it('opens the default URL for a known service name', () => {
     const openSpy = vi.spyOn(window, 'open').mockImplementation(() => null)
     const { result } = renderHook(() => useCalendly())
 
-    result.current.openCalendly('Career Coaching')
+    result.current.openCalendly('Outsourcing Discovery Call')
 
     expect(openSpy).toHaveBeenCalledWith(
-      'https://calendly.com/d/ctjv-525-36m/mentorship-career',
+      'https://calendly.com/prismaticnetwork12',
       '_blank',
       'width=960,height=700'
     )
@@ -57,7 +57,7 @@ describe('useCalendly', () => {
     const openSpy = vi.spyOn(window, 'open').mockImplementation(() => null)
     const { result } = renderHook(() => useCalendly())
 
-    result.current.openCalendly('Monthly Retainer')
+    result.current.openCalendly('Games & Partnership Inquiry')
 
     expect(openSpy).toHaveBeenCalledWith(
       'https://calendly.com/custom-link',

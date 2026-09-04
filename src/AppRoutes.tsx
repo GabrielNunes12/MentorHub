@@ -7,7 +7,6 @@ import Contact from './pages/Contact'
 import RefundPolicy from './pages/RefundPolicy'
 import PrivacyPolicy from './pages/PrivacyPolicy'
 import TermsOfService from './pages/TermsOfService'
-import Success from './pages/Success'
 
 const AppRoutes = () => (
   <Layout>
@@ -20,8 +19,6 @@ const AppRoutes = () => (
       <Route path="/refund-policy" element={<RefundPolicy />} />
       <Route path="/privacy-policy" element={<PrivacyPolicy />} />
       <Route path="/terms-of-service" element={<TermsOfService />} />
-
-      <Route path="/success" element={<Success />} />
     </Routes>
   </Layout>
 )

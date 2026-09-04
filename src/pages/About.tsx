@@ -1,4 +1,3 @@
-import myPhoto from '../assets/images/photo-pica.png'
 import { useLanguage } from '../hooks/useLanguage'
 import PathNode from '../components/PathNode'
 
@@ -7,103 +6,77 @@ import SEO from '../components/SEO'
 const About = () => {
   const { t, translations } = useLanguage()
   const timeline = translations.about.timeline.events
-  const expertise = translations.about.expertise.items
-  const profile = translations.about.profile
+  const disciplines = translations.about.disciplines.items
 
   return (
     <div className="w-full">
       <SEO
-        title="About MentorHubTech"
-        description="Learn about MentorHubTech, specialized game development mentorship and consulting services for developers and studios."
+        title="About MentorHub"
+        description="MentorHub is a small studio with two disciplines: original games we publish ourselves, and outsourced software delivery."
         canonical={`${window.location.origin}/about`}
       />
       {/* Hero Section */}
-      <section className="relative py-24 bg-gradient-to-br from-slate-50 to-slate-50 dark:from-slate-950 dark:to-slate-950 overflow-hidden">
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute bottom-0 left-0 w-full h-16 bg-gradient-to-t from-slate-50/30 via-transparent to-transparent dark:from-slate-950/20"></div>
-          <div className="absolute top-0 left-0 w-full h-16 bg-gradient-to-b from-slate-50/30 via-transparent to-transparent dark:from-slate-950/20"></div>
-        </div>
-
+      <section className="relative py-24 bg-bg overflow-hidden">
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-5xl md:text-6xl font-bold text-slate-900 dark:text-slate-50 tracking-tighter">
+          <div className="text-left max-w-3xl">
+            <h1 className="font-display text-4xl md:text-5xl font-bold text-ink tracking-tight">
               {t('about.hero.title')}{' '}
-              <span className="bg-gradient-to-r from-gaming to-professional bg-clip-text text-transparent">{t('about.hero.titleHighlight')}</span>
+              <span className="text-games">{t('about.hero.titleHighlight')}</span>
             </h1>
-            <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
+            <p className="text-lg text-muted mt-4">
               {t('about.hero.description')}
             </p>
           </div>
         </div>
       </section>
 
-      {/* Profile Section */}
-      <section className="relative py-24 bg-slate-50 dark:bg-slate-950 overflow-hidden">
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute bottom-0 left-0 w-full h-16 bg-gradient-to-t from-slate-50/30 via-transparent to-transparent dark:from-slate-950/20"></div>
-          <div className="absolute top-0 left-0 w-full h-16 bg-gradient-to-b from-slate-50/30 via-transparent to-transparent dark:from-slate-950/20"></div>
-        </div>
-
+      {/* Two disciplines */}
+      <section className="relative py-16 bg-bg overflow-hidden">
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div className="relative h-96 md:h-[500px]">
-              <div className="absolute inset-0 bg-gradient-to-br from-gaming/10 to-professional/10 rounded-2xl blur-3xl"></div>
-              <img
-                src={myPhoto}
-                alt={profile.name}
-                className="relative w-full h-full object-cover object-top rounded-2xl shadow-2xl border-4 border-slate-200 dark:border-slate-800"
-              />
-            </div>
-
-            <div className="space-y-6">
-              <h2 className="text-4xl font-bold text-slate-900 dark:text-slate-50">
-                {t('about.profile.name')}
-              </h2>
-              <p className="text-base text-slate-600 dark:text-slate-400 leading-relaxed">
-                {t('about.profile.bio1')}
-              </p>
-              <p className="text-base text-slate-600 dark:text-slate-400 leading-relaxed">
-                {t('about.profile.bio2')}
-              </p>
-              <p className="text-base text-slate-600 dark:text-slate-400 leading-relaxed">
-                {t('about.profile.bio3')}
-              </p>
-            </div>
+          <div className="grid md:grid-cols-2 gap-6">
+            {disciplines.map((item, index) => (
+              <div key={item.title} className="bg-surface border border-edge rounded-xl p-8">
+                <div className={`font-mono text-xs mb-3 ${index === 0 ? 'text-games' : 'text-outsourcing'}`}>
+                  {index === 0 ? '01 // GAMES' : '02 // OUTSOURCING'}
+                </div>
+                <h2 className="font-display text-2xl font-bold text-ink mb-3">
+                  {item.title}
+                </h2>
+                <p className="text-muted leading-relaxed">
+                  {item.description}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Timeline Section */}
-      <section className="relative py-24 bg-slate-50 dark:bg-slate-950 overflow-hidden">
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute bottom-0 left-0 w-full h-16 bg-gradient-to-t from-slate-50/30 via-transparent to-transparent dark:from-slate-950/20"></div>
-          <div className="absolute top-0 left-0 w-full h-16 bg-gradient-to-b from-slate-50/30 via-transparent to-transparent dark:from-slate-950/20"></div>
-        </div>
-
+      <section className="relative py-24 bg-bg overflow-hidden">
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-center text-4xl font-bold text-slate-900 dark:text-slate-50 mb-16">
+          <h2 className="font-display text-3xl font-bold text-ink mb-16">
             {t('about.timeline.title')}
           </h2>
-          <div className="relative max-w-4xl mx-auto">
+          <div className="relative max-w-4xl">
             {/* Vertical timeline line, aligned with the timeline dots below (pl-8) */}
-            <div className="absolute left-8 -translate-x-1/2 top-0 h-full w-[2px] bg-gradient-to-b from-gaming via-transparent to-professional"></div>
+            <div className="absolute left-8 -translate-x-1/2 top-0 h-full w-[2px] bg-edge"></div>
 
             <div className="relative space-y-8 pl-8">
               {timeline.map((item, index) => (
                 <div key={item.year} className="relative">
                   {/* Timeline point */}
                   <div className="absolute left-0 -translate-x-1/2 top-0">
-                    <div className={`${index % 2 === 0 ? 'bg-gaming' : 'bg-professional'} w-8 h-8 rounded-full flex items-center justify-center text-slate-50 text-xs font-bold`}>
+                    <div className={`${index % 2 === 0 ? 'bg-games' : 'bg-outsourcing'} w-8 h-8 rounded-full flex items-center justify-center text-ink text-xs font-mono font-bold`}>
                       {index + 1}
                     </div>
                   </div>
 
                   {/* Timeline content */}
                   <div className="ml-8">
-                    <h3 className="text-xl font-bold text-slate-900 dark:text-slate-50 mb-2">
+                    <h3 className="font-mono text-lg font-bold text-ink mb-2">
                       {item.year}
                     </h3>
-                    <p className="text-sm text-slate-600 dark:text-slate-400">
+                    <p className="text-sm text-muted">
                       {item.event}
                     </p>
                   </div>
@@ -114,27 +87,22 @@ const About = () => {
         </div>
       </section>
 
-      {/* Expertise Section */}
-      <section className="relative py-24 bg-slate-50 dark:bg-slate-950 overflow-hidden">
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute bottom-0 left-0 w-full h-16 bg-gradient-to-t from-slate-50/30 via-transparent to-transparent dark:from-slate-950/20"></div>
-          <div className="absolute top-0 left-0 w-full h-16 bg-gradient-to-b from-slate-50/30 via-transparent to-transparent dark:from-slate-950/20"></div>
-        </div>
-
+      {/* How We Work Section */}
+      <section className="relative py-24 bg-bg overflow-hidden">
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-center text-4xl font-bold text-slate-900 dark:text-slate-50 mb-12">
+          <h2 className="font-display text-3xl font-bold text-ink mb-12">
             {t('about.expertise.title')}
           </h2>
-          <div className="flex flex-wrap justify-center gap-6">
-            {expertise.map((skill, index) => (
+          <div className="flex flex-wrap gap-6">
+            {translations.about.expertise.items.map((skill, index) => (
               <div
                 key={skill}
-                className="group flex-1 min-w-[280px] bg-white dark:bg-slate-900 p-8 rounded-xl shadow-sm hover:shadow-md transform transition-all duration-300 hover:-translate-y-2"
+                className="group flex-1 min-w-[240px] bg-surface border border-edge p-6 rounded-xl transition-all duration-300 hover:-translate-y-1"
               >
-                <div className="mb-4 flex items-center justify-center w-16 h-16 bg-gradient-to-br from-gaming to-professional rounded-xl">
-                  <PathNode variant={index % 2 === 0 ? 'gaming' : 'professional'} size="md" className="text-slate-50" />
+                <div className="mb-4 flex items-center justify-center w-12 h-12 rounded-xl border border-edge">
+                  <PathNode variant={index % 2 === 0 ? 'games' : 'outsourcing'} size="md" />
                 </div>
-                <h3 className="text-lg font-bold text-slate-900 dark:text-slate-50 mb-2">
+                <h3 className="font-mono text-base font-bold text-ink">
                   {skill}
                 </h3>
               </div>

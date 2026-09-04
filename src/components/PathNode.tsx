@@ -1,5 +1,5 @@
 interface PathNodeProps {
-  variant?: 'gaming' | 'professional' | 'connection' | 'neutral'
+  variant?: 'games' | 'outsourcing' | 'neutral'
   size?: 'sm' | 'md' | 'lg'
   className?: string
   animated?: boolean
@@ -20,10 +20,9 @@ const PathNode = ({
 
   // Color configurations
   const colorConfig: Record<string, { bg: string; pointer: string }> = {
-    gaming: { bg: 'bg-gaming', pointer: 'text-white' },
-    professional: { bg: 'bg-professional', pointer: 'text-white' },
-    connection: { bg: 'bg-connection', pointer: 'text-gray-900 dark:text-gray-100' },
-    neutral: { bg: 'bg-gray-300 dark:bg-gray-600', pointer: 'text-white' },
+    games: { bg: 'bg-games', pointer: 'text-ink' },
+    outsourcing: { bg: 'bg-outsourcing', pointer: 'text-ink' },
+    neutral: { bg: 'bg-edge', pointer: 'text-ink' },
   }
 
   const { width, height } = sizeConfig[size] || sizeConfig.md

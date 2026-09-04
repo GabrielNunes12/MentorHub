@@ -2,13 +2,35 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --bg: #F7F8F4;
+  --surface: #FFFFFF;
+  --edge: #DCE3D8;
+  --ink: #14201A;
+  --muted: #4B5D52;
+  --dim: #7C8C81;
+  --games: #1F9D52;
+  --outsourcing: #A6790A;
+}
+
+.dark {
+  --bg: #0B0E0C;
+  --surface: #12160F;
+  --edge: #1D2620;
+  --ink: #F2FBF4;
+  --muted: #8FA396;
+  --dim: #5E7268;
+  --games: #7CF29C;
+  --outsourcing: #F2C94C;
+}
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  @apply bg-white dark:bg-gray-950 text-gray-900 dark:text-gray-100 transition-colors duration-300;
-  font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
+  @apply bg-bg text-ink transition-colors duration-300;
+  font-family: 'Inter', system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -20,11 +42,11 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  @apply bg-gray-50 dark:bg-gray-950;
+  @apply bg-bg;
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply bg-gray-300 dark:bg-gray-600 rounded-full hover:bg-gray-400 dark:hover:bg-gray-500;
+  @apply bg-edge rounded-full hover:opacity-80;
 }
 
 /* Custom animations for path nodes */
