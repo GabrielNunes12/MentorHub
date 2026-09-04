@@ -68,12 +68,11 @@ const Navbar = () => {
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="md:hidden flex items-center space-x-2">
-            <LanguageSelector />
+          <div className="md:hidden flex items-center space-x-1">
             <button
               type="button"
               onClick={toggleTheme}
-              className="p-2 rounded-xl bg-surface border border-edge text-muted"
+              className="p-3.5 rounded-xl bg-surface border border-edge text-muted"
               aria-label="Toggle theme"
             >
               <ThemeIcon />
@@ -81,7 +80,7 @@ const Navbar = () => {
             <button
               type="button"
               onClick={() => setIsOpen(!isOpen)}
-              className="text-muted"
+              className="p-3 text-muted"
               aria-label="Toggle menu"
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -105,6 +104,9 @@ const Navbar = () => {
                 ./{label.toLowerCase()}
               </Link>
             ))}
+            <div className="flex justify-center pt-4">
+              <LanguageSelector />
+            </div>
           </div>
         )}
       </div>

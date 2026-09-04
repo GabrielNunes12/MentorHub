@@ -16,7 +16,7 @@ export const LanguageSelector = () => {
           type="button"
           key={lang.code}
           onClick={() => changeLanguage(lang.code)}
-          className={`flex items-center justify-center w-7 h-7 rounded-lg text-sm transition-all duration-300 ${
+          className={`flex items-center justify-center w-9 h-9 md:w-7 md:h-7 rounded-lg text-sm transition-all duration-300 ${
             language === lang.code
               ? 'border border-games scale-105'
               : 'opacity-60 hover:opacity-100'

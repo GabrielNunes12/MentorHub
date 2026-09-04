@@ -1,9 +1,12 @@
 export interface EmailData {
+  inquiryType: 'outsourcing' | 'games'
   name: string
   email: string
   subject: string
   message: string
   phone?: string
+  budget?: string
+  timeline?: string
 }
 
 export interface EmailResponse {

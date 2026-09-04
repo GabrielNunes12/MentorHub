@@ -161,10 +161,17 @@ export const translations = {
       },
       form: {
         title: 'Send us a message',
+        inquiryType: {
+          label: 'What\'s this about?',
+          outsourcing: 'Outsourcing Project',
+          games: 'Games & Partnerships',
+        },
         labels: {
           fullName: 'Full Name',
           email: 'Email Address',
           phone: 'Phone (Optional)',
+          budget: 'Estimated Budget',
+          timeline: 'Timeline',
           subject: 'Subject',
           message: 'Message',
         },
@@ -172,9 +179,15 @@ export const translations = {
           fullName: 'John Doe',
           email: 'john@example.com',
           phone: '+1 (234) 567-890',
-          subject: 'I\'d like to discuss an outsourced project',
-          message: 'Tell us about your project or which of our games you\'re asking about...',
+          budget: 'Select a range',
+          timeline: 'Select a timeline',
+          subjectOutsourcing: 'I\'d like to discuss an outsourced project',
+          subjectGames: 'Question about a game, or a partnership inquiry',
+          messageOutsourcing: 'Tell us about your project — scope, goals, and rough timeline...',
+          messageGames: 'Tell us which game you\'re asking about, or what kind of partnership you have in mind...',
         },
+        budgetOptions: ['Not sure yet', 'Under $10k', '$10k – $50k', '$50k+'],
+        timelineOptions: ['ASAP', '1–3 months', '3–6 months', 'Flexible'],
         button: 'Send Message',
         sending: 'Sending...',
         errors: {
@@ -460,10 +473,17 @@ export const translations = {
       },
       form: {
         title: 'Envie uma mensagem',
+        inquiryType: {
+          label: 'Sobre o que é isso?',
+          outsourcing: 'Projeto Terceirizado',
+          games: 'Jogos & Parcerias',
+        },
         labels: {
           fullName: 'Nome Completo',
           email: 'Endereço de Email',
           phone: 'Telefone (Opcional)',
+          budget: 'Orçamento Estimado',
+          timeline: 'Prazo',
           subject: 'Assunto',
           message: 'Mensagem'
         },
@@ -471,9 +491,15 @@ export const translations = {
           fullName: 'João Silva',
           email: 'joao@exemplo.com',
           phone: '+55 (11) 98765-4321',
-          subject: 'Gostaria de discutir um projeto terceirizado',
-          message: 'Conte-nos sobre seu projeto ou sobre qual dos nossos jogos você está falando...'
+          budget: 'Selecione uma faixa',
+          timeline: 'Selecione um prazo',
+          subjectOutsourcing: 'Gostaria de discutir um projeto terceirizado',
+          subjectGames: 'Pergunta sobre um jogo, ou uma proposta de parceria',
+          messageOutsourcing: 'Conte-nos sobre seu projeto — escopo, objetivos e prazo aproximado...',
+          messageGames: 'Conte-nos sobre qual jogo você está falando, ou que tipo de parceria você tem em mente...'
         },
+        budgetOptions: ['Ainda não sei', 'Abaixo de $10k', '$10k – $50k', '$50k+'],
+        timelineOptions: ['O mais rápido possível', '1–3 meses', '3–6 meses', 'Flexível'],
         button: 'Enviar Mensagem',
         sending: 'Enviando...',
         errors: {
@@ -759,10 +785,17 @@ export const translations = {
       },
       form: {
         title: 'Envíame un mensaje',
+        inquiryType: {
+          label: '¿De qué se trata esto?',
+          outsourcing: 'Proyecto Subcontratado',
+          games: 'Juegos y Alianzas',
+        },
         labels: {
           fullName: 'Nombre Completo',
           email: 'Dirección de Correo',
           phone: 'Teléfono (Opcional)',
+          budget: 'Presupuesto Estimado',
+          timeline: 'Plazo',
           subject: 'Asunto',
           message: 'Mensaje'
         },
@@ -770,9 +803,15 @@ export const translations = {
           fullName: 'Juan Pérez',
           email: 'juan@ejemplo.com',
           phone: '+34 (123) 456-7890',
-          subject: 'Me gustaría discutir un proyecto subcontratado',
-          message: 'Cuéntanos sobre tu proyecto o sobre cuál de nuestros juegos preguntas...'
+          budget: 'Selecciona un rango',
+          timeline: 'Selecciona un plazo',
+          subjectOutsourcing: 'Me gustaría discutir un proyecto subcontratado',
+          subjectGames: 'Pregunta sobre un juego, o una propuesta de alianza',
+          messageOutsourcing: 'Cuéntanos sobre tu proyecto — alcance, objetivos y plazo aproximado...',
+          messageGames: 'Cuéntanos sobre cuál juego preguntas, o qué tipo de alianza tienes en mente...'
         },
+        budgetOptions: ['Aún no lo sé', 'Menos de $10k', '$10k – $50k', '$50k+'],
+        timelineOptions: ['Lo antes posible', '1–3 meses', '3–6 meses', 'Flexible'],
         button: 'Enviar Mensaje',
         sending: 'Enviando...',
         errors: {

@@ -1,5 +1,4 @@
 import { useLanguage } from '../hooks/useLanguage'
-import PathNode from './PathNode'
 import SEO from './SEO'
 
 interface LegalPageProps {
@@ -22,9 +21,8 @@ const LegalPage = ({ translationKey, path, seoTitle, seoDescription }: LegalPage
             />
             <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="mb-12">
-                    <h1 className="flex items-center gap-4 text-3xl font-display font-bold text-ink">
-                        <PathNode variant="outsourcing" size="lg" />
-                        <span>{t(`${translationKey}.title`)}</span>
+                    <h1 className="text-3xl font-display font-bold text-ink">
+                        {t(`${translationKey}.title`)}
                     </h1>
                 </div>
 
@@ -36,9 +34,8 @@ const LegalPage = ({ translationKey, path, seoTitle, seoDescription }: LegalPage
                     <div className="space-y-8">
                         {content.sections?.map((section: { heading: string; body: string }) => (
                             <div key={section.heading}>
-                                <h2 className="flex items-center gap-4 text-xl font-semibold text-ink mb-4">
-                                    <PathNode variant="games" size="md" className="flex-shrink-0" />
-                                    <span>{section.heading}</span>
+                                <h2 className="text-xl font-semibold text-ink mb-4">
+                                    {section.heading}
                                 </h2>
                                 <p className="text-muted">
                                     {section.body}

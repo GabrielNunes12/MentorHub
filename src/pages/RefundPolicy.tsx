@@ -1,5 +1,4 @@
 import { useLanguage } from '../hooks/useLanguage'
-import PathNode from '../components/PathNode'
 import SEO from '../components/SEO'
 
 const RefundPolicy = () => {
@@ -15,9 +14,8 @@ const RefundPolicy = () => {
             />
             <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="mb-12">
-                    <h1 className="flex items-center gap-4 text-3xl font-display font-bold text-ink">
-                        <PathNode variant="outsourcing" size="lg" />
-                        <span>{t('refundPolicy.title')}</span>
+                    <h1 className="text-3xl font-display font-bold text-ink">
+                        {t('refundPolicy.title')}
                     </h1>
                 </div>
 
@@ -40,10 +38,7 @@ const RefundPolicy = () => {
                     </ol>
 
                     <p className="text-base text-muted">
-                        <span className="flex items-center space-x-2">
-                            <PathNode variant="games" size="sm" className="flex-shrink-0" />
-                            <span>{refundContent.contact}</span>
-                        </span>
+                        <span className="block mb-1">{refundContent.contact}</span>
                         <a href={`mailto:${t('common.contactEmail')}`} className="text-muted hover:text-games font-medium">
                             {t('common.contactEmail')}
                         </a>

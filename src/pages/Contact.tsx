@@ -2,12 +2,14 @@ import { useForm } from 'react-hook-form'
 import { useState } from 'react'
 import { sendEmail } from '../services/email'
 import { useLanguage } from '../hooks/useLanguage'
-import PathNode from '../components/PathNode'
 
 interface ContactFormData {
+  inquiryType: 'outsourcing' | 'games'
   name: string
   email: string
   phone?: string
+  budget?: string
+  timeline?: string
   subject: string
   message: string
 }
@@ -16,10 +18,14 @@ import SEO from '../components/SEO'
 
 const Contact = () => {
   const { t, translations } = useLanguage()
-  const { register, handleSubmit, formState: { errors }, reset } = useForm<ContactFormData>()
+  const { register, handleSubmit, watch, formState: { errors }, reset } = useForm<ContactFormData>({
+    defaultValues: { inquiryType: 'outsourcing' },
+  })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
   const [errorMessage, setErrorMessage] = useState('')
+  const inquiryType = watch('inquiryType')
+  const isOutsourcing = inquiryType === 'outsourcing'
 
   const onSubmit = async (data: ContactFormData) => {
     setIsSubmitting(true)
@@ -76,9 +82,8 @@ const Contact = () => {
             {/* Contact Information */}
             <div className="space-y-8">
               <div>
-                <h3 className="flex items-center gap-3 text-xl font-bold text-ink mb-4">
-                  <PathNode variant="outsourcing" size="md" className="flex-shrink-0" />
-                  <span>{t('contact.info.title')}</span>
+                <h3 className="text-xl font-bold text-ink mb-4">
+                  {t('contact.info.title')}
                 </h3>
                 <p className="text-sm text-muted">
                   {t('contact.info.subtitle')}
@@ -89,7 +94,6 @@ const Contact = () => {
                 {/* Email */}
                 <div className="flex gap-4">
                   <div className="flex items-center">
-                    <PathNode variant="outsourcing" size="lg" className="mr-2" />
                     <h4 className="font-bold text-ink mb-1">
                       {t('contact.info.email')}
                     </h4>
@@ -107,7 +111,6 @@ const Contact = () => {
                 {/* Location */}
                 <div className="flex gap-4">
                   <div className="flex items-center">
-                    <PathNode variant="outsourcing" size="lg" className="mr-2" />
                     <h4 className="font-bold text-ink mb-1">
                       {t('contact.info.location')}
                     </h4>
@@ -122,7 +125,6 @@ const Contact = () => {
                 {/* Response Time */}
                 <div className="flex gap-4">
                   <div className="flex items-center">
-                    <PathNode variant="outsourcing" size="lg" className="mr-2" />
                     <h4 className="font-bold text-ink mb-1">
                       {t('contact.info.responseTime')}
                     </h4>
@@ -137,9 +139,8 @@ const Contact = () => {
 
               {/* Social Links */}
               <div className="pt-6 border-t border-edge">
-                <h4 className="flex items-center gap-3 font-bold text-ink mb-4">
-                  <PathNode variant="outsourcing" size="md" className="flex-shrink-0" />
-                  <span>{t('contact.info.social')}</span>
+                <h4 className="font-bold text-ink mb-4">
+                  {t('contact.info.social')}
                 </h4>
                 <div className="flex gap-4">
                   <a
@@ -163,11 +164,35 @@ const Contact = () => {
             {/* Contact Form */}
             <div className="lg:col-span-2">
               <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+                {/* Inquiry type */}
+                <div className="space-y-2">
+                  <span className="block text-sm font-semibold text-ink mb-1">
+                    {t('contact.form.inquiryType.label')}
+                  </span>
+                  <div className="grid grid-cols-2 gap-3">
+                    <label
+                      className={`flex items-center justify-center px-4 py-3 rounded-xl border text-sm font-mono font-semibold cursor-pointer transition-all duration-300 ${isOutsourcing
+                        ? 'border-outsourcing text-outsourcing'
+                        : 'border-edge text-muted hover:text-ink'}`}
+                    >
+                      <input type="radio" value="outsourcing" className="sr-only" {...register('inquiryType')} />
+                      {t('contact.form.inquiryType.outsourcing')}
+                    </label>
+                    <label
+                      className={`flex items-center justify-center px-4 py-3 rounded-xl border text-sm font-mono font-semibold cursor-pointer transition-all duration-300 ${!isOutsourcing
+                        ? 'border-games text-games'
+                        : 'border-edge text-muted hover:text-ink'}`}
+                    >
+                      <input type="radio" value="games" className="sr-only" {...register('inquiryType')} />
+                      {t('contact.form.inquiryType.games')}
+                    </label>
+                  </div>
+                </div>
+
                 {/* Name */}
                 <div className="space-y-2">
-                  <label htmlFor="name" className="flex items-center gap-2 text-sm font-semibold text-ink mb-1">
-                    <PathNode variant="outsourcing" size="sm" className="flex-shrink-0" />
-                    <span>{t('contact.form.labels.fullName')}</span>
+                  <label htmlFor="name" className="block text-sm font-semibold text-ink mb-1">
+                    {t('contact.form.labels.fullName')}
                   </label>
                   <input
                     {...register('name', { required: t('contact.form.errors.nameRequired') })}
@@ -183,9 +208,8 @@ const Contact = () => {
 
                 {/* Email */}
                 <div className="space-y-2">
-                  <label htmlFor="email" className="flex items-center gap-2 text-sm font-semibold text-ink mb-1">
-                    <PathNode variant="outsourcing" size="sm" className="flex-shrink-0" />
-                    <span>{t('contact.form.labels.email')}</span>
+                  <label htmlFor="email" className="block text-sm font-semibold text-ink mb-1">
+                    {t('contact.form.labels.email')}
                   </label>
                   <input
                     {...register('email', {
@@ -207,9 +231,8 @@ const Contact = () => {
 
                 {/* Phone */}
                 <div className="space-y-2">
-                  <label htmlFor="phone" className="flex items-center gap-2 text-sm font-semibold text-ink mb-1">
-                    <PathNode variant="outsourcing" size="sm" className="flex-shrink-0" />
-                    <span>{t('contact.form.labels.phone')}</span>
+                  <label htmlFor="phone" className="block text-sm font-semibold text-ink mb-1">
+                    {t('contact.form.labels.phone')}
                   </label>
                   <input
                     {...register('phone')}
@@ -220,18 +243,55 @@ const Contact = () => {
                   />
                 </div>
 
+                {/* Budget & Timeline (outsourcing only) */}
+                {isOutsourcing && (
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div className="space-y-2">
+                      <label htmlFor="budget" className="block text-sm font-semibold text-ink mb-1">
+                        {t('contact.form.labels.budget')}
+                      </label>
+                      <select
+                        {...register('budget')}
+                        id="budget"
+                        className={inputClass}
+                        defaultValue=""
+                      >
+                        <option value="" disabled>{t('contact.form.placeholders.budget')}</option>
+                        {translations.contact.form.budgetOptions.map((option) => (
+                          <option key={option} value={option}>{option}</option>
+                        ))}
+                      </select>
+                    </div>
+                    <div className="space-y-2">
+                      <label htmlFor="timeline" className="block text-sm font-semibold text-ink mb-1">
+                        {t('contact.form.labels.timeline')}
+                      </label>
+                      <select
+                        {...register('timeline')}
+                        id="timeline"
+                        className={inputClass}
+                        defaultValue=""
+                      >
+                        <option value="" disabled>{t('contact.form.placeholders.timeline')}</option>
+                        {translations.contact.form.timelineOptions.map((option) => (
+                          <option key={option} value={option}>{option}</option>
+                        ))}
+                      </select>
+                    </div>
+                  </div>
+                )}
+
                 {/* Subject */}
                 <div className="space-y-2">
-                  <label htmlFor="subject" className="flex items-center gap-2 text-sm font-semibold text-ink mb-1">
-                    <PathNode variant="outsourcing" size="sm" className="flex-shrink-0" />
-                    <span>{t('contact.form.labels.subject')}</span>
+                  <label htmlFor="subject" className="block text-sm font-semibold text-ink mb-1">
+                    {t('contact.form.labels.subject')}
                   </label>
                   <input
                     {...register('subject', { required: t('contact.form.errors.subjectRequired') })}
                     type="text"
                     id="subject"
                     className={inputClass}
-                    placeholder={t('contact.form.placeholders.subject')}
+                    placeholder={isOutsourcing ? t('contact.form.placeholders.subjectOutsourcing') : t('contact.form.placeholders.subjectGames')}
                   />
                   {errors.subject && (
                     <p className="text-red-500 text-sm mt-1">{errors.subject.message}</p>
@@ -240,16 +300,15 @@ const Contact = () => {
 
                 {/* Message */}
                 <div className="space-y-2">
-                  <label htmlFor="message" className="flex items-center gap-2 text-sm font-semibold text-ink mb-1">
-                    <PathNode variant="outsourcing" size="sm" className="flex-shrink-0" />
-                    <span>{t('contact.form.labels.message')}</span>
+                  <label htmlFor="message" className="block text-sm font-semibold text-ink mb-1">
+                    {t('contact.form.labels.message')}
                   </label>
                   <textarea
                     {...register('message', { required: t('contact.form.errors.messageRequired') })}
                     id="message"
                     rows={5}
                     className={`${inputClass} resize-none`}
-                    placeholder={t('contact.form.placeholders.message')}
+                    placeholder={isOutsourcing ? t('contact.form.placeholders.messageOutsourcing') : t('contact.form.placeholders.messageGames')}
                   ></textarea>
                   {errors.message && (
                     <p className="text-red-500 text-sm mt-1">{errors.message.message}</p>
@@ -258,18 +317,14 @@ const Contact = () => {
 
                 {/* Status Messages */}
                 {submitStatus === 'success' && (
-                  <div className="mt-4 p-4 bg-surface border border-games text-ink rounded-xl flex items-center gap-2">
-                    <PathNode variant="games" size="md" />
+                  <div className="mt-4 p-4 bg-surface border border-games text-ink rounded-xl">
                     <span>{t('contact.form.success')}</span>
                   </div>
                 )}
                 {submitStatus === 'error' && (
-                  <div className="mt-4 p-4 bg-surface border border-red-500 text-ink rounded-xl flex items-start gap-2">
-                    <PathNode variant="outsourcing" size="md" />
-                    <span>
-                      <p className="font-semibold mb-1">✗ {t('contact.form.error')}</p>
-                      <p className="text-sm">{errorMessage || 'Please try again later. Check browser console for details.'}</p>
-                    </span>
+                  <div className="mt-4 p-4 bg-surface border border-red-500 text-ink rounded-xl">
+                    <p className="font-semibold mb-1">✗ {t('contact.form.error')}</p>
+                    <p className="text-sm">{errorMessage || 'Please try again later. Check browser console for details.'}</p>
                   </div>
                 )}
 
@@ -290,9 +345,8 @@ const Contact = () => {
       {/* FAQ Section */}
       <section className="relative py-24 bg-bg overflow-hidden">
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="flex items-center gap-4 text-3xl font-display font-bold text-ink mb-12">
-            <PathNode variant="outsourcing" size="lg" className="flex-shrink-0" />
-            <span>{t('contact.faq.title')}</span>
+          <h2 className="text-3xl font-display font-bold text-ink mb-12">
+            {t('contact.faq.title')}
           </h2>
           <div className="space-y-4">
             {translations.contact.faq.items.map((faq) => (
@@ -300,9 +354,8 @@ const Contact = () => {
                 key={faq.question}
                 className="group bg-surface border border-edge rounded-xl p-6 transition-all duration-300 hover:-translate-y-1"
               >
-                <h3 className="flex items-center gap-3 text-lg font-bold text-ink mb-2">
-                  <PathNode variant="outsourcing" size="md" className="flex-shrink-0" />
-                  <span>{faq.question}</span>
+                <h3 className="text-lg font-bold text-ink mb-2">
+                  {faq.question}
                 </h3>
                 <p className="text-sm text-muted">
                   {faq.answer}
