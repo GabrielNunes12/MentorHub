@@ -1,5 +1,4 @@
 import { useLanguage } from '../hooks/useLanguage'
-import PathNode from '../components/PathNode'
 
 import SEO from '../components/SEO'
 
@@ -34,11 +33,8 @@ const About = () => {
       <section className="relative py-16 bg-bg overflow-hidden">
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-6">
-            {disciplines.map((item, index) => (
+            {disciplines.map((item) => (
               <div key={item.title} className="bg-surface border border-edge rounded-xl p-8">
-                <div className={`font-mono text-xs mb-3 ${index === 0 ? 'text-games' : 'text-outsourcing'}`}>
-                  {index === 0 ? '01 // GAMES' : '02 // OUTSOURCING'}
-                </div>
                 <h2 className="font-display text-2xl font-bold text-ink mb-3">
                   {item.title}
                 </h2>
@@ -94,14 +90,11 @@ const About = () => {
             {t('about.expertise.title')}
           </h2>
           <div className="flex flex-wrap gap-6">
-            {translations.about.expertise.items.map((skill, index) => (
+            {translations.about.expertise.items.map((skill) => (
               <div
                 key={skill}
                 className="group flex-1 min-w-[240px] bg-surface border border-edge p-6 rounded-xl transition-all duration-300 hover:-translate-y-1"
               >
-                <div className="mb-4 flex items-center justify-center w-12 h-12 rounded-xl border border-edge">
-                  <PathNode variant={index % 2 === 0 ? 'games' : 'outsourcing'} size="md" />
-                </div>
                 <h3 className="font-mono text-base font-bold text-ink">
                   {skill}
                 </h3>

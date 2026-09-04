@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom'
 import { useCalendly } from '../hooks/useCalendly'
 import { useLanguage } from '../hooks/useLanguage'
-import PathNode from '../components/PathNode'
 
 import SEO from '../components/SEO'
 
@@ -99,16 +98,11 @@ const Home = () => {
           </div>
 
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-            {features.map((feature, index) => (
+            {features.map((feature) => (
               <div
                 key={feature.title}
                 className="group bg-surface border border-edge p-8 rounded-xl transition-all duration-300 hover:-translate-y-1"
               >
-                <div className="mb-6">
-                  <div className="flex items-center justify-center w-12 h-12 rounded-xl border border-edge">
-                    <PathNode variant={index % 2 === 0 ? 'games' : 'outsourcing'} size="lg" />
-                  </div>
-                </div>
                 <h3 className="text-lg font-bold text-ink mb-3">
                   {feature.title}
                 </h3>

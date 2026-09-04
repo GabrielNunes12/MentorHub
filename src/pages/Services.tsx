@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom'
 import { useLanguage } from '../hooks/useLanguage'
-import PathNode from '../components/PathNode'
 
 import SEO from '../components/SEO'
 
@@ -22,9 +21,8 @@ const Services = () => {
       <section className="relative py-24 bg-bg overflow-hidden">
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-left">
-            <h1 className="flex items-center gap-4 text-4xl md:text-5xl font-display font-bold text-ink tracking-tight">
-              <PathNode variant="outsourcing" size="lg" className="flex-shrink-0" />
-              <span>{translations.services.hero.title}</span>
+            <h1 className="text-4xl md:text-5xl font-display font-bold text-ink tracking-tight">
+              {translations.services.hero.title}
             </h1>
             <p className="text-lg text-muted max-w-2xl mt-4">
               {t('services.hero.description')}
@@ -39,10 +37,6 @@ const Services = () => {
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
             {/* Games */}
             <div className="group bg-surface border border-edge p-8 rounded-xl transition-all duration-300 hover:-translate-y-1 flex flex-col">
-              <div className="mb-6 flex items-center justify-center w-14 h-14 rounded-xl border border-games">
-                <PathNode variant="games" size="lg" />
-              </div>
-              <div className="font-mono text-xs text-games mb-2">01 // GAMES</div>
               <h3 className="text-xl font-bold text-ink mb-2">
                 {games.name}
               </h3>
@@ -67,10 +61,6 @@ const Services = () => {
 
             {/* Outsourcing */}
             <div className="group bg-surface border border-edge p-8 rounded-xl transition-all duration-300 hover:-translate-y-1 flex flex-col">
-              <div className="mb-6 flex items-center justify-center w-14 h-14 rounded-xl border border-outsourcing">
-                <PathNode variant="outsourcing" size="lg" />
-              </div>
-              <div className="font-mono text-xs text-outsourcing mb-2">02 // OUTSOURCING</div>
               <h3 className="text-xl font-bold text-ink mb-2">
                 {outsourcing.name}
               </h3>
@@ -93,10 +83,6 @@ const Services = () => {
 
             {/* Blog */}
             <div className="group bg-surface border border-edge p-8 rounded-xl transition-all duration-300 hover:-translate-y-1 flex flex-col">
-              <div className="mb-6 flex items-center justify-center w-14 h-14 rounded-xl border border-edge">
-                <PathNode variant="neutral" size="lg" />
-              </div>
-              <div className="font-mono text-xs text-dim mb-2">03 // BLOG</div>
               <h3 className="text-xl font-bold text-ink mb-2">
                 {blog.name}
               </h3>

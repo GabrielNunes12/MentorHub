@@ -58,9 +58,8 @@ const Contact = () => {
       <section className="relative py-24 bg-bg overflow-hidden">
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-left">
-            <h1 className="flex items-center gap-4 text-4xl md:text-5xl font-display font-bold text-ink tracking-tight">
-              <PathNode variant="outsourcing" size="lg" className="flex-shrink-0" />
-              <span>{t('contact.hero.title')}</span>
+            <h1 className="text-4xl md:text-5xl font-display font-bold text-ink tracking-tight">
+              {t('contact.hero.title')}{' '}
               <span className="text-outsourcing">{t('contact.hero.titleHighlight')}</span>
             </h1>
             <p className="text-lg text-muted max-w-2xl mt-4">
