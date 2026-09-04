@@ -8,7 +8,7 @@ interface SEOProps {
     noindex?: boolean
 }
 
-const SEO = ({ title, description, canonical, ogImage, noindex = false }: SEOProps) => {
+const SEO = ({ title, description, canonical, ogImage = '/og-image.png', noindex = false }: SEOProps) => {
     const siteUrl = window.location.origin
     const currentUrl = canonical || window.location.href
 
