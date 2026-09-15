@@ -22,6 +22,7 @@ export const translations = {
       home: 'Home',
       about: 'About',
       services: 'Services',
+      caseStudies: 'Case Studies',
       contact: 'Contact',
     },
     home: {
@@ -128,6 +129,22 @@ export const translations = {
           cta: 'Read the Blog',
         },
       },
+    },
+    caseStudies: {
+      hero: {
+        title: 'Case Studies',
+        description: 'Real builds, real code — proof of how we work, not just claims about it.',
+      },
+      items: [
+        {
+          title: 'Chat with your database',
+          tag: 'AI-Accelerated Backend',
+          summary: 'A natural-language query API over Postgres: ask a question in plain English, get back safe, validated SQL and real results.',
+          stack: ['Node.js', 'TypeScript', 'Express', 'Postgres', 'Claude'],
+          highlight: 'The LLM only generates SQL — a separate safety layer validates every query is a single read-only SELECT before it ever touches the database. Never trust generated code with write access.',
+          cta: 'Read the writeup',
+        },
+      ],
     },
     refundPolicy: {
       title: 'Refund Policy',
@@ -333,6 +350,7 @@ export const translations = {
       home: 'Início',
       about: 'Sobre',
       services: 'Serviços',
+      caseStudies: 'Estudos de Caso',
       contact: 'Contato',
     },
 
@@ -440,6 +458,22 @@ export const translations = {
           cta: 'Ler o Blog',
         },
       },
+    },
+    caseStudies: {
+      hero: {
+        title: 'Estudos de Caso',
+        description: 'Projetos reais, código real — prova de como trabalhamos, não apenas afirmações sobre isso.',
+      },
+      items: [
+        {
+          title: 'Converse com seu banco de dados',
+          tag: 'Backend Acelerado por IA',
+          summary: 'Uma API de consulta em linguagem natural sobre Postgres: faça uma pergunta em português simples e receba SQL validado e resultados reais.',
+          stack: ['Node.js', 'TypeScript', 'Express', 'Postgres', 'Claude'],
+          highlight: 'A IA apenas gera o SQL — uma camada de segurança separada valida que cada consulta é um único SELECT somente leitura antes de tocar no banco de dados. Nunca confie em código gerado com acesso de escrita.',
+          cta: 'Ler o artigo completo',
+        },
+      ],
     },
     refundPolicy: {
       title: 'Política de Reembolso',
@@ -645,6 +679,7 @@ export const translations = {
       home: 'Inicio',
       about: 'Acerca',
       services: 'Servicios',
+      caseStudies: 'Casos de Éxito',
       contact: 'Contacto'
     },
 
@@ -752,6 +787,22 @@ export const translations = {
           cta: 'Leer el Blog',
         },
       },
+    },
+    caseStudies: {
+      hero: {
+        title: 'Casos de Éxito',
+        description: 'Proyectos reales, código real — prueba de cómo trabajamos, no solo afirmaciones al respecto.',
+      },
+      items: [
+        {
+          title: 'Habla con tu base de datos',
+          tag: 'Backend Acelerado por IA',
+          summary: 'Una API de consulta en lenguaje natural sobre Postgres: haz una pregunta en español simple y recibe SQL validado y resultados reales.',
+          stack: ['Node.js', 'TypeScript', 'Express', 'Postgres', 'Claude'],
+          highlight: 'La IA solo genera el SQL — una capa de seguridad separada valida que cada consulta sea un único SELECT de solo lectura antes de tocar la base de datos. Nunca confíes en código generado con acceso de escritura.',
+          cta: 'Leer el artículo completo',
+        },
+      ],
     },
     refundPolicy: {
       title: 'Política de Reembolso',
