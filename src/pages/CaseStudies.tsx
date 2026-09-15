@@ -2,7 +2,7 @@ import { useLanguage } from '../hooks/useLanguage'
 import SEO from '../components/SEO'
 
 const BLOG_POST_URL = 'https://syndevs.mentor-hub.space/posts/chat-with-your-database-safe-sql'
-const REPO_URL = 'https://github.com/mentor-hub/chat-with-your-db'
+const REPO_URL = 'https://github.com/GabrielNunes12/chat-with-your-db'
 
 interface CaseStudyItem {
   title: string
